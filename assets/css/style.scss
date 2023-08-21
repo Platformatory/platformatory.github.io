@@ -1,5 +1,5 @@
 ---
-# this ensures Jekyll reads the file to be transformed into CSS later
+ # this ensures Jekyll reads the file to be transformed into CSS later
 ---
 
 // Colors
@@ -76,4 +76,187 @@ body {
 
 .hbspt-form iframe {
    width: 100% !important;
-} 
+}
+
+/* new stuff for event & publications */
+.events-container,.publication-container,.event-detail-container {
+    
+    margin-top: 60px;
+    @media (min-width:776px) {
+        padding: 80px 180px;
+    }
+    @media (max-width:776px) {
+        padding: 60px 120px;
+    }
+    @media (max-width:576px) {
+        padding: 60px 20px;
+        .events-grid{
+            justify-content: center;
+        }
+    }
+    @media (max-width:440px) {
+        padding: 60px 10px;
+        .events-grid{
+            padding: 10px;
+        }
+    }
+}
+.event-title,.publication-title{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.event-top-position,.publication-top-position{
+    height: 100px;
+    background-color: #f5f5f5;
+}
+.event-date-path{
+    width: 70px;
+}
+.event-icons{
+    height: 26px;
+}
+.event-items-grid{
+    padding: 5px 10px;
+}
+.event-card,.publication-card{
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 340px;
+}
+.events-grid, .publications-grid {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 26px;
+    // justify-content: center;
+}
+.event-card-title,.publication-card-title{
+    font-size: 18px;
+    font-weight: bold;
+}
+.event-item, .publication-item{
+    padding-top: 20px;
+    // padding: 5px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    max-width: 320px;
+    margin: 0 10px 20px;
+    // text-align: center;
+
+    a {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 5px 15px;
+        background-color: #007BFF;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 3px;
+
+        &:hover {
+            background-color: #0056b3;
+        }
+    }
+
+    iframe {
+        max-width: 100%;
+        margin: 15px 0;
+    }
+}
+
+.event-type, .event-category, .publication-item .authors {
+    font-style: italic;
+    color: #555;
+}
+
+.event-detail-title{
+    font-size: 2.5rem;
+    // font-weight: bold;
+}
+.event-date{
+    color: #5C5A5A;
+    font-size: 1.5rem;
+}
+.rsvp-link{
+    padding:  15px;
+    font-size: .9rem;
+    text-align: center;
+    font-weight: bold;
+    color: white !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    :hover{
+        text-decoration: none;
+    }
+}
+.event-venue-title{
+    font-size: 28px;
+    font-weight: bold;
+}
+.event-detail-items{
+    color: #5C5A5A;
+    a {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 5px 15px;
+        background-color: #007BFF;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 3px;
+
+        &:hover {
+            background-color: #0056b3;
+        }
+    }
+
+}
+.venue-title{
+    color: black ;
+    }
+div>.event-content{
+    font-size: 1rem;
+    p{
+        font-size: 1rem;
+    }
+    .about{
+        padding: 15px;
+        // font-size: 16px;
+    }
+    @media (min-width:576px) {
+        ul,p{
+            padding: 0 15px;
+        }
+        ul>li{
+            padding: 5px 0;
+        }
+        th,td{
+            padding: 10px 15px;
+            border-bottom: 1px solid gray;
+        }
+        th{
+            font-size: 18px;
+        }
+    }
+    @media (max-width:576px) {
+        th,td{
+            padding: 5px ;
+            border-bottom: 1px solid gray;
+        }
+    }
+    
+   
+    #schedule,#prerequisites,#speakers,#talks,#agenda,#agenda-kafka-workshop---2{
+        font-size: 28px;
+        margin-top: 5px;
+        font-weight: bold;
+    }
+   
+    a{
+        color: #3793f5;
+    }
+    .speaker-name{
+        font-weight: bold;
+        color: #5C5A5A;
+    }
+    .speaker-description{
+        font-size: 14px;
+        color: #7a7a7a;
+    }
+}

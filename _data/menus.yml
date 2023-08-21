@@ -11,15 +11,21 @@ main:
     #  - name: "Solutions"
     #url: "/solutions/"
     #weight: 2   
+  - name: "Events"
+    url: "/events/"
+    weight: 4
+  # - name: "Publications"
+  #   url: "/publications/"
+  #   weight: 5    
+  - name: "Blog"
+    url: "/blog"
+    weight: 6
   - name: "About"
     url: "/platformatory/"
-    weight: 3
+    weight: 7       
   - name: "Get in touch"
     url: "/contact/"
-    weight: 4
-    #  - name: "Blog"
-    #url: "/blog"
-    #weight: 5    
+    weight: 8
 footer:
   - name: "Home"
     url: "/"

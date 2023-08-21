@@ -35,7 +35,14 @@ collections:
   openings:
     output: true
   engineering:
-    output: true  
+    output: true
+  events:
+    output: true
+  publications:
+    output: true
+
+# For events        
+future: true 
 
 sass:
   indentWidth: 4
