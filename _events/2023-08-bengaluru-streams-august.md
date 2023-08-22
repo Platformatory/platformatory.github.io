@@ -32,17 +32,17 @@ We're hosting our next in-person event on August 26. Join us for exciting discus
 
 ### Schedule
 
-| Name                                                                      | Speaker                                  | Start Time | End Time | Presentation                                                                                                                         | Recording                                                  |
-| ------------------------------------------------------------------------- | ---------------------------------------- | ---------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------- |
-| Welcome and registration                                                  |                                          | 9:30 AM    | 9:45 AM |                                                                                                                                      |                                                            |
-| Keynote                    | CRED     | 9:45 AM   | 10:00 AM |                             |  |
-| Apache Pulsar - The anatomy of Pub & Sub               | Shivji Kumar Jha, Nutanix            | 10:00 AM   | 10:30 AM |  |  |
-| Designing a Data Mesh with Kafka | Rahul Gulati, Saxo Bank                 | 10:35 AM   | 11:05 AM |  |  |
-| Empowering Interactive Queries on Lakehouse: Integrating Apache Hudi with Presto & Trino | Sagar Sumit, Onehouse                    | 11:10 AM   | 11:40 AM |  |  |
-| Networking break                                                          |                                          | 11:40 AM   | 12:00 PM |                                                                                                                                      |                                                            |
-| TBA       | CRED              | 12:00 PM   | 12:30 PM |                  |  |
-| TBA      | Platformatory | 12:45 PM   | 1:00 PM  |  |  |
-| Lunch and Networking                                                      |                                          | 01:15 PM   | 2:30 PM |                                                                                                                                      |                                                            |
+| Name                                                                                     | Speaker                            | Start Time | End Time | Presentation | Recording |
+| ---------------------------------------------------------------------------------------- | ---------------------------------- | ---------- | -------- | ------------ | --------- |
+| Welcome and registration                                                                 |                                    | 9:30 AM    | 9:45 AM  |              |           |
+| Keynote                                                                                  | CRED                               | 9:45 AM    | 10:00 AM |              |           |
+| Apache Pulsar - The anatomy of Pub & Sub                                                 | Shivji Kumar Jha, Nutanix          | 10:00 AM   | 10:30 AM |              |           |
+| Designing a Data Mesh with Kafka                                                         | Rahul Gulati, Saxo Bank            | 10:35 AM   | 11:05 AM |              |           |
+| Empowering Interactive Queries on Lakehouse: Integrating Apache Hudi with Presto & Trino | Sagar Sumit, Onehouse              | 11:10 AM   | 11:40 AM |              |           |
+| Networking break                                                                         |                                    | 11:40 AM   | 12:00 PM |              |           |
+| TBA                                                                                      | CRED                               | 12:00 PM   | 12:30 PM |              |           |
+| A primer on streaming databases: next gen tooling for streaming and stream processing    | Pavan Keshavamurthy, Platformatory | 12:45 PM   | 1:00 PM  |              |           |
+| Lunch and Networking                                                                     |                                    | 01:15 PM   | 2:30 PM  |              |           |
 
 ### Talks
 
@@ -73,6 +73,18 @@ _About the talk:_ Designing a Data Mesh with Kafka “Data Mesh objective is to 
 • Mapping Kafka to the data lake infrastructure.
 
 • Enabling analytics, data warehousing and production support
+
+- **A primer on streaming databases: next gen tooling for streaming and stream processing**
+
+_Speaker:_ **Pavan Keshavamurthy, CTO & Co-Founder @ Platformatory.io**
+
+_About the talk:_ In this talk, we will explore why streaming databases are the rage and what makes them the hottest thing in the world of streaming.
+
+In particular, we will cover how they converge into and diverge from the world views of both traditional OLAP and stream processing.
+
+As a final part of this talk, we will also deep dive into important characteristics of a few streaming DBs with a comparative lens.
+
+Time permitting, a small demo of capabilities will also follow.
 
 ### Speakers
 

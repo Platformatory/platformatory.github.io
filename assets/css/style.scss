@@ -81,9 +81,8 @@ body {
 /* new stuff for event & publications */
 .events-container,.publication-container,.event-detail-container {
     
-    margin-top: 60px;
     @media (min-width:776px) {
-        padding: 80px 180px;
+        padding: 60px 180px;
     }
     @media (max-width:776px) {
         padding: 60px 120px;
