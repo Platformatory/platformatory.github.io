@@ -3,8 +3,20 @@ layout: default
 title: Events
 ---
 
+<div class="intro">
+    <div class="container">
+      <div class="row justify-content-start">
+        <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
+          <h1>Synergistic Developer Ecosystem</h1>
+          <p>Open source community and collaboration is at the heart of what we do</p>
+        </div>
+        <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
+          <img alt={{ page.title }} class="intro-image intro-image-absolute" src="/images/illustrations/conference.svg" />
+        </div>
+      </div>
+    </div>
+</div>
 <div class="events-container">
-    <h1 class="event-title">Events</h1>
     
     <h2>Upcoming Events</h2>
     <div class="events-grid">
@@ -68,7 +80,7 @@ title: Events
     
     <h2>Past Events</h2>
     <div class="events-grid">
-        {% for event in site.events %}
+        {% for event in site.events reversed %}
             {% assign event_date_str = event.date | date: "%Y-%m-%d" %}
             {% assign current_date_str = site.time | date: "%Y-%m-%d" %}
             {% if event_date_str < current_date_str %}
