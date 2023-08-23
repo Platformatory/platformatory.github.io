@@ -32,17 +32,17 @@ We're hosting our next in-person event on August 26. Join us for exciting discus
 
 ### Schedule
 
-| Name                                                                                     | Speaker                            | Start Time | End Time | Presentation | Recording |
-| ---------------------------------------------------------------------------------------- | ---------------------------------- | ---------- | -------- | ------------ | --------- |
-| Welcome and registration                                                                 |                                    | 9:30 AM    | 9:45 AM  |              |           |
-| Keynote                                                                                  | CRED                               | 9:45 AM    | 10:00 AM |              |           |
-| Apache Pulsar - The anatomy of Pub & Sub                                                 | Shivji Kumar Jha, Nutanix          | 10:00 AM   | 10:30 AM |              |           |
-| Designing a Data Mesh with Kafka                                                         | Rahul Gulati, Saxo Bank            | 10:35 AM   | 11:05 AM |              |           |
-| Empowering Interactive Queries on Lakehouse: Integrating Apache Hudi with Presto & Trino | Sagar Sumit, Onehouse              | 11:10 AM   | 11:40 AM |              |           |
-| Networking break                                                                         |                                    | 11:40 AM   | 12:00 PM |              |           |
-| TBA                                                                                      | CRED                               | 12:00 PM   | 12:30 PM |              |           |
-| A primer on streaming databases: next gen tooling for streaming and stream processing    | Pavan Keshavamurthy, Platformatory | 12:45 PM   | 1:00 PM  |              |           |
-| Lunch and Networking                                                                     |                                    | 01:15 PM   | 2:30 PM  |              |           |
+| Name                                                                                     | Speaker                                                | Start Time | End Time | Presentation | Recording |
+| ---------------------------------------------------------------------------------------- | ------------------------------------------------------ | ---------- | -------- | ------------ | --------- |
+| Welcome and registration                                                                 |                                                        | 9:30 AM    | 9:45 AM  |              |           |
+| Keynote                                                                                  | CRED                                                   | 9:45 AM    | 10:00 AM |              |           |
+| Apache Pulsar - The anatomy of Pub & Sub                                                 | Shivji Kumar Jha, Nutanix                              | 10:00 AM   | 10:30 AM |              |           |
+| Designing a Data Mesh with Kafka                                                         | Rahul Gulati, Saxo Bank                                | 10:35 AM   | 11:05 AM |              |           |
+| Empowering Interactive Queries on Lakehouse: Integrating Apache Hudi with Presto & Trino | Sagar Sumit, Onehouse                                  | 11:10 AM   | 11:40 AM |              |           |
+| Networking break                                                                         |                                                        | 11:40 AM   | 12:00 PM |              |           |
+| Stream joins using Aerospike and RTP (Realtime Processing Platform)                      | Vikas Sharma, CRED                                     | 12:00 PM   | 12:30 PM |              |           |
+| A primer on streaming databases: next gen tooling for streaming and stream processing    | Pavan Keshavamurthy & Avinash Upadhyaya, Platformatory | 12:45 PM   | 1:00 PM  |              |           |
+| Lunch and Networking                                                                     |                                                        | 01:15 PM   | 2:30 PM  |              |           |
 
 ### Talks
 
@@ -74,9 +74,15 @@ _About the talk:_ Designing a Data Mesh with Kafka “Data Mesh objective is to 
 
 • Enabling analytics, data warehousing and production support
 
+- **Stream joins using Aerospike and RTP (Realtime Processing Platform)**
+
+_Speaker:_ **Vikas Sharma, Principal Engineer at CRED**
+
+_About the talk:_ Stream joins are integral to real-time data processing, enabling the fusion of information from different data streams for more insightful analytics and product decisioning. Leveraging Aerospike, a high-performance NoSQL database, in conjunction with a Realtime Processing Platform (RTP), we will explore how Aerospike’s in-memory and disk hybrid storage architecture and RTP’s real-time computation abilities can work together to perform efficient stream joins. It will delve into various techniques, such as parallel stream processing, stream state management, sharding, async I/O and optimisation of stream join algorithms for eventual consistency.
+
 - **A primer on streaming databases: next gen tooling for streaming and stream processing**
 
-_Speaker:_ **Pavan Keshavamurthy, CTO & Co-Founder @ Platformatory.io**
+_Speaker:_ **Pavan Keshavamurthy, CTO & Co-Founder @ Platformatory.io & Avinash Upadhyaya, Platform Engineer @ Platformatory.io**
 
 _About the talk:_ In this talk, we will explore why streaming databases are the rage and what makes them the hottest thing in the world of streaming.
 
@@ -89,6 +95,8 @@ Time permitting, a small demo of capabilities will also follow.
 ### Speakers
 
 - {:.speaker-name} Pavan Keshavamurthy <br> <span class="speaker-description">CTO & Co-founder @ Platformatory.io</span>
+- {:.speaker-name} Avinash Upadhyaya <br> <span class="speaker-description">Platform Engineer @ Platformatory.io</span>
+- {:.speaker-name} Vikas Sharma <br> <span class="speaker-description">Principal Engineer at CRED</span>
 - {:.speaker-name} Shivji Kumar Jha <br> <span class="speaker-description">Shivji has been working on databases and streaming systems for over a decade. Shivji currently heads the distributed data org at Nutanix. Previously, he has worked on organisations big and small, as a software engineer at MySQL Replication, 5th engineer at a startup working on a host of things including microservices, observability infrastructure, cloud and databases, designed and implemented the help chat bot and metadata catalogue for all data at Swiggy. Very active in the Open Source software community and a regular speaker at Open Source conferences, Shivji has contributed over 25 patches to MySQL and Apache Pulsar open source code bases.</span>
 - {:.speaker-name} Sagar Sumit <br> <span class="speaker-description">I am an Apache Committer and a Software Engineer at Onehouse, a fully-managed lakehouse platform. My primary contributions are to Apache Hudi's core transactional engine and its integration with different query engines such as Presto and Trino.</span>
 - {:.speaker-name} Rahul Gulati <br> <span class="speaker-description">Principal Data Platforms Engineer, Working on building Data Mesh(Operational & Analytical Planes) using Confluent Kafka</span>

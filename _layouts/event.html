@@ -11,8 +11,12 @@ layout: default
     
     <div class="d-flex justify-content-between">
         <h3 class="event-date">{{ page.date | date: "%A" }} {{ page.date | date_to_string }} {{page.time}}</h3>
-        
+        {% if page.interest_link %}
+        <div><a class="rsvp-link bg-success" href="{{page.interest_link}}" target="_blank">Interested</a></div>
+        {% endif %}
+        {% if page.link %}
         <div><a class="rsvp-link bg-success" href="{{page.link}}" target="_blank">RSVP</a></div>
+        {% endif %}
     </div>
     <hr>
     <div>{{page.detailed_description}}</div>

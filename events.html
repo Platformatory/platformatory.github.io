@@ -51,9 +51,11 @@ title: Events
                         <div class="row mx-0 align-items-center event-items-grid" ><div class="col-2  p-0"><img class="event-icons p-0" src="/images/event/ticket.png" alt="ticket icon"></div>
                         <p class="m-0 col-10 p-0 text-capitalize">{{ event.type }}</p>
                     </div>
+                        {% if event.partners %}
                         <div class="row mx-0 align-items-center event-items-grid" ><div class="col-2  p-0"><img class="event-icons p-0" src="/images/event/deal.png" alt="partner icon"></div>
                             <p class="m-0 col-10 p-0">{{ event.partners }}</p>
                         </div>
+                        {% endif %}
                         
                         <hr>
                         <div class="px-2">
