@@ -1,16 +1,17 @@
 ---
 layout: event
 title: "Bangalore Streams meetup - October 2023"
-date: 2023-10-29
+date: 2023-10-14
 time: 9:30am - 2:30pm
-location: TBD
-address: TBD
+location: Juspay Technologies, Bengaluru
+address: IndiQube - Grape Garden, SURVEY NO.130, 18TH MAIN, 1ST A CROSS, 6TH BLOCK, KORAMANGALA, BENGALURU – 560095
 category: meetup
 type: free
-partners: 
+partners: Juspay, Confluent
 mode: In-Person
 description: Special interest group focused on event streaming and real time analytics
 link: https://www.meetup.com/bangalore-streams/events/295612634
+map_link: https://maps.app.goo.gl/TE9HBtqUiKM6ve7r6
 ---
 
 <div class="about">
