@@ -10,6 +10,7 @@ type: paid
 mode: In-Person
 description: Hands-on workshop on Kubernetes
 interest_link: https://forms.gle/1pmQJo1jnrmjfp2f8
+published: false
 ---
 
 <div class="about">
