@@ -1,12 +1,12 @@
 ---
-title: "Full Stack Modernization"
+title: "Performance & Chaos Engineering"
 date: 2018-11-28T15:15:26+10:00
 featured: true
 weight: 2
 layout: service
 summary: "Application Modernization is a full stack, full lifecycle problem requiring paradigm shifts across people, process & tooling. Platformatory brings the advance guard to make your team battle ready." 
 image: "../images/developing.png"
-caption: Legacy rehaul for the modernizing enterprise, with a focus towards the cloud
+caption: Performance & resilliency assurance for platforms & distributed systems.
 hash: "modernization"
 ---
 

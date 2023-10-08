@@ -1,17 +1,17 @@
 [
   {
-    "title": "Apache Kafka&#174; Ecosystem & Event Streaming ",
-    "description": "Global scale Apache Kafka clusters and stream processing applications at Gigabyte scale throughput and sub-second latencies",
-    "image": "images/features/noun_3d modeling_1885342.svg"
-  },
-  {
-    "title": "Kong, Envoy & Apache Apisix",
-    "description": "Comprehensive service control and high performance API data plane to for web scale traffic",
+    "title": "Infrastructure & Observability",
+    "items": ["Kubernetes", "CrossPlane", "Terraform", "Pulumi", "Prometheus", "Apache Skywalking"],
     "image": "images/features/noun_The Process_1885341.svg"
   },
   {
-    "title": "Kubernetes & CNCF Ecosystem",
-    "description": "Expert driven infrastructure & application assistance for Kubernetes operations across public, private and hybrid cloud setting",
+    "title": "Streaming & Real-time",
+    "items": ["Apache Kafka","Apache Flink", "Apache Spark", "Apache Hudi", "Debezium", "Kafka Connect", "Kafka Streams", "Apache Pinot", "Apache Druid", "Clickhouse"],
+    "image": "images/features/noun_3d modeling_1885342.svg"
+  },
+  {
+    "title": "APIs & Networking",
+    "items": ["Kong", "Kuma", "Istio", "Envoy"],
     "image": "images/features/noun_branding_1885335.svg"
   }
 ]

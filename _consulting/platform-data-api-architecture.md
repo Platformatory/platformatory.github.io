@@ -1,12 +1,12 @@
 ---
-title: "Platform Strategy & Architecture"
+title: "Platform, Data & API Architecture"
 date: 2018-11-28T15:14:54+10:00
 featured: true
 weight: 3
 layout: service
 summary: Platform enabled enterprises outperform competitors on maturity indices, including IT agility, Customer Experience & Cost of operations. Platformatory can enable you to forge a strong cloud native backbone & platform definition fit to your business domain.
 image: "../images/flying.png"
-caption: Ground up operating model & technology enablement for IT & Platform teams
+caption: North-star guidance with strategic domain driven design for large scale initiatives.
 hash: "platform-landscaping"
 ---
 

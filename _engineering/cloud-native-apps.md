@@ -1,12 +1,12 @@
 ---
-title: "SaaS Product Engineering"
+title: "Cloud native applications"
 date: 2018-11-28T15:15:26+10:00
 featured: true
 weight: 1
 layout: service
 summary: "Modernize or build green field cloud native applications with a strong focus on microservices architecture & domain driven design."
 image: "images/services/computer.png"
-caption: Soup to nuts product and platform engineering for early stage SaaS
+caption: Build-out or re-fit data-intensive applications & microservices.
 hash: "product-engg"
 ---
 

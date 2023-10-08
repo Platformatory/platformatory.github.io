@@ -1,5 +1,5 @@
 ---
-title: "Microservices and APIs"
+title: "Real-time ML & Gen AI"
 date: 2018-11-28T15:15:26+10:00
 featured: true
 weight: 2

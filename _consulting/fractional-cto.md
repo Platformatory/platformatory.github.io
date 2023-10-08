@@ -1,12 +1,12 @@
 ---
-title: "CTO as a Service"
+title: "Fractional CTO"
 date: 2018-11-28T15:14:54+10:00
 featured: true
 weight: 1
 layout: service
 summary: Platform enabled enterprises outperform competitors on maturity indices, including IT agility, Customer Experience & Cost of operations. Platformatory can enable you to forge a strong cloud native backbone & platform definition fit to your business domain.
 image: "../images/conversation.png"
-caption: Managed technology office and leadership for early stage SaaS startups
+caption: Managed technology office and leadership for early stage upstarts, particulatly SaaS and PaaS.
 hash: "octo-advisory"
 ---
 

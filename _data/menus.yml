@@ -8,9 +8,9 @@ main:
   - name: "Engineering"
     url: "/engineering/"
     weight: 2
-    #  - name: "Solutions"
-    #url: "/solutions/"
-    #weight: 2   
+  - name: "Solutions"
+    url: "/solutions/"
+    weight: 2   
   - name: "Events"
     url: "/events/"
     weight: 4

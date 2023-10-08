@@ -5,9 +5,9 @@ description: Platformatory home page.
 intro_image: "images/illustrations/30496-min.jpg"
 intro_image_absolute: true
 intro_image_hide_on_mobile: true
-what_we_do: "We help businesses define, design, co-create & scale <strong>modern platforms & products</strong>, with a focus on APIs, Data & Infrastructure"
+what_we_do_label: "Our superpowers in the cloud native landscape"
+what_we_do: "Boutique engineering expertise, breadth & depth across, <br><strong>Hyperscale Data, Event Streaming, Machine Learning and API-based connectivity</strong>."
 ---
 
-# ./build --clean --modern
+# Co-create modern products & platforms.
 
-In the digital age, technology is the foundation of growth. A product mindset, coupled with a platforms oriented operating model in the cloud is the foundation of modern digital operations. At Platformatory, we believe this is a state of perpetual evolution and CTIO offices require truly invested, hands-on, strategic partners to deliver impact.

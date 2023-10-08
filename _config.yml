@@ -1,7 +1,7 @@
 baseurl: ''
 exclude: ['README.md']
 permalink: pretty
-title: 'Platformatory: Apache Kafka, Kong, Kubernetes, Modernization & Platform Strategy Consulting'
+title: 'Platformatory Labs'
 
 google_analytics_id: "G-PWW2W71JX1"
 homepage:
@@ -18,7 +18,7 @@ seo:
   meta_og_type: "website"
   meta_og_url: "http://platformatory.io"
   meta_og_image: "http://platformatory.io/images/logo/platformatory2.svg"
-  meta_og_description: "Cloud native engineering studio"
+  meta_og_description: "Platform, Data & ML Engineering Studio"
   meta_twitter_card: "summary"
   meta_twitter_site: "@platformatory"
   meta_twitter_creator: "@platformatory"
@@ -31,7 +31,7 @@ collections:
   consulting:
     output: true
   solutions:
-    output: false
+    output: true
   openings:
     output: true
   engineering:
