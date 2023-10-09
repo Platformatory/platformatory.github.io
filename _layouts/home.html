@@ -24,7 +24,7 @@ bodyClass: page-home
   <div class="container pb-2 pb-md-6">
     <div class="section-head text-center intro-text">
       <h2 class="section-title">{{ page.what_we_do_label }}</h2>
-      <p>{{ page.what_we_do }}</p>
+      <p class="section-short-description">{{ page.what_we_do }}</p>
   </div>  
     <div class="row justify-content-start">    
         <div class="col-md-12">
@@ -32,8 +32,8 @@ bodyClass: page-home
           <div class="row">
             {% assign sorted_consulting = site.consulting | sort: 'weight' | reverse %}		  
             {% for service in sorted_consulting %}
-            <div class="col-12 col-sm-4 mb-1">
-              <div class="row justify-content-center service-content-card">
+            <div class="col-12 col-sm-4 mb-2 ">
+              <div class="d-flex justify-content-center flex-column align-items-center service-content-card">
                 <div class="service service-summary text-start ">
                   <div class="service-content">
                     <h2 class="service-title m-0 text-center"  >
@@ -41,7 +41,7 @@ bodyClass: page-home
                     </h2>
                   </div>
                   </div>
-                  <div class="col-md-6  py-2">
+                  <div class="col-md-6  py-1 service-icon">
                     <div class="col-auto p-0 text-center">
                       <img alt={{ page.title }} class="consult-intro-image" src="{{service.image}}" />
                     </div>
@@ -104,21 +104,23 @@ bodyClass: page-home
       {% for feature in site.data.field-stack %}
       <div class="col-12 col-sm-6 col-lg-4 mb-2">
         <div class="feature">
-          {% if feature.image %}
-          <div class="feature-image"><img alt="{{ feature.title }} logo" src="{{ feature.image | relative_url }}" /></div>
-          {% endif %}
-          <h2 class="feature-title">{{ feature.title }}</h2>
-          <div class="feature-content">{{ feature.description }}</div>
+          <div class="feature-head">
+            {% if feature.image %}
+            <div class="feature-image"><img alt="{{ feature.title }} logo" src="{{ feature.image | relative_url }}" /></div>
+            {% endif %}
+            <h2 class="feature-title">{{ feature.title }}</h2>
+            <div class="feature-content">{{ feature.description }}</div>
+          </div>
 
           {% if feature.items %}
-          <div class="two-columns">
-            <ul class="column">
+          <div class="feature-two-columns">
+            <ul class="feature-column">
               {% assign half_length = feature.items.size | divided_by: 2 | ceil %}
               {% for item in feature.items limit:half_length %}
                 <li>{{ item }}</li>
               {% endfor %}
             </ul>
-            <ul class="column">
+            <ul class="feature-column second-column">
               {% for item in feature.items offset:half_length %}
                 <li>{{ item }}</li>
               {% endfor %}
@@ -127,8 +129,10 @@ bodyClass: page-home
           {% endif %}
 
         </div>
+        
       </div>
       {% endfor %}
+      <!-- <div class="text-primary">a</div> -->
     </div>
     <div class="row justify-content-center mt-2">
       <div class="col-auto">
@@ -139,26 +143,6 @@ bodyClass: page-home
 </div>
 {% endif %}
 
-<style>
-
-.two-columns {
-  display: flex;
-  justify-content: space-between;
-  gap: 1%;  /* Creates a gap between the columns */
-}
-
-.two-columns .column {
-  width: 46%;  /* Reduced width to accommodate the gap */
-  padding: 0 1%;  /* Added padding for a bit of inner spacing */
-}
-
-.two-columns li {
-  width: 100%;   /* Takes the full width of its parent column */
-  padding: 0 10px;  /* Add padding inside the list item (optional) */
-  margin: 0 5px 10px 5px;  /* Add margin outside the list item (optional) */
-}
-
-</style>
 
 <div class="strip service-content-wrapper">
   <div class="container pt-2 pt-md-4 pb-2 pb-md-8">
@@ -176,7 +160,7 @@ bodyClass: page-home
               <img alt={{ page.title }} class="consult-intro-image" src="{{service.image}}" />
             </div>
 
-      <span class="service-caption-excellence">{{ service.caption }}</span>
+      <p class="service-caption-excellence">{{ service.caption }}</p>
           </div>
         </div>
       </div>

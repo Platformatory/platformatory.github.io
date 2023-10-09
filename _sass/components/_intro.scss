@@ -86,6 +86,7 @@
         }
       }
     h2 {
+      height: 68px;
       a {
         color:#103080;
         @include media-breakpoint-up(sm) {
@@ -97,6 +98,9 @@
     }
     .service-caption-excellence{
       color:#103080;
+      height: 66px;
+      font-family:'Titillium Web', sans-serif, -apple-system;
+      margin: 0;
     }
 
     .icon-lg {

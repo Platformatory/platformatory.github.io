@@ -265,3 +265,14 @@ div>.event-content{
         color: #7a7a7a;
     }
 }
+
+// container response size
+
+.container{
+    @media (min-width:1300px) {
+        max-width: 1200px;
+    }
+    @media (min-width: 1600px) {
+        max-width: 1500px;
+    }
+}

@@ -4,10 +4,7 @@
   border-radius: 3px;
   padding: 30px;
   background-color: #ffffff;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
+  
   box-shadow: 0px 0px 5px #f5e1e7;
   &:hover {
     background: linear-gradient(to bottom, #0068a5 0%, #003367 100%);
@@ -17,6 +14,12 @@
         filter: contrast(0) brightness(5);
       }
     }
+  }
+  .feature-head{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
   }
   .feature-image {
     flex: 0 0 auto;
@@ -31,10 +34,39 @@
     height: auto;
   }
   .feature-title {
+    height: 68px;
   }
   .feature-content {
     margin-bottom: 0;
     margin-top: auto;
+  }
+  .feature-two-columns {
+    height: 154px;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: justify;
+
+    font-family:'Titillium Web', sans-serif, -apple-system;
+    gap: 5%;  /* Creates a gap between the columns */
+  }
+  .feature-two-columns{
+    .feature-column .second-column{
+      text-align: justify;
+    }
+  }
+  
+  .feature-two-columns .feature-column {
+    list-style: none;
+  }
+  
+  .feature-two-columns li {
+    text-align: justify;
+    justify-content: flex-start;
+    font-size: 16px;
+    width: 100%;   /* Takes the full width of its parent column */
+    padding: 0 10px;  /* Add padding inside the list item (optional) */
+    margin: 0 5px 10px 5px;  /* Add margin outside the list item (optional) */
   }
 }
 
