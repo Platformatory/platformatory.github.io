@@ -2,21 +2,34 @@
   {
     "title": "Infrastructure & Observability",
     "items": ["Kubernetes", "CrossPlane", "Terraform", "Pulumi", "Prometheus", "Apache Skywalking"],
-    "image": "images/features/noun_The Process_1885341.svg"
+    "image": "images/features/noun_The Process_1885341.svg",
+    "div_class":"col-lg-3",
+    "list_class":"row-cols-2 row-cols-md-2 pl-xl-2 pl-lg-1",
+    "render_title": true
   },
   {
     "title": "Streaming & Real-time",
     "items": ["Apache Kafka","Apache Flink", "Apache Spark", "Apache Hudi", "Debezium", "Kafka Connect", "Kafka Streams", "Apache Pinot", "Apache Druid", "Clickhouse"],
-    "image": "images/features/noun_3d modeling_1885342.svg"
+    "image": "images/features/noun_3d modeling_1885342.svg",
+    "div_class":"col-lg-6",
+    "list_class":"row-cols-2 row-cols-lg-3 row-cols-xl-4 pl-xl-5 pl-lg-3",
+    "render_title": true
   },
   {
     "title": "APIs & Networking",
     "items": ["Kong", "Kuma", "Istio", "Envoy"],
-    "image": "images/features/noun_branding_1885335.svg"
+    "image": "images/features/noun_branding_1885335.svg",
+    "div_class":"col-lg-3",
+    "list_class":"row-cols-2 row-cols-md-2",
+    "render_title": true
   },
   {
     "title": "Stack",
-    "items": ["Python", "Golang", "Lua", "Rust", "C++", "JavaScript", "JVM (Java, Scala)"],
-    "image": "images/features/noun_branding_1885335.svg"
+    "items": ["Python", "Golang", "Lua", "Rust", "C++", "JavaScript", "Java", "Scala"],
+    "item_class": "stack-language px-2 m-0",
+    "image": "images/features/noun_branding_1885335.svg",
+    "div_class":"col-md-12 stack",
+    "list_class":"col-sm-12 px-2 align-items-center justify-content-center",
+    "render_title": false
   }  
 ]

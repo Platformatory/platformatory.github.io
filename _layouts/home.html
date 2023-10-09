@@ -102,8 +102,11 @@ bodyClass: page-home
     <h2 class="service-title section-title mb-3">Custom development, On-field expertise & support</h2>
     <div class="row justify-content-center">
       {% for feature in site.data.field-stack %}
-      <div class="col-12 col-sm-6 col-lg-4 mb-2">
+      <div class="col-12 col-sm-6 {{feature.div_class}} mb-2">
         <div class="feature">
+          
+
+          {% if feature.render_title %}
           <div class="feature-head">
             {% if feature.image %}
             <div class="feature-image"><img alt="{{ feature.title }} logo" src="{{ feature.image | relative_url }}" /></div>
@@ -111,20 +114,27 @@ bodyClass: page-home
             <h2 class="feature-title">{{ feature.title }}</h2>
             <div class="feature-content">{{ feature.description }}</div>
           </div>
+          {% endif %}
 
           {% if feature.items %}
           <div class="feature-two-columns">
-            <ul class="feature-column">
-              {% assign half_length = feature.items.size | divided_by: 2 | ceil %}
-              {% for item in feature.items limit:half_length %}
-                <li>{{ item }}</li>
+            {% if feature.render_title==false %}
+          <div class="">
+            <h2 class="feature-stack-title">{{ feature.title }}</h2>
+          </div>
+          {% endif %}
+            <div class="feature-column row  {{feature.list_class}}">
+            
+              <!-- {% assign half_length = feature.items.size | divided_by: 2 | ceil %} -->
+              {% for item in feature.items  %}
+                <p class=" {{feature.item_class | default: 'm-0'}}">{{ item }}</p>
               {% endfor %}
-            </ul>
-            <ul class="feature-column second-column">
+            </div>
+            <!-- <ul class="feature-column second-column">
               {% for item in feature.items offset:half_length %}
                 <li>{{ item }}</li>
               {% endfor %}
-            </ul>
+            </ul> -->
           </div>
           {% endif %}
 

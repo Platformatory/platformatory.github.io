@@ -14,6 +14,9 @@
         filter: contrast(0) brightness(5);
       }
     }
+    .feature-two-columns p {
+      columns: #ffffff !important;
+    }
   }
   .feature-head{
     display: flex;
@@ -41,14 +44,13 @@
     margin-top: auto;
   }
   .feature-two-columns {
-    height: 154px;
     width: 100%;
     display: flex;
     justify-content:center;
     align-items: justify;
 
     font-family:'Titillium Web', sans-serif, -apple-system;
-    gap: 5%;  /* Creates a gap between the columns */
+    // gap: 5%;  /* Creates a gap between the columns */
   }
   .feature-two-columns{
     .feature-column .second-column{
@@ -56,17 +58,37 @@
     }
   }
   
-  .feature-two-columns .feature-column {
-    list-style: none;
+  // .feature-two-columns .feature-column {
+  //   list-style: none;
+  // }
+  .feature-stack-title{
+    margin-left: 20px;
+    width: fit-content;
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
   }
   
-  .feature-two-columns li {
+  .feature-two-columns p {
+    font-family:'Titillium Web', sans-serif, -apple-system;
     text-align: justify;
-    justify-content: flex-start;
+    color: inherit;
+    // justify-content: flex-start;
     font-size: 16px;
-    width: 100%;   /* Takes the full width of its parent column */
-    padding: 0 10px;  /* Add padding inside the list item (optional) */
-    margin: 0 5px 10px 5px;  /* Add margin outside the list item (optional) */
+    padding: 5px 0;
+    // width: 100%;   /* Takes the full width of its parent column */
+    // padding: 0 10px;  /* Add padding inside the list item (optional) */
+    // margin: 0 5px 10px 5px;  /* Add margin outside the list item (optional) */
+    
+    }
+}
+.stack .feature{
+  color: #ffffff;
+  background: linear-gradient(to bottom, #0068a5 0%, #003367 100%);
+  .feature-two-columns p{
+    color: #ffffff;
   }
 }
 
@@ -77,5 +99,10 @@
     height: 80px;
     margin-bottom: 20px;
     text-align: center;
+  }
+}
+.stack-list-style{
+  @media (max-width:776px) {
+    width: 50%;
   }
 }
