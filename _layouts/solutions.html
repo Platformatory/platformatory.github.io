@@ -3,6 +3,7 @@ layout: default
 bodyClass: page-services-list
 ---
 
+
 <div class="intro">
   <div class="container">
     <div class="row justify-content-start">
@@ -18,19 +19,49 @@ bodyClass: page-services-list
   </div>
 </div>
 
-<div class="container pt-6 pb-6">
+<div class="container pb-md-6">
   <div class="row">
-    {% for service in site.solutions %}
-    <div class="col-12 col-md-6 mb-3">
-      <div class="service service-summary">
-        <div class="service-content">
-          <h2 class="service-title">
-            <a href="{{site.baseurl}}{{ service.url }}">{{ service.title }}</a>
-          </h2>
-          <p>{{ service.content | markdownify | strip_html | truncate: 100 }}</p>
-        </div>
+    <div class="col-md-3 pt-3 left-panel">
+      <div class="left-panel-sticky">
+        <h4>Browse</h4>
+        <ul>
+          {% assign sorted_solutions = site.solutions | sort: 'weight' | reverse %}
+          {% for solutions in sorted_solutions %}
+            <li ><a href="#{{ solutions.hash }}">{{ solutions.title }} </a></li>
+          {% endfor %}
+        </ul>
+        {% include_relative _includes/cta.html %}
       </div>
     </div>
-    {% endfor %}
+    <div class="col-12 col-md-9 mb-md-3 pt-3 p-lg-3">
+      {% for solutions in sorted_solutions %}
+      <div class="service service-summary" id="{{ solutions.hash }}">
+          <div class="service-content">
+            <h2 class="service-title">
+              <a href="{{ solutions.hash }}">{{ solutions.title }}</a>
+            </h2>
+            <div class="content-list-item">{{ solutions.content | markdownify }}
+              {% if solutions.features %}
+              <ul>
+                {% for feature in solutions.features %}
+                <li>
+                  <div class="d-flex justify-content-center align-items-center flex-column {{ feature.div_class | default: 'text-center platform-strategy' }}">
+                    <h2 class="{{ feature.h2_class | default: 'text-center' }}">{{ feature.title }}</h2>
+                    <span class="material-icons {{ feature.span_class | default: 'icon-serv py-2' }}" style="font-size: 60px;">
+                      {{ feature.icon }}
+                    </span>
+                    <span class="feature-summary">
+                    {{ feature.summary }}
+                    </span>
+                  </div>
+                </li>
+                {% endfor %}
+              </ul>
+              {% endif %}
+              </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </div>
