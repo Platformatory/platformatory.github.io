@@ -5,7 +5,7 @@ featured: true
 weight: 3
 layout: service
 summary: Platform enabled enterprises outperform competitors on maturity indices, including IT agility, Customer Experience & Cost of operations. Platformatory can enable you to forge a strong cloud native backbone & platform definition fit to your business domain.
-image: "../images/flying.png"
+image: "../images/cloud-architecture.svg"
 caption: North-star guidance with strategic domain driven design for large scale initiatives.
 hash: "platform-landscaping"
 features:

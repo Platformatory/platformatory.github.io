@@ -51,6 +51,7 @@ ol {
 }
 
 .section-title {
+  text-align: center;
   color: #1f4e8e;
   @include media-breakpoint-up(sm) {
     font-size: 35px;

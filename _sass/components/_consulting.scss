@@ -18,10 +18,16 @@
     @include media-breakpoint-up(lg) {
       padding: 20px 20px;
     }
-    &:hover {background: linear-gradient(to left, #61794b 0%, #6bb202 100%);color: #fff;
+    &:hover {
+    background: linear-gradient(to bottom, #0068a5 0%, #003367 100%);color: #fff;
     .service-content{
       .service-title{
         a{color:#fff;}
+      }
+    }
+    .service-icon {
+      .consult-intro-image{
+        color: #fff;
       }
     }
     .service-caption{
