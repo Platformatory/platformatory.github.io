@@ -13,5 +13,10 @@
     "title": "APIs & Networking",
     "items": ["Kong", "Kuma", "Istio", "Envoy"],
     "image": "images/features/noun_branding_1885335.svg"
-  }
+  },
+  {
+    "title": "Stack",
+    "items": ["Python", "Golang", "Lua", "Rust", "C++", "JavaScript", "JVM (Java, Scala)"],
+    "image": "images/features/noun_branding_1885335.svg"
+  }  
 ]
