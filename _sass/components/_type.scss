@@ -51,8 +51,12 @@ ol {
 }
 
 .section-title {
+  width: fit-content;
+  border-radius: 40px;
+  padding: 8px 25px;
+  background-color: #31394d;
   text-align: center;
-  color: #1f4e8e;
+  color: #ffffff;
   font-size: 32px;
   @include media-breakpoint-up(sm) {
     font-size: 35px;

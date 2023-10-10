@@ -23,12 +23,16 @@ bodyClass: page-home
 <div class="strip consult-content-wrapper pt-md-6 pt-2">
   <div class="container pb-2 pb-md-6">
     <div class="section-head text-center intro-text">
-      <h2 class="section-title">{{ page.what_we_do_label }}</h2>
+      <div class="text-center d-flex justify-content-center">
+        <h2 class="section-title">{{ page.what_we_do_label }}</h2>
+      </div>
       <p class="section-short-description">{{ page.what_we_do }}</p>
   </div>  
     <div class="row justify-content-start">    
         <div class="col-md-12">
-          <h2 class="section-title">Consulting</h2>	
+          <div class="text-center d-flex justify-content-center">
+            <h2 class="section-title">Consulting</h2>	
+          </div>
           <div class="row">
             {% assign sorted_consulting = site.consulting | sort: 'weight' | reverse %}		  
             {% for service in sorted_consulting %}
@@ -99,7 +103,9 @@ bodyClass: page-home
 {% if site.data.field-stack %}
 <div class="strip strip-grey">
   <div class="container pt-2 pb-2 pt-md-6 pb-md-6">
-    <h2 class="service-title section-title mb-3">Custom development, On-field expertise & support</h2>
+    <div class="text-center d-flex justify-content-center">
+      <h2 class="service-title section-title mb-3">Custom development, On-field expertise & support</h2>
+    </div>
     <div class="row justify-content-center">
       {% for feature in site.data.field-stack %}
       <div class="col-12 col-sm-6 {{feature.div_class}} mb-2">
@@ -156,7 +162,9 @@ bodyClass: page-home
 
 <div class="strip service-content-wrapper">
   <div class="container pt-2 pt-md-4 pb-2 pb-md-8">
-    <h2 class="section-title">Engineering Excellence</h2>
+    <div class="text-center d-flex justify-content-center">
+      <h2 class="section-title">Engineering Excellence</h2>
+    </div>
     <div class="row justify-content-start">
       {% assign sorted_engineering = site.engineering | sort: 'weight' | reverse %}
       {% for service in sorted_engineering %}
@@ -186,14 +194,16 @@ bodyClass: page-home
 
 <div class="strip service-content-wrapper">
   <div class="container pt-2 pt-md-4 pb-2 pb-md-8">
-    <h2 class="section-title">Solutions & Accelerators</h2>
+    <div class="text-center d-flex justify-content-center">
+      <h2 class="section-title">Solutions & Accelerators</h2>
+    </div>
     <div class="row justify-content-start">
       {% assign sorted_solutions = site.solutions | sort: 'weight' | reverse %}
       {% for service in sorted_solutions %}
       <div class="col-12 col-sm-6 col-lg-3 mb-1">
         <div class="service service-summary">
           <div class="service-content py-3">
-            <h2 class="service-title fs-6">
+            <h2 class="service-solutions-title fs-6">
               <a href="{{site.baseurl}}engineering#{{service.hash}}">{{ service.title }}</a>
                   </h2>
             <div class="col-auto p-0 icon-lg">

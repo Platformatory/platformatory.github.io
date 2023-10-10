@@ -96,6 +96,12 @@
         display: inline-block;
       }
     }
+    .service-solutions-title{
+      min-height: 120px;
+    }
+    .service-solutions-title{
+      min-height: 120px;
+    }
     .service-caption-excellence{
       color:#103080;
       height: 66px;
@@ -138,6 +144,7 @@
   h2{
     text-align: center;
     color: #666666;
+    background-color: inherit;
   }
   p{
     @include media-breakpoint-up(sm) {
