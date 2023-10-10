@@ -4,7 +4,7 @@
   border-radius: 3px;
   padding: 30px;
   background-color: #ffffff;
-  
+  color:#103080;
   box-shadow: 0px 0px 5px #f5e1e7;
   &:hover {
     background: linear-gradient(to bottom, #0068a5 0%, #003367 100%);
@@ -36,9 +36,8 @@
     width: 100%;
     height: auto;
   }
-  .feature-title {
-    height: 68px;
-  }
+
+  
   .feature-content {
     margin-bottom: 0;
     margin-top: auto;
@@ -57,7 +56,11 @@
       text-align: justify;
     }
   }
-  
+  @media (min-width: 520px) {
+    .feature-title {
+      height: 68px;
+    }
+  }
   // .feature-two-columns .feature-column {
   //   list-style: none;
   // }

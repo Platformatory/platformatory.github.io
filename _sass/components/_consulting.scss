@@ -28,6 +28,10 @@
     .service-icon {
       .consult-intro-image{
         color: #fff;
+
+      }
+      img{
+        filter: contrast(0) brightness(5);
       }
     }
     .service-caption{
@@ -36,6 +40,7 @@
     }
     .service-caption{
       color:#103080; 
+      font-size: 16px;
       font-family:'Titillium Web', sans-serif, -apple-system;
       height: 56px;
     }
@@ -43,7 +48,7 @@
       min-height: 140px;
     }
     .service-content {
-      min-height: 90px;
+      min-height: 40px;
       padding: 0px 0px;
       @include media-breakpoint-up(md) {
         padding: 0px 0px;
@@ -57,16 +62,16 @@
       .service-title {
         a {
           color: #103080;
-          @include media-breakpoint-up(xl) {
-            font-size: 35px;
-            font-weight: bold;
-          }
-          @include media-breakpoint-up(lg) {
-            max-width: 50%;
-            font-size: 32px;
-            // font-family: ui-sans-serif;
-            padding: 0;
-          }
+          // @include media-breakpoint-up(xl) {
+          //   // font-size: 24px;
+          //   // font-weight: bold;
+          // }
+          // @include media-breakpoint-up(lg) {
+          //   // max-width: 50%;
+          //   // font-size: 24px;
+          //   // font-family: ui-sans-serif;
+          //   // padding: 0;
+          // }
           
         }
         
@@ -111,7 +116,7 @@
 
 .service-caption-excellence{
   @include media-breakpoint-up(md){
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 
