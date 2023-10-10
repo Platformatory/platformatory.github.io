@@ -5,7 +5,7 @@ featured: true
 weight: 4
 layout: service
 summary: "Adopt Kubernetes, Kong & Apache Kafka, across central IT, BU-wide and project deployments."
-image: "images/services/api.png"
+image: "images/services/operation.svg"
 caption: Run ops like a digital native. Lean infra platform teams for enterprises
 hash: "hybrid-cloud-native-devops"
 features:

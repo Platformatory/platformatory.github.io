@@ -5,7 +5,7 @@ featured: true
 weight: 3
 layout: service
 summary: ""
-image: "images/services/technology.png"
+image: "images/services/real-time-data.svg"
 caption: Evolve a real-time core for data & app integration
 hash: "data-engg"
 features:
