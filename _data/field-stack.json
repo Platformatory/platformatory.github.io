@@ -9,7 +9,7 @@
   },
   {
     "title": "Streaming & Real-time",
-    "items": ["Apache Kafka","Apache Flink", "Apache Spark", "Apache Hudi", "Debezium", "Kafka Connect", "Kafka Streams", "Apache Pinot", "Apache Druid", "Clickhouse"],
+    "items": ["Apache Kafka", "Redpanda", "Apache Flink", "Apache Spark", "Kafka Streams", "KSQL", "Debezium", "Kafka Connect", "Apache Pinot", "Apache Druid", "Clickhouse", "Apache Hudi"],
     "image": "images/features/streaming-waves.svg",
     "div_class":"col-lg-6",
     "list_class":"row-cols-2 row-cols-lg-3 row-cols-xl-4 pl-3 pl-xl-5 pl-lg-3",
