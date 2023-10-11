@@ -19,49 +19,56 @@ bodyClass: page-services-list
   </div>
 </div>
 
-<div class="container pb-md-6">
-  <div class="row">
-    <div class="col-md-3 pt-3 left-panel">
-      <div class="left-panel-sticky">
-        <h4>Browse</h4>
-        <ul>
-          {% assign sorted_solutions = site.solutions | sort: 'weight' | reverse %}
-          {% for solutions in sorted_solutions %}
-            <li ><a href="#{{ solutions.hash }}">{{ solutions.title }} </a></li>
-          {% endfor %}
-        </ul>
-        {% include_relative _includes/cta.html %}
-      </div>
-    </div>
-    <div class="col-12 col-md-9 mb-md-3 pt-3 p-lg-3">
-      {% for solutions in sorted_solutions %}
-      <div class="service service-summary" id="{{ solutions.hash }}">
-          <div class="service-content">
-            <h2 class="service-title">
-              <a href="{{ solutions.hash }}">{{ solutions.title }}</a>
-            </h2>
-            <div class="content-list-item">{{ solutions.content | markdownify }}
-              {% if solutions.features %}
-              <ul>
-                {% for feature in solutions.features %}
-                <li>
-                  <div class="d-flex justify-content-center align-items-center flex-column {{ feature.div_class | default: 'text-center platform-strategy' }}">
-                    <h2 class="{{ feature.h2_class | default: 'text-center' }}">{{ feature.title }}</h2>
-                    <span class="material-icons {{ feature.span_class | default: 'icon-serv py-2' }}" style="font-size: 60px;">
-                      {{ feature.icon }}
-                    </span>
-                    <span class="feature-summary">
-                    {{ feature.summary }}
-                    </span>
-                  </div>
-                </li>
-                {% endfor %}
-              </ul>
-              {% endif %}
-              </div>
-          </div>
-        </div>
-      {% endfor %}
-    </div>
+<div class=" down-panel info">
+  <div class=" container  d-flex p-2 justify-content-between">
+    <!-- <h4>Browse</h4> -->
+      <ul class="d-md-flex">
+        {% assign sorted_solutions = site.solutions | sort: 'weight' | reverse %}
+        {% for solutions in sorted_solutions %}
+          <li  ><a href="#{{ solutions.hash }}">{{ solutions.title }} </a></li>
+        {% endfor %}
+      </ul>
+      <div class="position-fixed intrested-section">{% include_relative _includes/cta.html %}</div>
+
   </div>
 </div>
+
+<div >
+  {% for solutions in sorted_solutions %}
+  <div class="service service-summary" id="{{ solutions.hash }}">
+  <div class="strip service-section p-2  p-md-3">
+    <div class="container pt-2 pt-md-2 pb-md-2">
+      <div class="row">
+        <h2 class="service-title col-12 col-md-3">
+                    <a href="{{ solutions.hash }}">{{ solutions.title }}</a>
+          </h2>
+          <div class="col-12 col-md-9 pl-md-4">{{ solutions.content | markdownify }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="content-list-item container">
+    {% if solutions.features %}
+    <ul class="container-context px-md-4 px-sm-1">
+      {% for feature in solutions.features %}
+      <li>
+        <div class="d-flex justify-content-center align-items-center flex-column {{ feature.div_class | default: 'text-center platform-strategy' }}">
+          <h2 class="{{ feature.h2_class | default: 'text-center' }}">{{ feature.title }}</h2>
+          <div class=" {{cfeature.div_class }}">
+            <span class="material-icons {{ feature.span_class | default: 'icon-serv py-1' }}" style="font-size: 80px;">
+              {{ feature.icon }}
+            </span>
+          </div>
+          <span class="feature-summary">
+          {{ feature.summary }}
+          </span>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    </div>
+</div>
+{% endfor %}
+</div>
+
+

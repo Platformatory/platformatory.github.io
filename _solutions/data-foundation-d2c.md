@@ -8,12 +8,36 @@ summary: "Modernize or build green field cloud native applications with a strong
 image: "images/services/computer.png"
 caption: Large scale data copy between operational and analytical systems with CDC.
 hash: "product-engg"
+features:
+  - title: "Multi-tenancy foundations"
+    summary: "Support single, multi and hybrid tenancy models along with cross cutting security, compliance,  billing & metering concerns"
+    image: "../images/icons/ddd.svg"
+    div_class: "text-center platform-strategy"
+    span_class: "icon-serv py-2"
+    icon: "account_tree"
+  - title: "Core product rapid development"
+    summary: "Robust backends with an API-first approach, in high performance polyglot runtimes"
+    image: "../images/icons/services.svg"
+    div_class: "text-center platform-strategy"
+    span_class: "icon-serv py-2"
+    icon: "punch_clock"
+  - title: "Data & Analytics"
+    summary: "Scalable analytics foundation to collect, analyze, process data and enable AI/ML based advanced possibilities"
+    image: "../images/icons/apis.svg"
+    div_class: "text-center platform-strategy"
+    span_class: "icon-serv py-2"
+    icon: "shape_line"
+  - title: "SRE & Product Operations"
+    summary: "Operational capability augmentation, including customer success, onboarding assistance and support"
+    image: "../images/icons/microfrontends.svg"
+    div_class: "text-center platform-strategy"
+    span_class: "icon-serv py-2"
+    icon: "miscellaneous_services"
 ---
 
-Digital natives SaaS business have been churning out unicorns after unicorns, year over year. Yet, the odds are still staked up. Ability to execute and a solid product is the most important ingredient of success. More than ever, founders need tech partners who can build  & productionize MVPs while they bootstrap the actual business and raise the engineering team. Our offering is centred around 100% Agile squads that can be A-team to help you get off the ground quickly.
+Digital natives SaaS business have been churning out unicorns after unicorns, year over year. Yet, the odds are still staked up. Ability to execute and a solid product is the most important ingredient of success. More than ever, founders need tech partners who can build & productionize MVPs while they bootstrap the actual business and raise the engineering team. Our offering is centred around 100% Agile squads that can be A-team to help you get off the ground quickly.
 
-- <div class="text-center platform-strategy"><h2 class="product_eng_title">Multi-tenancy foundations</h2><span class="icon-serv pb-2"><img src="../images/icons/ddd.svg" /></span>Support single, multi and hybrid tenancy models along with cross cutting security, compliance,  billing & metering concerns</div>
+<!-- - <div class="text-center platform-strategy"><h2 class="product_eng_title">Multi-tenancy foundations</h2><span class="icon-serv pb-2"><img src="../images/icons/ddd.svg" /></span>Support single, multi and hybrid tenancy models along with cross cutting security, compliance,  billing & metering concerns</div>
 - <div class="text-center platform-strategy"><h2 class="product_eng_title">Core product rapid development</h2><span class="icon-serv pb-2"><img src="../images/icons/services.svg" /></span>Robust backends with an API-first approach, in high performance polyglot runtimes</div>
 - <div class="text-center platform-strategy"><h2 class="product_eng_title">Data & Analytics</h2><span class="icon-serv pb-2"><img src="../images/icons/apis.svg" /></span>Scalable analytics foundation to collect, analyze, process data and enable AI/ML based advanced possibilities</div>
-- <div class="text-center platform-strategy"><h2 class="product_eng_title">SRE & Product Operations</h2><span class="icon-serv pb-2"><img src="../images/icons/microfrontends.svg" /></span>Operational capability augmentation, including customer success, onboarding assistance and support</div>
-
+- <div class="text-center platform-strategy"><h2 class="product_eng_title">SRE & Product Operations</h2><span class="icon-serv pb-2"><img src="../images/icons/microfrontends.svg" /></span>Operational capability augmentation, including customer success, onboarding assistance and support</div> -->
