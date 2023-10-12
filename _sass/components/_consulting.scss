@@ -13,14 +13,14 @@
     }
     
     box-shadow: 0px 0px 5px #d0d0d0;
-    color:#85b949;
+    color:#103080;
     padding: 20px 20px;
     @include media-breakpoint-up(lg) {
       padding: 20px 20px;
     }
     &:hover {
     
-    background: linear-gradient(to bottom, #85b949 0%, #2e7200 100%);    
+    background: linear-gradient(to bottom, #1d202e 0%, #31354d 100%);    
     .service-content{
       .service-title{
         a{color:#fff;}
@@ -40,7 +40,7 @@
     }
     }
     .service-caption{
-      color: #85b949; 
+      color: #103080; 
       font-size: 16px;
       font-family:'Titillium Web', sans-serif, -apple-system;
       height: 56px;
@@ -66,7 +66,7 @@
         
         
         a {
-          color: #85b949;
+          color: #103080;
           // @include media-breakpoint-up(xl) {
             // font-size: 24px;
             // font-weight: bold;
@@ -256,13 +256,13 @@
       background: #ffffff;
       border-radius: 2px;
       //         color: #ffffff !important;
-      color: #4777b3;
+      color: #103080;
       // box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
       margin-top: 0px;
       &:hover {
         // background: #0068a5;
         color: #ffffff;
-        background: linear-gradient(to bottom, #4777b3 0%, #07428a 100%);
+        background: linear-gradient(to bottom, #1d202e 0%, #31354d 100%);
         .icon-serv {
           img {
             filter: contrast(0) brightness(5);

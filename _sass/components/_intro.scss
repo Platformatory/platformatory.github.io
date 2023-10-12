@@ -102,7 +102,7 @@
     transition: all ease 1s;
     &:hover {
       color:white;
-      background: linear-gradient(to bottom, #85b949 0%, #2e7200 100%);      h2 {
+      background: linear-gradient(to bottom, #1d202e 0%, #31354d 100%);      h2 {
         a {
           color: #ffffff;
           }
@@ -114,7 +114,7 @@
     h2 {
       height: 68px;
       a {
-        color:#85b949;
+        color:#103080;
         @include media-breakpoint-up(sm) {
           padding: 0px 0px;
         }
@@ -129,7 +129,7 @@
       min-height: 120px;
     }
     .service-caption-excellence{
-      color:#85b949;
+      color:#103080;
       height: 66px;
       font-family:'Titillium Web', sans-serif, -apple-system;
       margin: 0;
