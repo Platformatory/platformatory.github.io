@@ -36,11 +36,11 @@ bodyClass: page-services-list
 <div >
   {% for solutions in sorted_solutions %}
   <div class="service service-summary" id="{{ solutions.hash }}">
-  <div class="strip service-section p-2  p-md-3">
+  <div class="strip service-section">
     <div class="container pt-2 pt-md-2 pb-md-2">
       <div class="row">
         <h2 class="service-title col-12 col-md-3">
-                    <a href="{{ solutions.hash }}">{{ solutions.title }}</a>
+                    <a href="#{{ solutions.hash }}">{{ solutions.title }}</a>
           </h2>
           <div class="col-12 col-md-9 pl-md-4">{{ solutions.content | markdownify }}</div>
       </div>
