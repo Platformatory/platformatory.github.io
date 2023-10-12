@@ -4,10 +4,10 @@
   border-radius: 3px;
   padding: 30px;
   background-color: #ffffff;
-  color:#103080;
+  color:#85b949;
   box-shadow: 0px 0px 5px #f5e1e7;
   &:hover {
-    background: linear-gradient(to bottom, #0068a5 0%, #003367 100%);
+    background: linear-gradient(to bottom, #85b949 0%, #2e7200 100%);
     color: #ffffff !important;
     .feature-image {
       img {
@@ -89,7 +89,7 @@
 }
 .stack .feature{
   color: #ffffff;
-  background: linear-gradient(to bottom, #0068a5 0%, #003367 100%);
+  background: linear-gradient(to bottom, #85b949 0%, #2e7200 100%);
   .feature-two-columns p{
     color: #ffffff;
   }
