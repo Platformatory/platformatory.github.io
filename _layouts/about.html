@@ -8,7 +8,7 @@ bodyClass: page-services-list
   <div class="container">
     <div class="row justify-content-start">
       <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
-        <p>{{ content }}</p>
+        {{ content }}
       </div>
       {% if page.intro_image %}
       <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
@@ -31,24 +31,27 @@ bodyClass: page-services-list
 
   </div>
 </div>
-<div class="container">
-  <div class="row">
-   
-    <div class="col-12  mb-3 pt-3 px-lg-3">
-      <div class="container pb-6 pt-2 pt-md-0 pb-md-1 p-0" id="about">
-        <div class="row justify-content-start">
-          <div class="col-12">
-            <div class="service service-single">
-              <div class="content">
-                {% capture my_include %}{% include_relative _pages/culture.md %}{% endcapture %}
-                {{ my_include | markdownify }}
-              </div>
+
+<div class="service mb-md-0 service-summary" id="about" >
+  <div class="strip service-section">
+    <div class="container p-2 pt-md-2 pb-md-2" >
+      <div class="row justify-content-start">
+        <div class="col-12">
+          <div class=" service-single">
+            <div class="content">
+              {% capture my_include %}{% include_relative _pages/culture.md %}{% endcapture %}
+              {{ my_include | markdownify }}
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
 
-      <div class="container p-0" id="team">
+  <div class="row" id="team"> 
+    <div class="col-12  mb-3 pt-3 px-lg-3">
+      <div class="container p-0" >
         <div class="d-flex justify-content-center py-md-2">
           <h2 class="section-title">Team</h2>
         </div>

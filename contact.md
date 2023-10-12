@@ -2,8 +2,9 @@
 title: Contact Us
 layout: contact
 bodyClass: page-contact
-intro_image: "../images/banners/20945548.png" 
+intro_image: "../images/banners/20945548.png"
 summary: "We're reachable on a vareity of protocols & transports. We prefer asynchronous communication via email"
+intro_image_absolute: true
 ---
 
 # Say Hello
