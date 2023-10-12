@@ -104,10 +104,15 @@ bodyClass: page-home
 <div class="strip strip-grey">
   <div class="container pt-2 pb-1 pt-md-2 pb-md-2">
     <div class="text-center d-flex justify-content-center  pb-1 pb-md-2">
-      <h2 class="service-title section-title ">Field Engineering</h2>
+      <h2 class="service-title section-title ">Custom development, On-field expertise & support</h2>
     </div>
     <div class="row justify-content-center">
       {% for feature in site.data.field-stack %}
+      {% if feature.render_title==false %}
+      <div class="feature-stack-title">
+        <h2 class=" px-2 px-md-4 text-white rounded-pill bg-primary">{{ feature.title }}</h2>
+      </div>
+      {% endif %}
       <div class="col-12 col-sm-6 {{feature.div_class}} mb-2">
         <div class="feature">
           
@@ -124,16 +129,20 @@ bodyClass: page-home
 
           {% if feature.items %}
           <div class="feature-two-columns">
-            {% if feature.render_title==false %}
-          <div class="">
-            <h2 class="feature-stack-title">{{ feature.title }}</h2>
-          </div>
-          {% endif %}
             <div class="feature-column row  {{feature.list_class}}">
             
               <!-- {% assign half_length = feature.items.size | divided_by: 2 | ceil %} -->
               {% for item in feature.items  %}
-                <p class=" {{feature.item_class | default: 'm-0'}}">{{ item }}</p>
+               {% if feature.render_title ==true %}
+               <p class=" {{feature.item_class | default: 'm-0'}}">{{ item }}</p>
+               {% else%}
+                <div class="text-center d-flex justify-content-around flex-column align-items-center" >
+                  <img class="" style="width: 60px; height:60px; padding:5px; margin:3px; background:white; border-radius:50%" src="{{item.image}}" alt="">
+                  <p class=" {{feature.item_class | default: 'm-0'}}">{{ item.name }}</p>
+
+                </div>
+               {% endif%}
+                
               {% endfor %}
             </div>
             <!-- <ul class="feature-column second-column">
@@ -143,6 +152,7 @@ bodyClass: page-home
             </ul> -->
           </div>
           {% endif %}
+
         </div>
         
       </div>
@@ -151,7 +161,7 @@ bodyClass: page-home
     </div>
     <div class="row justify-content-center mt-2">
       <div class="col-auto">
-        <a class="button button-primary view-more-button" href="{{site.baseurl}}/field-engineering">Learn more about our field engineering services</a>
+        <!--a class="button button-primary view-more-button" href="{{site.baseurl}}/field-engineering">Learn more about our field engineering services</a-->
       </div>
     </div>
   </div>
@@ -162,7 +172,7 @@ bodyClass: page-home
 <div class="strip service-content-wrapper ">
   <div class="container pt-2 pt-md-3 pb-2 pb-md-4">
     <div class="text-center d-flex justify-content-center  pb-1 pb-md-2">
-      <h2 class="section-title">Services</h2>
+      <h2 class="section-title">Engineering Excellence</h2>
     </div>
     <div class="row justify-content-start">
       {% assign sorted_engineering = site.engineering | sort: 'weight' | reverse %}
@@ -194,7 +204,7 @@ bodyClass: page-home
 <div class="strip service-content-wrapper strip-grey">
   <div class="container pt-2 pt-md-3 pb-2 pb-md-4">
     <div class="text-center d-flex justify-content-center  pb-1 pb-md-2">
-      <h2 class="section-title">Solutions</h2>
+      <h2 class="section-title">Solutions & Accelerators</h2>
     </div>
     <div class="row justify-content-start">
       {% assign sorted_solutions = site.solutions | sort: 'weight' | reverse %}

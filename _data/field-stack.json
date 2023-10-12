@@ -25,20 +25,20 @@
   },
   {
     "title": "Stack",
-    "items": ["Python", "Golang", "Lua", "Rust", "C++", "JavaScript", "Java", "Scala"],
+    "items": [{"name":"Python","image":"images/icons/icons8-python.svg"},{"name":"Golang","image":"images/icons/8666226_golang_icon.svg"},{"name":"Lua","image":"images/icons/icons8-lua-language.svg"},{"name":"Rust","image":"images/icons/9073359_rust_icon.svg"},{"name":"C++","image":"images/icons/icons8-c.svg"},{"name":"JavaScript","image":"images/icons/icons8-javascript.svg"},{"name":"Java","image":"images/icons/icons8-java.svg"},{"name":"Scala","image":"images/icons/icons8-scala.svg"}],
     "item_class": "stack-language px-2 m-0",
     "image": "images/features/noun_branding_1885335.svg",
     "div_class":"col-md-12 stack",
-    "list_class":"col-12 px-2 align-items-center justify-content-center",
+    "list_class":"col-12 px-2 align-items-center justify-content-around",
     "render_title": false
   },
    { 
     "title": "Partnerships",
-    "items": ["Confluent", "VMWare", "Kong", "Solo.io", "Redpanda", "StarTree"],
+    "items": [{"name":"Confluent","image":"images/features/confluent.png"},{"name":"VMWare","image":"images/features/vmware.png"},{"name":"Kong","image":"images/features/kong.png"},{"name":"Solo.io","image":"images/features/solo-io.png"},{"name":"Redpanda","image":"images/features/redpanda.jpg"},{"name":"StarTree","image":"images/features/startree.jpg"}],
     "item_class": "stack-language px-2 m-0",
     "image": "images/features/noun_branding_1885335.svg",
     "div_class":"col-md-12 stack",
-    "list_class":"col-12 px-2 align-items-center justify-content-center",
+    "list_class":"col-12 px-2 align-items-center justify-content-around",
     "render_title": false
   }   
 ]
