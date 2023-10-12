@@ -31,5 +31,14 @@
     "div_class":"col-md-12 stack",
     "list_class":"col-12 px-2 align-items-center justify-content-center",
     "render_title": false
-  }  
+  },
+   { 
+    "title": "Partnerships",
+    "items": ["Confluent", "VMWare", "Kong", "Solo.io", "Redpanda", "StarTree"],
+    "item_class": "stack-language px-2 m-0",
+    "image": "images/features/noun_branding_1885335.svg",
+    "div_class":"col-md-12 stack",
+    "list_class":"col-12 px-2 align-items-center justify-content-center",
+    "render_title": false
+  }   
 ]
