@@ -5,18 +5,21 @@ main:
   - name: "Consulting"
     url: "/consulting/"
     weight: 0
-  - name: "Engineering"
+  - name: "Services"
     url: "/engineering/"
     weight: 2
+  - name: "Field Engineering"
+    url: "/field-engineering/"
+    weight: 2   
   - name: "Solutions"
     url: "/solutions/"
     weight: 2   
   - name: "Events"
     url: "/events/"
     weight: 4
-  # - name: "Publications"
-  #   url: "/publications/"
-  #   weight: 5    
+  - name: "Education"
+    url: "/education/"
+    weight: 5    
   - name: "Blog"
     url: "/blog"
     weight: 6
