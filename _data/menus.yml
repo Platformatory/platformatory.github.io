@@ -1,7 +1,7 @@
 main:
   - name: "Home"
     url: "/"
-    weight: -1    
+    weight: -1
   - name: "Consulting"
     url: "/consulting/"
     weight: 0
@@ -10,22 +10,22 @@ main:
     weight: 2
   - name: "Field Engineering"
     url: "/field-engineering/"
-    weight: 2   
+    weight: 2
   - name: "Solutions"
     url: "/solutions/"
-    weight: 2   
+    weight: 2
   - name: "Events"
     url: "/events/"
     weight: 4
   - name: "Education"
     url: "/education/"
-    weight: 5    
+    weight: 5
   - name: "Write Ahead Log"
     url: "/blog"
     weight: 6
   - name: "Company"
-    url: "/platformatory/"
-    weight: 7       
+    url: "/company/"
+    weight: 7
   - name: "Get in touch"
     url: "/contact/"
     weight: 8
