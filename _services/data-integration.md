@@ -7,7 +7,7 @@ layout: service
 summary: ""
 image: "images/services/real-time-data.svg"
 caption: Evolve a real-time core for data & app integration
-hash: "data-engg"
+hash: "data-integration"
 features:
   - title: "Modern Data Infrastructure"
     summary: "With Apache Druid, Apache Airflow, Apache Flink and Apache Kafka. Support global scale deployments on public, private and hybrid cloud"

@@ -7,7 +7,7 @@ layout: service
 summary: "Modernize or build green field cloud native applications with a strong focus on microservices architecture & domain driven design."
 image: "images/services/computer.png"
 caption: Large scale data copy between operational and analytical systems with CDC.
-hash: "product-engg"
+hash: "streaming-data-movement"
 features:
   - title: "Unified Data Movement"
     summary: "Seamlessly transport data across various sources and sinks, capitalizing on high-throughput and low-latency streaming mechanisms."
@@ -36,6 +36,6 @@ features:
     div_class: "text-center data-integration-solution"
     span_class: "icon-serv py-2"
     icon: "memory"
-
 ---
+
 Dive into a new realm of data integration with our 'Data Integration Fabric for Streaming'. Tailored for the streaming era, this solution is geared towards empowering real-time data movement, ensuring impeccable integration, and fostering agile responsiveness in the face of ever-evolving data streams

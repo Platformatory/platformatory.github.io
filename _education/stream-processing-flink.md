@@ -7,7 +7,7 @@ layout: service
 summary: ""
 image: "images/services/real-time-data.svg"
 caption: Evolve a real-time core for data & app integration
-hash: "data-engg"
+hash: "introduction-stream-processing"
 features:
   - title: "Foundations of Flink & Stream Processing"
     summary: "Embark on the Flink journey, understanding the core principles of stream processing and how Flink stands out in this realm."
@@ -37,4 +37,5 @@ features:
     span_class: "icon-serv py-2"
     icon: "backup"
 ---
+
 Stream processing transcends the boundaries of traditional data handling, and Apache Flink is a trailblazer in this domain. Explore the depths of stream processing with Flink, mastering real-time data analytics, stateful computations, and ensuring data integrity in a highly distributed environment

@@ -7,7 +7,7 @@ layout: service
 summary: "Application Modernization is a full stack, full lifecycle problem requiring paradigm shifts across people, process & tooling. Platformatory brings the advance guard to make your team battle ready."
 image: "../images/experiment.svg"
 caption: Performance & resilliency assurance for platforms & distributed systems.
-hash: "modernization"
+hash: "performance-engineering"
 features:
   - title: "System Stress Testing"
     summary: "Simulate extreme scenarios to measure your system's resilience and response times."

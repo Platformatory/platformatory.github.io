@@ -7,7 +7,7 @@ layout: service
 summary: "Modernize or build green field cloud native applications with a strong focus on microservices architecture & domain driven design."
 image: "images/services/cloud-computer.svg"
 caption: Build-out or re-fit data-intensive applications & microservices.
-hash: "product-engg"
+hash: "cloud-native-applications"
 features:
   - title: "Breaking the Monolith"
     summary: "Transition from legacy structures to modular components, reimagining systems for the future."

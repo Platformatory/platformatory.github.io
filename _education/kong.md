@@ -7,7 +7,7 @@ layout: service
 summary: "Industrialize cloud native platform SLOs & scale your DevSecOps in an SRE model."
 image: "images/services/ai-mi-algorithm.svg"
 caption: Revitalize APIs through productization and API management at the core
-hash: "apis-service-mesh"
+hash: "apis-management-kong"
 features:
   - title: "Introduction to Kong & Its Landscape"
     summary: "Dive deep into Kong's essence, its positioning in the API gateway domain, and its significance in modern microservice architectures."
@@ -37,4 +37,5 @@ features:
     span_class: "icon-serv py-2"
     icon: "security"
 ---
+
 Kong redefines the way we perceive and work with APIs, serving as a robust gateway that manages both ingress and egress traffic. Embark on a journey to master Kong's core, leverage its plugin architecture, and harness its potential as an enabler of efficient microservices communication in a cloud-native environment.

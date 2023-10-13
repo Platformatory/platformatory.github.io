@@ -7,7 +7,7 @@ layout: service
 summary: "Industrialize cloud native platform SLOs & scale your DevSecOps in an SRE model."
 image: "images/services/ai-mi-algorithm.svg"
 caption: Revitalize APIs through productization and API management at the core
-hash: "apis-service-mesh"
+hash: "real-time-mlops-genai"
 features:
   - title: "Low Latency Online Serving"
     summary: "Achieve ultra-fast model predictions, making sure your AI-driven applications respond in the blink of an eye."

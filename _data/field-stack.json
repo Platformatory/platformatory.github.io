@@ -12,6 +12,7 @@
     "image": "images/features/cloud-computing.svg",
     "div_class": "col-lg-3",
     "list_class": "row-cols-2 row-cols-md-2 pl-2 pl-xl-2 pl-lg-1",
+    "hash":"platform-infra-and-observability",
     "render_title": true
   },
   {
@@ -31,6 +32,7 @@
       "Apache Hudi"
     ],
     "image": "images/features/streaming-waves.svg",
+    "hash":"streaming",
     "div_class": "col-lg-6",
     "list_class": "row-cols-2 row-cols-lg-3 row-cols-xl-4 pl-3 pl-xl-5 pl-lg-3",
     "render_title": true
@@ -46,6 +48,7 @@
     "image": "images/features/cold-snowflake.svg",
     "div_class": "col-lg-3",
     "list_class": "row-cols-2 row-cols-md-2",
+    "hash":"apis-management",
     "render_title": true
   },
   {

@@ -7,7 +7,7 @@ layout: service
 summary: "Adopt Kubernetes, Kong & Apache Kafka, across central IT, BU-wide and project deployments."
 image: "images/services/operation.svg"
 caption: Run ops like a digital native. Lean infra platform teams for enterprises
-hash: "hybrid-cloud-native-devops"
+hash: "platform-infra-and-observability"
 features:
   - title: "Kubernetes Extension Development"
     summary: "Delve deeper into Kubernetes with custom operators and extensions, molding its orchestration capabilities to fit your specific needs."

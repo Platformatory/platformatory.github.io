@@ -7,7 +7,7 @@ layout: service
 summary: "Industrialize cloud native platform SLOs & scale your DevSecOps in an SRE model."
 image: "images/services/ai-mi-algorithm.svg"
 caption: Revitalize APIs through productization and API management at the core
-hash: "apis-service-mesh"
+hash: "advanced-networking"
 features:
   - title: "Envoy Basics & Architecture"
     summary: "Get acquainted with the core principles of Envoy, understanding its architecture, and its role in the modern service mesh ecosystem."

@@ -7,7 +7,7 @@ layout: service
 summary: "Industrialize cloud native platform SLOs & scale your DevSecOps in an SRE model."
 image: "images/services/chip.png"
 caption: Operational maturity for streaming infrastructure
-hash: "apis-service-mesh"
+hash: "platform-ops-obs-kafka"
 features:
   - title: "Cluster Operations"
     summary: "Master the art of smooth Kafka cluster management, ensuring stability, performance, and resilience in real-time data flows."

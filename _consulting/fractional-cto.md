@@ -7,7 +7,7 @@ layout: service
 summary: Platform enabled enterprises outperform competitors on maturity indices, including IT agility, Customer Experience & Cost of operations. Platformatory can enable you to forge a strong cloud native backbone & platform definition fit to your business domain.
 image: "../images/nerd-intelligent.svg"
 caption: Managed technology office and leadership for early stage upstarts, particulatly SaaS and PaaS.
-hash: "octo-advisory"
+hash: "fractional-cto"
 features:
   - title: "Discovery & Architecture Foundations"
     summary: "Assess the technical contours of the problem space, as well as the solution space"

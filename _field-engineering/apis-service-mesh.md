@@ -7,7 +7,7 @@ layout: service
 summary: "Industrialize cloud native platform SLOs & scale your DevSecOps in an SRE model."
 image: "images/services/ai-mi-algorithm.svg"
 caption: Revitalize APIs through productization and API management at the core
-hash: "apis-service-mesh"
+hash: "apis-management"
 features:
   - title: "High-Performance API Gateway"
     summary: "Deploy robust and responsive API gateways designed for performance, ensuring swift and seamless data transit while securing endpoints."
@@ -36,7 +36,6 @@ features:
     div_class: "text-center api-connectivity"
     span_class: "icon-serv py-2"
     icon: "link"
-
 ---
 
 APIs are the bridges that connect the vast and varied technological landscapes. Our expertise in API-led connectivity is rooted in performance-centric gateways, adaptive service meshes, and developer-centric experiences. Moreover, we seamlessly integrate events with APIs, enabling dynamic interactions across your digital ecosystems.
