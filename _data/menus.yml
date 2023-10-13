@@ -6,7 +6,7 @@ main:
     url: "/consulting/"
     weight: 0
   - name: "Services"
-    url: "/engineering/"
+    url: "/services/"
     weight: 2
   - name: "Field Engineering"
     url: "/field-engineering/"
