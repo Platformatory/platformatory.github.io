@@ -6,7 +6,7 @@ weight: 3
 layout: service
 summary: ""
 image: "images/services/technology.png"
-caption: Evolve a real-time core for data & app integration
+caption: Synthesize custom event streams from API transactions
 hash: "data-engg"
 features:
   - title: "API Transaction to Event Mapping"

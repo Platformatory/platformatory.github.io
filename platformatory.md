@@ -13,6 +13,13 @@ seo:
   meta_twitter_creator: "@platformatory"
 ---
 
-# Code and culture.
+# Culture = Code.
 
-Characterized by laziness, impatience and hubris. Our core principle is to go deep, go broad and solve business problems with technology. Competence, passion and empathy and an ethic towards getting stuff done and done right.
+```common-lisp
+(loop
+   (progn
+     (get-things-done)
+     (learn)
+     (play)
+     (have-fun)))
+```
