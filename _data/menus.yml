@@ -20,10 +20,10 @@ main:
   - name: "Education"
     url: "/education/"
     weight: 5    
-  - name: "Blog"
+  - name: "Write Ahead Log"
     url: "/blog"
     weight: 6
-  - name: "About"
+  - name: "Company"
     url: "/platformatory/"
     weight: 7       
   - name: "Get in touch"
