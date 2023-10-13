@@ -19,11 +19,12 @@
       padding: 20px 20px;
     }
     &:hover {
-    
+    color: #ffffff;
+    text-decoration: none;
     background: linear-gradient(to bottom, #1d202e 0%, #31354d 100%);    
     .service-content{
       .service-title{
-        a{color:#fff;}
+        text-decoration: underline;
       }
     }
     .service-icon {
