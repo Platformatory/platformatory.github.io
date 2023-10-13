@@ -23,7 +23,7 @@ bodyClass: page-services-list
   <div class=" container  d-flex p-2 justify-content-between">
     <!-- <h4>Browse</h4> -->
       <ul class="d-md-flex">
-        {% assign sorted_consulting = site.engineering | sort: 'weight' | reverse %}
+        {% assign sorted_consulting = site.services | sort: 'weight' | reverse %}
         {% for consulting in sorted_consulting %}
           <li ><a href="#{{ consulting.hash }}" id="{{consulting.hash}}-list">{{ consulting.title  }}  </a></li>
         {% endfor %}
