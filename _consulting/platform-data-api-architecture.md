@@ -9,32 +9,33 @@ image: "../images/analysis-architecture.svg"
 caption: North-star guidance with strategic domain driven design for large scale initiatives.
 hash: "platform-landscaping"
 features:
-  - title: "Survey the ground"
-    summary: "Assess your present portfolio of applications & IT operating model. Calibrate risks."
-    image: "../images/icons/mapping.png"
+  - title: "End-to-End Architecture Review"
+    summary: "Deep dive into your platform, data, and API layers for a holistic architectural assessment."
+    image: "../images/icons/architect.png"
     div_class: "text-center platform-strategy"
     span_class: "icon-serv py-2"
-    icon: "search"
-  - title: "Facilitate vision & alignment"
-    summary: "Define what you may need (or not need), across Engineering, IT, DevOps, Security & Digital"
-    image: "../images/icons/mapping.png"
-    icon: "engineering"
+    icon: "architecture"
+
+  - title: "Data Flow & Integration Mapping"
+    summary: "Visualize and optimize how data moves and integrates across your entire digital landscape."
+    image: "../images/icons/data-flow.png"
     div_class: "text-center platform-strategy"
     span_class: "icon-serv py-2"
-  - title: "Navigate your options"
-    summary: "Choose to build (on open-source) or buy COTS platform stack. Understand cost, pros/cons and tradeoffs"
-    icon: "swipe"
-    image: "../images/icons/mapping.png"
+    icon: "sync_alt"
+
+  - title: "API Design & Optimization"
+    summary: "Enhance the efficiency, security, and scalability of your APIs."
+    image: "../images/icons/api.png"
     div_class: "text-center platform-strategy"
     span_class: "icon-serv py-2"
-  - title: "Actionable plan"
-    summary: "Build a triaged backlog to kickstart your platform product."
-    icon: "receipt_long"
-    image: "../images/icons/mapping.png"
+    icon: "api"
+
+  - title: "Platform Scalability Blueprint"
+    summary: "Strategies to ensure your platform can handle growth, traffic spikes, and expanding services."
+    image: "../images/icons/scale.png"
     div_class: "text-center platform-strategy"
     span_class: "icon-serv py-2"
+    icon: "scale"
 ---
 
-The modern Digital Platform is a product meant to serve both internal & external consumers. It needs to address the pressing concerns and standard use-cases across your product portfolio. Most often, a platform is characterized by a self service foundation of APIs, composable infrastructure, continuous delivery of cloud services and data management layers. These enable product teams to innovate rapidly rather than reinventing the wheel.
-
-So, how or where does a platform journey begin? We help you find your way.
+At the core of a solid digital foundation lie three essential pillars: Platform, Data, and API architecture. Together, they form the backbone of any platform estate, ensuring stability, scalability, and seamless integration. Perfecting this triad is paramount to unlocking unparalleled digital performance.

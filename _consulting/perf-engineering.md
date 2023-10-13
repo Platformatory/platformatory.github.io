@@ -9,37 +9,33 @@ image: "../images/experiment.svg"
 caption: Performance & resilliency assurance for platforms & distributed systems.
 hash: "modernization"
 features:
-  - title: "Convince the Boss"
-    summary: "Build a business case defense for why you need to be doing what you're doing."
-    image: "../images/icons/management.png"
+  - title: "System Stress Testing"
+    summary: "Simulate extreme scenarios to measure your system's resilience and response times."
+    image: "../images/icons/stress-test.png"
     div_class: "text-center platform-strategy"
     span_class: "icon-serv py-2"
-    icon: "manage_accounts"
-  - title: "Create a Roadmap"
-    summary: "You could lift & shift, replatform or re-architect or embark on a green field journey."
-    image: "../images/icons/roadmap.png"
+    icon: "bar_chart"
+
+  - title: "Vulnerability Analysis"
+    summary: "Identify potential weak points and craft strategies to bolster them."
+    image: "../images/icons/vulnerability.png"
     div_class: "text-center platform-strategy"
     span_class: "icon-serv py-2"
-    icon: "route"
-  - title: "Deliver a 360° blueprint"
-    summary: "Devil is in the details. Disambiguate Architecture, scaling, economics & operations."
-    image: "../images/icons/project-management.png"
+    icon: "security"
+
+  - title: "Real-world Failure Simulation"
+    summary: "Recreate real-world adverse conditions to evaluate system performance and recovery."
+    image: "../images/icons/simulation.png"
     div_class: "text-center platform-strategy"
     span_class: "icon-serv py-2"
-    icon: "donut_small"
-  - title: "Show empirical evidence"
-    summary: "A proof of concept reduces risk & puts thoughts into action."
-    image: "../images/icons/data.png"
+    icon: "psychology"
+
+  - title: "Continuous Monitoring & Feedback"
+    summary: "Stay informed on system health and receive actionable insights for continuous improvement."
+    image: "../images/icons/monitoring.png"
     div_class: "text-center platform-strategy"
     span_class: "icon-serv py-2"
-    icon: "query_stats"
+    icon: "trending_up"
 ---
 
-Modernization is a commitment towards the perpetual evolution of your software stack to suit the changing needs of business. We believe modernization can be business centric with a measurable RoI.The purpose of technology is to serve your business needs.
-
-In practice, most modernization initiatives tend to be focused only on the application stack and tactics around the possibilities cloud can offer. Our experience suggests that customers who achieve positive outcomes in modernizing their technology do a few things right.
-
-1. **Product Orientation**: _Unlike projects or specalized silos, this impacts people,processes and tooling_
-2. **Domain Driven Design**: \*Baking a self-evident business architecture layer into your product
-3. **Engineering Excellence**: _Software defines everything backed by continous delivery & experimentation infrastructure_
-4. **Clarity of KPIs**: _Specify and make it objectives measurable. Make money, save money or reduce risk_
+Running large-scale distributed platforms on the cloud is both an art and a science. Points of failure can often be concealed within the subtle couplings of systems, potentially triggering cascading failures and global outages. Performance & Chaos Engineering shines a light on these shadowed risks, allowing businesses to dissect, understand, and fortify their digital architectures against unforeseen calamities

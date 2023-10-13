@@ -36,9 +36,11 @@ collections:
     output: true
   engineering:
     output: true
+  field-engineering:
+    output: true  
   events:
     output: true
-  publications:
+  education:
     output: true
 
 # For events
