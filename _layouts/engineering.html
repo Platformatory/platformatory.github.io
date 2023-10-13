@@ -3,7 +3,6 @@ layout: default
 bodyClass: page-services-list
 ---
 
-
 <div class="intro">
   <div class="container">
     <div class="row justify-content-start">
@@ -19,58 +18,30 @@ bodyClass: page-services-list
   </div>
 </div>
 
-<div class=" down-panel info">
-  <div class=" container  d-flex p-2 justify-content-between">
-    <!-- <h4>Browse</h4> -->
-    <ul class="d-md-flex">
-      {% assign sorted_engineering = site.engineering | sort: 'weight' | reverse %}
-      {% for engineering in sorted_engineering %}
-        <li ><a href="#{{ engineering.hash }}">{{ engineering.title }} </a></li>
-      {% endfor %}
-    </ul>
-      <div class="position-fixed intrested-section">{% include_relative _includes/cta.html %}</div>
-  </div>
-</div>
-
-<div >
-  {% for engineering in sorted_engineering %}
-  <div class="service service-summary" id="{{ engineering.hash }}">
-  <div class="strip service-section">
-    <div class="container pt-2 pt-md-2 pb-md-2">
-      <div class="row">
-        <h2 class="service-title col-12 col-md-3">
-                    <a href="#{{ engineering.hash }}">{{ engineering.title }}</a>
-          </h2>
-          <div class="col-12 col-md-9 pl-md-4">{{ engineering.content | markdownify }}</div>
+<div class="container pb-md-6">
+  <div class="row">
+    <div class="col-md-3 pt-3 left-panel">
+      <div class="left-panel-sticky">
+        <h4>Browse</h4>
+        <ul>
+          {% for service in site.services %}
+          <li><a href="#{{ service.hash }}">{{ service.title }} </a></li>
+          {% endfor %}
+        </ul>
+        {% include_relative _includes/cta.html %}  
       </div>
     </div>
-  </div>
-  <div class="content-list-item container">
-    {% if engineering.features %}
-    <ul class="container-context px-md-4 px-sm-1">
-      {% for feature in engineering.features %}
-      <li>
-        <div class="d-flex justify-content-center align-items-center flex-column {{ feature.div_class | default: 'text-center platform-strategy' }}">
-          <h2 class="{{ feature.h2_class | default: 'text-center' }}">{{ feature.title }}</h2>
-          <div class=" {{cfeature.div_class }}">
-            <span class="material-icons {{ feature.span_class | default: 'icon-serv py-1' }}" style="font-size: 80px;">
-              
-              {% if feature.icon !='' %}
-              {{ feature.icon }}
-              {% else %}
-              <img src="{{feature.image}}" alt="">
-              {% endif %}
-            </span>
-          </div>
-          <span class="feature-summary">
-          {{ feature.summary }}
-          </span>
+    <div class="col-12 col-md-9 mb-md-3 pt-3 px-lg-4">
+    {% for service in site.services %}
+    <div class="service service-summary" id="{{service.hash}}">
+        <div class="service-content">
+          <h2 class="service-title">
+            <a href="{{site.baseurl}}{{ service.hash }}">{{ service.title }}</a>
+          </h2>
+          <div class="content-list-item">{{ service.content | markdownify}}</div>
         </div>
-      </li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-    </div>
-</div>
-{% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+  </div>
 </div>

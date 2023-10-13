@@ -38,11 +38,11 @@ bodyClass: page-services-list
   <div class="service mb-md-0 pb-1 service-summary" id="{{ consulting.hash }}">
   <div class="strip service-section">
     <div class="container pt-2 pt-md-2 pb-md-2">
-      <div class="row">
-        <h2 class="service-title col-12 col-md-3">
+      <div class="row justify-content-center align-items-center">
+        <h2 class="service-title col-12 col-md-5">
                     <a href="#{{ consulting.hash }}">{{ consulting.title }}</a>
           </h2>
-          <div class="col-12 col-md-9 pl-md-4">{{ consulting.content | markdownify }}</div>
+          <div class="col-12 col-md-7 pl-md-4">{{ consulting.content | markdownify }}</div>
       </div>
     </div>
   </div>
@@ -53,7 +53,7 @@ bodyClass: page-services-list
       <li >
         <div class="d-flex justify-content-center align-items-center flex-column {{ feature.div_class | default: 'text-center platform-strategy' }}">
           <h2 class="{{ feature.h2_class | default: 'text-center' }}">{{ feature.title }}</h2>
-          <div class=" {{cfeature.div_class }}">
+          <div class=" {{feature.div_class }}">
             <span class="material-icons {{ feature.span_class | default: 'icon-serv py-1' }}" style="font-size: 80px;">
               {{ feature.icon }}
             </span>

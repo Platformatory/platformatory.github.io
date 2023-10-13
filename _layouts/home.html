@@ -156,10 +156,10 @@ bodyClass: page-home
       <h2 class="section-title">Enginnering & Operational Services</h2>
     </div>
     <div class="row justify-content-start">
-      {% assign sorted_engineering = site.engineering | sort: 'weight' | reverse %}
-      {% for service in sorted_engineering %}
+      {% assign sorted_services = site.services | sort: 'weight' | reverse %}
+      {% for service in sorted_services %}
       <div class="col-12 col-sm-6 col-lg-3 mb-1">
-        <a href="{{site.baseurl}}engineering#{{service.hash}}" class=" service-summary">
+        <a href="{{site.baseurl}}services#{{service.hash}}" class=" service-summary">
           <div class="service-content py-3">
             <h2 class="service-title fs-6">
               {{ service.title }}
