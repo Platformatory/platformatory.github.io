@@ -9,35 +9,33 @@ image: "images/services/api.png"
 caption: Unlock new revenue streams with usage-based subscription billing for API & Data Products
 hash: "hybrid-cloud-native-devops"
 features:
-  - title: "Infrastructure Automation"
-    summary: "Cross cloud landing zones and IAC, with full CI/CD GitOps and operational controls. Built on K8S, CrossPlane, Terraform, ArgoCD and FluxCD"
-    image: "../images/icons/automation.png"
-    div_class: "text-center platform-strategy"
+  - title: "Data & API Discovery"
+    summary: "Embark on a journey of identifying high-value data sets and APIs, setting the stage for potent monetization strategies."
+    image: "../images/icons/discovery.png"
+    div_class: "text-center monetization-solution"
     span_class: "icon-serv py-2"
-    icon: "precision_manufacturing"
-  - title: "Containers & Container Orchestration"
-    summary: "Overhaul or Replatform existing applications elegantly to  production grade buildpacks and run on K8S"
-    image: "../images/icons/content-management.png"
-    div_class: "text-center platform-strategy"
+    icon: "search"
+
+  - title: "Seamless Productization"
+    summary: "Transform raw data assets into polished, market-ready products, optimizing them for varied consumer needs and maximizing revenue potential."
+    image: "../images/icons/productization.png"
+    div_class: "text-center monetization-solution"
     span_class: "icon-serv py-2"
-    icon: "all_inclusive"
-  - title: "Observability"
-    summary: "Logging, tracing and overall observability with Apache Skywalking, Thanos, Prometheus, Grafana (or bring your own)"
-    image: "../images/icons/lifting.svg"
-    div_class: "text-center platform-strategy"
+    icon: "widgets"
+
+  - title: "Self-Service Subscription Models"
+    summary: "Empower consumers with intuitive self-service subscription portals, ensuring frictionless access to data products and API services."
+    image: "../images/icons/subscription.png"
+    div_class: "text-center monetization-solution"
     span_class: "icon-serv py-2"
-    icon: "troubleshoot"
-  - title: "Operator & Extension Development"
-    summary: "Operator SDK or full blown K8S controllers to manage the operational lifecycle of your workloads"
-    image: "../images/icons/troubleshooting.svg"
-    div_class: "text-center platform-strategy"
+    icon: "subscriptions"
+
+  - title: "Real-Time, Usage-Based Billing"
+    summary: "Implement agile and transparent billing mechanisms that resonate with modern consumption patterns, capitalizing on real-time usage metrics for optimal monetization."
+    image: "../images/icons/billing.png"
+    div_class: "text-center monetization-solution"
     span_class: "icon-serv py-2"
-    icon: "developer_board"
+    icon: "payment"
 ---
 
-Cloud infrastructure management is at the very base of platform operations. Today, infrastructure is an increasingly complex array of managed platform services with varying choices and differentiation across cloud providers. Kubernetes is a great leveler, but platform teams must own cross-cloud, multi-platform Infrastructure as Code, with a GitOps model in order to run sustainably. Our offering is an opportunity for the platform teams to leapfrog maturity and operate infrastructure at optimal cost across all major public cloud providers.
-
-<!-- - <div class="text-center platform-strategy"><h2 class="product_eng_title">Infrastructure Automation</h2><span class="icon-serv pb-2"><img src="../images/icons/automation.png" /></span>  Cross cloud landing zones and IAC, with full CI/CD GitOps and operational controls. Built on K8S, CrossPlane, Terraform, ArgoCD and FluxCD</div>
-- <div class="text-center platform-strategy"><h2 class="product_eng_title">Containers & Container Orchestration</h2><span class="icon-serv pb-2"><img src="../images/icons/content-management.png" /></span> Overhaul or Replatform existing applications elegantly to  production grade buildpacks and run on K8S</div>
-- <div class="text-center platform-strategy"><h2 class="product_eng_title">Observability</h2><span class="icon-serv pb-2"><img src="../images/icons/lifting.svg" /></span> Logging, tracing and overall observability with Apache Skywalking, Thanos, Prometheus, Grafana (or bring your own)</div>
-- <div class="text-center platform-strategy"><h2 class="product_eng_title">Operator & Extension Development</h2><span class="icon-serv pb-2"><img src="../images/icons/troubleshooting.svg" /></span> Operator SDK or full blown K8S controllers to manage the operational lifecycle of your workloads</div> -->
+Monetization' solution. Transition seamlessly from mere data reservoirs to lucrative revenue streams, leveraging a systematic approach to discovery, productization, and user-friendly access. Ensure your consumers enjoy a streamlined subscription experience, backed by real-time, usage-based billing, encapsulating the essence of modern monetization strategies.

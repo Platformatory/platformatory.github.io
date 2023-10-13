@@ -69,42 +69,11 @@ bodyClass: page-home
 
 
 
-<!--div class="strip service-content-wrapper">
-  <div class="container pt-2 pt-md-4 pb-2 pb-md-8">
-    <h2 class="section-title">Engineering Excellence</h2>	  
-    <div class="row justify-content-start">
-      {% assign sorted_engineering = site.engineering | sort: 'weight' | reverse %}	    
-      {% for service in sorted_engineering %}
-      <div class="col-12 col-sm-6 col-lg-3 mb-1">
-        <div class="service service-summary">
-          <div class="service-content py-3">
-            <h2 class="service-title fs-6">
-              <a href="{{site.baseurl}}engineering#{{service.hash}}">{{ service.title }}</a>
-                  </h2>
-            <div class="col-auto p-0 icon-lg">
-              <img alt={{ page.title }} class="consult-intro-image" src="{{service.image}}" />
-            </div>
-            
-	    <span class="service-caption-excellence">{{ service.caption }}</span>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-    <div class="row justify-content-center mt-2">
-      <div class="col-auto">
-        <a class="button button-primary view-more-button" href="{{site.baseurl}}/engineering">Learn more about our engineering services</a>
-      </div>
-    </div>
-  </div>
-</div-->
-
-
 {% if site.data.field-stack %}
 <div class="strip strip-grey">
   <div class="container pt-2 pb-1 pt-md-2 pb-md-2">
     <div class="text-center d-flex justify-content-center  pb-1 pb-md-2">
-      <h2 class="service-title section-title ">Custom development, On-field expertise & support</h2>
+      <h2 class="service-title section-title ">Field-engineering</h2>
     </div>
     <div class="row justify-content-center">
       {% for feature in site.data.field-stack %}
@@ -172,7 +141,7 @@ bodyClass: page-home
 <div class="strip service-content-wrapper ">
   <div class="container pt-2 pt-md-3 pb-2 pb-md-4">
     <div class="text-center d-flex justify-content-center  pb-1 pb-md-2">
-      <h2 class="section-title">Engineering Excellence</h2>
+      <h2 class="section-title">Enginnering & Operational Services</h2>
     </div>
     <div class="row justify-content-start">
       {% assign sorted_engineering = site.engineering | sort: 'weight' | reverse %}
