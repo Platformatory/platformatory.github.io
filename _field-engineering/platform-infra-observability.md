@@ -28,7 +28,7 @@ features:
     image: "../images/icons/instrumentation.png"
     div_class: "text-center field-engineering"
     span_class: "icon-serv py-2"
-    icon: "precision_measure"
+    icon: "dvr"
 
   - title: "Tracing Backends, APM & Operational Analytics"
     summary: "Integrate cutting-edge tracing backends with Advanced Performance Monitoring, translating data into actionable operational insights."

@@ -14,7 +14,7 @@ features:
     image: "../images/icons/monolith-split.png"
     div_class: "text-center platform-strategy"
     span_class: "icon-serv py-2"
-    icon: "break_apart"
+    icon: "blur_off"
 
   - title: "Event-Driven Decoupling"
     summary: "Establish fluid communication between decoupled components with an event-driven approach and CQRS."
