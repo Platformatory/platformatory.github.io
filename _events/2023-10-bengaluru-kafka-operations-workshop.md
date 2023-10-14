@@ -10,6 +10,7 @@ type: paid
 mode: In-Person
 description: Hands-on workshop on operating Apache Kafka
 interest_link: https://forms.gle/9Q9YvU6RY4WzDcUA6
+published: false
 ---
 
 <div class="about">
