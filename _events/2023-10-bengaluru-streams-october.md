@@ -30,6 +30,6 @@ Data Mesh<br>
 We're hosting our next in-person event on October 28. Join us for exciting discussions in the streaming world with opportunities to network with peers and leaders in the industry.
 </div>
 
-### 📢 Call for Speakers
+## Call for Speakers
 
 The Call for Speakers is now open at [https://forms.gle/gVeX45FZi296PSfa9](https://forms.gle/gVeX45FZi296PSfa9){:target="\_blank"} and we're looking for talks around event streaming and real time analytics. The submissions are open till 3 October 2023(Tuesday) 20:00 IST. Feel free to submit multiple talks as well. We will get back to you with the results, latest by October 6.

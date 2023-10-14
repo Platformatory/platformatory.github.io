@@ -15,18 +15,19 @@
   <!--link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet">
   {% if page.description %}
   <meta name="description" content="{{ page.description }}" />
   {% endif %}
-  <meta property="og:title" content="{{ site.seo.meta_og_title }}" />
-  <meta property="og:type" content="{{ site.seo.meta_og_type }}" />
-  <meta property="og:url" content="{{ site.seo.meta_og_url }}" />
-  <meta property="og:image" content="{{ site.seo.meta_og_image }}" />
-  <meta property="og:description" content="{{ site.seo.meta_og_description }}" />
-  <meta name="twitter:card" content="{{ site.seo.meta_twitter_card }}" />
-  <meta name="twitter:site" content="{{ site.seo.meta_twitter_site }}" />
-  <meta name="twitter:creator" content="{{ site.seo.meta_twitter_creator }}" />
+  <meta property="og:title" content="{{ page.title }} | {{site.title}}" />
+  <meta property="og:type" content="{{ page.seo.meta_og_type }}" />
+  <meta property="og:url" content="{{site.url}}{{ page.url | split: '/' | join: '/' }}" />
+  <meta property="og:image" content="{{site.url}}/{{ page.intro_image }}" />
+  <meta property="og:description" content="{{ page.seo.meta_og_description }}" />
+  <meta name="twitter:card" content="{{ page.seo.meta_twitter_card }}" />
+  <meta name="twitter:site" content="{{ page.seo.meta_twitter_site }}" />
+  <meta name="twitter:creator" content="{{ page.seo.meta_twitter_creator }}" />
 </head>
 <body class='page {{page.bodyClass}}'>
   {% include main-menu-mobile.html %}

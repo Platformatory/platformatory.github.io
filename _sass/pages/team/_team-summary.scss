@@ -21,6 +21,7 @@
       // width: 60px;
       width: 100%;
       height: auto;
+      background: #ffffff;
       object-fit: cover;
       //position: absolute;
       //top: -32%;
@@ -46,6 +47,9 @@
     margin-top: 20px;
     flex: 1 0 100%;
   }
+}
+.team-row-gap{
+  row-gap: 20px;
 }
 
 .team-summary-large {
