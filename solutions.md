@@ -12,6 +12,6 @@ seo:
   meta_twitter_creator: "@platformatory"
 ---
 
-# Services that grow with your business
+# Tooling & accelerators for platform teams.
 
-Industry focussed accelerators and fast-starts
+Niche solutions for data, infrastructure and API management.
