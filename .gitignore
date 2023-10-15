@@ -1,7 +1,7 @@
 # NPM
 node_modules
 npm-debug.log
-
+*.swp
 # Jekyll
 _site
 _site/
