@@ -239,6 +239,29 @@ body {
     }
 div>.event-content{
     font-size: 1rem;
+    ul {
+        margin-left: 15px;
+    }
+    @include media-breakpoint-down(sm){
+        table{
+            font-size: 10px;
+        }
+    }
+    @include media-breakpoint-up(sm){
+        table{
+            font-size: 12px;
+        }
+    }
+    @include media-breakpoint-up(md){
+        table{
+            font-size:14px
+        }
+    }
+    @include media-breakpoint-up(lg){
+        table{
+            font-size: 16px;
+        }
+    }
     p{
         font-size: 1rem;
     }
@@ -247,7 +270,7 @@ div>.event-content{
         // font-size: 16px;
     }
     @media (min-width:576px) {
-        ul,p{
+        p{
             padding: 0 15px;
         }
         ul>li{
