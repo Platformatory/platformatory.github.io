@@ -24,7 +24,7 @@
   <meta property="og:type" content="{{ site.seo.meta_og_type }}" />
   <meta property="og:url" content="{{site.url}}{{ page.url | split: '/' | join: '/' }}" />
   <meta property="og:image" content="{{site.url}}/{{ page.intro_image }}" />
-  <meta property="og:description" content="{{ page.content | remove: '# ' }}" />
+  <meta property="og:description" content="{% if page.layout != 'event' %}{{ page.content | remove: '# ' }}{% else %}{{page.description}}{% endif %}" />
   <meta name="twitter:card" content="{{ site.seo.meta_twitter_card  }}" />
   <meta name="twitter:site" content="{{ site.seo.meta_twitter_site }}" />
   <meta name="twitter:creator" content="{{ site.seo.meta_twitter_creator }}" />
