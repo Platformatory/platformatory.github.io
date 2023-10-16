@@ -1,16 +1,22 @@
-# Platform & Product Engineering Boutique
+# Creative Destruction in Software Engineering
 
-Our mission is to build a creatively destructive software company with a global footprint of artisanal practitioners.
+### Our mission is to build a culture-heavy, global company that can solve customer problems with a level of engineering rigour that is unmatched in the consulting industry.
 
-One, solve customer problems.
-Two, deal with complexity.
-Three, fall in love with technology (again)
+A few things set us apart.
 
-What sets us apart?
++ Intersectional expertise is a super power
 
-* Intersectional expertise is a super power
-* Teaching, practicing, sharing is a value
-* Keep it flat. Stay lean, stay young
+Being T-shaped around the flux of evolving technologies is extremely rare and allows us to deliver orders of magnitude more value.
 
++ Teaching, practicing, sharing
 
-If you're a senior technologist with a passion for platform engineering, dev(sec)ops, site reliability engineering or related disciplines, we may be looking out for you. We have global full-time & contract roles open. Get in touch with us and we'll talk.
+Being a 100% practitioner driven setup, allows us to build highly artisanal guilds with real mastery over craft. Teaching (the community) and sharing (OSS/libre) reinforces this culture.
+
++ Seek simplicty & elegance, relentlessly
+
+Complexity is a disease. We (often) operate in a contrasting world of super-reductionist concretions and needless abstractions. Navigating this requires a principled approach, while understanding boundaries of the domain.
+
++ Keep it flat. Stay lean, stay young
+
+No delusions of building or scaling factories. No bulking & cutting cycles. A pursuit of achieving the highest level of skill attainable in a given context. 
+
