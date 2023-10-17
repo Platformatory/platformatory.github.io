@@ -2,7 +2,7 @@
 title: Home
 layout: home
 description: Platformatory home page.
-intro_image: "images/banners/platform.jpg"
+intro_image: "images/banners/pexels-maximilian-ruther-11589778.jpg"
 intro_image_absolute: true
 intro_image_hide_on_mobile: true
 what_we_do_label: "Our superpowers in the cloud native landscape"

@@ -242,6 +242,10 @@ ol {
     position: absolute;
     right: -14px;
     top: 4px;
+    &:hover{
+      color: rgb(143, 3, 3);
+      background: #ffffff;
+    }
   }
 }
 
