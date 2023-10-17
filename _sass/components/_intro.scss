@@ -2,15 +2,20 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  max-height: 470px;
+  // background: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   @include media-breakpoint-down(sm){
-    padding-top: 40px;
+    padding-top: 10rem;
   }
   @include media-breakpoint-up(sm) {
     padding-top: 60px;
     padding-bottom: 60px;
   }
   overflow: hidden;
-  background: linear-gradient(to left, #d5fdff 0%, #e8f5ff 100%);
+  background-color: linear-gradient(to left, #d5fdff 0%, #e8f5ff 100%);
   // background: linear-gradient(to left, #2868a9 0%, #1b023e 100%);
   margin-top: 60px;
   @include media-breakpoint-up(md) {
@@ -24,9 +29,15 @@
       height: 450px;
     }
   }
+  .intro-content{
+    background-color: rgba(10, 24, 39, .9);
+    p,pre{
+      color: #ffffff;
+    }
+  }
   h1 {
     // color: $white;
-    color:#85b949;
+    color:#ffffff;
     @include media-breakpoint-up(sm) {
       font-size: 32px;
     }
