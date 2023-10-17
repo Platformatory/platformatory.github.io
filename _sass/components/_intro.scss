@@ -65,6 +65,10 @@
 
 .homepage {
   background: transparent;
+  background-image: url("/images/banners/platform.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   @include media-breakpoint-up(sm) {
     padding-top: 10rem;
     padding-bottom: 10rem;

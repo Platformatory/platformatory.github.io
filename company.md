@@ -5,6 +5,8 @@ layout: about
 bodyClass: page-about
 intro_image: "images/illustrations/teamwork.svg"
 intro_image_absolute: true
+section:
+  background: "#6c973c"
 ---
 
 # Culture = Code.
