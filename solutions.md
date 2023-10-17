@@ -1,7 +1,7 @@
 ---
 title: Solutions
 layout: solutions
-intro_image: "images/illustrations/reading.svg"
+intro_image: "images/banners/pexels-pixabay-207367.jpg"
 intro_image_absolute: true
 intro_image_hide_on_mobile: false
 ---

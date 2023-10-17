@@ -1,7 +1,7 @@
 ---
 title: Education
 layout: education
-intro_image: "images/illustrations/pointing.svg"
+intro_image: "images/banners/pexels-markus-winkler-12220470.jpg"
 intro_image_absolute: true
 intro_image_hide_on_mobile: false
 ---

@@ -37,7 +37,7 @@ collections:
   engineering:
     output: true
   field-engineering:
-    output: true  
+    output: true
   events:
     output: true
   education:

@@ -1,7 +1,7 @@
 ---
 title: Consulting
 layout: consulting
-intro_image: "images/banners/10493.png"
+intro_image: "images/banners/pexels-jeshootscom-834892.jpg"
 intro_image_absolute: true
 intro_image_hide_on_mobile: false
 ---
