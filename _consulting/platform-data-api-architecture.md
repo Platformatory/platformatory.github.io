@@ -8,6 +8,8 @@ summary: Platform enabled enterprises outperform competitors on maturity indices
 image: "../images/analysis-architecture.svg"
 caption: North-star guidance with strategic domain driven design for large scale initiatives.
 hash: "platform-architecture"
+section:
+  background: "#6c973c"
 features:
   - title: "End-to-End Architecture Review"
     summary: "Deep dive into your platform, data, and API layers for a holistic architectural assessment."

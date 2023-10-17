@@ -8,6 +8,8 @@ summary: "Adopt Kubernetes, Kong & Apache Kafka, across central IT, BU-wide and 
 image: "images/services/operation.svg"
 caption: Run ops like a digital native. Lean infra platform teams for enterprises
 hash: "platform-infra-and-observability"
+section:
+  background: "#6c973c"
 features:
   - title: "Installation & Migrations"
     summary: "Navigate through Kubernetes installation and migrations on bare metal, ensuring optimized sizing and high availability."
@@ -37,4 +39,5 @@ features:
     span_class: "icon-serv py-2"
     icon: "visibility"
 ---
+
 Fortify your infrastructure and enhance system visibility. This service is intended to help customers streamline operations, improve system reliability, and facilitate technological innovation by ensuring the infrastructure is robust, observable, and primed for future advancements.

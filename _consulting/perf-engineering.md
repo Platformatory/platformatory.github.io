@@ -8,6 +8,8 @@ summary: "Application Modernization is a full stack, full lifecycle problem requ
 image: "../images/experiment.svg"
 caption: Performance & resilliency assurance for platforms & distributed systems.
 hash: "performance-engineering"
+section:
+  background: "#6c973c"
 features:
   - title: "System Stress Testing"
     summary: "Simulate extreme scenarios to measure your system's resilience and response times."

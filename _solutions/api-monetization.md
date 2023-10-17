@@ -8,6 +8,8 @@ summary: "Adopt Kubernetes, Kong & Apache Kafka, across central IT, BU-wide and 
 image: "images/services/api.png"
 caption: Unlock new revenue streams with usage-based subscription billing for API & Data Products
 hash: "api-and-data-monetization"
+section:
+  background: "#6c973c"
 features:
   - title: "Data & API Discovery"
     summary: "Embark on a journey of identifying high-value data sets and APIs, setting the stage for potent monetization strategies."

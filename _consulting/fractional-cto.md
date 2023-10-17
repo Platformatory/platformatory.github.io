@@ -8,6 +8,8 @@ summary: Platform enabled enterprises outperform competitors on maturity indices
 image: "../images/nerd-intelligent.svg"
 caption: Managed technology office and leadership for early stage upstarts, particulatly SaaS and PaaS.
 hash: "fractional-cto"
+section:
+  background: "#6c973c"
 features:
   - title: "Discovery & Architecture Foundations"
     summary: "Assess the technical contours of the problem space, as well as the solution space"

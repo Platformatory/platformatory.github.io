@@ -8,6 +8,8 @@ summary: ""
 image: "images/services/technology.png"
 caption: Synthesize custom event streams from API transactions
 hash: "asynchronous-eventing"
+section:
+  background: "#6c973c"
 features:
   - title: "API Transaction to Event Mapping"
     summary: "Flawlessly transform real-time API transactions into decipherable events, ensuring synchronization and coherence across systems."

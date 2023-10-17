@@ -8,6 +8,8 @@ summary: "Modernize or build green field cloud native applications with a strong
 image: "images/services/cloud-computer.svg"
 caption: Build-out or re-fit data-intensive applications & microservices.
 hash: "cloud-native-applications"
+section:
+  background: "#6c973c"
 features:
   - title: "Breaking the Monolith"
     summary: "Transition from legacy structures to modular components, reimagining systems for the future."

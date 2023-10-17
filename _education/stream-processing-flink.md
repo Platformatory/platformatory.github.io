@@ -8,6 +8,8 @@ summary: ""
 image: "images/services/real-time-data.svg"
 caption: Evolve a real-time core for data & app integration
 hash: "introduction-stream-processing"
+section:
+  background: "#6c973c"
 features:
   - title: "Foundations of Flink & Stream Processing"
     summary: "Embark on the Flink journey, understanding the core principles of stream processing and how Flink stands out in this realm."

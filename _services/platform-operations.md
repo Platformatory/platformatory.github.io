@@ -8,6 +8,8 @@ summary: "Adopt Kubernetes, Kong & Apache Kafka, across central IT, BU-wide and 
 image: "images/services/operation.svg"
 caption: Run ops like a digital native. Lean infra platform teams for enterprises
 hash: "platform-operations"
+section:
+  background: "#6c973c"
 features:
   - title: "Infrastructure Automation"
     summary: "Cross cloud landing zones and IAC, with full CI/CD GitOps and operational controls. Built on K8S, CrossPlane, Terraform, ArgoCD and FluxCD"

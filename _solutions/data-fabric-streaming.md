@@ -8,6 +8,8 @@ summary: "Modernize or build green field cloud native applications with a strong
 image: "images/services/computer.png"
 caption: Large scale data copy between operational and analytical systems with CDC.
 hash: "streaming-data-movement"
+section:
+  background: "#6c973c"
 features:
   - title: "Unified Data Movement"
     summary: "Seamlessly transport data across various sources and sinks, capitalizing on high-throughput and low-latency streaming mechanisms."

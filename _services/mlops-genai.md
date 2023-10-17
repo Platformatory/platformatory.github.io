@@ -8,6 +8,8 @@ summary: "Industrialize cloud native platform SLOs & scale your DevSecOps in an 
 image: "images/services/ai-mi-algorithm.svg"
 caption: Revitalize APIs through productization and API management at the core
 hash: "real-time-mlops-genai"
+section:
+  background: "#6c973c"
 features:
   - title: "Low Latency Online Serving"
     summary: "Achieve ultra-fast model predictions, making sure your AI-driven applications respond in the blink of an eye."

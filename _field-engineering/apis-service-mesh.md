@@ -8,6 +8,8 @@ summary: "Industrialize cloud native platform SLOs & scale your DevSecOps in an 
 image: "images/services/ai-mi-algorithm.svg"
 caption: Revitalize APIs through productization and API management at the core
 hash: "apis-management"
+section:
+  background: "#6c973c"
 features:
   - title: "Install & Migrate"
     summary: "Effortlessly transition between API management systems with our installation and migration services, ensuring stability and performance continuity."

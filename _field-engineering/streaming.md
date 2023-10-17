@@ -8,7 +8,8 @@ summary: ""
 image: "images/services/real-time-data.svg"
 caption: Evolve a real-time core for data & app integration
 hash: "streaming"
-
+section:
+  background: "#6c973c"
 features:
   - title: "Installation, Sizing & Migrations"
     summary: "Facilitate seamless installation and migration processes, ensuring that your streaming platforms are correctly sized and optimally configured for reliable performance and scalability."
