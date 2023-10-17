@@ -100,10 +100,23 @@
 .service-section{
   color: #ffffff !important;
   // background-color: #0b329681;
-  background: #6c973c !important;
+  // background-color: #6c973c !important;
     @include media-breakpoint-up(md){
-    padding-top: 140px;
-    padding-bottom: 30px;
+      padding-top: 140px;
+      .service-section-bg{
+      height: 140px;
+      background-image: url(https://img.freepik.com/free-vector/seamless-white-interlaced-rounded-arc-patterned-background_53876-97975.jpg?size=626&ext=jpg&ga=GA1.1.1413502914.1697328000&semt=ais);
+      background-repeat: repeat;
+      object-position: center;
+      background-position: center;
+      
+      }
+  }
+
+  @include media-breakpoint-down(md){
+    .service-section-bg{
+      display: none;
+    }
   }
   // background: linear-gradient(to bottom, #0068a5 0%, #003367 100%);color: #fff;
 .container{

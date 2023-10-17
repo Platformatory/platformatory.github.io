@@ -3,7 +3,7 @@ title: "Events"
 date: 2018-02-22T17:01:34+07:00
 layout: events
 bodyClass: page-events
-intro_image: "images/illustrations/event-presentation.svg"
+intro_image: "images/illustrations/event.svg"
 intro_image_absolute: true
 ---
 
