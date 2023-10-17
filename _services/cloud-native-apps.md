@@ -10,6 +10,7 @@ caption: Build-out or re-fit data-intensive applications & microservices.
 hash: "cloud-native-applications"
 section:
   background: "#6c973c"
+  color: "#ffffff"
 features:
   - title: "Breaking the Monolith"
     summary: "Transition from legacy structures to modular components, reimagining systems for the future."

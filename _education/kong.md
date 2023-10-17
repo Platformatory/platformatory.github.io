@@ -10,6 +10,7 @@ caption: Revitalize APIs through productization and API management at the core
 hash: "apis-management-kong"
 section:
   background: "#6c973c"
+  color: "#ffffff"
 features:
   - title: "Introduction to Kong & Its Landscape"
     summary: "Dive deep into Kong's essence, its positioning in the API gateway domain, and its significance in modern microservice architectures."

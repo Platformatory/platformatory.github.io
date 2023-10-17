@@ -10,6 +10,7 @@ caption: Evolve a real-time core for data & app integration
 hash: "deep-dive-into-kafka-connect"
 section:
   background: "#6c973c"
+  color: "#ffffff"
 features:
   - title: "Introduction to Kafka Connect & Its Architecture"
     summary: "Unravel the architecture and core components of Kafka Connect, laying a solid foundation for scalable data integrations."

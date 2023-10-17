@@ -38,9 +38,9 @@ bodyClass: page-services-list
 <div >
   {% for consulting in sorted_consulting %}
   <div class="service mb-md-0 pb-1 service-summary" id="{{ consulting.hash }}">
-  <div style="background-color: {{ consulting.section.background }};" class="strip service-section">
+  <div style="background-color: {{ consulting.section.background | default: '#6c973c' }};" class="strip service-section">
     <div class="container pt-2 pb-md-4">
-      <div class="row justify-content-center align-items-center">
+      <div style="color: {{consulting.section.color | default: '#ffffff'}};" class="row justify-content-center align-items-center">
         <h2 class="service-title col-12 col-lg-5 text-center text-lg-right">
                     <a href="#{{ consulting.hash }}">{{ consulting.title }}</a>
           </h2>

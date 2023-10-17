@@ -34,12 +34,12 @@ bodyClass: page-services-list
 
 
 <div class="service mb-md-0 service-summary" id="about" >
-  <div  style="background-color: {{page.section.background}};" class="strip service-section">
+  <div  style="background-color: {{page.section.background | default: '#6c973c' }};" class="strip service-section">
     <div class="container p-2 pt-md-2 pb-md-2" >
       <div class="row justify-content-start">
         <div class="col-12">
           <div class=" service-single">
-            <div class="content">
+            <div style="color: {{page.section.color | default: '#ffffff'}};" class="content">
               {% capture my_include %}{% include_relative _pages/culture.md %}{% endcapture %}
               {{ my_include | markdownify }}
               {% if site.data.culture-features %}

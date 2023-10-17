@@ -10,6 +10,7 @@ caption: Revitalize APIs through productization and API management at the core
 hash: "apis-management"
 section:
   background: "#6c973c"
+  color: "#ffffff"
 features:
   - title: "Install & Migrate"
     summary: "Effortlessly transition between API management systems with our installation and migration services, ensuring stability and performance continuity."

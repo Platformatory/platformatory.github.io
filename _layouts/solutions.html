@@ -36,10 +36,10 @@ bodyClass: page-services-list
 <div >
   {% for solutions in sorted_solutions %}
   <div class="service service-summary" id="{{ solutions.hash }}">
-  <div  style="background-color: {{solutions.section.background}};" class="strip service-section">
+  <div  style="background-color: {{solutions.section.background | default: '#6c973c'}};" class="strip service-section">
     <!-- <div class="service-section-bg"></div> -->
     <div class="container pt-2  pb-md-4">
-      <div class="row justify-content-center align-items-center">
+      <div style="color: {{solutions.section.color | default: '#ffffff'}};" class="row justify-content-center align-items-center">
         <h2 class="service-title col-12 col-lg-5 text-center text-lg-right">
                     <a href="#{{ solutions.hash }}">{{ solutions.title }}</a>
           </h2>

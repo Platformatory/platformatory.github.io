@@ -10,6 +10,7 @@ caption: Unlock new revenue streams with usage-based subscription billing for AP
 hash: "api-and-data-monetization"
 section:
   background: "#6c973c"
+  color: "#ffffff"
 features:
   - title: "Data & API Discovery"
     summary: "Embark on a journey of identifying high-value data sets and APIs, setting the stage for potent monetization strategies."

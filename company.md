@@ -7,6 +7,7 @@ intro_image: "images/banners/platform.jpg"
 intro_image_absolute: true
 section:
   background: "#6c973c"
+  color: "#ffffff"
 ---
 
 # Culture = Code.

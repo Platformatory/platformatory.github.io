@@ -98,7 +98,7 @@
 }
 
 .service-section{
-  color: #ffffff !important;
+  // color: #ffffff !important;
   // background-color: #0b329681;
   // background-color: #6c973c !important;
     @include media-breakpoint-up(md){
@@ -121,7 +121,7 @@
   // background: linear-gradient(to bottom, #0068a5 0%, #003367 100%);color: #fff;
 .container{
  h2 a,p{
-  color: #ffffff;
+  color: inherit;
  }
   @include media-breakpoint-up(xl){
     h2{font-size: 36px;

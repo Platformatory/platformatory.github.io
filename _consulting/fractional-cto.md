@@ -10,6 +10,7 @@ caption: Managed technology office and leadership for early stage upstarts, part
 hash: "fractional-cto"
 section:
   background: "#6c973c"
+  color: "#ffffff"
 features:
   - title: "Discovery & Architecture Foundations"
     summary: "Assess the technical contours of the problem space, as well as the solution space"

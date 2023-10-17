@@ -10,6 +10,7 @@ caption: Run ops like a digital native. Lean infra platform teams for enterprise
 hash: "platform-infra-and-observability"
 section:
   background: "#6c973c"
+  color: "#ffffff"
 features:
   - title: "Installation & Migrations"
     summary: "Navigate through Kubernetes installation and migrations on bare metal, ensuring optimized sizing and high availability."

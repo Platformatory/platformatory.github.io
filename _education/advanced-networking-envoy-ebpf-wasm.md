@@ -10,6 +10,7 @@ caption: Revitalize APIs through productization and API management at the core
 hash: "advanced-networking"
 section:
   background: "#6c973c"
+  color: "#ffffff"
 features:
   - title: "Envoy Basics & Architecture"
     summary: "Get acquainted with the core principles of Envoy, understanding its architecture, and its role in the modern service mesh ecosystem."

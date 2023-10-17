@@ -10,6 +10,7 @@ caption: Operational maturity for streaming infrastructure
 hash: "platform-ops-obs-kafka"
 section:
   background: "#6c973c"
+  color: "#ffffff"
 features:
   - title: "Cluster Operations"
     summary: "Master the art of smooth Kafka cluster management, ensuring stability, performance, and resilience in real-time data flows."

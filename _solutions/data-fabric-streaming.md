@@ -10,6 +10,7 @@ caption: Large scale data copy between operational and analytical systems with C
 hash: "streaming-data-movement"
 section:
   background: "#6c973c"
+  color: "#ffffff"
 features:
   - title: "Unified Data Movement"
     summary: "Seamlessly transport data across various sources and sinks, capitalizing on high-throughput and low-latency streaming mechanisms."

@@ -10,6 +10,7 @@ caption: Evolve a real-time core for data & app integration
 hash: "data-integration"
 section:
   background: "#6c973c"
+  color: "#ffffff"
 features:
   - title: "Modern Data Infrastructure"
     summary: "With Apache Druid, Apache Airflow, Apache Flink and Apache Kafka. Support global scale deployments on public, private and hybrid cloud"

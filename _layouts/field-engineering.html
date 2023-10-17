@@ -35,9 +35,9 @@ bodyClass: page-services-list
 <div >
   {% for engineering in sorted_engineering %}
   <div class="service service-summary" id="{{ engineering.hash }}">
-  <div style="background-color: {{engineering.section.background}};" class="strip service-section">
+  <div style="background-color: {{ engineering.section.background | default: '#6c973c' }};" class="strip service-section">
     <div class="container pt-2 pb-md-4">
-      <div class="row justify-content-center align-items-center">
+      <div style="color: {{engineering.section.color | default: '#ffffff'}};" class="row justify-content-center align-items-center">
         <h2 class="service-title col-12 col-lg-5 text-center text-lg-right">
                     <a href="#{{ engineering.hash }}">{{ engineering.title }}</a>
           </h2>

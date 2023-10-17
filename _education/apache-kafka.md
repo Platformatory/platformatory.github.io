@@ -10,6 +10,7 @@ caption: Evolve a real-time core for data & app integration
 hash: "apache-kafka-operations"
 section:
   background: "#6c973c"
+  color: "#ffffff"
 features:
   - title: "Kafka Cluster Setup & Configuration"
     summary: "Establish a strong foundation by learning the essentials of setting up and configuring a Kafka cluster tailored to your needs."

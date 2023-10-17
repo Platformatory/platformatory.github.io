@@ -10,6 +10,7 @@ caption: Run ops like a digital native. Lean infra platform teams for enterprise
 hash: "platform-operations"
 section:
   background: "#6c973c"
+  color: "#ffffff"
 features:
   - title: "Infrastructure Automation"
     summary: "Cross cloud landing zones and IAC, with full CI/CD GitOps and operational controls. Built on K8S, CrossPlane, Terraform, ArgoCD and FluxCD"

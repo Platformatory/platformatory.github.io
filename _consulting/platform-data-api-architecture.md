@@ -10,6 +10,7 @@ caption: North-star guidance with strategic domain driven design for large scale
 hash: "platform-architecture"
 section:
   background: "#6c973c"
+  color: "#ffffff"
 features:
   - title: "End-to-End Architecture Review"
     summary: "Deep dive into your platform, data, and API layers for a holistic architectural assessment."
