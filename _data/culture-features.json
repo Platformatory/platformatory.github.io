@@ -1,0 +1,30 @@
+[
+    {
+        "title":"Intersectional expertise is a super power",
+        "summary":"Being T-shaped around the flux of evolving technologies is extremely rare and allows us to deliver orders of magnitude more value.",
+        "div_class": "text-center infrastructure",
+        "span_class":"icon-serv py-2",
+        "icon":"bolt"
+    },
+    {
+        "title":"Teaching, practicing, sharing",
+        "summary":"Being a 100% practitioner driven setup, allows us to build highly artisanal guilds with real mastery over craft. Teaching (the community) and sharing (OSS/libre) reinforces this culture.",
+        "div_class": "text-center infrastructure",
+        "span_class":"icon-serv py-2",
+        "icon":"school"
+    },
+    {
+        "title":"Seek simplicty & elegance, relentlessly",
+        "summary":"Complexity is a disease. We (often) operate in a contrasting world of super-reductionist concretions and needless abstractions. Navigating this requires a principled approach, while understanding boundaries of the domain.",
+        "div_class": "text-center infrastructure",
+        "span_class":"icon-serv py-2",
+        "icon":"workspace_premium"
+    },
+    {
+        "title":"Keep it flat. Stay lean, stay young",
+        "summary":"No delusions of building or scaling factories. No bulking & cutting cycles. A pursuit of achieving the highest level of skill attainable in a given context.",
+        "div_class": "text-center infrastructure",
+        "span_class":"icon-serv py-2",
+        "icon":"local_library"
+    }
+]
