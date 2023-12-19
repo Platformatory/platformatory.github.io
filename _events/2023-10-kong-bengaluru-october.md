@@ -32,7 +32,7 @@ We're excited to be joined by the CTO of Kong, Marco Palladino for a talk on the
 | Kong: Product Roadmap + Fireside chat                                                                                                    | Marco Palladino, CTO & Co-Founder, Kong    | 11:10 AM   | 11:50 AM |              |           |
 | Networking break                                                                                                                         |                                            | 11:50 AM   | 12:10 PM |              |           |
 | Verifone’s Journey towards spec-first approach for Kong configurations and leveraging Kong insomnia to generate vendor agnostic solution | Prema Namasivayam, Satyajit Sial, Verifone | 12:10 PM   | 12:40 PM |              |           |
-| TBA                                                                                                                                      |                                            | 12:45 PM   | 1:15 PM  |              |           |
+| Heracles: Empowering with Kong. Building a robust traffic and observability platform for seamless performance and insights               | Mayank Verma & Nishant Hooda, Zeta         | 12:45 PM   | 1:15 PM  |              |           |
 | Lunch                                                                                                                                    |                                            | 1:15 PM    | 2:30 PM  |              |           |
 
 ### Talks
@@ -55,9 +55,17 @@ _Speaker:_ Prema Namasivayam, Satyajit Sial, Verifone
 
 About the talk: - Verifone’s cloud migration project requires Kong-ingress controller which in turn requires ingress rules to be added for Kong ingress controller. Our earlier approach with decK configs were not allowing us to migrate to ingress rules easily. Hence, we started our journey towards spec-first approach where insocli helps us to generate ingress rules for Kong Ingress Controller and decK configs for Kong Gateway to solve all our technological needs. We will talk about how to define Open API specs to define kong configs for service, route,upstreams, targets, kong plugins, custom plugins and also how to release specs with varying parameters for every environment. We will be demonstrating how Kong insomnia helps in achieving the below flow.
 
+**Heracles: Empowering with Kong. Building a robust traffic and observability platform for seamless performance and insights**
+
+_Speaker:_ Mayank Verma, Nishant Hooda, Zeta
+
+About the talk: - Give overview of Heracles platform traffic and Observability capabilities build on top of Kong.
+
 ### Speakers
 
 - {:.speaker-name} Sreekumar <br> <span class="speaker-description"> Leads all Kong efforts at CRED </span>
 - {:.speaker-name} Marco Palladino <br> <span class="speaker-description"> CTO & Co-Founder, Kong </span>
 - {:.speaker-name} Prema Namasivayam <br> <span class="speaker-description"> Technical Manager, Verifone - leading a team of people working on Kong API Gateway </span>
 - {:.speaker-name} Satyajit Sial <br> <span class="speaker-description"> Verifone </span>
+- {:.speaker-name} Mayank Verma <br> <span class="speaker-description"> Sr. Software Engineer at Zeta </span>
+- {:.speaker-name} Nishant Hooda <br> <span class="speaker-description"> Sr. Software Engineer at Zeta </span>
