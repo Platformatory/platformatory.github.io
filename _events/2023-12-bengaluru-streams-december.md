@@ -34,15 +34,15 @@ We're hosting our next in-person event on December 23. Join us for exciting disc
 
 
 
-| Name                                                                    | Speaker                                       | Start Time | End Time | Presentation | Recording |
-| ----------------------------------------------------------------------- | --------------------------------------------- | ---------- | -------- | ------------ | --------- |
-| Welcome and registration                                                |                                               | 10:00 AM   | 10:20 AM |              |           |
-| Building GenAI pipeline using langstream                                | Jauneet singh, Datastax                       | 10:20 AM   | 11:00 AM |              |           |
-| BigBasket's in-house ETL system with Debezium and Kafka                 | Midhun Sukumaran, Big Basket                  | 11:00 AM   | 11:40 AM |              |           |
-| Networking break                                                        |                                               | 11:40 AM   | 12:00 PM |              |           |
-| Reactive streams - principles, practices and applications               | Rahul Pydimukkala, Art of Programming Edulabs | 12:00 PM   | 12:40 PM |              |           |
-| The Metamorphosis of Kafka: Apache Kafka, Redpanda, WarpStream and more | Pavan Keshavamurthy, Platformatory            | 12:40 PM   | 01:20 PM |              |           |
-| Lunch and Networking                                                    |                                               | 01:30 PM   | 2:30 PM  |              |           |
+| Name                                                                    | Speaker                                       | Start Time | End Time | Presentation                                                                                                                                                         | Recording |
+| ----------------------------------------------------------------------- | --------------------------------------------- | ---------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| Welcome and registration                                                |                                               | 10:00 AM   | 10:20 AM |                                                                                                                                                                      |           |
+| Building GenAI pipeline using langstream                                | Jauneet Singh, Datastax                       | 10:20 AM   | 11:00 AM | [Slides](https://docs.google.com/presentation/d/1SNLjxc4mJR23bAjODNiP5MLtD6N9zwpV/edit?usp=sharing&ouid=105484769521359459132&rtpof=true&sd=true){:target="\_blank"} |           |
+| BigBasket's in-house ETL system with Debezium and Kafka                 | Midhun Sukumaran, Big Basket                  | 11:00 AM   | 11:40 AM | [Slides](https://drive.google.com/file/d/1_TaYqt7pkaLYlPL_8eQt4XE-XIjSloo0/view?usp=sharing){:target="\_blank"}                                                      |           |
+| Networking break                                                        |                                               | 11:40 AM   | 12:00 PM |                                                                                                                                                                      |           |
+| Reactive streams - principles, practices and applications               | Rahul Pydimukkala, Art of Programming Edulabs | 12:00 PM   | 12:40 PM | [Slides](https://drive.google.com/file/d/1Pb2LykOPfFiSqdcWwis7T_yqTZGjWTvB/view?usp=sharing){:target="\_blank"}                                                      |           |
+| The Metamorphosis of Kafka: Apache Kafka, Redpanda, WarpStream and more | Pavan Keshavamurthy, Platformatory            | 12:40 PM   | 01:20 PM | [Slides](https://drive.google.com/file/d/1s1XbhI-JLjzB6__4H-2MSlNDQ-PRPWTR/view?usp=sharing){:target="\_blank"}                                                      |           |
+| Lunch and Networking                                                    |                                               | 01:30 PM   | 2:30 PM  |                                                                                                                                                                      |           |
 
 
 ### Talks
