@@ -80,7 +80,7 @@ bodyClass: page-contact
     <div class="section {% if section.layout == 'right' %}image-right{% elsif section.layout == 'left' %}image-left{% endif %} clearfix">
 
       {% if section.title %}
-        <h2>{{ section.title }}</h2>
+        <center><h1 class="section-header">{{ section.title }}</h1></center>
       {% endif %}
 
       {% if section.layout == 'right' or section.layout == 'left' %}
