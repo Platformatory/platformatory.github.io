@@ -1,0 +1,102 @@
+---
+title: Contact
+layout: default
+bodyClass: page-contact
+---
+<div style="background-image: url(/{{page.intro_image}});" class="intro">
+  <div class="container">
+    <div class="row justify-content-start">
+      <div class="col-12 col-md-7 intro-content col-lg-6 order-2 order-md-1">
+        <p>{{ page.summary }}</p>
+      </div>
+      <!-- {% if page.intro_image %}
+      <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
+        <img alt={{ page.title }} class="intro-image{% if page.intro_image_absolute %} intro-image-absolute{% endif %}{% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}" src="{{ page.intro_image | relative_url }}" />
+      </div>
+      {% endif %} -->
+    </div>
+  </div>
+</div>
+
+<div class="container p-3">
+<div class="row">
+  <div class="col-12 col-md-6 hbspot-form">
+          <p>{{ content }}</p>
+   </div>
+   <div class="col-12 col-md-6 address-info">
+      {{ page.description }}
+      {% if page.ctas %}
+  <div class="cta-buttons">
+    {% for cta in page.ctas %}
+      {% if cta.onclick %}
+        <button class="cta-button" style="background-color: {{ cta.color }};" onclick="{{ cta.onclick }}">
+          {{ cta.text }}
+        </button><br>
+      {% else %}
+        <a href="{{ cta.url }}" class="cta-button" style="background-color: {{ cta.color }};">
+          {{ cta.text }}
+        </a><br>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}
+
+</div>
+    <!-- begin features section-->
+    <div class="content-list-item container">
+      <center><h1 class = "section-header">{{ page.features_section_title }}</h1></center>
+      {% if page.features %}
+      <ul class="container-context px-md-4 px-sm-1">
+        {% for feature in page.features %}
+        <li>
+          <div
+            class="d-flex justify-content-center align-items-center flex-column {{ feature.div_class | default: 'text-center platform-strategy' }}"
+          >
+            <h2 class="{{ feature.h2_class | default: 'text-center' }}">
+              {{ feature.title }}
+            </h2>
+            <div class=" {{cfeature.div_class }}">
+              <span
+                class="material-icons {{ feature.span_class | default: 'icon-serv py-1' }}"
+                style="font-size: 80px"
+              >
+                {% if feature.icon !='' %} {{ feature.icon }} {% else %}
+                <img src="{{feature.image}}" alt="" />
+                {% endif %}
+              </span>
+            </div>
+            <span class="feature-summary"> {{ feature.summary }} </span>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+
+</div>
+ <!-- begin sections -->
+  {% if page.sections %}
+  {% for section in page.sections %}
+    <div class="section {% if section.layout == 'right' %}image-right{% elsif section.layout == 'left' %}image-left{% endif %} clearfix">
+
+      {% if section.title %}
+        <h2>{{ section.title }}</h2>
+      {% endif %}
+
+      {% if section.layout == 'right' or section.layout == 'left' %}
+        <div class="section-text">
+          {{ section.caption }}
+        </div>
+      {% endif %}
+
+      <img src="{{ section.image_url }}" alt="Section Image">
+
+      {% if section.layout != 'right' and section.layout != 'left' %}
+        <div class="section-text">
+          {{ section.caption }}
+        </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  {% endif %}
+
