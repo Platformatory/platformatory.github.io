@@ -3,11 +3,11 @@ title: Migrate to Confluent
 layout: landing
 bodyClass: page-landing
 intro_image: "images/landing/migrate-to-confluent.jpg"
-summary: "Confluent = Streaming with Apache Kafka, 10X better"
+summary: "Confluent = Streaming, 10X better"
 description: "Platformatory is proud to be a part of Confluent’s Migration Accelerator, which is designed to streamline the transition from traditional messaging systems or open-source Kafka deployments to Confluent. Together, Platformatory and Confluent aim to alleviate the challenges and complexities associated with migration, enabling your organization to undertake your data streaming journey with confidence."
 intro_image_absolute: true
 ctas:
-  - text: "Download our migration whitepaper"
+  - text: "Download offering brief: Migration Accelerator"
     url: "/link-for-cta-1"
     color: "#72b6de"
   - text: "Contact us for a migration assessment"
@@ -43,13 +43,13 @@ features:
 sections:
   - title: "Migration Approach"
     image_url: "/images/landing/migration-approach.svg"
-    caption: "Our approach is geared towards adoption and ROI realization around Kafka in 6-12 sprints"
+    caption: "A strategic overhaul of your streaming nervous system"
   - title: "Why Platformatory?"
     image_url: "/images/landing/why-platformatory.svg"
-    caption: "In the trenches experience with migrations, at scale"
+    caption: "Expertise intersecting infrastructure, analytics and operational data"
 ---
 
-# Why Migrate?
+# Why Migrate to Confluent?
 
 Founded by Kafka's original developers, Confluent provides the most comprehensive distribution of Kafka with additional features to enhance your streaming experience at a massive scale.
 
