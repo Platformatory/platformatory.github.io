@@ -3,11 +3,12 @@ title: Contact
 layout: default
 bodyClass: page-contact
 ---
+
 <div style="background-image: url(/{{page.intro_image}});" class="intro">
   <div class="container">
     <div class="row justify-content-start">
       <div class="col-12 col-md-7 intro-content col-lg-6 order-2 order-md-1">
-        <p>{{ page.summary }}</p>
+        <h1>{{ page.summary }}</h1>
       </div>
       <!-- {% if page.intro_image %}
       <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
@@ -19,32 +20,58 @@ bodyClass: page-contact
 </div>
 
 <div class="container p-3">
-<div class="row">
-  <div class="col-12 col-md-6 hbspot-form">
-          <p>{{ content }}</p>
-   </div>
-   <div class="col-12 col-md-6 address-info">
-      {{ page.description }}
-      {% if page.ctas %}
-  <div class="cta-buttons">
-    {% for cta in page.ctas %}
-      {% if cta.onclick %}
-        <button class="cta-button" style="background-color: {{ cta.color }};" onclick="{{ cta.onclick }}">
-          {{ cta.text }}
-        </button><br>
-      {% else %}
-        <a href="{{ cta.url }}" class="cta-button" style="background-color: {{ cta.color }};">
-          {{ cta.text }}
-        </a><br>
-      {% endif %}
-    {% endfor %}
-  </div>
-{% endif %}
+  <div class="row">
+    <div class="col-12 col-md-6 hbspot-form">{{ content }}</div>
+    <div class="col-12 col-md-6 address-info">
+      {{ page.description }} {% if page.ctas %}
+      <div class="cta-buttons">
+        {% for cta in page.ctas %} {% if cta.onclick %}
+        <button
+          class="cta-button"
+          id="{{cta.btn_id}}"
+          style="background-color: {{ cta.color }};"
+          onclick="{{ cta.onclick }}"
+        >
+          {{ cta.text }}</button
+        ><br />
+        <!-- Custom Modal and Overlay -->
+        <div id="overlay"></div>
+        <div id="customModal" title="Close">
+          <!-- Google Form Embed Code -->
+          <div class="d-flex justify-content-end">
+            <button onclick="closeModal()" class="dialog-close-button">
+              <span style="font-size: 20px" class="material-icons">close</span>
+            </button>
+          </div>
 
-</div>
+          <iframe
+            src="{{cta.url}}"
+            width="640"
+            height="800"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            >Loading...</iframe
+          >
+        </div>
+        {% else %}
+        <a
+          href="{{ cta.url }}"
+          id="{{cta.btn_id}}"
+          class="cta-button"
+          style="background-color: {{ cta.color }};"
+        >
+          {{ cta.text }} </a
+        ><br />
+        {% endif %} {% endfor %}
+      </div>
+      {% endif %}
+    </div>
     <!-- begin features section-->
     <div class="content-list-item container">
-      <center><h1 class = "section-header">{{ page.features_section_title }}</h1></center>
+      <center>
+        <h1 class="section-header">{{ page.features_section_title }}</h1>
+      </center>
       {% if page.features %}
       <ul class="container-context px-md-4 px-sm-1">
         {% for feature in page.features %}
@@ -72,31 +99,40 @@ bodyClass: page-contact
       </ul>
       {% endif %}
     </div>
+  </div>
+  <!-- begin sections -->
+  {% if page.sections %} {% for section in page.sections %}
+  <div
+    class="section {% if section.layout == 'right' %}image-right{% elsif section.layout == 'left' %}image-left{% endif %} clearfix"
+  >
+    {% if section.title %}
+    <center><h1 class="section-header">{{ section.title }}</h1></center>
+    {% endif %} {% if section.layout == 'right' or section.layout == 'left' %}
+    <p class="section-text-caption">{{ section.caption }}</p>
+    {% endif %}
 
+    <img src="{{ section.image_url }}" alt="Section Image" />
+
+    {% if section.layout != 'right' and section.layout != 'left' %}
+    <p class="section-text-caption">{{ section.caption }}</p>
+    {% endif %}
+  </div>
+  {% endfor %} {% endif %}
 </div>
- <!-- begin sections -->
-  {% if page.sections %}
-  {% for section in page.sections %}
-    <div class="section {% if section.layout == 'right' %}image-right{% elsif section.layout == 'left' %}image-left{% endif %} clearfix">
 
-      {% if section.title %}
-        <center><h1 class="section-header">{{ section.title }}</h1></center>
-      {% endif %}
+<script>
+  function openModal() {
+    document.getElementById("customModal").style.display = "block";
+    document.getElementById("overlay").style.display = "block";
+  }
 
-      {% if section.layout == 'right' or section.layout == 'left' %}
-        <div class="section-text">
-          {{ section.caption }}
-        </div>
-      {% endif %}
+  function closeModal() {
+    document.getElementById("customModal").style.display = "none";
+    document.getElementById("overlay").style.display = "none";
+  }
 
-      <img src="{{ section.image_url }}" alt="Section Image">
-
-      {% if section.layout != 'right' and section.layout != 'left' %}
-        <div class="section-text">
-          {{ section.caption }}
-        </div>
-      {% endif %}
-    </div>
-    {% endfor %}
-  {% endif %}
-
+  document.addEventListener("DOMContentLoaded", function () {
+    // Open the modal on button click
+    document.getElementById("openDialog").addEventListener("click", openModal);
+  });
+</script>
