@@ -357,7 +357,32 @@ ol {
     }
 }
 @include media-breakpoint-down(sm){
-    
+    .cta-button,.section-text-caption{
+        font-size: 14px !important;
+    }
+    .section-text-caption{
+        padding: 10px !important;
+    }
+    .section-title{
+        font-size: 20px;
+    }
+    .cta-description{
+        font-size: 16px ;
+    }
+}
+@include media-breakpoint-down(lg){
+    .cta-button,.section-text-caption{
+        font-size: 16px !important;
+    }
+    .section-text-caption{
+        padding: 15px !important;
+    }
+    .section-title{
+        font-size: 26px;
+    }
+    .cta-description{
+        font-size: 20px ;
+    }
 }
 #DownloadModel>.dialog-content{
     width: 640px;
