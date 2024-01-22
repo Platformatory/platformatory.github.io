@@ -15,6 +15,7 @@ ctas:
     btn_id: "openDialog"
     onclick: ""
     color: "#0c910c"
+features_section_title: "Migration: From other Kafka compatible platforms or messaging systems"
 features:
   - title: "Zero Downtime, Zero data-loss migrations"
     summary: "Migrate from Kafka compatible platforms or other messaging systems with no risk of disruption"
