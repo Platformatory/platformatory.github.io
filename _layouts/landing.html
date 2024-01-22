@@ -23,7 +23,8 @@ bodyClass: page-contact
   <div class="row">
     <div class="col-12 col-md-6 hbspot-form">{{ content }}</div>
     <div class="col-12 col-md-6 address-info">
-      {{ page.description }} {% if page.ctas %}
+      <h2 class="text-justify">{{ page.description }}</h2>
+      {% if page.ctas %}
       <div class="cta-buttons">
         {% for cta in page.ctas %} {% if cta.onclick %}
         <button
@@ -71,7 +72,7 @@ bodyClass: page-contact
     <!-- begin features section-->
     <div class="content-list-item container">
       <center>
-        <h1 class="section-header">{{ page.features_section_title }}</h1>
+        <h1 class="section-title">{{ page.features_section_title }}</h1>
       </center>
       {% if page.features %}
       <ul class="container-context px-md-4 px-sm-1">
@@ -107,7 +108,7 @@ bodyClass: page-contact
     class="section {% if section.layout == 'right' %}image-right{% elsif section.layout == 'left' %}image-left{% endif %} clearfix"
   >
     {% if section.title %}
-    <center><h1 class="section-header">{{ section.title }}</h1></center>
+    <center><h1 class="section-title">{{ section.title }}</h1></center>
     {% endif %} {% if section.layout == 'right' or section.layout == 'left' %}
     <p class="section-text-caption">{{ section.caption }}</p>
     {% endif %}

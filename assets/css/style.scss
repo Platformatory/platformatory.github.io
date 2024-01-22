@@ -369,8 +369,12 @@ ol {
 }
 
 .section-text-caption{
-    font-size: 16px;
-    padding-top: 10px;
+    font-size: 18px;
+    background-color: #3b5e8b;
+    margin: 10px 0px;
+    padding: 20px;
+    color: white;
+    text-align: center;
     @include media-breakpoint-up(sm){
         padding-left: 62px;
     }
