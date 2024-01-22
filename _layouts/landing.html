@@ -36,25 +36,19 @@ bodyClass: page-contact
           {{ cta.text }}</button
         ><br />
         <!-- Custom Modal and Overlay -->
-        <div id="overlay"></div>
-        <div id="customModal" title="Close">
-          <!-- Google Form Embed Code -->
+        <div id="{{cta.modal_overlay_id}}"></div>
+        <div id="{{cta.modal_id}}" title="Close">
           <div class="d-flex justify-content-end">
-            <button onclick="closeModal()" class="dialog-close-button">
+            <button
+              onclick="closeModal('{{cta.modal_id}}' ,'{{cta.modal_overlay_id}}')"
+              class="dialog-close-button"
+            >
               <span style="font-size: 20px" class="material-icons">close</span>
             </button>
           </div>
-
-          <iframe
-            class="dialog-form-iframe"
-            src="{{cta.url}}"
-            width="640"
-            height="800"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
-            >Loading...</iframe
-          >
+          <div class="dialog-content">
+            {% include {{cta.scriptfile}}.html %}
+          </div>
         </div>
         {% else %}
         <a
@@ -123,18 +117,14 @@ bodyClass: page-contact
 </div>
 
 <script>
-  function openModal() {
-    document.getElementById("customModal").style.display = "block";
-    document.getElementById("overlay").style.display = "block";
+  function openModal(modal_id, modal_overlay_id) {
+    document.getElementById(modal_id).style.display = "block";
+    document.getElementById(modal_overlay_id).style.display = "block";
   }
 
-  function closeModal() {
-    document.getElementById("customModal").style.display = "none";
-    document.getElementById("overlay").style.display = "none";
+  function closeModal(modal_id, modal_overlay_id) {
+    console.log(modal_id, modal_overlay_id);
+    document.getElementById(modal_id).style.display = "none";
+    document.getElementById(modal_overlay_id).style.display = "none";
   }
-
-  document.addEventListener("DOMContentLoaded", function () {
-    // Open the modal on button click
-    document.getElementById("openDialog").addEventListener("click", openModal);
-  });
 </script>
