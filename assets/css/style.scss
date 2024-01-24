@@ -348,6 +348,9 @@ ol {
     margin: 10px 0px;
     margin-top: 20px;
 }
+.cta-description{
+    font-family: Helvetica, Arial, sans-serif, -apple-system;
+}
 @include media-breakpoint-up(sm){
     .cta-buttons{
         margin-top: 50px;
@@ -384,7 +387,7 @@ ol {
         font-size: 20px ;
     }
 }
-#DownloadModel>.dialog-content{
+.dialog-content{
     width: 640px;
     @include media-breakpoint-down(md){
         width: 500px;
