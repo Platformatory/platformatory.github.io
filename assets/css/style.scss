@@ -345,16 +345,13 @@ ol {
     }
 }
 .cta-buttons{
-    margin: 10px 0px;
-    margin-top: 20px;
+    margin: 20px 0px;
 }
 .cta-description{
-    font-family: Helvetica, Arial, sans-serif, -apple-system;
+    color:#2f2f41;
 }
 @include media-breakpoint-up(sm){
-    .cta-buttons{
-        margin-top: 50px;
-    }
+    
     #ContactModel>.dialog-content{
         width: 640px;
     }
@@ -369,9 +366,7 @@ ol {
     .section-title{
         font-size: 20px;
     }
-    .cta-description{
-        font-size: 16px ;
-    }
+    
 }
 @include media-breakpoint-down(lg){
     .cta-button,.section-text-caption{
@@ -383,9 +378,7 @@ ol {
     .section-title{
         font-size: 26px;
     }
-    .cta-description{
-        font-size: 20px ;
-    }
+    
 }
 .dialog-content{
     width: 640px;

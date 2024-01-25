@@ -22,9 +22,22 @@ bodyClass: page-contact
 <div class="container p-3">
   <div class="row">
     <div class="col-12 col-md-6 hbspot-form">{{ content }}</div>
-    <div class="col-12 col-md-6 address-info">
-      <h2 class="text-justify cta-description">{{ page.description }}</h2>
-      {% if page.ctas %}
+    <div class="col-12 col-md-6 address-info migrate-info">
+      <div
+        class="d-flex justify-content-center align-items-center partner-info"
+      >
+        <div class="border-right border-dark">
+          <img
+            src="/images/logo/confluent_logo.png"
+            class="partner-logo"
+            alt=""
+          />
+        </div>
+        <div>
+          <img src="/images/logo/plf-logo.svg" class="plf-logo" alt="" />
+        </div>
+      </div>
+      {{ page.description }} {% if page.ctas %}
       <div class="cta-buttons">
         {% for cta in page.ctas %} {% if cta.onclick %}
         <button
