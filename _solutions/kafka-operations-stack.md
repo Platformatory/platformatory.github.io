@@ -1,5 +1,5 @@
 ---
-title: "Platform Operations & Observability Stack for Apache Kafka & Confluent"
+title: "RTDX"
 date: 2018-11-28T15:15:26+10:00
 featured: true
 weight: 2
@@ -9,7 +9,7 @@ image: "images/services/chip.png"
 caption: Operational maturity for streaming infrastructure
 hash: "platform-ops-obs-kafka"
 section:
-  background: "#6c973c"
+  background: "linear-gradient(to bottom right, #2d4479, #0b1e4a)"
   color: "#ffffff"
 features:
   - title: "Cluster Operations"

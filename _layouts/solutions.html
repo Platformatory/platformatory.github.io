@@ -37,11 +37,11 @@ bodyClass: page-services-list
   {% for solutions in sorted_solutions %}
   <div class="service service-summary" id="{{ solutions.hash }}">
     <div
-      style="background-color: {{solutions.section.background | default: '#6c973c'}};"
+      style="background: {{solutions.section.background | default: '#6c973c'}};"
       class="strip service-section"
     >
       <!-- <div class="service-section-bg"></div> -->
-      <div class="container pt-2 pb-md-4">
+      <div class="container py-2 pb-md-4">
         <div
           style="color: {{solutions.section.color | default: '#ffffff'}};"
           class="text-center"
@@ -52,8 +52,25 @@ bodyClass: page-services-list
           <div class="">{{ solutions.content | markdownify }}</div>
         </div>
       </div>
+      <div class="container content-list-item">
+        <div class="product-card">
+          <img
+            src="{{solutions.image}}"
+            alt="{{solutions.title}} Website"
+            class="product-image"
+          />
+          <a
+            href="{{solutions.site_url}}"
+            target="_blank"
+            class="product-visit-button"
+            >Learn More</a
+          >
+        </div>
+        <div></div>
+      </div>
     </div>
-    <div class="content-list-item container">
+
+    <!-- <div class="content-list-item container">
       {% if solutions.features %}
       <ul class="container-context px-md-4 px-sm-1">
         {% for feature in solutions.features %}
@@ -78,7 +95,7 @@ bodyClass: page-services-list
         {% endfor %}
       </ul>
       {% endif %}
-    </div>
+    </div> -->
   </div>
   {% endfor %}
 </div>
