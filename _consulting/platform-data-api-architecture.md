@@ -9,7 +9,7 @@ image: "../images/analysis-architecture.svg"
 caption: North-star guidance with strategic domain driven design for large scale initiatives.
 hash: "platform-architecture"
 section:
-  background: "#6c973c"
+  background: "#0b1e4a"
   color: "#ffffff"
 features:
   - title: "End-to-End Architecture Review"

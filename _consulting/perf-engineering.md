@@ -9,7 +9,7 @@ image: "../images/experiment.svg"
 caption: Performance & resilliency assurance for platforms & distributed systems.
 hash: "performance-engineering"
 section:
-  background: "#6c973c"
+  background: "#0b1e4a"
   color: "#ffffff"
 features:
   - title: "System Stress Testing"

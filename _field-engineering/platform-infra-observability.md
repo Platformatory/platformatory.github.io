@@ -9,7 +9,7 @@ image: "images/services/operation.svg"
 caption: Run ops like a digital native. Lean infra platform teams for enterprises
 hash: "platform-infra-and-observability"
 section:
-  background: "#6c973c"
+  background: "#0b1e4a"
   color: "#ffffff"
 features:
   - title: "Installation & Migrations"

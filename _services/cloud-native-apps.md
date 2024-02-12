@@ -9,7 +9,7 @@ image: "images/services/cloud-computer.svg"
 caption: Build-out or re-fit data-intensive applications & microservices.
 hash: "cloud-native-applications"
 section:
-  background: "#6c973c"
+  background: "#0b1e4a"
   color: "#ffffff"
 features:
   - title: "Breaking the Monolith"

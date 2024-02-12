@@ -9,7 +9,7 @@ image: "../images/nerd-intelligent.svg"
 caption: Managed technology office and leadership for early stage upstarts, particulatly SaaS and PaaS.
 hash: "fractional-cto"
 section:
-  background: "#6c973c"
+  background: "#0b1e4a"
   color: "#ffffff"
 features:
   - title: "Discovery & Architecture Foundations"

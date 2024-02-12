@@ -9,7 +9,7 @@ image: "images/services/ai-mi-algorithm.svg"
 caption: Revitalize APIs through productization and API management at the core
 hash: "apis-management-kong"
 section:
-  background: "#6c973c"
+  background: "#0b1e4a"
   color: "#ffffff"
 features:
   - title: "Introduction to Kong & Its Landscape"

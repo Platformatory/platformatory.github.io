@@ -35,12 +35,15 @@ bodyClass: page-services-list
 
 <div>
   {% for education in sorted_education %}
-  <div class="service service-summary" id="{{ education.hash }}">
+  <div
+    class="service education-section service-summary"
+    id="{{ education.hash }}"
+  >
     <div
       style="background-color: {{education.section.background | default: '#6c973c' }};"
       class="strip service-section"
     >
-      <div class="container pt-2 pb-md-4">
+      <div class="container py-2 pb-md-4">
         <div
           style="color: {{education.section.color | default: '#ffffff'}};"
           class="text-center"

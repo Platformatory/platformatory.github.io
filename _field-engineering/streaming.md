@@ -9,7 +9,7 @@ image: "images/services/real-time-data.svg"
 caption: Evolve a real-time core for data & app integration
 hash: "streaming"
 section:
-  background: "#6c973c"
+  background: "#0b1e4a"
   color: "#ffffff"
 features:
   - title: "Installation, Sizing & Migrations"

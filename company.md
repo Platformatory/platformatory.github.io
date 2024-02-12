@@ -6,7 +6,7 @@ bodyClass: page-about
 intro_image: "images/banners/platform.jpg"
 intro_image_absolute: true
 section:
-  background: "#6c973c"
+  background: "#0b1e4a"
   color: "#ffffff"
 ---
 
