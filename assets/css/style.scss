@@ -450,10 +450,13 @@ ol {
         @include media-breakpoint-up(lg) {
             min-height: 512px;
         }
-        @include media-breakpoint-up(sm){
+        @include media-breakpoint-down(lg){
             min-height: 670px;
         }
-        min-height: 440px;
+        @include media-breakpoint-down(sm){
+            min-height: 440px;
+        }
+        
         .product-image{
             max-width: 840px;
             @include media-breakpoint-down(md){
