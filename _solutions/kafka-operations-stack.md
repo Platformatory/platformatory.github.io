@@ -5,9 +5,9 @@ featured: true
 weight: 2
 layout: service
 summary: "Industrialize cloud native platform SLOs & scale your DevSecOps in an SRE model."
-image: "images/services/chip.png"
+image: "/images/products/rtdx-logo.png"
 caption: Operational maturity for streaming infrastructure
-hash: "platform-ops-obs-kafka"
+hash: "rtdx"
 section:
   background: "linear-gradient(to bottom right, #2d4479, #0b1e4a)"
   color: "#ffffff"
@@ -41,4 +41,4 @@ features:
     icon: "security"
 ---
 
-Dive deep into the intricacies of efficiently managing Apache Kafka with our robust 'Operations & Observability Stack'. Harness the power of streamlined cluster operations, blended with the agility of GitOps for Kafka resources. Elevate your observability standards, ensuring system transparency, while also fortifying your setups with focused security operations.
+RTDx is a platform for exchanging operational and analytical data in real-time, enabling organizations to make swift, informed decisions and stay competitive in the digital age.
