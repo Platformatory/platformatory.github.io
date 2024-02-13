@@ -10,8 +10,8 @@ caption: Synthesize custom event streams from API transactions
 hash: "eventception"
 site_url: "https://eventception.io"
 section:
-  background: "linear-gradient(to bottom right, #2d4479, #0b1e4a)"
-  color: "#ffffff"
+  background: "linear-gradient(to bottom right, #fdeef1, #fcfcfc)"
+  color: "#212529"
 features:
   - title: "API Transaction to Event Mapping"
     summary: "Flawlessly transform real-time API transactions into decipherable events, ensuring synchronization and coherence across systems."

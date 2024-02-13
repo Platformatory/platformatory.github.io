@@ -10,8 +10,8 @@ caption: Unlock new revenue streams with usage-based subscription billing for AP
 hash: "apinomy"
 site_url: "https://apinomy.com"
 section:
-  background: "linear-gradient(to bottom right, #2d4479, #0b1e4a)"
-  color: "#ffffff"
+  background: "linear-gradient(to bottom right, #fdeef1, #fcfcfc)"
+  color: "#212529"
 features:
   - title: "Data & API Discovery"
     summary: "Embark on a journey of identifying high-value data sets and APIs, setting the stage for potent monetization strategies."

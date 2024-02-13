@@ -9,8 +9,8 @@ image: "/images/products/rtdx-logo.png"
 caption: Operational maturity for streaming infrastructure
 hash: "rtdx"
 section:
-  background: "linear-gradient(to bottom right, #2d4479, #0b1e4a)"
-  color: "#ffffff"
+  background: "linear-gradient(to bottom right, #fdeef1, #fcfcfc)"
+  color: "#212529"
 features:
   - title: "Cluster Operations"
     summary: "Master the art of smooth Kafka cluster management, ensuring stability, performance, and resilience in real-time data flows."
