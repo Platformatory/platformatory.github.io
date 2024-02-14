@@ -149,27 +149,38 @@
     .service-solutions-title{
       min-height: 120px;
     }
-    .service-solutions-title{
-      min-height: 120px;
-    }
+   
     .service-caption-excellence{
       color:#103080;
       height: 66px;
       font-family:'Titillium Web', sans-serif, -apple-system;
       margin: 0;
     }
-
+    .solutions-card{
+      h2{
+        height: fit-content !important;
+      }
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      gap: 32px;
+      .solutions-image{
+        max-width: 286px !important;
+      }
+    }
+    
     .icon-lg {
       padding: 20px;
       background: #f1f1f1;
       border-radius: 100px;
-      width: 120px;
-      height: 120px;
+      width: 140px;
+      height: 140px;
       margin: auto;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 20px;
+      
 
       img {
         flex: 0 0 auto;

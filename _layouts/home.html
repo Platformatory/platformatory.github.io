@@ -4,10 +4,15 @@ layout: default
 bodyClass: page-home
 ---
 
-<div style="background-image: url({{page.intro_image}});" class="intro position-relative homepage">
+<div
+  style="background-image: url({{page.intro_image}});"
+  class="intro position-relative homepage"
+>
   <div class="container">
     <div class="row justify-content-start">
-      <div class="col-12 col-md-7 col-lg-6 order-2 text-center order-md-1 intro-content-block">
+      <div
+        class="col-12 col-md-7 col-lg-6 order-2 text-center order-md-1 intro-content-block"
+      >
         {{ content }}
       </div>
     </div>
@@ -19,7 +24,6 @@ bodyClass: page-home
       {% endif %} -->
 </div>
 
-
 <div class="strip consult-content-wrapper pt-md-6 pt-2">
   <div class="container pb-2 pb-md-6">
     <div class="section-head text-center intro-text">
@@ -27,68 +31,86 @@ bodyClass: page-home
         <h2 class="section-title">{{ page.what_we_do_label }}</h2>
       </div>
       <p class="section-short-description">{{ page.what_we_do }}</p>
-  </div>  
-    <div class="row justify-content-start">    
-        <div class="col-md-12">
-          <div class="text-center d-flex justify-content-center pb-1 pb-md-2">
-            <h2 class="section-title">Consulting</h2>	
-          </div>
-          <div class="row">
-            {% assign sorted_consulting = site.consulting | sort: 'weight' | reverse %}		  
-            {% for service in sorted_consulting %}
-            <div class="col-12 col-sm-4 mb-2 ">
-              <a href="{{site.baseurl}}consulting#{{service.hash}}" class="d-flex justify-content-center flex-column align-items-center service-content-card">
-                <div class=" service-summary text-start ">
-                  <div class="service-content">
-                    <h2 class="service-title m-0 text-center"  >
-			                {{ service.title }}
-                    </h2>
-                  </div>
-                  </div>
-                  <div class="col-md-6  py-1 service-icon">
-                    <div class="col-auto p-0 text-center">
-                      <img alt={{ page.title }} class="consult-intro-image" src="{{service.image}}" />
-                    </div>
-                  </div>
-                  <p class="service-caption text-center m-0">{{ service.caption }}</p>
-                </a>
+    </div>
+    <div class="row justify-content-start">
+      <div class="col-md-12">
+        <div class="text-center d-flex justify-content-center pb-1 pb-md-2">
+          <h2 class="section-title">Consulting</h2>
+        </div>
+        <div class="row">
+          {% assign sorted_consulting = site.consulting | sort: 'weight' |
+          reverse %} {% for service in sorted_consulting %}
+          <div class="col-12 col-sm-4 mb-2">
+            <a
+              href="{{site.baseurl}}consulting#{{service.hash}}"
+              class="d-flex justify-content-center flex-column align-items-center service-content-card"
+            >
+              <div class="service-summary text-start">
+                <div class="service-content">
+                  <h2 class="service-title m-0 text-center">
+                    {{ service.title }}
+                  </h2>
+                </div>
               </div>
-            {% endfor %}
+              <div class="col-md-6 py-1 service-icon">
+                <div class="col-auto p-0 text-center">
+                  <img
+                    alt="{{page.title}}"
+                    class="consult-intro-image"
+                    src="{{service.image}}"
+                  />
+                </div>
+              </div>
+              <p class="service-caption text-center m-0">
+                {{ service.caption }}
+              </p>
+            </a>
           </div>
-          <div class="row justify-content-center">
-            <div class="col-auto">
-              <a class="button button-primary view-more-button" href="{{site.baseurl}}/consulting">Learn more about our consulting services</a>
-            </div>
+          {% endfor %}
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-auto">
+            <a
+              class="button button-primary view-more-button"
+              href="{{site.baseurl}}/consulting"
+              >Learn more about our consulting services</a
+            >
           </div>
         </div>
+      </div>
     </div>
   </div>
 </div>
 
-
-
-
-
 {% if site.data.field-stack %}
 <div class="strip strip-grey">
   <div class="container pt-2 pb-1 pt-md-2 pb-md-2">
-    <div class="text-center d-flex justify-content-center  pb-1 pb-md-2">
-      <h2 class="service-title section-title ">Field-engineering</h2>
+    <div class="text-center d-flex justify-content-center pb-1 pb-md-2">
+      <h2 class="service-title section-title">Field-engineering</h2>
     </div>
     <div class="row justify-content-center">
-      {% for feature in site.data.field-stack %}
-      {% if feature.render_title==false %}
+      {% for feature in site.data.field-stack %} {% if
+      feature.render_title==false %}
       <div class="feature-stack-title">
-        <h2 class=" px-2 px-md-4 text-white rounded-pill bg-primary">{{ feature.title }}</h2>
+        <h2 class="px-2 px-md-4 text-white rounded-pill bg-primary">
+          {{ feature.title }}
+        </h2>
       </div>
       {% endif %}
       <div class="col-12 col-sm-6 {{feature.div_class}} mb-2">
         {% if feature.render_title %}
-        <a href="{{site.baseurl}}field-engineering#{{feature.hash}}" class="feature">
-          
+        <a
+          href="{{site.baseurl}}field-engineering#{{feature.hash}}"
+          class="feature"
+        >
           <div class="feature-head">
             {% if feature.image %}
-            <div class="feature-image"><img alt="{{ feature.title }} logo" src="{{ feature.image | relative_url }}" /></div>
+            <div class="feature-image">
+              <img
+                alt="{{ feature.title }} logo"
+                src="{{ feature.image | relative_url }}"
+              />
+            </div>
             {% endif %}
             <h2 class="feature-title">{{ feature.title }}</h2>
             <div class="feature-content">{{ feature.description }}</div>
@@ -97,40 +119,41 @@ bodyClass: page-home
           {% if feature.items %}
           <div class="feature-two-columns">
             <div class="feature-column row  {{feature.list_class}}">
-              {% for item in feature.items  %}
-               {% if feature.render_title ==true %}
-               <p class=" {{feature.item_class | default: 'm-0'}}">{{ item }}</p>
-               {% else%}
-                <div class="text-center d-flex justify-content-around flex-column align-items-center" >
-                  <img  src="{{item.image}}" alt="">
-                  <p class=" {{feature.item_class | default: 'm-0'}}">{{ item.name }}</p>
-
-                </div>
-               {% endif%}
-                
-              {% endfor %}
+              {% for item in feature.items %} {% if feature.render_title ==true
+              %}
+              <p class=" {{feature.item_class | default: 'm-0'}}">{{ item }}</p>
+              {% else%}
+              <div
+                class="text-center d-flex justify-content-around flex-column align-items-center"
+              >
+                <img src="{{item.image}}" alt="" />
+                <p class=" {{feature.item_class | default: 'm-0'}}">
+                  {{ item.name }}
+                </p>
+              </div>
+              {% endif%} {% endfor %}
             </div>
           </div>
           {% endif %}
-
         </a>
         {% else %}
         <div class="feature">
           {% if feature.items %}
           <div class="feature-two-columns">
             <div class="feature-column row  {{feature.list_class}}">
-              {% for item in feature.items  %}
-               {% if feature.render_title ==true %}
-               <p class=" {{feature.item_class | default: 'm-0'}}">{{ item }}</p>
-               {% else%}
-                <div class="text-center d-flex justify-content-around flex-column align-items-center" >
-                  <img  src="{{item.image}}" alt="">
-                  <p class=" {{feature.item_class | default: 'm-0'}}">{{ item.name }}</p>
-
-                </div>
-               {% endif%}
-                
-              {% endfor %}
+              {% for item in feature.items %} {% if feature.render_title ==true
+              %}
+              <p class=" {{feature.item_class | default: 'm-0'}}">{{ item }}</p>
+              {% else%}
+              <div
+                class="text-center d-flex justify-content-around flex-column align-items-center"
+              >
+                <img src="{{item.image}}" alt="" />
+                <p class=" {{feature.item_class | default: 'm-0'}}">
+                  {{ item.name }}
+                </p>
+              </div>
+              {% endif%} {% endfor %}
             </div>
           </div>
           {% endif %}
@@ -142,33 +165,41 @@ bodyClass: page-home
     </div>
     <div class="row justify-content-center mt-2">
       <div class="col-auto">
-        <a class="button button-primary view-more-button" href="{{site.baseurl}}/field-engineering">Learn more about our field engineering services</a>
+        <a
+          class="button button-primary view-more-button"
+          href="{{site.baseurl}}/field-engineering"
+          >Learn more about our field engineering services</a
+        >
       </div>
     </div>
   </div>
 </div>
 {% endif %}
 
-
-<div class="strip service-content-wrapper ">
+<div class="strip service-content-wrapper">
   <div class="container pt-2 pt-md-3 pb-2 pb-md-4">
-    <div class="text-center d-flex justify-content-center  pb-1 pb-md-2">
+    <div class="text-center d-flex justify-content-center pb-1 pb-md-2">
       <h2 class="section-title">Enginnering & Operational Services</h2>
     </div>
     <div class="row justify-content-start">
-      {% assign sorted_services = site.services | sort: 'weight' | reverse %}
-      {% for service in sorted_services %}
+      {% assign sorted_services = site.services | sort: 'weight' | reverse %} {%
+      for service in sorted_services %}
       <div class="col-12 col-sm-6 col-lg-3 mb-1">
-        <a href="{{site.baseurl}}services#{{service.hash}}" class=" service-summary">
+        <a
+          href="{{site.baseurl}}services#{{service.hash}}"
+          class="service-summary"
+        >
           <div class="service-content py-3">
-            <h2 class="service-title fs-6">
-              {{ service.title }}
-                  </h2>
+            <h2 class="service-title fs-6">{{ service.title }}</h2>
             <div class="col-auto p-0 icon-lg">
-              <img alt={{ page.title }} class="consult-intro-image" src="{{service.image}}" />
+              <img
+                alt="{{ page.title}}"
+                class="consult-intro-image"
+                src="{{service.image}}"
+              />
             </div>
 
-      <p class="service-caption-excellence">{{ service.caption }}</p>
+            <p class="service-caption-excellence">{{ service.caption }}</p>
           </div>
         </a>
       </div>
@@ -176,7 +207,11 @@ bodyClass: page-home
     </div>
     <div class="row justify-content-center mt-2">
       <div class="col-auto">
-        <a class="button button-primary view-more-button" href="{{site.baseurl}}/services">Learn more about our engineering services</a>
+        <a
+          class="button button-primary view-more-button"
+          href="{{site.baseurl}}/services"
+          >Learn more about our engineering services</a
+        >
       </div>
     </div>
   </div>
@@ -184,23 +219,27 @@ bodyClass: page-home
 
 <div class="strip service-content-wrapper strip-grey">
   <div class="container pt-2 pt-md-3 pb-2 pb-md-4">
-    <div class="text-center d-flex justify-content-center  pb-1 pb-md-2">
+    <div class="text-center d-flex justify-content-center pb-1 pb-md-2">
       <h2 class="section-title">Solutions & Accelerators</h2>
     </div>
-    <div class="row justify-content-start">
+    <div class="row justify-content-center">
       {% assign sorted_solutions = site.solutions | sort: 'weight' | reverse %}
       {% for service in sorted_solutions %}
-      <div class="col-12 col-sm-6 col-lg-3 mb-1">
-        <a href="{{site.baseurl}}solutions#{{service.hash}}" class=" service-summary">
-          <div class="service-content py-3">
-            <h2 class="service-solutions-title fs-6">
-              {{ service.title }}
-                  </h2>
-            <div class="col-auto p-0 icon-lg">
-              <img alt={{ page.title }} class="consult-intro-image" src="{{service.image}}" />
+      <div class="col-12 col-sm-6 col-lg-4 mb-1">
+        <a
+          href="{{site.baseurl}}solutions#{{service.hash}}"
+          class="service-summary"
+        >
+          <div class="service-content solutions-card py-3">
+            <h2 class="fs-6">{{ service.title }}</h2>
+            <div class="col-auto p-0">
+              <img
+                alt="{{page.title}}"
+                class="consult-intro-image solutions-image"
+                src="{{service.image}}"
+              />
             </div>
-
-      <p class="service-caption-excellence">{{ service.caption }}</p>
+            <p class="service-caption-excellence">{{ service.caption }}</p>
           </div>
         </a>
       </div>
@@ -208,7 +247,11 @@ bodyClass: page-home
     </div>
     <div class="row justify-content-center mt-2">
       <div class="col-auto">
-        <a class="button button-primary view-more-button" href="{{site.baseurl}}/solutions">Learn more about our solutions & accelerators</a>
+        <a
+          class="button button-primary view-more-button"
+          href="{{site.baseurl}}/solutions"
+          >Learn more about our solutions & accelerators</a
+        >
       </div>
     </div>
   </div>
