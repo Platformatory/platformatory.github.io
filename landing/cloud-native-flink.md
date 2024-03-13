@@ -27,24 +27,18 @@ features:
     span_class: "icon-serv py-2"
     icon: "settings_applications"
   - title: "Experience Kafka and Flink as a unified platform"
-    summary: "With fully integrated monitoring, security, and governance"
+    summary: "Fully integrated monitoring, security, and governance"
     image: "../images/icons/hub.svg"
     div_class: "text-center platform-strategy"
     span_class: "icon-serv py-2"
     icon: "cloud_sync"
   - title: "Engineer and replatform streaming pipelines"
-    summary: "We help build new or transition Kafka Streams, KSQL and Sparkto Flink"
+    summary: "We help build new or transition Kafka Streams, KSQL and Spark to Flink"
     image: "../images/icons/operators.svg"
     div_class: "text-center platform-strategy"
     span_class: "icon-serv py-2"
     icon: "device_hub"
-# sections:
-#   - title: "Migration Approach"
-#     image_url: "/images/landing/migration-approach.svg"
-#     caption: "A strategic overhaul of your streaming nervous system"
-#   - title: "Why Platformatory?"
-#     image_url: "/images/landing/why-platformatory.svg"
-#     caption: "Expertise intersecting infrastructure, analytics and operational data"
+
 
 ---
 
