@@ -23,15 +23,9 @@ bodyClass: page-contact
   <div class="row">
     <div class="col-12 col-md-6 hbspot-form">{{ content }}</div>
     <div class="col-12 col-md-6 address-info migrate-info">
-      <div
-        class="d-flex justify-content-center align-items-center partner-info"
-      >
+      <div class="d-flex justify-content-center align-items-center partner-info">
         <div class="border-right border-dark">
-          <img
-            src="/images/logo/confluent_logo.png"
-            class="partner-logo"
-            alt=""
-          />
+          <img src="/images/logo/confluent_logo.png" class="partner-logo" alt="" />
         </div>
         <div>
           <img src="/images/logo/plf-logo.svg" class="plf-logo" alt="" />
@@ -40,22 +34,14 @@ bodyClass: page-contact
       {{ page.description }} {% if page.ctas %}
       <div class="cta-buttons">
         {% for cta in page.ctas %} {% if cta.onclick %}
-        <button
-          class="cta-button"
-          id="{{cta.btn_id}}"
-          style="background-color: {{ cta.color }};"
-          onclick="{{ cta.onclick }}"
-        >
-          {{ cta.text }}</button
-        ><br />
+        <button class="cta-button" id="{{cta.btn_id}}" style="background-color: {{ cta.color }};"
+          onclick="{{ cta.onclick }}">
+          {{ cta.text }}</button><br />
         <!-- Custom Modal and Overlay -->
         <div id="{{cta.modal_overlay_id}}"></div>
         <div id="{{cta.modal_id}}" title="Close">
           <div class="d-flex justify-content-end">
-            <button
-              onclick="closeModal('{{cta.modal_id}}' ,'{{cta.modal_overlay_id}}')"
-              class="dialog-close-button"
-            >
+            <button onclick="closeModal('{{cta.modal_id}}' ,'{{cta.modal_overlay_id}}')" class="dialog-close-button">
               <span style="font-size: 20px" class="material-icons">close</span>
             </button>
           </div>
@@ -64,14 +50,8 @@ bodyClass: page-contact
           </div>
         </div>
         {% else %}
-        <a
-          href="{{ cta.url }}"
-          id="{{cta.btn_id}}"
-          class="cta-button"
-          style="background-color: {{ cta.color }};"
-        >
-          {{ cta.text }} </a
-        ><br />
+        <a href="{{ cta.url }}" id="{{cta.btn_id}}" class="cta-button" style="background-color: {{ cta.color }};">
+          {{ cta.text }} </a><br />
         {% endif %} {% endfor %}
       </div>
       {% endif %}
@@ -86,16 +66,12 @@ bodyClass: page-contact
         {% for feature in page.features %}
         <li>
           <div
-            class="d-flex justify-content-center align-items-center flex-column {{ feature.div_class | default: 'text-center platform-strategy' }}"
-          >
+            class="d-flex justify-content-center align-items-center flex-column {{ feature.div_class | default: 'text-center platform-strategy' }}">
             <h2 class="{{ feature.h2_class | default: 'text-center' }}">
               {{ feature.title }}
             </h2>
             <div class=" {{cfeature.div_class }}">
-              <span
-                class="material-icons {{ feature.span_class | default: 'icon-serv py-1' }}"
-                style="font-size: 80px"
-              >
+              <span class="material-icons {{ feature.span_class | default: 'icon-serv py-1' }}" style="font-size: 80px">
                 {% if feature.icon !='' %} {{ feature.icon }} {% else %}
                 <img src="{{feature.image}}" alt="" />
                 {% endif %}
@@ -112,10 +88,11 @@ bodyClass: page-contact
   <!-- begin sections -->
   {% if page.sections %} {% for section in page.sections %}
   <div
-    class="section {% if section.layout == 'right' %}image-right{% elsif section.layout == 'left' %}image-left{% endif %} clearfix"
-  >
+    class="section {% if section.layout == 'right' %}image-right{% elsif section.layout == 'left' %}image-left{% endif %} clearfix">
     {% if section.title %}
-    <center><h1 class="section-title">{{ section.title }}</h1></center>
+    <center>
+      <h1 class="section-title">{{ section.title }}</h1>
+    </center>
     {% endif %} {% if section.layout == 'right' or section.layout == 'left' %}
     <p class="section-text-caption">{{ section.caption }}</p>
     {% endif %}
@@ -127,6 +104,16 @@ bodyClass: page-contact
     {% endif %}
   </div>
   {% endfor %} {% endif %}
+  <!-- begin section summary -->
+  <!-- {% if page.summary_section %}
+  {% for section in page.summary_section %}
+  <div class="col-12 hbspot-form">
+    {% if section.title %}
+    <h1>{{section.title}}</h1>
+    {% endif %}
+    <p>{{section.summary}}</p>
+  </div>
+  {% endfor %} {% endif %} -->
 </div>
 
 <script>
