@@ -32,7 +32,7 @@ features:
     div_class: "text-center platform-strategy"
     span_class: "icon-serv py-2"
     icon: "cloud_sync"
-  - title: "Replatforming assistance for existing pipelines"
+  - title: "Engineer and replatform streaming pipelines"
     summary: "We help transition Kafka Streams, KSQL and Spark, for the better"
     image: "../images/icons/operators.svg"
     div_class: "text-center platform-strategy"
