@@ -12,7 +12,7 @@
     "image": "images/features/cloud-computing.svg",
     "div_class": "col-lg-3",
     "list_class": "row-cols-2 row-cols-md-2 pl-2 pl-xl-2 pl-lg-1",
-    "hash":"platform-infra-and-observability",
+    "hash": "platform-infra-and-observability",
     "render_title": true
   },
   {
@@ -32,23 +32,18 @@
       "Apache Hudi"
     ],
     "image": "images/features/streaming-waves.svg",
-    "hash":"streaming",
+    "hash": "streaming",
     "div_class": "col-lg-6",
     "list_class": "row-cols-2 row-cols-lg-3 row-cols-xl-4 pl-3 pl-xl-5 pl-lg-3",
     "render_title": true
   },
   {
     "title": "APIs & Networking",
-    "items": [
-      "Kong",
-      "Kuma",
-      "Istio",
-      "Envoy"
-    ],
+    "items": ["Kong", "Kuma", "Istio", "Envoy"],
     "image": "images/features/cold-snowflake.svg",
     "div_class": "col-lg-3",
     "list_class": "row-cols-2 row-cols-md-2",
-    "hash":"apis-management",
+    "hash": "apis-management",
     "render_title": true
   },
   {
@@ -111,10 +106,6 @@
       {
         "name": "Solo.io",
         "image": "images/features/solo-io.png"
-      },
-      {
-        "name": "Redpanda",
-        "image": "images/features/redpanda.jpg"
       }
     ],
     "item_class": "stack-language px-2 m-0",
