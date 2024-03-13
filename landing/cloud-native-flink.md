@@ -3,7 +3,7 @@ title: Cloud Native to Confluent Flink
 layout: landing
 bodyClass: page-landing
 intro_image: "images/landing/migrate-to-confluent.jpg"
-summary: "Confluent + Flink = Streaming holistically"
+summary: "Confluent + Flink = Stream Processing, 10X better"
 description: "Confluent’s fully managed Flink service is now generally available across all three major cloud service providers, providing customers with a true multicloud solution and the flexibility to seamlessly deploy stream processing workloads everywhere their data and applications reside. Backed by a 99.99% uptime SLA, Confluent ensures reliable stream processing with support and services from the leading Kafka and Flink experts.
 "
 intro_image_absolute: true
@@ -21,19 +21,19 @@ features:
     span_class: "icon-serv py-2"
     icon: "timelapse"
   - title: "Enable high-performance and efficient stream processing at any scale"
-    summary: "without the complexities of infrastructure management"
+    summary: "Without the complexities of infrastructure management"
     image: "../images/icons/pipelines.svg"
     div_class: "text-center platform-strategy"
     span_class: "icon-serv py-2"
     icon: "settings_applications"
   - title: "Experience Kafka and Flink as a unified platform"
-    summary: "with fully integrated monitoring, security, and governance"
+    summary: "With fully integrated monitoring, security, and governance"
     image: "../images/icons/hub.svg"
     div_class: "text-center platform-strategy"
     span_class: "icon-serv py-2"
     icon: "cloud_sync"
   - title: "Engineer and replatform streaming pipelines"
-    summary: "We help transition Kafka Streams, KSQL and Spark, for the better"
+    summary: "We help build new or transition Kafka Streams, KSQL and Sparkto Flink"
     image: "../images/icons/operators.svg"
     div_class: "text-center platform-strategy"
     span_class: "icon-serv py-2"
