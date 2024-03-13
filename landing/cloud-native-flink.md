@@ -8,22 +8,10 @@ description: "Confluent’s fully managed Flink service is now generally availab
 "
 intro_image_absolute: true
 ctas:
-#   - text: "Getting Started"
-#     url: "/link-for-cta-1"
-#     color: "#72b6de"
-#     btn_id: "openDialog"
-#     scriptfile: "downloadoffering"
-#     onclick: "https://www.confluent.io/product/flink/"
-#     modal_id: "DownloadModel"
-#     modal_overlay_id: "DownloadOverlay"
   - text: "Getting Started"
     url: "https://www.confluent.io/product/flink/"
-    btn_id: "openContactDialog"
+    btn_id: "flink product"
     color: "#0c910c"
-    scriptfile: "contactform"
-    onclick: "https://www.confluent.io/product/flink/"
-    modal_id: "ContactModel"
-    modal_overlay_id: "ContactOverlay"
 features_section_title: "Fully integrated with Apache Kafka® on Confluent Cloud, Confluent’s new Flink service allows businesses to:"
 features:
   - title: "Effortlessly filter, join, and enrich your data streams with Flink"
@@ -44,15 +32,12 @@ features:
     div_class: "text-center platform-strategy"
     span_class: "icon-serv py-2"
     icon: "cloud_sync"
-summary_section:
-   - summary: "Confluent’s fully managed Flink service is now generally available across all three major cloud service providers, providing customers with a true multicloud solution and the flexibility to seamlessly deploy stream processing workloads everywhere their data and applications reside. Backed by a 99.99% uptime SLA, Confluent ensures reliable stream processing with support and services from the leading Kafka and Flink experts."
-
-#   - title: "Hybrid Operations for Kafka"
-#     summary: "One platform across Cloud, Kubernetes and Baremtal/VM deployments, with 24x7  support"
-#     image: "../images/icons/operators.svg"
-#     div_class: "text-center platform-strategy"
-#     span_class: "icon-serv py-2"
-#     icon: "device_hub"
+  - title: "Ensure fault tolerance and exactly-once"
+    summary: " processing semantics for mission-critical data pipelines."
+    image: "../images/icons/operators.svg"
+    div_class: "text-center platform-strategy"
+    span_class: "icon-serv py-2"
+    icon: "device_hub"
 # sections:
 #   - title: "Migration Approach"
 #     image_url: "/images/landing/migration-approach.svg"
@@ -63,11 +48,11 @@ summary_section:
 
 ---
 
-# Simplify Stream Processing With Serverless Apache Flink® From Confluent and Platformatory Labs
+# Simplify Stream Processing With Serverless Apache Flink® From Confluent and Platformatory
 
 We’re thrilled to be partnered with Confluent today as they announce the general availability of the industry’s only cloud-native, serverless Apache Flink® service. Available directly within Confluent’s data streaming platform alongside a cloud-native service for Apache Kafka®, the new Flink offering is now ready for use on AWS, Azure, and Google Cloud.
 
-Directly integrated with [insert company/product name], Confluent provides a simple solution for accessing and processing data streams from across the entire business to build a real-time, contextual, and trustworthy knowledge base to fuel applications
+Confluent provides a simple solution for accessing and processing data streams from across the entire business to build a real-time, contextual, and trustworthy knowledge base to fuel applications
 
 # Easily build high-quality, reusable data streams with the industry’s only cloud-native, serverless Flink service
 

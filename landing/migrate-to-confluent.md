@@ -8,7 +8,6 @@ description: "Platformatory is proud to be a part of Confluent’s Migration Acc
 intro_image_absolute: true
 ctas:
   - text: "Download offering brief: Migration Accelerator"
-    url: "/link-for-cta-1"
     color: "#72b6de"
     btn_id: "openDialog"
     scriptfile: "downloadoffering"
@@ -16,7 +15,6 @@ ctas:
     modal_id: "DownloadModel"
     modal_overlay_id: "DownloadOverlay"
   - text: "Contact us for a migration assessment"
-    url: "https://docs.google.com/forms/d/e/your_google_form_id/viewform?embedded=true"
     btn_id: "openContactDialog"
     color: "#0c910c"
     scriptfile: "contactform"

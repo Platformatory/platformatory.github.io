@@ -50,7 +50,8 @@ bodyClass: page-contact
           </div>
         </div>
         {% else %}
-        <a href="{{ cta.url }}" id="{{cta.btn_id}}" class="cta-button" style="background-color: {{ cta.color }};">
+        <a href="{{ cta.url }}" id="{{cta.btn_id}}" target="_blank" class="cta-button"
+          style="background-color: {{ cta.color }};">
           {{ cta.text }} </a><br />
         {% endif %} {% endfor %}
       </div>
@@ -104,16 +105,6 @@ bodyClass: page-contact
     {% endif %}
   </div>
   {% endfor %} {% endif %}
-  <!-- begin section summary -->
-  <!-- {% if page.summary_section %}
-  {% for section in page.summary_section %}
-  <div class="col-12 hbspot-form">
-    {% if section.title %}
-    <h1>{{section.title}}</h1>
-    {% endif %}
-    <p>{{section.summary}}</p>
-  </div>
-  {% endfor %} {% endif %} -->
 </div>
 
 <script>
