@@ -32,4 +32,21 @@ We're hosting our next in-person event on April 20. Join us for exciting discuss
 
 ## Call for Speakers
 
-The Call for Speakers is now open at [https://forms.gle/gVeX45FZi296PSfa9](https://forms.gle/gVeX45FZi296PSfa9){:target="\_blank"}. We are looking for talks around event streaming and real time analytics. Anything streaming and fast data fits the bill. We want to hear from the community about the adoption, various use cases and exciting open source technology in the streaming world. The submissions are open till 20 March 2024(Wednesday) 20:00 IST. Feel free to submit multiple talks as well. We will get back to you with the results, latest by March 22.
+The Call for Speakers is now open at [https://forms.gle/gVeX45FZi296PSfa9](https://forms.gle/gVeX45FZi296PSfa9){:target="\_blank"}. We are looking for talks around event streaming and real time analytics. Anything streaming and fast data fits the bill. We want to hear from the community about the adoption, various use cases and exciting open source technology in the streaming world. The submissions are open till 27 March 2024(Wednesday) 20:00 IST. Feel free to submit multiple talks as well. We will get back to you with the results, latest by March 28.
+
+
+### Talks
+
+- **Mq (Queuing Abstraction at Meesho for Scalable and Efficient Communication)**
+
+_Speaker:_ **Ramiz Mehran, Software Architect at Meesho**
+
+_About the talk:_ We'll explore the challenges of tightly coupled messaging queues and the financial and operational inefficiencies they introduce, such as over-provisioning and migration headaches. We'll introduce MQ Abstraction as a solution that decouples application code from specific messaging infrastructures, enabling seamless interaction and standardizing configurations for optimal performance. Through a quick overview of its architecture and benefits, we'll discuss how MQ Abstraction simplifies messaging queue interactions, promotes scalability, and reduces costs.
+
+
+### Speakers
+
+- {:.speaker-name} Ramiz Mehran <br> <span class="speaker-description">Software Architect at Meesho</span>
+
+<br>
+_More talks TBA soon!_
