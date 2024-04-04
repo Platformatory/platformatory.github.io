@@ -30,9 +30,17 @@ Data Mesh<br>
 We're hosting our next in-person event on April 20. Join us for exciting discussions in the streaming world with opportunities to network with peers and leaders in the industry.
 </div>
 
-## Call for Speakers
+### Schedule
 
-The Call for Speakers is now open at [https://forms.gle/gVeX45FZi296PSfa9](https://forms.gle/gVeX45FZi296PSfa9){:target="\_blank"}. We are looking for talks around event streaming and real time analytics. Anything streaming and fast data fits the bill. We want to hear from the community about the adoption, various use cases and exciting open source technology in the streaming world. The submissions are open till 27 March 2024(Wednesday) 20:00 IST. Feel free to submit multiple talks as well. We will get back to you with the results, latest by March 28.
+| Name                                                                                           | Speaker                             | Start Time | End Time | Presentation | Recording |
+|------------------------------------------------------------------------------------------------|-------------------------------------|------------|----------|--------------|-----------|
+| Welcome and registration                                                                       |                                     | 10:00 AM   | 10:20 AM |              |           |
+| TBA                                                                                            | Tijo Thomas, Imply                  | 10:30 AM   | 11:15 AM |              |           |
+| Mq (Queuing Abstraction at Meesho for Scalable and Efficient Communication)                    | Ramiz Mehran, Meesho                | 11:20 AM   | 12:00 PM |              |           |
+| Networking break                                                                               |                                     | 12:00 PM   | 12:15 PM |              |           |
+| Solving for Real-time in modern ecommerce: A primer on challenges, opportunities and solutions | Ashwin Venkatesan, Platformatory.io | 12:15 PM   | 01:00 PM |              |           |
+| Lunch and Networking                                                                           |                                     | 01:00 PM   | 02:30 PM |              |           |
+
 
 
 ### Talks
@@ -43,10 +51,20 @@ _Speaker:_ **Ramiz Mehran, Software Architect at Meesho**
 
 _About the talk:_ We'll explore the challenges of tightly coupled messaging queues and the financial and operational inefficiencies they introduce, such as over-provisioning and migration headaches. We'll introduce MQ Abstraction as a solution that decouples application code from specific messaging infrastructures, enabling seamless interaction and standardizing configurations for optimal performance. Through a quick overview of its architecture and benefits, we'll discuss how MQ Abstraction simplifies messaging queue interactions, promotes scalability, and reduces costs.
 
+- **Solving for Real-time in modern ecommerce: A primer on challenges, opportunities and solutions**
+
+_Speaker:_ **Ashwin Venkatesan, Platform Engineer @ Platformatory.io**
+
+_About the talk:_ Customer experience is the real driver of innovation. And there's no harder challenge for CX than in the face of large scale ecommerce. This talk focuses on where streaming fits in, along with our experiential tidbits of working with over half a dozen top retailers. We will specifically talk through<br>
+• Inventory Awareness (and why real-time inventory is crucial)<br>
+• How dynamic pricing is the final frontier of personalization<br>
+• Optimizing costs of commerce: advertising, shipping and with predictive insights on fresh data trends
+
 
 ### Speakers
 
 - {:.speaker-name} Ramiz Mehran <br> <span class="speaker-description">Software Architect at Meesho</span>
+- {:.speaker-name} Ashwin Venkatesan <br> <span class="speaker-description"> Senior Consultant at Platformatory working mainly on Apache Kafka and Kubernetes. Ashwin has done multiple projects building scalable data pipelines incorporating Apache Kafka in production scenarios. He also dabbles in Data science and Machine learning in his free time. His hobbies include traveling, cooking, and following Manchester United : )</span>
 
 <br>
 _More talks TBA soon!_

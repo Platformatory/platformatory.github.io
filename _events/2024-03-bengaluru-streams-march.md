@@ -42,7 +42,6 @@ We're hosting our next in-person event on March 2. Join us for exciting discussi
 | Networking break                                         |                                  | 12:00 PM   | 12:15 PM |                                                                                                                                   |                                                            |
 | Time Series Text Indexing in Apache Pinot                | Atri Sharma, Atlassian           | 12:15 PM   | 01:00 PM |                                                                                                                                   | [YouTube](https://youtu.be/mrNgS9DqiAU){:target="\_blank"} |
 | Lunch and Networking                                     |                                  | 01:00 PM   | 02:30 PM |                                                                                                                                   |                                                            |
-|                                                          |                                  |            |          |                                                                                                                                   |                                                            |
 
 
 
