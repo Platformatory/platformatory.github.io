@@ -52,12 +52,16 @@ _Speaker:_ **Noel Kwan, Software Engineer at RisingWave Labs**
 
 _About the talk:_  In this talk, Noel will show you how to process real-time streaming data using SQL in RisingWave, which is fully wire compatible with PostgreSQL. He will use the real-world example (NYC Taxi dataset) to explain stateless computation, stateful computation, data ingestion and delivery, among others.
 
-- **Apache Hudi 1.0 preview: A database experience on the data lake**
+- **Unlocking Seamless Streaming Ingestion with Apache Hudi and Kafka**
 
-_Speaker:_ **Onehouse** (TBA)
+_Speaker:_ **Sagar Sumit, Software Engineer at Onehouse && Vinish Reddy,Data Platform Engineer at Onehouse**
+
+_About the talk:_ Join us as we explore Apache Hudi and its transformative utility, Hudi Streamer, for seamless data ingestion from various sources, including Apache Kafka. Learn how Hudi Streamer simplifies workflows with pluggable interfaces for extraction, key generation, and schema provision. We'll  also showcase real-time database replication using CDC, bridging Confluent Cloud platform and Onehouse managed lakehouse. Throughout the session, we'll highlight the synergy between Hudi and Kafka, empowering organizations to streamline data workflows and drive innovation. Whether you're a seasoned Kafka user, data engineer, or analytics enthusiast, this session equips you with the tools to harness Hudi's full potential in your Kafka ecosystem.
 
 ### Speakers
 
 - {:.speaker-name} Richard Artoul <br> <span class="speaker-description">Co-Founder @ WarpStream Labs</span>
 - {:.speaker-name} Christina Lin <br> <span class="speaker-description">Christina has 20+ years of experience in software development. She has worked as a developer, consultant, architect. She is an advocate for making innovative solutions down to earth and making them easily accessible for everyone. Skilled in Open Source technology such as Redpanda, Apache Camel, Kafka and Kubernetes, Ansible. https://www.linkedin.com/in/christina-lin-14a4b655/</span>
 - {:.speaker-name} Noel Kwan <br> <span class="speaker-description">Noel works as a Database Kernel Engineer at RisingWave.​He focuses on performance and reliability and has worked on fuzzing tools such as SqlSmith and performance-related features such as Backfill. He studied at NUS, with an emphasis on programming languages.</span>
+- {:.speaker-name} Sagar Sumit <br> <span class="speaker-description">Sagar Sumit is a Software Engineer at Onehouse and an Apache Hudi PMC member. Apart from Hudi, he is also a contributor to the Presto and Trino projects. In the past, he has worked on the team that built Amazon Aurora, a relational database built for the cloud, that now powers mission-critical applications for AWS customers.</span>
+- {:.speaker-name} Vinish Reddy <br> <span class="speaker-description">Vinish Reddy is a Data Platform Engineer at Onehouse. He works on the Onehouse Data Plane services, and is a PMC member for Apache XTable. He previously worked in the payments team at Uber. He is passionate about solving challenging engineering problems and making an impact.</span>
