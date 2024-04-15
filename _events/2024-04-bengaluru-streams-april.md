@@ -32,18 +32,26 @@ We're hosting our next in-person event on April 20. Join us for exciting discuss
 
 ### Schedule
 
-| Name                                                                                           | Speaker                             | Start Time | End Time | Presentation | Recording |
-|------------------------------------------------------------------------------------------------|-------------------------------------|------------|----------|--------------|-----------|
-| Welcome and registration                                                                       |                                     | 10:00 AM   | 10:20 AM |              |           |
-| TBA                                                                                            | Tijo Thomas, Imply                  | 10:30 AM   | 11:15 AM |              |           |
-| Mq (Queuing Abstraction at Meesho for Scalable and Efficient Communication)                    | Ramiz Mehran, Meesho                | 11:20 AM   | 12:00 PM |              |           |
-| Networking break                                                                               |                                     | 12:00 PM   | 12:15 PM |              |           |
-| Solving for Real-time in modern ecommerce: A primer on challenges, opportunities and solutions | Ashwin Venkatesan, Platformatory.io | 12:15 PM   | 01:00 PM |              |           |
-| Lunch and Networking                                                                           |                                     | 01:00 PM   | 02:30 PM |              |           |
+| Name                                                                                                                               | Speaker                             | Start Time | End Time | Presentation | Recording |
+|------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------|------------|----------|--------------|-----------|
+| Welcome and registration                                                                                                           |                                     | 10:00 AM   | 10:20 AM |              |           |
+| Optimizing Real-Time Analytics: Strategies for Optimizing high concurrency real time analytics using Apache Kafka and Apache Druid | Tijo Thomas, Imply                  | 10:30 AM   | 11:15 AM |              |           |
+| Mq (Queuing Abstraction at Meesho for Scalable and Efficient Communication)                                                        | Ramiz Mehran, Meesho                | 11:20 AM   | 12:00 PM |              |           |
+| Networking break                                                                                                                   |                                     | 12:00 PM   | 12:15 PM |              |           |
+| Solving for Real-time in modern ecommerce: A primer on challenges, opportunities and solutions                                     | Ashwin Venkatesan, Platformatory.io | 12:15 PM   | 01:00 PM |              |           |
+| Lunch and Networking                                                                                                               |                                     | 01:00 PM   | 02:30 PM |              |           |
 
 
 
 ### Talks
+
+- **Optimizing Real-Time Analytics: Strategies for Optimizing high concurrency real time analytics using Apache Kafka and Apache Druid**
+
+_Speaker:_ **Tijo Thomas, Manager, Solutions Architect @ Imply**
+
+_About the talk:_ We will delve into Apache Druid's capabilities as a real-time analytical database optimized for event-driven data and large-scale queries. We will discuss Druid's data storage and indexing strategies, which allow for fast data ingestion and query responses, essential for real-time analytics.
+
+The core of the talk will focus on tuning and optimization strategies for both Kafka and Druid. This includes configuring Kafka producers and consumers for maximum efficiency, understanding and applying Druid's indexing schemes, and tuning Druid's query performance. We will also discuss how to effectively manage and scale the Kafka-Druid pipeline to handle increasing volumes of data.
 
 - **Mq (Queuing Abstraction at Meesho for Scalable and Efficient Communication)**
 
@@ -63,8 +71,6 @@ _About the talk:_ Customer experience is the real driver of innovation. And ther
 
 ### Speakers
 
+- {:.speaker-name} Tijo Thomas <br> <span class="speaker-description">Manager, Solutions Architect @ Imply. An experienced Data Engineer with 20+ years of experience as Architect , Global Lead Solutions Architect,  Software Engineer (R&D), mostly in the area of big data and streaming technologies. He has been part of developing big data platform and also helping customers in solving their Data challenges using Bigdata, Spark and Druid. During this time he has collected best practices,  patterns and anti-patterns applied in production environments.</span>
 - {:.speaker-name} Ramiz Mehran <br> <span class="speaker-description">Software Architect at Meesho</span>
 - {:.speaker-name} Ashwin Venkatesan <br> <span class="speaker-description"> Senior Consultant at Platformatory working mainly on Apache Kafka and Kubernetes. Ashwin has done multiple projects building scalable data pipelines incorporating Apache Kafka in production scenarios. He also dabbles in Data science and Machine learning in his free time. His hobbies include traveling, cooking, and following Manchester United : )</span>
-
-<br>
-_More talks TBA soon!_
