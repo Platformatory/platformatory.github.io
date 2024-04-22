@@ -50,7 +50,13 @@ Participants will learn how to avoid common pitfalls associated with complex dat
 
 _Speaker:_ **Noel Kwan, Software Engineer at RisingWave Labs**
 
-_About the talk:_  In this talk, Noel will show you how to process real-time streaming data using SQL in RisingWave, which is fully wire compatible with PostgreSQL. He will use the real-world example (NYC Taxi dataset) to explain stateless computation, stateful computation, data ingestion and delivery, among others.
+_About the talk:_  Join us for an exploration of real-time streaming data processing, where we’ll delve into RisingWave’s Stream Processing Model and interact with data streams using SQL.
+In this session, we will begin by demonstrating the difference between batch and streaming data processing. We will then cover the internals of RisingWave’s architecture, such as decoupled compute and storage, and discuss how each RisingWave service operates.<br>
+We will further dive into stateful and stateless streaming computations, examining aspects like the internal state of stateful computations and how it can be observed from RisingWave.
+We will also explore RisingWave’s handling of batch queries and discuss the serving scenarios in which RisingWave excels.<br>
+Next, we will cover data delivery and ingestion with external systems like Kafka, seamlessly integrating them to showcase how different systems can collaborate to provide various features.<br>
+Finally, we will review a simple dashboard application for ride-hailing data and demonstrate these concepts.<br>
+After this talk, developers should be more familiar with the batteries-included capabilities of RisingWave and understand how to simplify their stream processing workflows with RisingWave.
 
 - **Unlocking Seamless Streaming Ingestion with Apache Hudi and Kafka**
 
