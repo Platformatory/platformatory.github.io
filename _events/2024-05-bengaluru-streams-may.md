@@ -21,6 +21,16 @@ Platformatory is excited to host a special edition of the Bengaluru Streams meet
 <i>Please note:</i> <b>Since there are limited seats, we can only accommodate people who <a href="https://forms.gle/W5VQzvm4rQvwiRup9" target="_blank">register</a> . Only people completing the form and receiving a confirmation email will be able to attend.</b>
 </div>
 
+### Schedule
+
+| Name                                                                             | Speaker                              | Start Time | End Time    | Presentation | Recording |
+|----------------------------------------------------------------------------------|--------------------------------------|------------|-------------|--------------|-----------|
+| Welcome and registration                                                         |                                      | 04:00 PM   | 04:10 PM AM |              |           |
+| Beyond Tiered Storage: Serverless Kafka with No Local Disks                      | Richard Artoul, WarpStream           | 04:20 PM   | 05:00 PM    |              |           |
+| Real-Time Predictions with Machine Learning & Redpanda Streaming Data Transforms | Christina Lin, Redpanda              | 05:00 PM   | 05:40 PM    |              |           |
+| Networking break with snacks                                                     |                                      | 05:40 PM   | 06:30 PM    |              |           |
+| Stream Processing in SQL: One Approach                                           | Noel Kwan, RisingWave                | 06:30 PM   | 07:10 PM    |              |           |
+| Unlocking Seamless Streaming Ingestion with Apache Hudi and Kafka                | Sagar Sumit & Vinish Reddy, Onehouse | 07:10 PM   | 07:50 PM    |              |           |
 
 ### Talks
 
