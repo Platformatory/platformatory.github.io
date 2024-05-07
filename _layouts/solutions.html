@@ -32,20 +32,15 @@ bodyClass: page-services-list
     </div>
   </div>
 </div>
-
-<div>
+<div class="container-section">
   {% for solutions in sorted_solutions %}
-  <div class="service service-summary" id="{{ solutions.hash }}">
-    <div
-      style="background: {{solutions.section.background | default: '#6c973c'}};"
-      class="strip service-section border-bottom border-light"
-    >
+  <div class="service service-summary solution-section" id="{{ solutions.hash }}">
+    <!-- <button class="button button-left" onclick="moveLeft()">&#10094;</button> -->
+    <div style="background: {{solutions.section.background | default: '#6c973c'}};"
+      class="strip service-section border-bottom border-light">
       <!-- <div class="service-section-bg"></div> -->
-      <div class="container py-2 pb-md-4">
-        <div
-          style="color: {{solutions.section.color | default: '#ffffff'}};"
-          class="text-center"
-        >
+      <div class="container py-2  pb-md-2">
+        <div style="color: {{solutions.section.color | default: '#ffffff'}};" class="text-center">
           <h2 class="service-title">
             <a href="#{{ solutions.hash }}">{{ solutions.title }}</a>
           </h2>
@@ -54,48 +49,14 @@ bodyClass: page-services-list
       </div>
       <div class="container content-list-item">
         <div class="product-card">
-          <img
-            src="{{solutions.image}}"
-            alt="{{solutions.title}} Website"
-            class="product-image"
-          />
-          <a
-            href="{{solutions.site_url}}"
-            target="_blank"
-            class="product-visit-button"
-            >Learn More</a
-          >
+          <img src="{{solutions.image}}" alt="{{solutions.title}} Website" class="product-image" />
+          <a href="{{solutions.site_url}}" target="_blank" class="product-visit-button">Learn More</a>
         </div>
         <div></div>
       </div>
     </div>
-
-    <!-- <div class="content-list-item container">
-      {% if solutions.features %}
-      <ul class="container-context px-md-4 px-sm-1">
-        {% for feature in solutions.features %}
-        <li>
-          <div
-            class="d-flex justify-content-center align-items-center flex-column {{ feature.div_class | default: 'text-center platform-strategy' }}"
-          >
-            <h2 class="{{ feature.h2_class | default: 'text-center' }}">
-              {{ feature.title }}
-            </h2>
-            <div class=" {{cfeature.div_class }}">
-              <span
-                class="material-icons {{ feature.span_class | default: 'icon-serv py-1' }}"
-                style="font-size: 80px"
-              >
-                {{ feature.icon }}
-              </span>
-            </div>
-            <span class="feature-summary"> {{ feature.summary }} </span>
-          </div>
-        </li>
-        {% endfor %}
-      </ul>
-      {% endif %}
-    </div> -->
+    <!-- <button class="button button-right" onclick="moveRight()">&#10095;</button> -->
   </div>
   {% endfor %}
+
 </div>
