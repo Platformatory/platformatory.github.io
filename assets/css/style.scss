@@ -446,24 +446,24 @@ ol {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-around;
         @include media-breakpoint-up(lg) {
-            min-height: 512px;
+            min-height: 320px;
         }
         @include media-breakpoint-down(lg){
-            min-height: 670px;
+            min-height: 280px;
         }
         @include media-breakpoint-down(sm){
-            min-height: 440px;
+            min-height: 280px;
         }
         
         .product-image{
-            max-width: 840px;
+            max-width: 340px;
             @include media-breakpoint-down(md){
-                max-width: 540px;
+                max-width: 240px;
             }
             @include media-breakpoint-down(sm){
-                max-width: 280px;
+                max-width: 160px;
             }
         }
         .product-visit-button{
