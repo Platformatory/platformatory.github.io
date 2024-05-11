@@ -23,14 +23,15 @@ Platformatory is excited to host a special edition of the Bengaluru Streams meet
 
 ### Schedule
 
-| Name                                                                             | Speaker                              | Start Time | End Time    | Presentation | Recording |
-|----------------------------------------------------------------------------------|--------------------------------------|------------|-------------|--------------|-----------|
-| Welcome and registration                                                         |                                      | 04:00 PM   | 04:10 PM    |              | [YouTube](https://youtu.be/m9DMEpEhbeg){:target="\_blank"} |
-| Beyond Tiered Storage: Serverless Kafka with No Local Disks                      | Richard Artoul, WarpStream           | 04:20 PM   | 05:00 PM    |              | [YouTube](https://youtu.be/EIE_Ad4qLjg){:target="\_blank"} |
-| Real-Time Predictions with Machine Learning & Redpanda Streaming Data Transforms | Christina Lin, Redpanda              | 05:00 PM   | 05:40 PM    |              |           |
-| Networking break with snacks                                                     |                                      | 05:40 PM   | 06:30 PM    |              |           |
-| Stream Processing in SQL: One Approach                                           | Noel Kwan, RisingWave                | 06:30 PM   | 07:10 PM    | [Slides](https://drive.google.com/file/d/1pBCUCMXvhKmEWXzpbJWnRTIUy7Y2EKYP/view?usp=sharing){:target="\_blank"} | [YouTube](https://youtu.be/1B5lEpIWcJI){:target="\_blank"} |
-| Unlocking Seamless Streaming Ingestion with Apache Hudi and Kafka                | Sagar Sumit & Vinish Reddy, Onehouse | 07:10 PM   | 07:50 PM    | [Slides](https://drive.google.com/file/d/1KKBwQo3-b97b8yfAfTT4dRMidzVI7qqM/view?usp=sharing){:target="\_blank"} | [YouTube](https://youtu.be/PZyi1NWKBgs){:target="\_blank"} |
+| Name                                                                             | Speaker                              | Start Time | End Time | Presentation                                                                                                    | Recording                                                  |
+|----------------------------------------------------------------------------------|--------------------------------------|------------|----------|-----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------|
+| Welcome and registration                                                         |                                      | 04:00 PM   | 04:10 PM | [Slides](https://drive.google.com/file/d/1_v7gH7PHTE5GlZbRCW-su8fSpkaCnxy7/view?usp=sharing){:target="\_blank"} | [YouTube](https://youtu.be/m9DMEpEhbeg){:target="\_blank"} |
+| Beyond Tiered Storage: Serverless Kafka with No Local Disks                      | Richard Artoul, WarpStream           | 04:20 PM   | 05:00 PM |                                                                                                                 | [YouTube](https://youtu.be/EIE_Ad4qLjg){:target="\_blank"} |
+| Real-Time Predictions with Machine Learning & Redpanda Streaming Data Transforms | Christina Lin, Redpanda              | 05:00 PM   | 05:40 PM |                                                                                                                 |                                                            |
+| Networking break with snacks                                                     |                                      | 05:40 PM   | 06:30 PM |                                                                                                                 |                                                            |
+| Stream Processing in SQL: One Approach                                           | Noel Kwan, RisingWave                | 06:30 PM   | 07:10 PM | [Slides](https://drive.google.com/file/d/1pBCUCMXvhKmEWXzpbJWnRTIUy7Y2EKYP/view?usp=sharing){:target="\_blank"} | [YouTube](https://youtu.be/1B5lEpIWcJI){:target="\_blank"} |
+| Unlocking Seamless Streaming Ingestion with Apache Hudi and Kafka                | Sagar Sumit & Vinish Reddy, Onehouse | 07:10 PM   | 07:50 PM | [Slides](https://drive.google.com/file/d/1KKBwQo3-b97b8yfAfTT4dRMidzVI7qqM/view?usp=sharing){:target="\_blank"} | [YouTube](https://youtu.be/PZyi1NWKBgs){:target="\_blank"} |
+
 
 ### Talks
 
