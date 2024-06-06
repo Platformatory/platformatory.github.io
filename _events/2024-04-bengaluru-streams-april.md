@@ -7,7 +7,7 @@ location: Meesho, Bengaluru
 address: Meesho HQ, 3rd Floor, Tower E, Helios Business Park, near Near Gate 3, Chandana, Kadabeesanahalli, Bengaluru, Karnataka 560103
 category: meetup
 type: free
-partners: Meesho
+partners: Meesho, Imply
 mode: In-Person
 description: Special interest group focused on event streaming and real time analytics
 link: https://www.meetup.com/bangalore-streams/events/299747121
