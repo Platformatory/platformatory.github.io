@@ -30,6 +30,67 @@ Data Mesh<br>
 We're hosting our next in-person event on July 6. Join us for exciting discussions in the streaming world with opportunities to network with peers and leaders in the industry.
 </div>
 
-### Call for Speakers
+### Schedule
 
-The Call for Speakers is now open at [https://forms.gle/gVeX45FZi296PSfa9](https://forms.gle/gVeX45FZi296PSfa9){:target="\_blank"}. We are looking for talks around event streaming and real time analytics. Anything streaming and fast data fits the bill. We want to hear from the community about the adoption, various use cases and exciting open source technology in the streaming world. The submissions are open till 11 June 2024(Tuesday) 20:00 IST. Feel free to submit multiple talks as well. We will get back to you with the results, latest by June 13.
+
+
+| Name                                                                   | Speaker                  | Start Time | End Time | Presentation | Recording |
+|------------------------------------------------------------------------|--------------------------|------------|----------|--------------|-----------|
+| Welcome and registration                                               |                          | 10:00 AM   | 10:20 AM |              |           |
+| Realtime Triggers in Kestra                                            | Shruti Mantri, Moveworks | 10:20 AM   | 11:00 AM |              |           |
+| Moving from Batch to Realtime : Inspired by a true production incident | Shivji Jha, Nutanix      | 11:00 AM   | 11:40 AM |              |           |
+| Networking break                                                       |                          | 11:40 AM   | 12:00 PM |              |           |
+| Challenges & Learnings with using Kafka/Redpanda at a huge scale       | Anurag Jain, Sharechat   | 12:00 PM   | 12:40 PM |              |           |
+| Push Query Layer for Stream Processing Systems (Apache Flink)          | Platformatory            | 12:40 PM   | 01:20 PM |              |           |
+| Lunch and Networking                                                   |                          | 01:30 PM   | 2:30 PM  |              |           |
+
+
+
+### Talks
+
+- **Realtime Triggers in Kestra**
+
+_Speaker:_ **Shruti Mantri, Software Engineer at Moveworks**
+
+_About the talk:_ 
+1. Introduction to Kestra
+2. Capabilities of Kestra
+3. Introduction to Realtime Triggers in Kestra
+4. How can realtime triggers be leveraged for event driven architecture
+
+Kestra can serve as a central tool to handle event driven architecture, along with being an orchestration tool.
+
+- **Moving from Batch to Realtime : Inspired by a true production incident**
+
+_Speaker:_ **Shivji Jha, Staff Engineer at Nutanix**
+
+_About the talk:_ This is a real world account from an Apache Druid cluster in production. A story of 48 hours of debugging, learning and understanding batch vs stream better, filing a couple of issues in Druid open source projects and finally a stable production pipeline again thanks to the Druid community. We will discuss what parts of your design could be impacted, how you should change the related systems so the cascading failures don't bring down your complete production availability. As an example, we will discuss the bottlenecks we had in overlord, slot issues for Peons in middle managers, coordinator bottlenecks, how to mitigated task and segment flooding, what configs we changed sprinkled with real world numbers and snapshots from our Grafana dashboards.
+
+Finally we will list all the leanings and how we made sure we never repeat the same mistakes in production systems.
+
+A real world account of a production incident showing
+1. How batch and realtime systems differ
+2. Kind of failures to anticipate
+3. How to be antifragile for future"
+
+- **Challenges & Learnings with using Kafka/Redpanda at a huge scale**
+
+_Speaker:_ **Anurag Jain, Software Engineer at Sharechat**
+
+_About the talk:_ Kafka is a industry standard data steaming platform and a lot of data intensive companies use it already for their streaming data use-cases, In this talk I am going to cover-up on our (ShareChat's) Challenges & Leaning's from using/operating Kafka/Redpanda at a heavy scale (GBs per sec) and overcoming problems with systems, causes for issues etc. It will be a really good leanings/best-practices session for the devs to avoid mistakes in production at a scale. ShareChat already operates big Kafka/Redpanda clusters in production and at a heavy scale. I have done a lot of firefighting around various issues and onboarding/migrating of our services/jobs to Kafka protocol recently.
+
+Devs watching this presentation will be able to understand what all issues can come-up in production with operating Kafka at a high scale with the Kafka system and their services/jobs, they will be able to understand why the issues come-up and what is the resolution, how to deal with a problem and how to avoid mistakes in production.
+
+- **Push Query Layer for Stream Processing Systems**
+
+_Speaker:_ **Platformatory**
+
+_About the talk:_ One of the problems with stream processing systems is that they exist primarily in the streaming plane. These systems are only capable of processing data, which means it cannot hold an infinite amount of state, unlike databases. Some streaming processing systems work around this, usually by allowing some kind of interface to query the state store directly. But this usually a difficult problem to solve, mainly because the state stores are local and they involve the internals of the system, which aren't necessarily meant to be exposed. Nonetheless, many stream processing systems do provide a work around to this problem - For example, in Kafka Streams, there is a way to perform interactive queries on the state store across different state stores.
+
+Making this work with Apache Flink is an interesting problem to solve. In this talk, we will talk about how to make state stores queryable. Thus, providing a query layer on top of Flink and therefore embedding Flink into the operational plane.
+
+### Speakers
+
+- {:.speaker-name} Shruti Mantri <br> <span class="speaker-description">Software Engineer at Moveworks. Shruti is passionate about Data Engineering. She has contributed to multiple open source data engineering technologies, has Udemy courses related to Data Engineering, and has been a mentor to many who wants to excel in this domain.</span>
+- {:.speaker-name} Shivji Jha <br> <span class="speaker-description">Staff Engineer at Nutanix. Shiv is a distributed systems enthusiast, open source lover with deep expertise in OLTP, OLAP and streaming systems and usage patterns. Very active in the community, Shiv is  a contributor to multiple open source projects and a regular speaker with more than 25 talks at meetups and conferences</span>
+- {:.speaker-name} Anuraj Jain <br> <span class="speaker-description">I am a software engineer at ShareChat, working for projects involving streaming data technologies - Kafka, Flink, Clickhouse etc. I have worked on evolving the ShareChat's event steaming architecture with Kafka protocol, migrated the entire org onto Kafka protocol, done a lot of research & firefighting with issues/challenges with scale and use-cases at ShareChat with Kafka/Redpanda.</span>
