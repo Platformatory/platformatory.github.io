@@ -5,7 +5,7 @@ draft: false
 image: "images/team/nr.jpeg"
 jobtitle: "Director & Practitioner"
 linkedinurl: "https://www.linkedin.com/in/raghavendran-nehru-44b761/"
-weight: 1
+weight: 7
 layout: team
 ---
 
