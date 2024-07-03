@@ -34,16 +34,16 @@ We're hosting our next in-person event on July 6. Join us for exciting discussio
 
 
 
-| Name                                                                   | Speaker                  | Start Time | End Time | Presentation | Recording |
-|------------------------------------------------------------------------|--------------------------|------------|----------|--------------|-----------|
-| Welcome and registration                                               |                          | 10:00 AM   | 10:20 AM |              |           |
-| Realtime Triggers in Kestra                                            | Shruti Mantri, Moveworks | 10:20 AM   | 11:00 AM |              |           |
-| Moving from Batch to Realtime : Inspired by a true production incident | Shivji Jha, Nutanix      | 11:00 AM   | 11:40 AM |              |           |
-| Networking break                                                       |                          | 11:40 AM   | 12:00 PM |              |           |
-| Challenges & Learnings with using Kafka/Redpanda at a huge scale       | Anurag Jain, Sharechat   | 12:00 PM   | 12:40 PM |              |           |
-| Push Query Layer for Stream Processing Systems (Apache Flink)          | Platformatory            | 12:40 PM   | 01:20 PM |              |           |
-| Lunch and Networking                                                   |                          | 01:30 PM   | 2:30 PM  |              |           |
-
+| Name                                                                   | Speaker                                                | Start Time | End Time | Presentation | Recording |
+|------------------------------------------------------------------------|--------------------------------------------------------|------------|----------|--------------|-----------|
+| Welcome and registration                                               |                                                        | 09:30 AM   | 10:00 AM |              |           |
+| Realtime Triggers in Kestra                                            | Shruti Mantri, Moveworks                               | 10:00 AM   | 10:30 AM |              |           |
+| Moving from Batch to Realtime : Inspired by a true production incident | Shivji Jha, Nutanix                                    | 10:35 AM   | 11:10 AM |              |           |
+| Challenges & Learnings with using Kafka/Redpanda at a huge scale       | Anuraj Jain, Sharechat                                 | 11:15 AM   | 11:50 AM |              |           |
+| Networking break                                                       |                                                        | 11:50 AM   | 12:10 PM |              |           |
+| Unleashing Data Powerhouses - Benthos and Kafka Streams                | Shivam Yadav & Shubham Dhal,  Sharechat                | 12:10 PM   | 12:45 PM |              |           |
+| Push Query Layer for Stream Processing Systems (Apache Flink)          | Avinash Upadhyaya & Pavan Keshavamurthy, Platformatory | 12:45 PM   | 01:20 PM |              |           |
+| Lunch and Networking                                                   |                                                        | 01:30 PM   | 02:30 PM |              |           |
 
 
 ### Talks
@@ -75,15 +75,25 @@ A real world account of a production incident showing
 
 - **Challenges & Learnings with using Kafka/Redpanda at a huge scale**
 
-_Speaker:_ **Anurag Jain, Software Engineer at Sharechat**
+_Speaker:_ **Anuraj Jain, Software Engineer at Sharechat**
 
 _About the talk:_ Kafka is a industry standard data steaming platform and a lot of data intensive companies use it already for their streaming data use-cases, In this talk I am going to cover-up on our (ShareChat's) Challenges & Leaning's from using/operating Kafka/Redpanda at a heavy scale (GBs per sec) and overcoming problems with systems, causes for issues etc. It will be a really good leanings/best-practices session for the devs to avoid mistakes in production at a scale. ShareChat already operates big Kafka/Redpanda clusters in production and at a heavy scale. I have done a lot of firefighting around various issues and onboarding/migrating of our services/jobs to Kafka protocol recently.
 
 Devs watching this presentation will be able to understand what all issues can come-up in production with operating Kafka at a high scale with the Kafka system and their services/jobs, they will be able to understand why the issues come-up and what is the resolution, how to deal with a problem and how to avoid mistakes in production.
 
+- **Unleashing Data Powerhouses - Benthos and Kafka Streams**
+
+_Speakers:_ **Shivam Yadav and Shubham Dhal, Software Engineers at Sharechat**
+
+_About the talk:_ "In this session, we'll unravel the story of ShareChat's transition from Java to Benthos for crafting efficient ETL pipelines. With a single configuration file, Benthos effortlessly connects diverse sources and sinks, transforming the way we handle data. Discover how, armed with ""at least once"" guarantees, Benthos emerged as the go-to solution for our stateless pipelines.
+
+Focused on real-world use cases, we'll explore how Benthos, paired seamlessly with Kafka and Kafka Streams, became the linchpin of our operations. From sending notifications to triggering events for millions of users, to routing posts for reviews, Benthos proved its mettle in simplifying complex tasks.
+
+Learn how we platformized Benthos at ShareChat, deploying over 20 jobs from a single repository. Delve into the specifics of how Benthos with Kafka and Kafka Streams powers our data pipelines, handling tasks such as dumping data to databases, making API calls, and routing events to different message queues. The session will highlight the simplicity and performance benefits we've achieved—processing 2K events/sec to an impressive 45K events/sec—without the need for extensive developer code."
+
 - **Push Query Layer for Stream Processing Systems**
 
-_Speaker:_ **Platformatory**
+_Speaker:_ **Avinash Upadhyaya and Pavan Keshavamurthy, Platformatory**
 
 _About the talk:_ One of the problems with stream processing systems is that they exist primarily in the streaming plane. These systems are only capable of processing data, which means it cannot hold an infinite amount of state, unlike databases. Some streaming processing systems work around this, usually by allowing some kind of interface to query the state store directly. But this usually a difficult problem to solve, mainly because the state stores are local and they involve the internals of the system, which aren't necessarily meant to be exposed. Nonetheless, many stream processing systems do provide a work around to this problem - For example, in Kafka Streams, there is a way to perform interactive queries on the state store across different state stores.
 
@@ -94,3 +104,7 @@ Making this work with Apache Flink is an interesting problem to solve. In this t
 - {:.speaker-name} Shruti Mantri <br> <span class="speaker-description">Software Engineer at Moveworks. Shruti is passionate about Data Engineering. She has contributed to multiple open source data engineering technologies, has Udemy courses related to Data Engineering, and has been a mentor to many who wants to excel in this domain.</span>
 - {:.speaker-name} Shivji Jha <br> <span class="speaker-description">Staff Engineer at Nutanix. Shiv is a distributed systems enthusiast, open source lover with deep expertise in OLTP, OLAP and streaming systems and usage patterns. Very active in the community, Shiv is  a contributor to multiple open source projects and a regular speaker with more than 25 talks at meetups and conferences</span>
 - {:.speaker-name} Anuraj Jain <br> <span class="speaker-description">I am a software engineer at ShareChat, working for projects involving streaming data technologies - Kafka, Flink, Clickhouse etc. I have worked on evolving the ShareChat's event steaming architecture with Kafka protocol, migrated the entire org onto Kafka protocol, done a lot of research & firefighting with issues/challenges with scale and use-cases at ShareChat with Kafka/Redpanda.</span>
+- {:.speaker-name} Shivam Yadav <br> <span class="speaker-description">Shivam Yadav is a software engineer in the Livestream team at Sharechat. He has experience working with Kafka, Kafka Streams, and Redpanda, with a focus on message queues, stream processing, and ETL pipelines. Currently, he is working with Redpanda, Benthos and stream processing at scale.</span>
+- {:.speaker-name} Shubham Dhal <br> <span class="speaker-description">"Shubham Dhal is a software engineer in Sharechat working in Livestream team. Earlier he was a part of Platform team, focussing on stream processing and realtime communication. His interests lie in realtime data and he has a hidden agenda to move everything he can get his hands on to streaming. Before Sharechat he was an equity derivatives quant at JP Morgan. Shubham has done his bachelor's in engineering from Indian Institute of Technology, Kharagpur"</span>
+- {:.speaker-name} Pavan Keshavamurthy <br> <span class="speaker-description">CTO & Co-founder @ Platformatory.io</span>
+- {:.speaker-name} Avinash Upadhyaya <br> <span class="speaker-description">Platform Engineer at Platformatory.io</span>
