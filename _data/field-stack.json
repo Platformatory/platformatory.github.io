@@ -16,16 +16,20 @@
     "render_title": true
   },
   {
-    "title": "Streaming & Real-time",
+    "title": "Real-time data infrastructure",
     "items": [
+      "Redis",
+      "Aerospike DB",
+      "Apache Ignite",
+      "Scylla DB",
       "Apache Kafka",
-      "Redpanda",
       "Apache Flink",
       "Apache Spark",
       "Kafka Streams",
-      "KSQL",
+      "Benthos",
       "Debezium",
       "Kafka Connect",
+      "Apache Airflow",
       "Apache Pinot",
       "Apache Druid",
       "Clickhouse",
