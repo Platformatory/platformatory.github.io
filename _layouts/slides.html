@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css">
+    <style>
+        .typewriter {
+            display: inline-block;
+            white-space: pre-wrap;
+            border-right: .1em solid orange;
+            animation: blink-caret .75s step-end infinite;
+            text-align: left;
+            font-size: 1em;
+            max-width: 90%;
+            overflow-wrap: break-word;
+            word-break: break-all;
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: orange; }
+        }
+
+        .typewriter p {
+            animation: none;
+        }
+
+        .reveal {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .slides {
+            text-align: left;
+            margin: 0;
+        }
+
+        pre {
+            margin: 0;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 5px;
+            background: #333;
+            position: relative;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .progress-bar .indicator {
+            width: 0;
+            height: 100%;
+            background: orange;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: progress 10s linear forwards;
+        }
+
+        @keyframes progress {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <div class="progress-bar">
+                <div class="indicator"></div>
+            </div>
+            {{ content }}
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/markdown/markdown.js"></script>
+    <script>
+        Reveal.initialize({
+            plugins: [ RevealMarkdown ],
+            view: 'scroll',
+            scrollProgress: true,
+            viewDistance: 3,
+            hash: true
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const typewriterElement = document.getElementById('typewriter-content');
+            const lines = typewriterElement.innerHTML.split('\n');
+            typewriterElement.innerHTML = '';
+            let lineIndex = 0;
+
+            function typeLine() {
+                if (lineIndex < lines.length) {
+                    typewriterElement.innerHTML += lines[lineIndex] + '\n';
+                    lineIndex++;
+                    setTimeout(typeLine, 500); // Adjust typing speed here
+                } else {
+                    // Move the cursor to the end of the prompt
+                    typewriterElement.innerHTML += ' ';
+                }
+            }
+
+            typeLine();
+        });
+    </script>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</body>
+</html>
+
