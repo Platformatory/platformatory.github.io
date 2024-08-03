@@ -63,9 +63,9 @@
     font-family: $font-family-base;
   }
   p {
-    font-size: 1rem;
+    font-size: 1  rem;
     font-weight: light;
-    line-height: 1.5;
+    line-height: 1.5;     
     // color: $white;
     opacity: .7;
   }
@@ -219,6 +219,3 @@
 }
 
 
-.text-center {
-  text-align: center;
-}

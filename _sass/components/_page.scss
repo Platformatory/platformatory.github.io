@@ -6,3 +6,215 @@
     flex: 1 0 0;
   }
 }
+
+
+.slides{
+  @include media-breakpoint-up(lg) {
+    width: 990px !important;
+  }
+  @include media-breakpoint-up(xl) {
+    width: 1100px !important;
+  }     
+}
+.text-center {
+  text-align: center;
+}   
+
+
+.section-top{
+  .section-intro-container{
+    margin-top: 50px;   
+    @include media-breakpoint-up(xl){
+    margin-top: 40px;
+    min-height: 586px;  
+    // display: grid !important      ;
+    // grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  .intro{
+    margin: 0;
+  }
+  }
+  .intro-image-conatainer{
+    img{
+    object-fit: cover;
+    object-position: left;
+    height: 100%;
+    margin: 0;  
+    max-width: 100% !important;
+    max-height: 100% !important;}
+  }
+
+}
+.section-content{
+  // display: grid;
+  // grid-template-columns: repeat(2, minmax(0, 1fr));
+  border: 1px solid rgb(186 186 186 / 27%);
+  .intro-content{
+    height: 100%;
+    padding: 1rem 1.5em;  
+    background-color: #2f2f2f;
+    text-align: start;
+    display: flex;
+    flex-direction: column ;    
+    justify-content: center;
+    h1 {
+      font-size: 38px !important;
+      margin: 0;
+    }   
+    p{
+      color: #e8f5ff;
+    }
+  }
+  .ctas-list{
+    h4{
+      font-size: 26px;
+    }
+    border: 1px solid rgb(186 186 186 / 27%);
+    background-color: inherit !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ul{
+      list-style: none  ;
+      display: flex !important;
+      flex-direction: column;
+      li{
+        font-size: 18px;  
+        a{  
+          color: rgb(190, 190, 190);
+          &:hover{
+            color: #ffffff;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+section{
+.consulting-container{
+  .strip{
+    background-color: #2a2a2a;
+    padding: 0;
+    .service-title  {
+      font-size: 24px !important;
+      a{
+      color: white;
+      font-size: 16     px;
+      }
+    }  
+    p{
+      color: white;
+    }           
+  } 
+  .content-list-item{
+      padding-bottom: 0 !important;
+    ul {
+       margin: 0; 
+       display: grid;
+       @include media-breakpoint-up(md){
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      li{
+        @include media-breakpoint-down(sm){
+          width: 100%;
+        }
+        
+        .feature-card{  
+          min-height: 146px;
+        }
+        padding: 15px 20px;
+        background: #252525 !important;
+        
+        h2{
+          font-size: 18px !important;
+        }
+      }
+    }
+    .container-context{
+      display: flex;
+      .icon{
+        span{
+          font-size: 32px;
+          display: inline;
+          padding: 8px !important;
+          background-color: white;
+          border-radius: 47px;
+          color: #81B94C;
+        }
+      }
+      
+      h2{
+        margin-bottom: 5px;
+        font-size: 24px;
+      }
+    }
+    
+    .feature-summary{ 
+      font-size: 14px;
+      color: #cbcbcb;
+    }
+  }
+}
+}
+
+.home-slides{
+  display: grid;
+  width: 100%;
+  height: 100%;
+  @include media-breakpoint-up(lg){
+    min-height: 580px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+    --tw-shadow-color: #1d6427;
+    box-shadow: 0 10px 26px -3px rgb(23 95 10 / 50%), 0 4px 6px -4px rgb(0 0 0 / 0.1); 
+  .tmux-header{
+    border-bottom:1px solid #1d6427;
+    text-align: start;
+    p{
+      font-size: 12px;
+      margin: 0;
+      color: white;
+    }
+  }
+  .slide-left{
+    border:1px solid #1d6427;
+    border-right: 0;
+    .content{
+    
+    padding: 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center   ;
+    h2{
+      font-size: 32px;  
+      text-transform: none    ;
+    } 
+    p{
+      margin: 0;
+      color: #b5b5b5;   
+    }
+  }
+  } 
+  .slide-right{
+    border:1px solid #1d6427;
+    .content{
+      text-align: start;
+      padding: 1rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h2{
+        font-size: 24px !important;
+        text-transform: none;
+      }
+      p{
+        margin: 0;
+        color: #b5b5b5;
+        
+      }
+    }
+  }  
+}

@@ -303,20 +303,20 @@
   ul {
     display: flex;
     // gap: 10px;
-    justify-content: space-between;
+    // justify-content: space-between;
     flex-wrap: wrap;
-    row-gap: 10px;
+    gap: 10px;
     margin: 0px -10px;
     @media (min-width:540px) {
       padding: 0 120px;
       margin: 0 40px;
     }
     @include media-breakpoint-up(md){
-      row-gap: 15px;
+      gap: 15px;
     }
-    @include media-breakpoint-up(lg){
-      row-gap: 30px;
-    }
+    // @include media-breakpoint-up(lg){
+    //   gap: 30px;
+    // }
     li {
       @include media-breakpoint-up(md) {
         width: 48.9%;

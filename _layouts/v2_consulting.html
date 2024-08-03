@@ -1,0 +1,83 @@
+---
+layout: v2_default
+bodyClass: v2-page-consulting
+---
+
+<!-- <section> -->
+<section class="section-top">
+  <div class="section-intro-container row mx-0">
+    <div class="section-content col-lg-6 p-0 col-12">
+      <div class="intro-content py-2">{{ content }}</div>
+      <!-- <div class="ctas-list">
+        <div class="p-2 justify-content-between">
+          <h4>Browse</h4>
+          <ul class="d-md-flex justify-content-center">
+            {% assign sorted_consulting = site.consulting | sort: 'weight' |
+            reverse %} {% for consulting in sorted_consulting %}
+            <li>
+              <a href="#{{ consulting.hash }}" id="{{consulting.hash}}-list"
+                >{{ consulting.title }}
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+              style="background-image: url(/{{page.intro_image}})"
+
+      </div> -->
+    </div>
+    <div
+      class="intro-image-conatainer col-lg-6 p-0 col-12 order-lg-1 order-first flex-xl-row-reverse"
+    >
+      <img src="/{{page.intro_image}}" alt="{{page.title}}" />
+    </div>
+  </div>
+</section>
+
+<!-- <div> -->
+{% for consulting in sorted_consulting %}
+<section>
+  <div
+    class="consulting-container mb-md-0 pb-1 servce-summary"
+    id="{{ consulting.hash }}"
+  >
+    <!-- style="background-color: {{ consulting.section.background | default: '#6c973c' }};" -->
+    <div class="strip service-section">
+      <div class="p-2 pb-md-4">
+        <div class="row mx-0 items-center text-left">
+          <h2 class="service-title col-3">
+            <a href="#{{ consulting.hash }}">{{ consulting.title }}</a>
+          </h2>
+          <div class="col-7">{{ consulting.content | markdownify }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="content-list-item">
+      {% if consulting.features %}
+      <ul class="container-context px-md-4 px-sm-1">
+        {% for feature in consulting.features %}
+        <li>
+          <div
+            class="d-flex justify-content-lg-around  flex-column feature-card {{ feature.div_class | default: ' platform-strategy' }}"
+          >
+            <div class=" {{feature.div_class }} icon">
+              <span
+                class="material-icons {{ feature.span_class | default: 'icon-serv py-1' }}"
+                >
+                {{ feature.icon }}
+              </span>
+            </div>
+            <h2 class="{{ feature.h2_class | default: 'text-left' }}">
+              {{ feature.title }}
+            </h2>
+
+            <span class="feature-summary"> {{ feature.summary }} </span>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endfor %}

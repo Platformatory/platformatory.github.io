@@ -1,118 +1,238 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>{{ site.title }}</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css"
+    />
+    <link
+      href="{{ '/assets/css/monitor.scss' | relative_url }}"
+      rel="stylesheet"
+    />
     <style>
-        .typewriter {
-            display: inline-block;
-            white-space: pre-wrap;
-            border-right: .1em solid orange;
-            animation: blink-caret .75s step-end infinite;
-            text-align: left;
-            font-size: 1em;
-            max-width: 90%;
-            overflow-wrap: break-word;
-            word-break: break-all;
-        }
+      .typewriter {
+        display: inline-block;
 
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: orange; }
+        /* animation: blink-caret 0.75s step-end infinite; */
+        text-align: left;
+        font-size: 1em;
+        max-width: 90%;
+        overflow-wrap: break-word;
+        word-break: break-all;
+      }
+      .typewriter-tab {
+        font-size: small;
+        margin: 0;
+        border: 1px solid gray;
+      }
+      .typewriter-tab p {
+        display: inline;
+        padding: 0 4px;
+        border-start-end-radius: 0.5rem;
+        /* b    order-end-end-radius: 0.25rem; */
+        background-color: #333;
+      }
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
         }
+        50% {
+          border-color: orange;
+        }
+      }
+      .prompt {
+        display: inline;
+        border-right: 0.1em solid orange;
+        animation: blink-caret 0.75s step-end infinite !important   ;
+      }
+      #typewriter-content {
+        /* border: 1px solid gray; */
+        white-space: pre-wrap;
+      }
+      .typewriter p {
+        animation: none;
+      }
 
-        .typewriter p {
-            animation: none;
-        }
+      .reveal {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
 
-        .reveal {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
+      .slides {
+        text-align: left;
+        margin: 0;
+      }
 
-        .slides {
-            text-align: left;
-            margin: 0;
-        }
+      pre {
+        margin: 0;
+      }
 
-        pre {
-            margin: 0;
-        }
+      .progress-bar {
+        width: 100%;
+        height: 5px;
+        background: #333;
+        position: relative;
+        overflow: hidden;
+        margin-top: 20px;
+      }
 
-        .progress-bar {
-            width: 100%;
-            height: 5px;
-            background: #333;
-            position: relative;
-            overflow: hidden;
-            margin-top: 20px;
-        }
+      .progress-bar .indicator {
+        width: 0;
+        height: 100%;
+        background: orange;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: progress 10s linear forwards;
+      }
 
-        .progress-bar .indicator {
-            width: 0;
-            height: 100%;
-            background: orange;
-            position: absolute;
-            top: 0;
-            left: 0;
-            animation: progress 10s linear forwards;
+      @keyframes progress {
+        from {
+          width: 0;
         }
+        to {
+          width: 100%;
+        }
+      }
 
-        @keyframes progress {
-            from { width: 0; }
-            to { width: 100%; }
+      @keyframes cursor {
+        0% {
+          opacity: 1;
         }
+        25% {
+          opacity: 0;
+        }
+        75% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes flicker {
+        0% {
+          opacity: 0.57861;
+        }
+        5% {
+          opacity: 0.64769;
+        }
+        10% {
+          opacity: 0.73604;
+        }
+        15% {
+          opacity: 0.90626;
+        }
+        20% {
+          opacity: 0.68128;
+        }
+        25% {
+          opacity: 0.83891;
+        }
+        30% {
+          opacity: 0.65583;
+        }
+        35% {
+          opacity: 0.67807;
+        }
+        40% {
+          opacity: 0.66559;
+        }
+        45% {
+          opacity: 0.84693;
+        }
+        50% {
+          opacity: 0.96019;
+        }
+        55% {
+          opacity: 0.58594;
+        }
+        60% {
+          opacity: 0.60313;
+        }
+        65% {
+          opacity: 0.71988;
+        }
+        70% {
+          opacity: 0.53455;
+        }
+        75% {
+          opacity: 0.67288;
+        }
+        80% {
+          opacity: 0.71428;
+        }
+        85% {
+          opacity: 0.70419;
+        }
+        90% {
+          opacity: 0.7003;
+        }
+        95% {
+          opacity: 0.66108;
+        }
+        100% {
+          opacity: 0.54387;
+        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="reveal">
-        <div class="slides">
-            <div class="progress-bar">
-                <div class="indicator"></div>
-            </div>
-            {{ content }}
+      <div class="slides">
+        <div class="progress-bar">
+          <div class="indicator"></div>
         </div>
+        {{ content }}
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/markdown/markdown.js"></script>
     <script>
-        Reveal.initialize({
-            plugins: [ RevealMarkdown ],
-            view: 'scroll',
-            scrollProgress: true,
-            viewDistance: 3,
-            hash: true
-        });
+      Reveal.initialize({
+        plugins: [RevealMarkdown],
+        view: "scroll",
+        scrollProgress: true,
+        viewDistance: 3,
+        hash: true,
+      });
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const typewriterElement = document.getElementById('typewriter-content');
-            const lines = typewriterElement.innerHTML.split('\n');
-            typewriterElement.innerHTML = '';
-            let lineIndex = 0;
+      document.addEventListener("DOMContentLoaded", function () {
+        const typewriterElement = document.getElementById("typewriter-content");
+        // const terminal = document.getElementsById("crt");
+        const lines = typewriterElement.innerHTML.split("\n");
+        typewriterElement.innerHTML = "";
+        let lineIndex = 0;
 
-            function typeLine() {
-                if (lineIndex < lines.length) {
-                    typewriterElement.innerHTML += lines[lineIndex] + '\n';
-                    lineIndex++;
-                    setTimeout(typeLine, 500); // Adjust typing speed here
-                } else {
-                    // Move the cursor to the end of the prompt
-                    typewriterElement.innerHTML += ' ';
-                }
-            }
+        function typeLine() {
+          if (lineIndex < lines.length) {
+            typewriterElement.innerHTML += lines[lineIndex] + "\n";
+            lineIndex++;
+            setTimeout(typeLine, 500); // Adjust typing speed here
+          } else {
+            // Move the cursor to the end of the prompt
+            typewriterElement.innerHTML += " ";
+          }
+        }
 
-            typeLine();
-        });
+        typeLine();
+      });
     </script>
     <script type="module">
-        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-        mermaid.initialize({ startOnLoad: true });
+      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+      mermaid.initialize({ startOnLoad: true });
     </script>
-</body>
+  </body>
 </html>
-

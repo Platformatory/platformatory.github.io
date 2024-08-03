@@ -29,6 +29,34 @@ main:
   - name: "Get in touch"
     url: "/contact/"
     weight: 8
+v2_main:
+  - name: "Home"
+    url: "/v2"
+    weight: -1
+  - name: "Consulting"
+    url: "/v2/consulting/"
+    weight: 0
+  - name: "Services"
+    url: "/v2/services/"
+    weight: 2
+  - name: "Field Engineering"
+    url: "/v2/field-engineering/"
+    weight: 2
+  - name: "Solutions"
+    url: "/v2/solutions/"
+    weight: 2
+  - name: "Events"
+    url: "/v2/events/"
+    weight: 4
+  - name: "Write Ahead Log"
+    url: "/v2/blog"
+    weight: 6
+  - name: "Company"
+    url: "/v2/company/"
+    weight: 7
+  - name: "Get in touch"
+    url: "/v2/contact/"
+    weight: 8
 footer:
   - name: "Home"
     url: "/"

@@ -1,16 +1,16 @@
 ---
- # this ensures Jekyll reads the file to be transformed into CSS later
+ #this ensures Jekyll reads the file to be transformed into CSS later
 ---
 
 // Colors
 //$primary: #E5261F;
 //$secondary: #f88379;
-$primary: #31394d;
+$primary:  #31394d;
 $secondary: #ede3da; 
 $black: #2f2f41;
 $white: #ffffff;
 $white-offset: #fff6f8;
-$steel: #5C5A5A;
+$steel: #5C5A5A;                
 
 // Links
 $link-color: $primary;
@@ -58,6 +58,8 @@ $sub-footer-text-color: $white;
 @import 'components/feature';
 @import 'components/social';
 @import 'components/consulting';
+@import 'components/animations';
+@import 'components/monitor';
 
 // Pages
 @import 'pages/home';
@@ -479,3 +481,25 @@ ol {
             }
         }
     }
+
+
+.reveal{
+    margin-top: 0px !important;
+    .slides{
+        .section-top{
+            margin-top: 20px;
+            top:0 !important;
+        }
+        section{
+            width: 100% !important;
+            transform: none !important;
+
+            
+        }
+    }
+}
+
+
+.reveal .controls{
+    color: #81B94C !important;
+}

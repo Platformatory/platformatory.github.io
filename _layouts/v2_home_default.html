@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-5CR3MF9");
+    </script>
+    <!-- End Google Tag Manager -->
+    <title>
+      {% if page.title %}{{page.title}} {% endif %} | {{ site.title | escape }}
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      type="image/svg"
+      href="{{ '/images/logo/plf-logo.svg' | relative_url }}"
+    />
+    <!--link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap"
+      rel="stylesheet"
+    />
+    <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}" />
+    {% endif %}
+    <meta property="og:title" content="{{ page.title }} | {{site.title}}" />
+    <meta property="og:type" content="{{ site.seo.meta_og_type }}" />
+    <meta
+      property="og:url"
+      content="{{site.url}}{{ page.url | split: '/' | join: '/' }}"
+    />
+    <meta property="og:image" content="{{site.url}}/{{ page.intro_image }}" />
+    <meta
+      property="og:description"
+      content="{% if page.layout != 'event' %}{{ page.content | remove: '# ' }}{% else %}{{page.description}}{% endif %}"
+    />
+    <meta name="twitter:card" content="{{ site.seo.meta_twitter_card  }}" />
+    <meta name="twitter:site" content="{{ site.seo.meta_twitter_site }}" />
+    <meta
+      name="twitter:creator"
+      content="{{ site.seo.meta_twitter_creator }}"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Reveal.js style -->
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/reveal.js/dist/reveal.css' | relative_url }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/reveal.js/dist/theme/black.css' | relative_url }}"
+      id="theme"
+    />
+  </head>
+
+  <body>
+        {% include v2_header.html headerClass='header-extra' %}
+        <div class="reveal">
+            <div class="slides">
+                {{ content }}
+            </div>
+        </div>
+            {% include v2_footer.html %}        
+    <script type="text/javascript" src="{{ "/assets/js/scripts.js" | relative_url }}""></script>
+    <script src="{{ '/assets/reveal.js/dist/reveal.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/monitor.js' | relative_url }}"></script>
+    <script>
+      Reveal.initialize({
+            view: "scroll",
+        });
+    </script>
+  </body>
+</html>
