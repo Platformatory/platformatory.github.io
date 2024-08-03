@@ -168,7 +168,7 @@ section{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
     --tw-shadow-color: #1d6427;
-    box-shadow: 0 10px 26px -3px rgba(23, 95, 10, 0.50), 0 4px 6px -4px rgb(0, 0 ,0, 0.1); 
+    box-shadow: 0 10px 26px -3px rgba(23, 95, 10, 0.50), 0 4px 6px -4px rgba(0, 0 ,0, 0.1); 
   .tmux-header{
     border-bottom:1px solid #1d6427;
     text-align: start;
