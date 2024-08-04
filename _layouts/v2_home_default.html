@@ -48,7 +48,7 @@
     <meta property="og:image" content="{{site.url}}/{{ page.intro_image }}" />
     <meta
       property="og:description"
-      content="{% if page.layout != 'event' %}{{ page.content | remove: '# ' }}{% else %}{{page.description}}{% endif %}"
+      content="{{page.description}}"
     />
     <meta name="twitter:card" content="{{ site.seo.meta_twitter_card  }}" />
     <meta name="twitter:site" content="{{ site.seo.meta_twitter_site }}" />
