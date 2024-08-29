@@ -345,3 +345,13 @@ a {
 .plf-logo{
   height: 40px;
 }
+
+#container-slides {
+  ol{
+    list-style: none !important;
+    li::before{
+      position: static !important;
+      // display: none !important;
+    }
+  }
+}

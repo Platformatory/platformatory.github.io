@@ -34,16 +34,55 @@ v2_main:
     url: "/v2"
     weight: -1
   - name: "Consulting"
-    url: "/v2/consulting/"
     weight: 0
+    sub_menu:
+      - name: "Real-time data & intelligent modernization"
+        url: "/v2/consulting"
+      - name: "Platform Engineering"
+        url: "/v2/consulting"
+      - name: "Platform led SaaS"
+        url: "/v2/consulting"
   - name: "Services"
-    url: "/v2/services/"
     weight: 2
-  - name: "Field Engineering"
-    url: "/v2/field-engineering/"
-    weight: 2
-  - name: "Solutions"
-    url: "/v2/solutions/"
+    sub_menu:
+      - name: "Professional Services"
+        url: "/v2/services"
+      - name: "Strategic Program Delivery"
+        url: "/v2/services"
+      - name: "Mission Critical Support"
+        url: "/v2/services"
+      - name: "Field Engineering"
+        url: "/v2/services"
+      - name: "By Technology / Company"
+        sub_menu:
+          - name: "Redpanda"
+            url: "/v2/services"
+          - name: "Confluent"
+            url: "/v2/services"
+          - name: "MSK"
+            url: "/v2/services"
+          - name: "Apache Kafka"
+            url: "/v2/services"
+          - name: "Flink"
+            url: "/v2/services"
+          - name: "Clickhouse"
+            url: "/v2/services"
+          - name: "Imply"
+            url: "/v2/services"
+          - name: "Temporal"
+            url: "/v2/services"
+          - name: "Kong"
+            url: "/v2/services"
+  - name: "Industries"
+    sub_menu:
+      - name: "SaaS & Digital Native"
+        url: "/v2/"
+      - name: "Retail & Ecommerce"
+        url: "/v2/"
+      - name: "Financial Services"
+        url: "/v2/"
+      - name: "Internet of Things"
+        url: "/v2/"
     weight: 2
   - name: "Events"
     url: "/v2/events/"
@@ -52,11 +91,16 @@ v2_main:
     url: "/v2/blog"
     weight: 6
   - name: "Company"
-    url: "/v2/company/"
+    sub_menu:
+      - name: "People"
+        url: "/v2/"
+      - name: "Locations"
+        url: "/v2/"
+      - name: "Openings"
+        url: "/v2/"
+      - name: "Contact"
+        url: "/v2/" 
     weight: 7
-  - name: "Get in touch"
-    url: "/v2/contact/"
-    weight: 8
 footer:
   - name: "Home"
     url: "/"

@@ -32,18 +32,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0px;
+  
   width: 100%;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) 100%);
-  position: fixed;
+  background: black;
+  // background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) 100%);
+  position: sticky;
+  top: 0;
   z-index: 999;   
   border-bottom: 1px solid #262626;  
   box-shadow: 0 4px 6px -1px rgba(0 ,0, 0, 0.1), 0 2px 4px -2px rgba(0 ,0 ,0 , 0.1); 
   .main-menu{
+    ul >li{
+      padding: 12px 0px;
+    }
     ul >li >a {
+      padding: 18px 12px 14px 12px;
       color: rgb(218, 218, 218);
       &:hover{
         color: white !important;
+        font-weight: bold;
+        cursor: pointer;
       }
     } 
     ul > li.active > a{
@@ -61,3 +69,66 @@
     width: 100%;
   }
 }
+
+// header style
+
+.dropdown-menu {
+  top: 100%; 
+  // min-height: 240px;
+  z-index: 1000;
+  border-radius: 0;
+  background-color: #f8f9fa; 
+  border: none; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+.dropdown-menu{ 
+  // min-width: 280px;
+  .sub-menu{
+      margin: 0 auto;
+      padding: 2rem;
+      justify-content: center;
+  .sub-menu-item {
+      font-size: 16px;
+      white-space: nowrap; 
+      padding: 10px 20px; 
+      display: block;
+      color: #333; 
+      text-decoration: none;
+      &:hover{    
+          color: #1d6427;
+      }
+      
+  }
+
+  .child-menu-section{
+      position: relative;
+      &:hover{
+        .child-menu{
+          display: block;
+        }
+      }
+      h3{
+          font-size: 16px;
+      }
+      .child-menu{  
+        right: -120px;
+        padding: 10px 20px;
+        background: white;
+        display: none;
+        position: absolute;
+          .child-menu-item{
+              display: block;
+              padding: 6px 20px; 
+              margin-right: 2rem;  
+              font-size: 16px;
+              text-decoration: none;
+              &:hover{
+                  color: #1d6427;
+              }
+          }
+
+      }
+  }
+
+}}
+

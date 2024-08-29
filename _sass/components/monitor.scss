@@ -34,7 +34,7 @@
 }
 .theme-red #crt {
     font-family: "Share Tech Mono", monospace;
-    font-size: max(1rem, 1.6vmin);
+    font-size: max(1rem, 1.1rem);
 }
 .theme-blue #crt {
     background-image: none;
@@ -133,8 +133,8 @@ a {
 /*********** PARTS OF THE SCREEN *************/
 
 #monitor {
-    margin: 3vmin auto;
-    padding: 5.5vmin;
+    margin: 2rem auto;
+    padding: 4.5rem;
     width: min-content;
     display: flex;
     flex-direction: column;
@@ -159,11 +159,11 @@ pre {
     font-family: "VT323", monospace;
 }
 #crt {
-    min-width: 46ch; /* This makes 80 monospace characters fit on the screen */
-    height: calc(40ch * 0.8);
+    min-width: 42ch; /* This makes 80 monospace characters fit on the screen */
+    height: calc(34ch * 0.8);
     font-size: max(
         1rem,
-        2.2vmin
+        2.2rem
     ); /* Scale the font-size relative to the minimum screen dimension */
     position: relative;
     background: var(--bg);

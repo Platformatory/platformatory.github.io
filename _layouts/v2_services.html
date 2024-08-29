@@ -4,28 +4,36 @@ bodyClass: v2-page-consulting
 ---
 
 <!-- <section> -->
-<section class="section-top">
-  <div class="section-intro-container row mx-0">
-    <div class="section-content col-lg-6 p-0 col-12">
-      <div class="intro-content py-2">{{ content }}</div>
-    </div>
-    <div
-      class="intro-image-conatainer col-lg-6 p-0 col-12 order-lg-1 order-first flex-xl-row-reverse"
-    >
-      <img src="/{{page.intro_image}}" alt="{{page.title}}" />
+  
+  <div class="reveal">
+    <div class="slides">
+      <section class="section-top">
+      <div class="section-intro-container row mx-0">
+        <div class="section-content col-lg-6 p-0 col-12">
+          <div class="intro-content py-2">{{ content }}</div>
+        </div>
+        <div
+          class="intro-image-conatainer col-lg-6 p-0 col-12 order-lg-1 order-first flex-xl-row-reverse"
+        >
+          <img src="/{{page.intro_image}}" alt="{{page.title}}" />
+        </div>
+    </section>
+  </div>
     </div>
   </div>
-</section>
+  <div class="content container">
+
+ 
 
 {% assign sorted_services = site.services | sort: 'weight' | reverse %} {% for
 service in sorted_services %}
-<section>
-  <div
-    class="consulting-container row mb-md-0 pb-1 servce-summary"
+ 
+<div
+    class="consulting-container mb-md-0 servce-summary"
     id="{{ service.hash }}"
   >
     <!-- style="background-color: {{ service.section.background | default: '#6c973c' }};" -->
-    <div class="strip col-lg-4 service-section">
+    <div class="strip service-section">
       <div class="p-2 pb-md-4">
         <div class="mx-0 items-center text-left">
           <h2 class="service-title">
@@ -35,32 +43,36 @@ service in sorted_services %}
         </div>
       </div>
     </div>
-    <div class="content-list-item col-lg-8">
+    <div class="content-list-item">
       {% if service.features %}
       <ul class="container-context">
         {% for feature in service.features %}
         <li>
-          <div
-            class="d-flex justify-content-lg-around flex-column feature-card"
-          >
-            <div class="icon">
-              <span
-                class="material-icons {{ feature.span_class | default: 'icon-serv py-1' }}"
-              >
-                {{ feature.icon }}
-              </span>
+          <a href="">
+            <div
+              class="d-flex justify-content-around flex-column feature-card"
+            >
+              <div class="icon">
+                <span
+                  class="material-icons {{ feature.span_class | default: 'icon-serv py-1' }}"
+                >
+                  {{ feature.icon }}
+                </span>
+              </div>
+              <h2 class="{{ feature.h2_class | default: 'text-left' }}">
+                {{ feature.title }}
+              </h2>
+              <span class="feature-summary"> {{ feature.summary }} </span>
             </div>
-            <h2 class="{{ feature.h2_class | default: 'text-left' }}">
-              {{ feature.title }}
-            </h2>
-
-            <span class="feature-summary"> {{ feature.summary }} </span>
-          </div>
+            <div>
+              <p>View Detail</p>
+            </div>
+          </a>
         </li>
         {% endfor %}
       </ul>
       {% endif %}
     </div>
   </div>
-</section>
 {% endfor %}
+</div>

@@ -3,14 +3,14 @@ function pause(s = 1) {
 }
 function getChar(char) {
   let result;
-  if (typeof char === "string") {
-    if (char === "\n") {
+  if (typeof char === "string" ) {
+    if (char === "\n" || char === "  ") {
       result = document.createElement("br");
     } else if (char === "\t") {
       let tab = document.createElement("span");
       tab.innerHTML = "&nbsp;&nbsp;&nbsp; ";
       result = tab;
-    } else if (char === " ") {
+    } else if (char === "  ") {
       let space = document.createElement("span");
       space.innerHTML = "&nbsp; ";
       space.classList.add("char");
@@ -32,8 +32,8 @@ async function type(
   if (!text) return Promise.resolve();
 
   let {
-    wait = 30,
-    initialWait = 100,
+    wait = 10,
+    initialWait = 10,
     finalWait = 50,
     lineWait = 10,
     typerClass = "",
@@ -86,7 +86,7 @@ async function type(
 
     let queue = text;
     if (processChars) {
-      queue = text.split(" ");
+      queue = text.split("\n");
     }
 
     let prev;
@@ -201,7 +201,22 @@ function clear(screen = document.querySelector(".terminal")) {
   screen.innerHTML = "";
 }
 
-boot();
+// boot();
+
+async function loadmonitor() {
+  const terminalElement = document.querySelector(".terminal");
+  const lines = terminalElement.innerHTML.split('\n')
+  clear();
+  for (let i=0; i<lines.length; i++){
+    let stopBlinking = true;
+    await type(lines[i],{ lineWait:0, stopBlinking});
+  }
+ 
+
+  
+}
+
+loadmonitor();
 
 // document.addEventListener("DOMContentLoaded", function () {
 //     const monitor = document.getElementById("monitor");
