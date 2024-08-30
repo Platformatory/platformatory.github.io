@@ -1,0 +1,84 @@
+---
+layout: v2_default
+bodyClass: v2-page-consulting
+---
+
+<!-- <section> -->
+<div class="reveal">
+  <div class="slides">
+    <section class="section-top">
+      <div class="section-intro-container row mx-0">
+        <div class="section-content col-lg-6 p-0 col-12">
+          <div class="intro-content py-2">{{ content }}</div>
+        </div>
+        <div
+          class="intro-image-conatainer col-lg-6 p-0 col-12 order-lg-1 order-first flex-xl-row-reverse"
+        >
+          <img src="/{{page.intro_image}}" alt="{{page.title}}" />
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+{%if page.sections%}
+{% assign sorted_section = page.sections | sort: 'weight' |
+                reverse %}
+
+<div class="content">
+{% for section in sorted_section %}
+
+  <div class="{{section.section.features_class | default: 'box-card-container'}}">
+    <div
+      class="section-container container mb-md-0 servce-summary"
+      id="{{ section.hash }}"
+    >
+      <!-- style="background-color: {{ section.section.background | default: '#6c973c' }};" -->
+      <div class="strip service-section">
+        <div class="p-2 pb-md-4">
+          <div class="mx-0 items-center text-left">
+            <h2 class="service-title">
+              <a href="#{{ section.hash }}">{{ section.title }}</a>
+            </h2>
+            <div class=""><p>{{ section.summary  }}</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="content-list-item">
+        {% if section.features %}
+        <ul class="container-context">
+          {% for feature in section.features %}
+          <li>
+            <a {% if feature.path %}href="{{feature.path}}"{% endif %}>
+              <div
+                class="d-flex justify-content-around  flex-column feature-card {{ feature.div_class | default: ' platform-strategy' }}"
+              >
+                <div class=" icon">
+                  <span
+                    class="material-icons {{ feature.span_class | default: 'icon-serv py-1' }}"
+                  >
+                    {{ feature.icon }}
+                  </span>
+                </div>
+                <h2 class="{{ feature.h2_class | default: 'text-left' }}">
+                  {{ feature.title }}
+                </h2>
+                <span class="feature-summary"> {{ feature.summary }} </span>
+              </div>
+              {% if feature.cta_name %}
+              <p>{{feature.cta_name}}</p>
+              {% endif %}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+        {%if section.section.image %}
+        <img src="/{{section.section.image}}"/>
+        {%endif %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endfor %}
+</div> 
+{% endif %}

@@ -2,19 +2,22 @@
     {% assign mainmenu = site.data.menus.v2_main | sort: 'weight'  %}
     <ul>
       {% for item in mainmenu %}
-      <li class="{% if item.url == page.url %}active{% endif %}{% if item.sub_menu %} custom-dropdown{% endif %}">
-        <a class="{% if item.sub_menu %}custom-dropdown{% endif %}" {% if item.sub_menu %} data-toggle="dropdown" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false"  {% else %} href="{{ item.url | relative_url }}"{% endif %}  >{{ item.name }}</a>
+      <li class="{% if item.url == page.url %}active{% endif %}{% if item.children %} custom-dropdown{% endif %}">
+        <a class="{% if item.children %}custom-dropdown{% endif %}" {% if item.children %} data-toggle="dropdown" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false"  {% else %} href="{{ item.url | relative_url }}"{% endif %}  >{{ item.name }}</a>
 
-        {% if item.sub_menu %}
-      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        {% if item.children %}
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
         <div class="">
         <div class="sub-menu">
-          {% for sub_item in item.sub_menu %}
-            {% if sub_item.sub_menu %}
+          {% if item.children.name%}
+          <p class="sub-menu-title">{{ item.children.name }}</p>
+          {% endif %}
+          {% for sub_item in item.children.items %}
+            {% if sub_item.children %}
             <div class="child-menu-section">
-                <a class="sub-menu-item child-dropdown dropdown-toggle">{{ sub_item.name }}</a>
+                <p class="sub-menu-item child-dropdown ">{{ sub_item.name }}</p>
                 <div class="child-menu">
-                  {% for child_item in sub_item.sub_menu %}
+                  {% for child_item in sub_item.children.items %}
                   <a class="child-menu-item" href="{{ child_item.url || relative_url }}">{{ child_item.name }}</a>
                   {% endfor %}
                 </div>

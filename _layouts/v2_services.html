@@ -21,58 +21,64 @@ bodyClass: v2-page-consulting
   </div>
     </div>
   </div>
-  <div class="content container">
+  <div class="content">
 
  
 
 {% assign sorted_services = site.services | sort: 'weight' | reverse %} {% for
 service in sorted_services %}
  
-<div
-    class="consulting-container mb-md-0 servce-summary"
-    id="{{ service.hash }}"
-  >
-    <!-- style="background-color: {{ service.section.background | default: '#6c973c' }};" -->
-    <div class="strip service-section">
-      <div class="p-2 pb-md-4">
-        <div class="mx-0 items-center text-left">
-          <h2 class="service-title">
-            <a href="#{{ service.hash }}">{{ service.title }}</a>
-          </h2>
-          <div class="">{{ service.content | markdownify }}</div>
+<div class="{{service.features_class | default: ' box-card-container'}}">
+  <div
+      class="consulting-container container mb-md-0 servce-summary"
+      id="{{ service.hash }}"
+    >
+      <!-- style="background-color: {{ service.section.background | default: '#6c973c' }};" -->
+      <div >
+        <div class="strip service-section">
+          <div class="p-2 pb-md-4">
+            <div class="mx-0 items-center text-left">
+              <h2 class="service-title">
+                <a href="#{{ service.hash }}">{{ service.title }}</a>
+              </h2>
+              <div class="">{{ service.content | markdownify }}</div>
+            </div>
+          </div>
+        </div>
+        <div class="content-list-item">
+          {% if service.features %}
+          <ul class="container-context">
+            {% for feature in service.features %}
+            <li>
+              <a href="">
+                <div
+                  class="d-flex justify-content-around flex-column feature-card"
+                >
+                  <div class="icon">
+                    <span
+                      class="material-icons {{ feature.span_class | default: 'icon-serv py-1' }}"
+                    >
+                      {{ feature.icon }}
+                    </span>
+                  </div>
+                  <h2 class="{{ feature.h2_class | default: 'text-left' }}">
+                    {{ feature.title }}
+                  </h2>
+                  <span class="feature-summary"> {{ feature.summary }} </span>
+                </div>
+                <div>
+                  <p>View Detail</p>
+                </div>
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+          <img src="/{{service.section.image}}"/>
+          {% endif %}
         </div>
       </div>
     </div>
-    <div class="content-list-item">
-      {% if service.features %}
-      <ul class="container-context">
-        {% for feature in service.features %}
-        <li>
-          <a href="">
-            <div
-              class="d-flex justify-content-around flex-column feature-card"
-            >
-              <div class="icon">
-                <span
-                  class="material-icons {{ feature.span_class | default: 'icon-serv py-1' }}"
-                >
-                  {{ feature.icon }}
-                </span>
-              </div>
-              <h2 class="{{ feature.h2_class | default: 'text-left' }}">
-                {{ feature.title }}
-              </h2>
-              <span class="feature-summary"> {{ feature.summary }} </span>
-            </div>
-            <div>
-              <p>View Detail</p>
-            </div>
-          </a>
-        </li>
-        {% endfor %}
-      </ul>
-      {% endif %}
-    </div>
   </div>
-{% endfor %}
+  {% endfor %}
+  
 </div>

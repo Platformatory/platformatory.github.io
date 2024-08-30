@@ -1,3 +1,118 @@
+// mixins
+// Common styles for consulting container
+@mixin consulting-container {
+ .consulting-container{
+  scroll-margin-top: 30px;
+  a {
+    text-decoration: none !important;
+  }
+  @include media-breakpoint-up(lg) {
+    padding-top: 2rem;
+    .strip {
+      .service-title {
+        a {
+          font-size: 3.5rem !important;
+        }
+      }
+    }
+  }}
+}
+
+// Common styles for strip
+@mixin strip-styles {
+  background-color: inherit;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  .service-title {
+    text-transform: none;
+    margin-bottom: 2rem;
+    a {
+      font-size: 2.5rem;
+      color: #81B94C;
+    }
+  }
+  p {
+    color: white;
+    font-size: 18px;
+  }
+}
+
+// Common styles for list items
+@mixin list-item-styles {
+  ul {
+    display: block !important;
+    height: 100%;
+    padding: 20px;
+    margin: 0;
+    li {
+      padding: 0;
+      width: 100%;
+      margin-bottom: 2rem;
+      text-align: start !important;
+      min-height: auto !important;
+      background: white !important;
+      border: 1px solid white;
+      a {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        padding: 5rem;
+      }
+      .feature-card {
+        gap: 1rem;
+      }
+      p {
+        margin-top: 1rem;
+        font-size: 18px;
+        text-decoration: underline;
+        color: #1d6427;
+      }
+      .feature-card {
+        min-height: 65%;
+      }
+      @include media-breakpoint-down(md) {
+        min-height: 452px;
+        a {
+          padding: 3rem;
+        }
+      }
+      h2 {
+        color: #1d6427;
+        text-transform: none;
+        font-size: 28px !important;
+      }
+    }
+  }
+}
+
+// Common styles for container context
+@mixin container-context-styles {
+  display: flex;
+  .icon {
+    span {
+      font-size: 42px;
+      display: inline;
+      padding: 8px !important;
+      background-color: black;
+      border-radius: 47px;
+      color: #81B94C;
+    }
+  }
+  h2 {
+    margin: 0;
+    font-size: 24px;
+  }
+}
+
+// Common styles for feature summary
+@mixin feature-summary-styles {
+  font-size: 18px;
+  color: #474747;
+}
+
+
 .page {
   display: flex;
   min-height: 100vh;
@@ -56,6 +171,7 @@
       width: 490px;
       h1{
         padding-bottom: 20px;
+        font-size: 5rem !important;
       }
     }
    
@@ -65,7 +181,7 @@
     flex-direction: column ;    
     justify-content: center;
     h1 {
-      font-size: 5rem !important;
+      font-size: 3rem ;
       margin: 0;
       color: #1d6427;
       font-weight: bold;
@@ -101,123 +217,163 @@
     }
   }
 }
-.content{
-  padding-bottom: 60px;
-.consulting-container{
-  scroll-margin-top: 60px;
-  a{
-    text-decoration: none !important;
-  }
-   @include media-breakpoint-up(lg){
-    padding-top: 2rem;
-   }
-  .strip{
-    background-color: inherit;
-    padding: 0;
-    display: flex;
-    align-items: center ;
-  
-    .service-title  { 
-      text-transform: none;
-      margin-bottom: 2rem;
-      a{
-        font-size: 3.5rem;
-        color: #81B94C;
+
+.content {
+  // padding-bottom: 60px;
+  .bullet-point-container{
+    @include consulting-container;
+    background-color: white;
+    .strip{
+        padding: 0;
+      p{
+        font-size: 18px;
       }
-    }     
-    p{
-      color: white;
-      font-size: 18px;
-    }           
-  } 
-  .content-list-item{
+      .service-title {
+        text-transform: none;
+        margin-bottom: 2rem;
+        a {
+          font-size: 2.5rem;
+          color: #1d6427;
+        }
+      }
+    }
+    .content-list-item{
+      padding-top: 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      img{
+        width: 50%;
+        margin: 0;
+      }
+        ul{
+            width: 50%;
+            padding: 0;
+            padding-bottom: 40px;
+            display: block;
+            width: fit-content;
+            // margin: 0 auto;
+            li{
+              list-style: square;
+              width: 100%;
+              padding: 10px;
+              &:hover{
+                color: #31394d !important;
+                background: inherit;
+              }
+              a{
+                .feature-card{
+                  h2{
+                    text-align: start;
+                    color: #1d6427;
+                    font-size: 2rem !important;
+                    font-weight: bold;
+                    margin: 0 !important;
+                  }
+                }
+                
+                .icon,.feature-summary, p{
+                  display: none;
+                }
+                
+              }
+            }
+        }
+    }
+  }
+  .harizontal-card-container {
+    @include consulting-container;
+    
+    .strip {
+      @include strip-styles;
+    }
+    
+    .content-list-item {
+      @include list-item-styles;
+    }
+    
+    .container-context {
+      @include container-context-styles;
+    }
+    
+    .feature-summary {
+      @include feature-summary-styles;
+    }
+  }
+
+  .box-card-container {
+    @include consulting-container;
+
+    .strip {
+      @include strip-styles;
+    }
+
+    .content-list-item {
       padding-top: 0 !important;
       padding-bottom: 0 !important;
       
-    ul {
-      height: 100%;
-       padding: 20px 10px;
-       margin: 0; 
-       gap: 1rem;
-       display: grid !important;
-       @include media-breakpoint-up(md){
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        padding: 2rem;
-        gap: 3rem;
-      }
-      li{
-        width: 100%;
-        min-height: 480px;
-        text-align: start !important  ;
-        padding: 0;
-        background: white !important;
-        border: 1px solid white;
-        &:hover{
-          // border: 2px solid gray;
-          box-shadow: 10 15 25 -4 ;
-          cursor: pointer;
-        }
-        a{
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          height: 100%;
-          padding: 5rem;
-        }
-        p{
-          font-size: 18px;
-          text-decoration: underline;
-          color: #1d6427;
-        }
-        .feature-card{  
-          min-height: 65%;
-        }
-        @include media-breakpoint-down(md){
-          
-          min-height: 452px;
-         a{
-          padding: 3rem;
-        }
-        }
-        // border-radius: 12px;
-        // border: 1px solid #81B94C;
-        
-        
-        h2{
-          color: #1d6427;
-          text-transform: none;
-          font-size: 28px !important;
-        }
-      } 
-    } 
-    .container-context{
-      display: flex;
-      .icon{
-        span{
-          font-size: 42px;
-          display: inline;
-          padding: 8px !important;
-          background-color: black;
-          border-radius: 47px;
-          color: #81B94C;
-          // border: 1px solid hite
-        }
-      }
-      
-      h2{
+      ul {
+        height: 100%;
+        padding: 20px 10px;
         margin: 0;
-        font-size: 24px;
-        
+        gap: 1rem;
+        display: grid !important;
+        @include media-breakpoint-up(md) {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          padding: 2rem;
+          gap: 3rem;
+        }
+        li {
+          width: 100%;
+          min-height: 480px;
+          text-align: start !important;
+          padding: 0;
+          background: white !important;
+          border: 1px solid white;
+          &:hover {
+            box-shadow: 0 10px 15px -3px;
+            cursor: pointer;
+          }
+          a {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            padding: 5rem;
+          }
+          p {
+            font-size: 18px;
+            text-decoration: underline;
+            color: #1d6427;
+          }
+          .feature-card {
+            min-height: 65%;
+          }
+          @include media-breakpoint-down(md) {
+            min-height: 452px;
+            a {
+              padding: 3rem;
+            }
+          }
+          h2 {
+            color: #1d6427;
+            text-transform: none;
+            font-size: 28px !important;
+          }
+        }
       }
     }
     
-    .feature-summary{ 
-      font-size: 18px;
-      color: #474747;
+    .container-context {
+      @include container-context-styles;
+    }
+    
+    .feature-summary {
+      @include feature-summary-styles;
     }
   }
 }
-}
+
 
 .home-slides{
   display: grid;

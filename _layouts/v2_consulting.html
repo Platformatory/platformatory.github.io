@@ -24,53 +24,57 @@ bodyClass: v2-page-consulting
 {% assign sorted_consulting = site.consulting | sort: 'weight' |
                 reverse %}
 
-<div class="content container">
+<div class="content">
 {% for consulting in sorted_consulting %}
 
-  <div
-    class="consulting-container  mb-md-0 servce-summary"
-    id="{{ consulting.hash }}"
-  >
-    <!-- style="background-color: {{ consulting.section.background | default: '#6c973c' }};" -->
-    <div class="strip service-section">
-      <div class="p-2 pb-md-4">
-        <div class="mx-0 items-center text-left">
-          <h2 class="service-title">
-            <a href="#{{ consulting.hash }}">{{ consulting.title }}</a>
-          </h2>
-          <div class="">{{ consulting.content | markdownify }}</div>
+  <div class="{{consulting.features_class | default: 'box-card-container'}}">
+    <div
+      class="consulting-container container mb-md-0 servce-summary"
+      id="{{ consulting.hash }}"
+    >
+      <!-- style="background-color: {{ consulting.section.background | default: '#6c973c' }};" -->
+      <div class="strip service-section">
+        <div class="p-2 pb-md-4">
+          <div class="mx-0 items-center text-left">
+            <h2 class="service-title">
+              <a href="#{{ consulting.hash }}">{{ consulting.title }}</a>
+            </h2>
+            <div class="">{{ consulting.content | markdownify }}</div>
+          </div>
         </div>
-      </div>  
-    </div>
-    <div class="content-list-item">
-      {% if consulting.features %}
-      <ul class="container-context">
-        {% for feature in consulting.features %}
-        <li>
-          <a href="">
-            <div
-              class="d-flex justify-content-around  flex-column feature-card {{ feature.div_class | default: ' platform-strategy' }}"
-            >
-              <div class=" {{feature.div_class }} icon">
-                <span
-                  class="material-icons {{ feature.span_class | default: 'icon-serv py-1' }}"
-                >
-                  {{ feature.icon }}
-                </span>
+      </div>
+      <div class="content-list-item">
+        {% if consulting.features %}
+        <ul class="container-context">
+          {% for feature in consulting.features %}
+          <li>
+            <a href="">
+              <div
+                class="d-flex justify-content-around  flex-column feature-card {{ feature.div_class | default: ' platform-strategy' }}"
+              >
+                <div class=" {{feature.div_class }} icon">
+                  <span
+                    class="material-icons {{ feature.span_class | default: 'icon-serv py-1' }}"
+                  >
+                    {{ feature.icon }}
+                  </span>
+                </div>
+                <h2 class="{{ feature.h2_class | default: 'text-left' }}">
+                  {{ feature.title }}
+                </h2>
+                <span class="feature-summary"> {{ feature.summary }} </span>
               </div>
-              <h2 class="{{ feature.h2_class | default: 'text-left' }}">
-                {{ feature.title }}
-              </h2>
-              <span class="feature-summary"> {{ feature.summary }} </span>
-            </div>
-            <p>View Detail</p>
-          </a>
-        </li>
-        {% endfor %}
-      </ul>
-      {% endif %}
+              <p>View Detail</p>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+        {%if consulting.section.image %}
+        <img src="/{{consulting.section.image}}"/>
+        {%endif %}
+        {% endif %}
+      </div>
     </div>
   </div>
-</section>
 {% endfor %}
 </div> 

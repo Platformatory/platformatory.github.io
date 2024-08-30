@@ -11,6 +11,7 @@ hash: "cloud-native-applications"
 section:
   background: "#0b1e4a"
   color: "#ffffff"
+features_class: "bullet-point-container"
 features:
   - title: "Breaking the Monolith"
     summary: "Transition from legacy structures to modular components, reimagining systems for the future."
