@@ -21,7 +21,7 @@ bodyClass: page-events-list
 </div> -->
 
 
-<div class="content">
+<section class="horizontal-events">
     <div class="container pb-md-6">
         <div class="events-container">
     
@@ -81,7 +81,7 @@ bodyClass: page-events-list
                                 {% endif %}
                             </div>
                             <hr>
-                            <div class="px-2">
+                            <div class="px-1">
                                 {% if event.description %}
                                 <div class="event-item-description">
                                     <p class="m-0 ">{{event.description}}</p>
@@ -105,7 +105,7 @@ bodyClass: page-events-list
                 </div>
     
                 <div class="events-title-section" id="past-events">
-                    <h2 class="section-title">Past Events</h2>
+                    <h2 class="section-title">Watch Now</h2>
                 </div>
                 <div class="events-grid ">
                     {% for event in site.events reversed %}
@@ -154,7 +154,7 @@ bodyClass: page-events-list
                                 </div>
                             </div>
                             <hr>
-                            <div class="px-2">
+                            <div class="px-1">
                                 {% if event.description %}
                                 <div class="event-item-description">
                                     <p class="m-0 ">{{event.description}}</p>
