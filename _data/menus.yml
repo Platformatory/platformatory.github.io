@@ -36,8 +36,6 @@ v2_main:
   - name: "Consulting"
     weight: 0
     children:
-      name: "Advisory & Strategic"
-
       items:
         - name: "Real-time data & intelligent modernization"
           url: "/v2/consulting/real-time-data&intelligent-modernization"
@@ -82,7 +80,6 @@ v2_main:
                 url: "/v2/services/technology/kong"
   - name: "Industries"
     children: 
-      name: "Case Studies by Industry"
       items:
         - name: "SaaS & Digital Native"
           url: "/v2/industries/saas&digital-native"
@@ -100,17 +97,7 @@ v2_main:
     url: "/v2/blog"
     weight: 6
   - name: "Company"
-    children:
-      name: "About Us"
-      items:
-        - name: "People"
-          url: "/v2/company/people"
-        - name: "Locations"
-          url: "/v2/company/locations"
-        - name: "Openings"
-          url: "/v2/company/openings"
-        - name: "Contact"
-          url: "/v2/company/contact" 
+    url: "/v2/company"
     weight: 7
 footer:
   - name: "Home"
