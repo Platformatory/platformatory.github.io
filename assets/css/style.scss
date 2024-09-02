@@ -66,8 +66,21 @@ $sub-footer-text-color: $white;
 @import 'pages/team/team-summary';
 @import 'pages/services/page-services-single';
 
+
+:root{
+    --v2-heading-color: #0a130b;
+    --v2-sub-heading-color: #353535;
+    --v2-primary-color: #1d6427;
+    --v2-paragraph-color: #454545;
+    --v2-paragraph-light-color: #757575;
+    --v2-box-container-bg: #f9f9f9;
+    --v2-box-container-card-bg: #f3f3f3cf;
+    --v2-box-container-card-bg-light: #fdfdfd;
+
+}
+
 body {
-  overflow-y: auto !important;
+//   overflow-y: auto !important;
   font-size: 16px;
   line-height: 1.2;
   font-family: $font-family-base;
@@ -209,7 +222,7 @@ body {
     color: #5C5A5A;
     font-size: 1.5rem;
 }
-.content{
+section{
     .events-container{
         .events-title-section{
             @include media-breakpoint-up(md){

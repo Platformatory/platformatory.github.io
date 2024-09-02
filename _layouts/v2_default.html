@@ -59,41 +59,43 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Reveal.js style -->
-    <!-- <link
+    <link
       rel="stylesheet"
       href="{{ '/assets/reveal.js/dist/reveal.css' | relative_url }}"
     />
     <link
       rel="stylesheet"
-      href="{{ '/assets/reveal.js/dist/theme/black.css' | relative_url }}"
+      href="{{ '/assets/reveal.js/dist/theme/white.css' | relative_url }}"
       id="theme"
-    /> -->
+    />
   </head>
 
   <body>
     {% include main-menu-mobile.html %}
         {% include v2_header.html headerClass='header-extra' %}
-        <!-- <div class="reveal">
-            <div class="slides"> -->
+        <div class="reveal">
+            <div class="slides">
                 {{ content }}
-            <!-- </div> -->
-        <!-- </div> -->
-        {% include v2_footer.html %}
+            </div>
+        </div>
+        <!-- {% include v2_footer.html %} -->
     <!-- {% include footer.html %} {%    include sub-footer.html %} -->
     <script type="text/javascript" src="{{ "/assets/js/scripts.js" | relative_url }}""></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <!-- <script src="{{ '/assets/reveal.js/dist/reveal.js' | relative_url }}"></script> -->
-    <!-- <script>
+    <script src="{{ '/assets/reveal.js/dist/reveal.js' | relative_url }}"></script>
+    <script>
       Reveal.initialize({
             controls: true,
             progress: true,
             hash: true,
+            // center:false
+            view: "scroll"
 
-            slideNumber: true,
-            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ] 
+            // slideNumber: true,
+            // plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ] 
         });
-    </script> -->
+    </script>
   </body>
 </html>
