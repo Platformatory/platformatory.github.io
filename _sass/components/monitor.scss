@@ -10,32 +10,97 @@
     --term: "> ";
 }
 
-/*********** THEMES  *************/
-/** Use --color and --bg in your CSS files to get the active text and bg colour. */
-/** One of these theme classes is applied to the <body>, so the whole document uses that theme */
 .theme-red {
     --color: var(--red-color);
     --bg: var(--red-bg);
     --term: "$ ";
 }
+
 .theme-green {
     --color: var(--green-color);
     --bg: var(--green-bg);
 }
+
 .theme-blue {
     --color: var(--blue-color);
     --bg: var(--blue-bg);
     --term: "";
 }
 
-/** Theme specific stuff from here */
 .theme-red .char {
     animation: type 0.5s linear 0s 1;
 }
-.theme-red #crt {
-    font-family: "Share Tech Mono", monospace;
-    font-size: max(1rem, 1.1rem);
+
+@include media-breakpoint-down(lg){
+    #crt{
+        min-width: 32ch !important;
+    }
 }
+
+@include media-breakpoint-down(sm){
+    #monitor{
+        padding:2rem !important;
+    }
+    #crt{
+        min-width: 18ch !important;
+        height: 100% !important;
+        min-height: 45rem;
+        .terminal{
+            padding: 1rem !important;
+        }
+       
+    }
+
+}
+
+#crt {
+    font-family: "VT323", monospace;
+    min-width: 42ch;
+    height: calc(34ch * 0.8);
+    font-size: max(1rem, 2.5rem);
+    position: relative;
+    background: var(--bg);
+    background-image: radial-gradient(ellipse, var(--bg) 0%, var(--off) 90%);
+    animation: on 2s linear;
+    transition: all 0.5s;
+    overflow: hidden;
+
+    &:after {
+        content: " ";
+        opacity: 0;
+        background: #fff;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 3;
+    }
+
+    &:before {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(
+            to bottom,
+            rgba(18, 16, 16, 0.1) 50%,
+            rgba(0, 0, 0, 0.25) 50%
+        );
+        background-size: 100% 8px;
+        z-index: 2;
+        pointer-events: none;
+        animation: fadeIn 2s;
+    }
+}
+
 .theme-blue #crt {
     background-image: none;
     background-color: var(--color);
@@ -43,6 +108,7 @@
     border-radius: 1em;
     padding: 3rem;
 }
+
 .theme-blue #monitor:not(.off) #crt:before {
     background: none;
     background-color: var(--bg);
@@ -52,19 +118,20 @@
     right: 3rem;
     z-index: 0;
 }
+
 .theme-blue .scanline {
     display: none;
 }
+
 .theme-blue .terminal {
     padding: 0;
 }
-
-/*********** GENERIC STUFF *************/
 
 html {
     font-size: 12px;
     box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
@@ -72,65 +139,62 @@ html {
 }
 
 body {
-    background: #111;
+    background: var(--dark);
     margin: 0;
 }
-        
+
 a {
     outline: none;
 }
-/*********** INPUT / OUTPUT *************/
 
 #prompt {
     display: none;
 }
+
 [contenteditable] {
-    caret-color: transparent; /** This hides the default browser caret */
+    caret-color: transparent; /** Hides default browser caret */
     outline: none;
 }
+
 #input {
     position: relative;
     display: block;
     white-space: pre-wrap;
-}
-/* Inserts the > before terminal input */
-#input:before {
-    content: var(--term);
-}
-/* Puts a blinking square after the content as replacement for caret */
-#input[contenteditable="true"]:after,
-.typer.active:after {
-    content: "■";
-    animation: cursor 1s infinite;
-    animation-timing-function: step-end;
-    margin-left: 1px;
-    line-height: 1rem;
+
+    &:before {
+        content: var(--term);
+    }
+
+    &[contenteditable="true"]:after,
+    .typer.active:after {
+        content: "■";
+        animation: cursor 1s infinite;
+        animation-timing-function: step-end;
+        margin-left: 1px;
+        line-height: 1rem;
+    }
+
+    &.password .char {
+        display: none;
+    }
+
+    &.password:after,
+    &.password:before {
+        color: var(--color);
+    }
+
+    &.password:before {
+        content: var(--term) attr(data-pw);
+    }
 }
 
-/* 
-* This makes the caret (:after) show correctly after the previously typed character.
-* Otherwise the caret is always on new line
-*/
 [contenteditable="true"] br:last-child {
     display: none;
-}
-
-#input.password .char {
-    display: none;
-}
-#input.password:after {
-    color: var(--color);
-}
-#input.password:before {
-    color: var(--color);
-    content: var(--term) attr(data-pw);
 }
 
 .typer {
     word-break: break-all;
 }
-
-/*********** PARTS OF THE SCREEN *************/
 
 #monitor {
     margin: 2rem auto;
@@ -141,10 +205,24 @@ a {
     align-items: center;
     background: #3f3933;
     border-radius: 0.5rem;
+
+    &.off #crt {
+        background: var(--off);
+
+        &:before {
+            background: none;
+        }
+
+        * {
+            display: none !important;
+        }
+    }
+
+    &:not(.off) {
+        box-shadow: 0.6px 90px 110px -60px var(--bg); /* screen glow */
+    }
 }
-#monitor:not(.off) {
-    box-shadow: 0.6px 90px 110px -60px var(--bg); /* screen glow */
-}
+
 #screen {
     position: relative;
     border: 30px solid transparent;
@@ -152,79 +230,6 @@ a {
     border-image-slice: 30 fill;
     border-image-outset: 0;
     overflow: hidden;
-}
-/* The screen itself + border */
-#crt,
-pre {
-    font-family: "VT323", monospace;
-}
-#crt {
-    min-width: 42ch; /* This makes 80 monospace characters fit on the screen */
-    height: calc(34ch * 0.8);
-    font-size: max(
-        1rem,
-        2.2rem
-    ); /* Scale the font-size relative to the minimum screen dimension */
-    position: relative;
-    background: var(--bg);
-    background-image: radial-gradient(
-        ellipse,
-        var(--bg) 0%,
-        var(--off) 90%
-    );
-    animation: on 2s linear;
-    transition: all 0.5s;
-    overflow: hidden;
-}
-
-#crt:after {
-    content: " ";
-    opacity: 0;
-    background: #fff;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 3;
-}
-#monitor.turn-off #crt:after {
-    animation: turnOff 0.4s ease-in-out;
-    /* animation-fill-mode: forwards; */
-}
-
-#monitor:not(.off) #crt:before {
-    content: " ";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(18, 16, 16, 0.1) 50%,
-        rgba(0, 0, 0, 0.25) 50%
-    );
-    background-size: 100% 8px;
-    z-index: 2;
-    pointer-events: none;
-    animation: fadeIn 2s;
-}
-
-/* Screen turned off */
-#monitor.off #crt {
-    background: var(--off);
-}
-#monitor.off #crt:before {
-    background: none;
-}
-#monitor.off #crt * {
-    display: none !important;
 }
 
 body.fullscreen #crt {
@@ -249,39 +254,34 @@ body.fullscreen #crt {
 
 .terminal {
     position: relative;
-    text-align: start   ;
+    text-align: start;
     height: 100%;
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding: 2rem;
     overflow-y: auto;
     overflow-x: hidden;
     word-break: break-word;
-    // text-transform: uppercase;
     animation: textShadow 4s infinite;
-    &::-webkit-scrollbar {
-        width: 4px;
-      }
-    &::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 5px var(--bg); 
-        border-radius: 10px;
-      }
-       
-      /* Handle */
-    &::-webkit-scrollbar-thumb {
-        background: var(--color); 
-        border-radius: 10px;
-      }
-      
-      /* Handle on hover */
-    &   ::-webkit-scrollbar-thumb:hover {
-        background: #b30000; 
-      }
-}
-
-.terminal,
-.fullscreen {
     color: var(--color);
     text-shadow: 0 0 5px #c8c8c8;
+
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px var(--bg);
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--color);
+        border-radius: 10px;
+
+        &:hover {
+            background: #b30000;
+        }
+    }
 }
 
 ::selection {
@@ -290,7 +290,6 @@ body.fullscreen #crt {
     text-shadow: none;
 }
 
-/* Scanline moving top to bottom over the screen */
 .scanline {
     width: 100%;
     height: 100px;
@@ -307,8 +306,6 @@ body.fullscreen #crt {
     pointer-events: none;
     animation: scanline 10s linear infinite;
 }
-
-/*********** RANDOM OTHER STUFF *************/
 
 .access-granted {
     animation: flicker 2s infinite;
@@ -342,23 +339,21 @@ body.fullscreen #crt {
         #ffff88 82%,
         #ffffc6 100%
     );
-    transition-property: left top transform;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-in-out;
+    transition: left top transform 0.5s ease-in-out;
     cursor: pointer;
-}
-.post-it:hover {
-    border-bottom-left-radius: 20px 5px;
-    border-bottom-right-radius: 40px 28px;
-}
-.post-it.fly {
-    transform: translate(-5rem, 10rem) rotate(270deg);
-}
 
+    &:hover {
+        border-bottom-left-radius: 20px 5px;
+        border-bottom-right-radius: 40px 28px;
+    }
+
+    &.fly {
+        transform: translate(-5rem, 10rem) rotate(270deg);
+    }
+}
 
 /*********** MEDIA QUERIES *************/
 
-/* For really small screens, only show fullscreen mode */
 @media only screen and (max-width: 425px), (max-height: 425px) {
     #crt {
         left: 0;
@@ -366,10 +361,8 @@ body.fullscreen #crt {
         width: 100%;
         height: 100%;
     }
-
 }
 
-/* Some fixes for smaller screens */
 @media only screen and (max-width: 768px) {
     .post-it,
     #themes,
@@ -382,10 +375,12 @@ body.fullscreen #crt {
         justify-content: space-around;
     }
 }
+
 @media only screen and (min-width: 800px) {
     #themes {
         flex-direction: row;
     }
+
     .post-it {
         font-size: 2rem;
     }
