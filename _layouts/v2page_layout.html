@@ -30,7 +30,7 @@ bodyClass: v2-page-layout
 <!-- <section> -->
   <section class="{{section.section.features_class | default: 'box-card-container'}}">
     <div
-      class="section-container container mb-md-0 servce-summary"
+      class="section-container {% if section.section.features_class !='split-container' %}container{% endif %} mb-md-0 servce-summary"
       id="{{ section.hash }}"
     >
       <!-- style="background-color: {{ section.section.background | default: '#6c973c' }};" -->
@@ -53,6 +53,7 @@ bodyClass: v2-page-layout
               <div
                 class="d-flex justify-content-around  flex-column feature-card {{ feature.div_class | default: ' platform-strategy' }}"
               >
+              {%if feature.icon %}
                 <div class=" icon">
                   <span
                     class="material-icons {{ feature.span_class | default: 'icon-serv py-1' }}"
@@ -60,6 +61,7 @@ bodyClass: v2-page-layout
                     {{ feature.icon }}
                   </span>
                 </div>
+                {% endif %}
                 <h2 class="{{ feature.h2_class | default: 'text-left' }}">
                   {{ feature.title }}
                 </h2>
@@ -73,10 +75,11 @@ bodyClass: v2-page-layout
           </li>
           {% endfor %}
         </ul>
+        {% endif %}
         {%if section.section.image %}
         <img src="/{{section.section.image}}"/>
         {%endif %}
-        {% endif %}
+        
       </div>
     </div>
   </section>

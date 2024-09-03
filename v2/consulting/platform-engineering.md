@@ -5,128 +5,65 @@ intro_image: "images/v2/banners/platform-engineering.jpg"
 intro_image_absolute: true
 intro_image_hide_on_mobile: false
 sections:
-    - title: "Performance & Chaos Engineering"
-      featured: true
-      weight: 1
-      summary: "Application Modernization is a full stack, full lifecycle problem requiring paradigm shifts across people, process & tooling."
-      image: "../images/experiment.svg"
-      caption: Performance & resilliency assurance for platforms & distributed systems.
-      hash: "performance-engineering"
-      section:
-      features:
-        - title: "System Stress Testing"
-          summary: "Simulate extreme scenarios to measure your system's resilience and response times."
-          image: "../images/icons/stress-test.png"
-          span_class: "icon-serv py-2"
-          icon: "bar_chart"
-          cta_name: "View Detail"
-        - title: "Vulnerability Analysis"
-          summary: "Identify potential weak points and craft strategies to bolster them.Simulate extreme scenarios to measure your system's resilience and response times.Simulate extreme scenarios to measure your system's resilience and response times."
-          image: "../images/icons/vulnerability.png"
-          span_class: "icon-serv py-2"
-          icon: "security"
-          cta_name: "View Detail"
-        - title: "Real-world Failure Simulation"
-          summary: "Recreate real-world adverse conditions to evaluate system performance and recovery."
-          image: "../images/icons/simulation.png"
-          span_class: "icon-serv py-2"
-          icon: "psychology"
-          cta_name: "View Detail"
-        - title: "Continuous Monitoring & Feedback"
-          summary: "Stay informed on system health and receive actionable insights for continuous improvement."
-          image: "../images/icons/monitoring.png"
-          span_class: "icon-serv py-2"
-          icon: "trending_up"
-          cta_name: "View Detail"
-    - title: "Fractional CTO"
-      featured: true
-      weight: 2
-      hash: "fractional-cto"
-      summary: Platform enabled enterprises outperform competitors on maturity indices, including IT agility, Customer Experience & Cost of operations. 
-      section:
-        features_class: "bullet-point-container"
-        image: "../images/1229861.jpg"
-      features:
-        - title: "Assess the technical contours of the problem space, as well as the solution space"
-          cta_name: "View Detail"
-        - title: "Periodically assess progress and enable course correction or support"
-          cta_name: "View Detail"
-        - title: "Choose a stack that fits the bill, balances risk, time to market"
-          cta_name: "View Detail"
-        - title: "Help you identify, recruit and groom key members of your engineering team. Visualize and optimize how data moves and integrates across your entire digital landscape."
-          cta_name: "View Detail"
-        - title: "Periodically assess progress and enable course correction or support"
-          cta_name: "View Detail"
-        - title: "Periodically assess progress and enable course correction or support"
-          cta_name: "View Detail"
-        - title: "Deep dive into your platform, data, and API layers for a holistic architectural assessment."
-          cat_name: "View Detail"
-    - title: "Performance & Chaos Engineering"
-      featured: true
-      weight: 3
-      summary: "Application Modernization is a full stack, full lifecycle problem requiring paradigm shifts across people, process & tooling."
-      image: "../images/experiment.svg"
-      caption: Performance & resilliency assurance for platforms & distributed systems.
-      hash: "performance-engineering"
-      section:
-      features:
-        - title: "System Stress Testing"
-          summary: "Simulate extreme scenarios to measure your system's resilience and response times."
-          image: "../images/icons/stress-test.png"
-          span_class: "icon-serv py-2"
-          icon: "bar_chart"
-          cta_name: "View Detail"
-        - title: "Vulnerability Analysis"
-          summary: "Identify potential weak points and craft strategies to bolster them."
-          image: "../images/icons/vulnerability.png"
-          span_class: "icon-serv py-2"
-          icon: "security"
-          cta_name: "View Detail"
-        - title: "Real-world Failure Simulation"
-          summary: "Recreate real-world adverse conditions to evaluate system performance and recovery."
-          image: "../images/icons/simulation.png"
-          span_class: "icon-serv py-2"
-          icon: "psychology"
-          cta_name: "View Detail"
-        - title: "Continuous Monitoring & Feedback"
-          summary: "Stay informed on system health and receive actionable insights for continuous improvement."
-          image: "../images/icons/monitoring.png"
-          span_class: "icon-serv py-2"
-          icon: "trending_up"
-          cta_name: "View Detail"
-    - title: "Performance & Chaos Engineering"
-      featured: true
-      weight: 4
-      summary: "Application Modernization is a full stack, full lifecycle problem requiring paradigm shifts across people, process & tooling."
-      image: "../images/experiment.svg"
-      caption: Performance & resilliency assurance for platforms & distributed systems.
-      hash: "performance-engineering"
-      section:
-      features:
-        - title: "System Stress Testing"
-          summary: "Simulate extreme scenarios to measure your system's resilience and response times."
-          image: "../images/icons/stress-test.png"
-          span_class: "icon-serv py-2"
-          icon: "bar_chart"
-          cta_name: "View Detail"
-        - title: "Vulnerability Analysis"
-          summary: "Identify potential weak points and craft strategies to bolster them."
-          image: "../images/icons/vulnerability.png"
-          span_class: "icon-serv py-2"
-          icon: "security"
-          cta_name: "View Detail"
-        - title: "Real-world Failure Simulation"
-          summary: "Recreate real-world adverse conditions to evaluate system performance and recovery."
-          image: "../images/icons/simulation.png"
-          span_class: "icon-serv py-2"
-          icon: "psychology"
-          cta_name: "View Detail"
-        - title: "Continuous Monitoring & Feedback"
-          summary: "Stay informed on system health and receive actionable insights for continuous improvement."
-          image: "../images/icons/monitoring.png"
-          span_class: "icon-serv py-2"
-          icon: "trending_up"
-          cta_name: "View Detail"
+  - title: "Infrastructure Automation"
+    featured: true
+    weight: 3
+    summary: "Automate infrastructure management for speed, efficiency, and consistency."
+    image: "../images/icons/automation.png"
+    caption: "Automated deployment and scaling."
+    hash: "infrastructure-automation"
+    section:
+      features_class: "bullet-point-container"
+      image: "../images/v2/banners/platform-engineering.jpg"
+    features:
+      - title: "Accelerate development cycles with continuous integration and delivery."
+        cta_name: "View Detail"
+      - title: "Manage infrastructure using code for reproducibility and scalability."
+        cta_name: "View Detail"
+      - title: "Keep an eye on your infrastructure with real-time automated monitoring."
+        cta_name: "View Detail"
+      - title: "Enable systems to automatically recover from failures without manual intervention."
+        cta_name: "View Detail"
+  - title: "Security Engineering"
+    featured: true
+    weight: 2
+    summary: "Embed security into every layer of your platform for robust protection."
+    image: "../images/icons/security-engineering.png"
+    caption: "Comprehensive security strategies."
+    hash: "security-engineering"
+    section:
+      features_class: "box-card-container"
+    features:
+      - title: "Threat Modeling"
+        summary: "Identify and mitigate potential security threats early in the development process."
+        span_class: "icon-serv py-2"
+        icon: "security"
+        cta_name: "View Detail"
+      - title: "Secure Coding Practices"
+        summary: "Implement best practices in secure coding to reduce vulnerabilities."
+        span_class: "icon-serv py-2"
+        icon: "lock"
+        cta_name: "View Detail"
+      - title: "Automated Security Testing"
+        summary: "Continuously test your platform's security posture with automated tools."
+        span_class: "icon-serv py-2"
+        icon: "verified_user"
+        cta_name: "View Detail"
+      - title: "Compliance Management"
+        summary: "Ensure your platform meets industry regulations and compliance standards."
+        span_class: "icon-serv py-2"
+        icon: "gavel"
+        cta_name: "View Detail"
+  - title: "Security Engineering"
+    featured: true
+    weight: 1
+    summary: "Efficient, scalable, and secure platforms are the backbone of any successful digital operation. Our platform engineering services focus on building robust, cloud-native platforms tailored to your specific needs. From infrastructure automation to CI/CD pipelines, we deliver solutions that enhance your development velocity and operational efficiency."
+    image: "../images/icons/security-engineering.png"
+    caption: "Comprehensive security strategies."
+    hash: "security-engineering"
+    section:
+      features_class: "split-container"
+      image: "../images/v2/banners/druid.jpg"
 
 ---
 

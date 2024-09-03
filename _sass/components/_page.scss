@@ -161,16 +161,17 @@ p{
   // grid-template-columns: repeat(2, minmax(0, 1fr));
   .intro-content{
     height: 100%;
-    padding: 1rem 1.5em;  
+    padding: 1rem;
     @media (min-width: 1600px) {
-      width: 770px !important;
+      width: 796px !important;
     }
     @media (min-width:1300px) and (max-width: 1599px) {
-      width: 610px !important;
+      width: 652px !important;
     }
     @include media-breakpoint-up(lg){
+      padding: 1rem 1.5em;  
       margin: 0 0 0 auto;
-      width: 490px;
+      width: 528px;
       h1{
         padding-bottom: 20px;
         font-size: 5rem !important;
@@ -225,6 +226,79 @@ p{
 //   width: 100%;
 //   height: 100%;
   // padding-bottom: 60px;
+  .split-container{
+    // margin-top: 0px;
+    width: 100%;
+    height: 100%;
+    .section-container{
+      height: 100%;
+      @include media-breakpoint-up(lg){
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      @media (max-width: 992px){
+        .strip,.content-list-item{
+          height: 50%;
+        }
+      }
+      @include media-breakpoint-down(sm){
+        .strip{
+          .service-title{
+            font-size: 2.5rem !important;
+          }
+          p{
+            font-size: 1.2rem !important;
+          }
+        }
+      }
+      .strip{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #efefef;
+        div{
+          width: 100%;
+          div{
+            margin-left: auto !important;
+            @include media-breakpoint-up(lg){
+              width: 450px;
+            }
+            @media (min-width: 1600px) {
+              width: 712px !important;
+            }
+            @media (min-width:1300px) and (max-width: 1599px) {
+              width: 567px !important;
+            }
+
+          }
+        }
+        .service-title{
+          font-size: 4rem;
+          text-align: start;
+          a{
+            color: var(--v2-heading-color);
+          }
+        }
+        p{
+          text-align: start;
+          font-size: 1.5rem;
+        }
+      }
+      .content-list-item{
+        margin: 0;
+        padding: 0;
+        img{
+          margin:0;
+          width: 100%;
+          max-width: 100% !important;
+          max-height: 100% !important;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+  }
   .bullet-point-container{
     @include consulting-container;
     background-color: white;
