@@ -1,5 +1,5 @@
 ---
-layout: event
+layout: v2_event
 title: "Apache Kafka workshop at Manipal Institute of Technology"
 date: 2024-09-14
 time: 09:00am - 12:30pm

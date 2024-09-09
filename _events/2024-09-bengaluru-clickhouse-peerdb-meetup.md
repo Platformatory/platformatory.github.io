@@ -1,5 +1,5 @@
 ---
-layout: event
+layout: v2_event
 title: "ClickHouse + PeerDB Bangalore Meetup"
 date: 2024-09-18
 time: 5:00pm - 9:00pm
@@ -12,6 +12,7 @@ mode: In-Person
 description: Clickhouse User Group meetup with a focus on PeerDB
 link: https://www.meetup.com/clickhouse-bangalore-user-group/events/303208274/
 map_link: https://maps.app.goo.gl/6SNykATeuaYp8Q7a7
+banner: "/images/v2/events/sep-2024-clickhouse.png"
 ---
 
 <div class="about">

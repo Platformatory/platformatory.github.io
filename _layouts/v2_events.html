@@ -25,7 +25,7 @@ bodyClass: page-events-list
     <div class="container pb-md-6">
         <div class="events-container">
     
-                <div class="events-title-section" id="upcoming-events">
+                <div class="events-title-section mt-1" id="upcoming-events">
                     <h2 class="section-title">Upcoming Events</h2>
                 </div>
                 <div class="events-grid border-md-bottom ">
@@ -35,7 +35,12 @@ bodyClass: page-events-list
                     {% if event_date_str >= current_date_str %}
                     <div class="event-card">
                         <div class="row mx-0 event-top-position">
-                            <div
+                            {%if event.banner %}
+                            <img src="{{event.banner}}" alt="{{event.title}}">
+                            {% else %}
+                            <h5 class=" p-1 event-card-title ">{{event.title}}</h5>
+                            {% endif %}
+                            <!-- <div
                                 class=" d-flex justify-content-center col-3 align-items-center flex-column event-date-path">
                                 <h6 class="m-0 text-white font-weight-bold">{{ event.date | date: '%d'}}</h6>
                                 <h6 class="m-0 text-white text-uppercase font-weight-bold">{{ event.date | date: '%b' | upcase }}
@@ -45,7 +50,7 @@ bodyClass: page-events-list
                             </div>
                             <div class=" d-flex col-9 p-0 justify-content-center align-items-center">
                                 <h5 class="m-0 p-1 event-card-title ">{{event.title}}</h5>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="event-item">
                             <div class="event-item-list">
@@ -58,11 +63,11 @@ bodyClass: page-events-list
                                             <p class="m-0 col-10 p-0">{{ event.date | date_to_string }}</p>
                                             </div> -->
                                 <div class="row mx-0 align-items-center event-items-grid">
-                                    <div class="col-2  p-0"><img class="event-icons p-0" src="/images/event/{{event.mode}}.png"
-                                            alt="{{event.mode}} icon"></div>
-                                    <p class="m-0 col-10 p-0 text-capitalize">{{ event.mode }}</p>
+                                    <div class="col-2  p-0"><img class="event-icons p-0" src="/images/event/calendar.png"
+                                            alt="calender icon"></div>
+                                    <p class="m-0 col-10 p-0 text-capitalize">{{ event.date | date: '%d'}}-{{ event.date | date: '%b' | upcase }}-{{ event.date | date: '%Y' | upcase }}</p>
                                 </div>
-                                <div class="row mx-0 align-items-center event-items-grid">
+                                <!-- <div class="row mx-0 align-items-center event-items-grid">
                                     <div class="col-2  p-0"><img class="event-icons p-0" src="/images/event/{{event.category}}.png"
                                             alt="{{event.category}} icon"></div>
                                     <p class="m-0 col-10 p-0 text-capitalize">{{ event.category }}</p>
@@ -78,7 +83,7 @@ bodyClass: page-events-list
                                             alt="partner icon"></div>
                                     <p class="m-0 col-10 p-0">{{ event.partners }}</p>
                                 </div>
-                                {% endif %}
+                                {% endif %} -->
                             </div>
                             <hr>
                             <div class="px-1">
