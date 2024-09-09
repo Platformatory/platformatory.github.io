@@ -1724,10 +1724,10 @@ html.reveal-full-page {
   position: absolute !important;
   /* width: var(--slide-width) !important;
   height: var(--slide-height) !important; */
-  /* top: 50% !important;
-  left: 50% !important; */
+  top: 50% !important;
+  left: 50% !important;
   opacity: 1 !important;
-  /* transform: translate(-50%, -50%) !important; */
+  transform: translate(-50%, -50%) !important;
   transform-style: flat !important;
   transform-origin: 0 0 !important;
 }
