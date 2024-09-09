@@ -2,7 +2,7 @@
 layout: event
 title: "ClickHouse + PeerDB Bangalore Meetup"
 date: 2024-09-18
-time: 4:00pm - 7:30pm
+time: 5:00pm - 9:00pm
 location: Halcyon Condos By Inventree Hotels & Resorts
 address: Bohemian & Poolside, Halcyon Hotel, P.B. 4708,Drafadilla, 9, 5th Main Rd, BDA Layout, 4th Block, Koramangala, Bengaluru, Karnataka 560047
 category: meetup
