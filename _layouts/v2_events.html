@@ -5,7 +5,7 @@ bodyClass: page-events-list
 
 <!-- <div class="reveal">
     <div class="slides"> -->
-        <section class="section-top">
+        <!-- <section class="section-top">
             <div class="section-intro-container row mx-0">
                 <div class="section-content col-lg-6 p-0 col-12">
                   <div class="intro-content py-2">{{ content }}</div>
@@ -16,7 +16,7 @@ bodyClass: page-events-list
                   <img src="/{{page.intro_image}}" alt="{{page.title}}" />
                 </div>
               </div>
-        </section>
+        </section> -->
     <!-- </div>
 </div> -->
 
@@ -104,7 +104,7 @@ bodyClass: page-events-list
                     {% endfor %}
                 </div>
     
-                <div class="events-title-section" id="past-events">
+                <!-- <div class="events-title-section" id="past-events">
                     <h2 class="section-title">Watch Now</h2>
                 </div>
                 <div class="events-grid ">
@@ -131,9 +131,6 @@ bodyClass: page-events-list
                                     <div class="col-2  p-0"><img class="event-icons p-0" src="/images/event/location.png" alt=""></div>
                                     <p class="m-0 col-10 p-0">{{event.location}}</p>
                                 </div>
-                                <!-- <div class="row mx-0 align-items-center" ><div class="col-2  p-0"><img class="event-icons p-0"  src="/images/event/calendar.png" alt=""></div>
-                                            <p class="m-0 col-10 p-0">{{ event.date | date_to_string }}</p>
-                                        </div> -->
                                 <div class="row mx-0 align-items-center event-items-grid">
                                     <div class="col-2  p-0"><img class="event-icons p-0" src="/images/event/{{event.mode}}.png" alt="">
                                     </div>
@@ -162,20 +159,12 @@ bodyClass: page-events-list
                                 {% endif %}
                                 <a href="{{ event.url }}">Read more</a>
                             </div>
-                            <!-- {{event_day}}
-                                    <strong>{{ event.title }}</strong><br>
-                                    Date: {{ event.date | date_to_string }}<br>
-                                    Location: {{ event.location }}<br>
-                                    Type: <span class="event-type">{{ event.type }}</span><br>
-                                    Mode: {{ event.mode }}<br>
-                                    Partners: {{ event.partners }}<br>
-                                    Description: {{ event.description }}<br> -->
                         </div>
                 </div>
     
             {% endif %}
             {% endfor %}
-        </div>
+        </div> -->
     </div>
 </div>
 <!-- <div class="events-grid">

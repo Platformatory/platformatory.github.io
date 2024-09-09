@@ -12,6 +12,23 @@ mode: In-Person
 description: Special interest group focused on event streaming and real time analytics
 link: https://www.meetup.com/bangalore-streams/events/294898968/
 map_link: https://goo.gl/maps/VwfZ9V42eHhoF7yS7
+talks:
+    - title: Apache Pulsar - The anatomy of Pub & Sub
+      speaker: Shivji Kumar Jha, Nutanix
+      video: DrTRvZ1w6Cw
+      slide: https://www.slideshare.net/shiv4289/pulsarplatformatorymeetup2pptx
+    - title: "Empowering Interactive Queries on Lakehouse: Integrating Apache Hudi with Presto & Trino | Sagar Sumit, Onehouse"
+      speaker: Sagar Sumit, Onehouse
+      video: o6N9gxw0T88
+      slide: https://drive.google.com/file/d/1jP3fd4nYaL-j-6J4uhQBHzrULlyMAGm_/view?usp=drive_link
+    - title: Stream joins using Aerospike and RTP (Realtime Processing Platform)
+      speaker: Vikas Sharma, CRED
+      video: ZrxL2IIu9cM
+      slide: https://drive.google.com/file/d/1VYSD715vjXit_g-08jcv9OXZGmy8feFK/view?usp=drive_link
+    - title: "A primer on streaming databases: next gen tooling for streaming and stream processing"
+      speaker: Pavan Keshavamurthy & Avinash Upadhyaya, Platformatory
+      video: UWogU__IunI
+      slide: https://docs.google.com/presentation/d/1Lpl2Vy_QgGa_VqWQptkYz-Rhu57guQrZvLpRoWPp13Y/edit?usp=sharing
 ---
 
 <div class="about">

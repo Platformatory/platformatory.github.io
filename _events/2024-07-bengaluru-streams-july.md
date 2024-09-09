@@ -12,6 +12,27 @@ mode: In-Person
 description: Special interest group focused on event streaming and real time analytics
 link: https://www.meetup.com/bangalore-streams/events/301289568
 map_link: https://maps.app.goo.gl/SywptxCo6Z8hcws6A
+talks:
+    # - title: Realtime Triggers in Kestra
+    #   speaker: Shruti Mantri, Moveworks
+    #   video: R45jlnvOnOI
+    #   slide: https://drive.google.com/file/d/1oQj536qWWsAnr4BQY6K7-kwaY1QvZ-ul/view?usp=sharing
+    - title: "Moving from Batch to Realtime : Inspired by a true production incident"
+      speaker: Shivji Jha, Nutanix 
+      video: BgwHe_S3IoY
+      slide: https://www.slideshare.net/slideshow/batch-to-near-realtime-inspired-by-a-real-production-incident/270137775
+    - title: Challenges & Learnings with using Kafka/Redpanda at a huge scale
+      speaker: Anuraj Jain, Sharechat
+      video: NFKC5qsbYUw
+      slide: https://docs.google.com/presentation/d/1aYXqZCD7ynU-A7CU_HuEvEzBBQHGgPSM/edit?usp=sharing&ouid=105484769521359459132&rtpof=true&sd=true
+    - title: Unleashing Data Powerhouses - Benthos
+      speaker: Shivam Yadav & Shubham Dhal,  Sharechat
+      video: 6xs5j0QL7e0
+      slide: https://drive.google.com/file/d/1A5NYJQ6AVM1aj0RP0GzTtSpvryxNV2I-/view?usp=sharing
+    - title: Push Query Layer for Stream Processing Systems (Apache Flink)
+      speaker: Avinash Upadhyaya & Pavan Keshavamurthy, Platformatory
+      video: RmZUgSQwVRM
+      slide: https://docs.google.com/presentation/d/1NuDjzcDkAHTXIUELIKgJAta3jqDO-7AVPKP3xBl4Ilw/edit?usp=sharing
 ---
 
 <div class="about">
@@ -38,9 +59,9 @@ We're hosting our next in-person event on July 6. Join us for exciting discussio
 |------------------------------------------------------------------------|--------------------------------------------------------|------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------|
 | Welcome and registration                                               |                                                        | 09:30 AM   | 10:00 AM |                                                                                                                                                                      |                                                            |
 | Realtime Triggers in Kestra                                            | Shruti Mantri, Moveworks                               | 10:00 AM   | 10:30 AM | [Slides](https://drive.google.com/file/d/1oQj536qWWsAnr4BQY6K7-kwaY1QvZ-ul/view?usp=sharing){:target="\_blank"}                                                      | [YouTube](https://youtu.be/R45jlnvOnOI){:target="\_blank"} |
-| Moving from Batch to Realtime : Inspired by a true production incident | Shivji Jha, Nutanix                                    | 10:35 AM   | 11:10 AM |                                                                                                                                                                      |                                                            |
-| Challenges & Learnings with using Kafka/Redpanda at a huge scale       | Anuraj Jain, Sharechat                                 | 11:15 AM   | 11:50 AM | [Slideshare](https://www.slideshare.net/slideshow/batch-to-near-realtime-inspired-by-a-real-production-incident/270137775){:target="\_blank"}                        | [YouTube](https://youtu.be/BgwHe_S3IoY){:target="\_blank"} |
-| Networking break                                                       |                                                        | 11:50 AM   | 12:10 PM | [Slides](https://docs.google.com/presentation/d/1aYXqZCD7ynU-A7CU_HuEvEzBBQHGgPSM/edit?usp=sharing&ouid=105484769521359459132&rtpof=true&sd=true){:target="\_blank"} | [YouTube](https://youtu.be/NFKC5qsbYUw){:target="\_blank"} |
+| Moving from Batch to Realtime : Inspired by a true production incident | Shivji Jha, Nutanix                                    | 10:35 AM   | 11:10 AM | [Slideshare](https://www.slideshare.net/slideshow/batch-to-near-realtime-inspired-by-a-real-production-incident/270137775){:target="\_blank"}                        | [YouTube](https://youtu.be/BgwHe_S3IoY){:target="\_blank"} |
+| Challenges & Learnings with using Kafka/Redpanda at a huge scale       | Anuraj Jain, Sharechat                                 | 11:15 AM   | 11:50 AM | [Slides](https://docs.google.com/presentation/d/1aYXqZCD7ynU-A7CU_HuEvEzBBQHGgPSM/edit?usp=sharing&ouid=105484769521359459132&rtpof=true&sd=true){:target="\_blank"} | [YouTube](https://youtu.be/NFKC5qsbYUw){:target="\_blank"} |
+| Networking break                                                       |                                                        | 11:50 AM   | 12:10 PM |                                                                                                                                                                      |                                                            |
 | Unleashing Data Powerhouses - Benthos                                  | Shivam Yadav & Shubham Dhal,  Sharechat                | 12:10 PM   | 12:45 PM | [Slides](https://drive.google.com/file/d/1A5NYJQ6AVM1aj0RP0GzTtSpvryxNV2I-/view?usp=sharing){:target="\_blank"}                                                      | [YouTube](https://youtu.be/6xs5j0QL7e0){:target="\_blank"} |
 | Push Query Layer for Stream Processing Systems (Apache Flink)          | Avinash Upadhyaya & Pavan Keshavamurthy, Platformatory | 12:45 PM   | 01:20 PM | [Slides](https://docs.google.com/presentation/d/1NuDjzcDkAHTXIUELIKgJAta3jqDO-7AVPKP3xBl4Ilw/edit?usp=sharing){:target="\_blank"}                                    | [YouTube](https://youtu.be/RmZUgSQwVRM){:target="\_blank"} |
 | Lunch and Networking                                                   |                                                        | 01:30 PM   | 02:30 PM |                                                                                                                                                                      |                                                            |

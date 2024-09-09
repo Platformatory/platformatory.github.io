@@ -12,6 +12,19 @@ mode: In-Person
 description: Special interest group focused on event streaming and real time analytics
 link: https://www.meetup.com/bangalore-streams/events/299074224
 map_link: https://maps.app.goo.gl/FW61fHVeDEjBVyko6
+talks:
+    - title: Real time Analytics with Apache Kafka and Apache Druid
+      speaker: Tijo Thomas, Imply
+      video: 0rG8Bic4eSs
+      slide:
+    - title: Real time data lake for CDC with Apache Paimon and Flink
+      speaker: Avinash Upadhyaya, Platformatory
+      video: PoWWZZayI74
+      slide: https://docs.google.com/presentation/d/1EQRJzjxcVd0LxBo0ryfIVLz2oIe9vr0SncjilqfmvcE/edit?usp=sharing
+    - title: Time Series Text Indexing in Apache Pinot
+      speaker: Atri Sharma, Atlassian
+      video: mrNgS9DqiAU
+      slide:
 ---
 
 <div class="about">

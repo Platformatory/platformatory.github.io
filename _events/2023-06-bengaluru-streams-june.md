@@ -12,6 +12,27 @@ mode: In-Person
 description: Special interest group focused on event streaming and real time analytics
 link: https://www.meetup.com/bangalore-streams/events/293340690/
 map_link: https://goo.gl/maps/khjwkvjpQzmmFoKY8
+talks:
+    - title: Introduction and The State of Streaming & Modern Data
+      speaker: Pavan Keshavamurthy, Platformatory
+      video: xA-OwGdqcXk
+      slide: https://www.slideshare.net/AvinashUpadhyaya3/the-state-of-streamingpdf
+    - title: Capturing database changes in real-time with Kafka Connect
+      speaker: Chaitanya Mukka, Confluent
+      video: f85LMBPW0_8
+      slide: https://docs.google.com/presentation/d/1X4ng98TI5oGRlMsVfC9NpIsL-_NBaLxhdrDcYLzFVp0/edit?usp=drive_link
+    - title: "Unlocking Real-time Insights: CDC streams by the Lakehouse on Apache Hudi"
+      speaker: Sagar Sumit, Onehouse
+      video: ingJ_6CND0w
+      slide: https://docs.google.com/presentation/d/1j_TmjsDPdXwFoWVafkN4ccF7JYx769LyOaFkkmkn11s/edit?usp=drive_link
+    - title: "Beyond Kafka: Exploring NATS for Modern Event-Driven Architectures"
+      speaker: Robin Biju Thomas, Iotify
+      video: 2gPoEt52CIE
+      slide: https://drive.google.com/file/d/1m0YPQOOOQT76lBrOpHD3Bwl0BRvivRqi/view?usp=drive_link
+    - title: Real-time analytics and insights with Apache Kafka and Apache Pinot
+      speaker: Suraj Pillai and Saurabh Dubey, Startree
+      video: rPgrF2gs7dk
+      slide: https://docs.google.com/presentation/d/1D-W09zuYNOKbA3fo-RNG-P1Jp7QmgroG4XXxLBgTdIU/edit?usp=drive_link
 ---
 
 <div class="about">
