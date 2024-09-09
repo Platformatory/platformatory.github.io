@@ -12,6 +12,19 @@ mode: In-Person
 description: Special interest group focused on event streaming and real time analytics
 link: https://www.meetup.com/bangalore-streams/events/299747121
 map_link: https://maps.app.goo.gl/rnArdqMMUGDsDMfP7
+talks:
+  - title: Optimizing Real-Time Analytics:Strategies for Optimizing high concurrency real time analytics using Apache Kafka and Apache Druid
+    speaker: Tijo Thomas, Imply
+    video: iPq1elGtpUo
+    slide: https://drive.google.com/file/d/1o2c2WOEg_MEXs1elxT7AwxPRgcOK_23K/view?usp=sharing
+  - title: MQ(Queuing Abstraction at Meesho for Scalable and Efficient Communication)
+    speaker: Ramiz Mehran, Meesho
+    video: zyyHNKR7URM
+    slide: 
+  - title: Solving for Real-time in modern ecommerce:A primer on challenges, opportunities and solutions
+    speaker: Ashwin Venkatesan, Platformatory.io
+    video: UXuplv4MKWI
+    slide: https://drive.google.com/file/d/1DsX5LlDUT92zczsv6KOWXrwaiorVGJjs/view?usp=sharing
 ---
 
 <div class="about">

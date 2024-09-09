@@ -109,3 +109,117 @@
         }
     }
 }
+
+.horizontal-talks{
+ margin-top: 74px;
+ height: 96vh; 
+ width: 100%;
+ .container{
+    height: 100%;
+ }
+ .talks-container{
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* Hide scrollbar for Chrome, Safari, and Edge */
+    &::-webkit-scrollbar {
+        width: 5px;
+      }
+
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px rgb(187, 187, 187); 
+        border-radius: 5px;
+      }
+       
+      /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: var(--v2-primary-color); 
+        border-radius: 10px;
+      }
+      
+      /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: var(--v2-primary-color); 
+      }
+    .talks-section-title{
+        margin-top: 10px;
+        font-size: 2rem ;
+        text-align: start;
+    }
+    .talks-grid{
+         padding: 2rem 1rem ;
+         display: flex;
+         gap:10px;
+         overflow-x: auto;
+         &::-webkit-scrollbar {
+            height: 2px;
+          }
+    
+        &::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px rgb(187, 187, 187); 
+            border-radius: 5px;
+          }
+           
+          /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: var(--v2-primary-color); 
+            border-radius: 10px;
+          }
+          
+          /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: var(--v2-primary-color); 
+          }
+            .talk-card{
+                min-width: 364px;
+                border: 1px solid #e7e7e7;
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+                width: 24rem;
+                .talk-video{
+                    max-width: 100%;
+                }
+                .talk-slide{
+                    display: flex;
+                    justify-content: center;
+                    padding-bottom: 15px;
+                    .talk-slide-btn{
+                        cursor: pointer;
+                        border: none;
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                        background: var(--v2-primary-color);
+                        color: white;
+                        padding: 6px 10px;
+                        border-radius: 8px;
+                    }
+                }
+                .talk-item-list{
+                    padding: 0 16px;
+                    .talk-card-title{
+                        text-align: start;
+                        font-size:1.8rem;
+                        min-height: 12rem;   
+                    }
+                    .talk-speaker{
+                      padding-top: 10px;
+                      padding-bottom: 15px;
+                      text-align: start;
+                      .speaker{
+                        text-align: start;
+                        color: var(--v2-primary-color);
+                        font-size: 1.2rem;
+                      }
+                    }
+                    .talk-summary{
+                        text-align: start;
+                        min-height: 4rem;
+                    }
+                    
+                    img{
+                        width: 20px;
+                    }
+                }
+            }
+    }
+ }
+}

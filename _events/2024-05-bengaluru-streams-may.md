@@ -12,6 +12,27 @@ mode: In-Person
 description: Special interest group focused on event streaming and real time analytics
 link: https://forms.gle/W5VQzvm4rQvwiRup9
 map_link: https://goo.gl/maps/Zq93Fj9uhM39W2yKA
+talks:
+    - title: Beyond Tiered Storage
+      summary: Serverless Kafka with No Local Disks
+      speaker: Richard Artoul, WarpStream
+      video: m9DMEpEhbeg
+      slide: https://drive.google.com/file/d/1_v7gH7PHTE5GlZbRCW-su8fSpkaCnxy7/view?usp=sharing
+    - title: Real-Time Predictions with Machine Learning & Redpanda Streaming Data Transforms
+      summary:
+      speaker: Christina Lin, Redpanda
+      video: EIE_Ad4qLjg
+      slide: https://drive.google.com/file/d/1_v7gH7PHTE5GlZbRCW-su8fSpkaCnxy7/view?usp=sharing
+    - title:  Stream Processing in SQL
+      summary: One Approach
+      speaker: Noel Kwan, RisingWave
+      video: 1B5lEpIWcJI
+      slide: https://drive.google.com/file/d/1pBCUCMXvhKmEWXzpbJWnRTIUy7Y2EKYP/view?usp=sharing
+    - title:  Unlocking Seamless Streaming Ingestion with Apache Hudi and Kafka
+      summary: 
+      speaker: Sagar Sumit & Vinish Reddy, Onehouse
+      video: PZyi1NWKBgs
+      slide: https://drive.google.com/file/d/1KKBwQo3-b97b8yfAfTT4dRMidzVI7qqM/view?usp=sharing
 ---
 
 <div class="about">

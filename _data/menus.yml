@@ -90,8 +90,8 @@ v2_main:
         - name: "Internet of Things"
           url: "/v2/industries/internet-of-things"
     weight: 2
-  - name: "Events"
-    url: "/v2/events/"
+  - name: "Talks"
+    url: "/v2/talks/"
     weight: 4
   - name: "Write Ahead Log"
     url: "/v2/blog"
