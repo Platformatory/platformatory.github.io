@@ -52,7 +52,11 @@
     }
 
 }
-
+.intro-image-conatainer{
+    #crt{
+        min-width: 36ch;
+    }
+}
 #crt {
     font-family: "VT323", monospace;
     min-width: 42ch;
@@ -203,7 +207,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #3f3933;
+    background: #3e4341;
     border-radius: 0.5rem;
 
     &.off #crt {
