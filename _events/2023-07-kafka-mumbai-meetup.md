@@ -1,5 +1,5 @@
 ---
-layout: event
+layout: v2_event
 title: "Apache Kafka® Meetup Mumbai- July 2023"
 date: 2023-07-14
 time: 3:00pm - 6:15pm

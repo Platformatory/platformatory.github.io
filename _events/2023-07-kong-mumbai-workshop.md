@@ -1,5 +1,5 @@
 ---
-layout: event
+layout: v2_event
 title: "Kong Mumbai Hands-On Workshop"
 date: 2023-07-15
 time: 10:00am - 2:00pm

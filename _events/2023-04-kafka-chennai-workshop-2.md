@@ -1,5 +1,5 @@
 ---
-layout: event
+layout: v2_event
 title: "Apache Kafka (Confluent) - hands-on workshop - Part 2"
 date: 2023-04-22
 time: 9:45am - 1:00pm

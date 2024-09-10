@@ -1,5 +1,5 @@
 ---
-layout: event
+layout: v2_event
 title: "Bengaluru Temporal Summer Camp 2024"
 date: 2024-07-26
 time: 4:30pm - 7:30pm

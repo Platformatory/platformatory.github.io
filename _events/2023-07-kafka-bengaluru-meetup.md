@@ -1,5 +1,5 @@
 ---
-layout: event
+layout: v2_event
 title: "Apache Kafka® Meetup Bangalore- July 2023"
 date: 2023-07-29
 time: 10:30am - 2:00pm

@@ -1,5 +1,5 @@
 ---
-layout: event
+layout: v2_event
 title: "Bangalore Streams meetup - April 2024"
 date: 2024-04-20
 time: 9:30am - 2:30pm

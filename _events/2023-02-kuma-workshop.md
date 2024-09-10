@@ -1,5 +1,5 @@
 ---
-layout: event
+layout: v2_event
 title: "Hands-On Workshop - Service Mesh 101: Getting Started with Kuma"
 date: 2023-02-23
 time: 4:00am - 8:00pm

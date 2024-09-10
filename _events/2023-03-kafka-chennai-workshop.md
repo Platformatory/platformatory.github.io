@@ -1,5 +1,5 @@
 ---
-layout: event
+layout: v2_event
 title: "Apache Kafka and Azure connectors - hands-on workshop"
 date: 2023-03-25
 time: 10:00am - 2:00pm

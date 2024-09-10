@@ -1,5 +1,5 @@
 ---
-layout: event
+layout: v2_event
 title: "Bangalore Streams meetup - October 2023"
 date: 2023-10-14
 time: 9:30am - 2:30pm

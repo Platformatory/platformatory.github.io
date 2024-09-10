@@ -1,5 +1,5 @@
 ---
-layout: event
+layout: v2_event
 title: "Bangalore Streams meetup - July 2024"
 date: 2024-07-06
 time: 9:30am - 2:30pm
@@ -95,7 +95,8 @@ A real world account of a production incident showing
 2. Kind of failures to anticipate
 3. How to be antifragile for future"
 
-- **Challenges & Learnings with using Kafka/Redpanda at a huge scale**
+
+-  **Challenges & Learnings with using Kafka/Redpanda at a huge scale**
 
 _Speaker:_ **Anuraj Jain, Software Engineer at Sharechat**
 

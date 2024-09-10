@@ -1,5 +1,5 @@
 ---
-layout: event
+layout: v2_event
 title: "Kubernetes Workshop Chennai [Paid]"
 date: 2023-09-23
 time: 9:30am - 6:00pm

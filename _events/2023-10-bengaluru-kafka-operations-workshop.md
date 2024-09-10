@@ -1,5 +1,5 @@
 ---
-layout: event
+layout: v2_event
 title: "Apache Kafka Operations Workshop Bengaluru [Paid]"
 date: 2023-09-23
 time: 9:30am - 6:00pm

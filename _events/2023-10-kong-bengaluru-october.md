@@ -1,5 +1,5 @@
 ---
-layout: event
+layout: v2_event
 title: "October Kong Bengaluru Meetup"
 date: 2023-10-07
 time: 10:00am - 2:00pm

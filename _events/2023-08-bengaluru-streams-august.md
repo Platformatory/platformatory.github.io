@@ -1,5 +1,5 @@
 ---
-layout: event
+layout: v2_event
 title: "Bangalore Streams meetup - August 2023"
 date: 2023-08-26
 time: 9:30am - 2:30pm

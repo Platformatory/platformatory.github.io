@@ -1,5 +1,5 @@
 ---
-layout: event
+layout: v2_event
 title: "December Kong Bengaluru Meetup"
 date: 2023-12-16
 time: 10:00am - 2:00pm
