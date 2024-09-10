@@ -77,3 +77,131 @@
 .lock-scroll {
   overflow: hidden;
 }
+
+@mixin sub-menu{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  column-gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
+  .sub-menu-title{
+    margin: 0;
+    font-size: 16px;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #333;
+  }
+.sub-menu-item {
+    font-size: 16px;
+    white-space: nowrap; 
+    padding: 10px 20px; 
+    display: block;
+    color: #333; 
+    text-decoration: none;
+    &:hover{    
+        color: #1d6427;
+    }
+    
+}
+
+.child-menu-section{
+    .child-dropdown{
+      &:hover{
+        color: #333;
+        cursor:default;
+      }
+      // text-align: center;
+      font-weight: bold;
+      margin: 0;
+    }
+    h3{
+        font-size: 16px;
+    }
+    .child-menu{  
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      max-height: 180px;
+      padding: 10px 20px;
+        .child-menu-item{
+            display: block;
+            padding: 6px 20px; 
+            margin-right: 2rem;  
+            font-size: 16px;
+            color: var(--v2-heading-color);
+            text-decoration: none;
+            &:hover{
+                color: #1d6427;
+            }
+        }
+
+    }
+}
+}
+
+
+
+.dropdown-menu {
+  top: 100%; 
+  
+  z-index: 1000;
+  border-radius: 0;
+  background-color: #f8f9fa; 
+  border: none; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.v2-main-menu-mobile{
+  position: fixed;
+  background: #314d31;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s, visibility 0.35s, height 0.35s;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &.open {
+    opacity: 0.9;
+    visibility: visible;
+    height: 100%;
+    z-index: 20;
+  }
+  ul {
+    font-size: 30px;
+    font-family: $font-family-heading;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 0;
+    li {
+      display: block;
+      position: relative;
+      opacity: 1;
+      padding: 10px;
+      a {
+        display: block;
+        position: relative;
+        color: #ffffff;
+        text-decoration: none;
+        overflow: hidden;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  .dropdown-menu{
+    min-width: 320px;
+    .sub-menu{
+      @include sub-menu;
+    }
+  }
+}

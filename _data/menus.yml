@@ -94,7 +94,7 @@ v2_main:
     url: "/v2/talks/"
     weight: 4
   - name: "Write Ahead Log"
-    url: "/v2/blog"
+    url: "/blog"
     weight: 6
   - name: "Company"
     url: "/v2/company"

@@ -71,7 +71,7 @@
   </head>
 
   <body>
-    {% include main-menu-mobile.html %}
+    {% include v2-main-menu-mobile.html %}
         {% include v2_header.html headerClass='header-extra' %}
         <div class="reveal">
             <div class="slides">
@@ -85,6 +85,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="{{ '/assets/reveal.js/dist/reveal.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/monitor.js' | relative_url }}"></script>
     <script>
       Reveal.initialize({
             controls: true,
