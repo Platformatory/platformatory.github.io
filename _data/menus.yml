@@ -37,8 +37,8 @@ v2_main:
     weight: 0
     children:
       items:
-        - name: "Real-time data & intelligent modernization"
-          url: "/v2/consulting/real-time-data&intelligent-modernization"
+        - name: "Real-time data & AI"
+          url: "/v2/consulting/real-time-data&ai"
         - name: "Platform Engineering"
           url: "/v2/consulting/platform-engineering"
         - name: "Platform led SaaS"
