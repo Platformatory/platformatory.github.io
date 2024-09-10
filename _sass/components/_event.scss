@@ -509,6 +509,10 @@
     @include scroll-style;
     .event-detail-container{
         padding: 0; 
+        .intro-container{
+            padding: 15px 10px;
+            background: linear-gradient(90deg, rgb(206, 255, 246) 0%, rgb(200, 255, 225) 50%, rgb(161, 255, 212) 100%);
+        }
         .talks-container{
             @include talk-section-title;
             
@@ -546,10 +550,11 @@
                 padding: 10px 20px;
                 font-size: 1.5rem;
                 color: white;
-                background-color: #272727;
-                &:hover{
-                    background-color: #000000 ;
-                }
+                font-weight: bold;
+                background-color: var(--v2-primary-color);
+                // &:hover{
+                //     background-color: var() ;
+                // }
                 img{
                     margin: 0;
                 }
