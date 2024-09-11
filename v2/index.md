@@ -67,6 +67,25 @@ sections:
     section:
       features_class: "split-container"
       image: "../images/v2/banners/druid.jpg"
+  - title: "Infrastructure Automation"
+    featured: true
+    weight: 3
+    summary: "Automate infrastructure management for speed, efficiency, and consistency."
+    image: "../images/icons/automation.png"
+    caption: "Automated deployment and scaling."
+    hash: "infrastructure-automation"
+    section:
+      features_class: "bullet-point-container"
+      image: "../images/v2/banners/platform-engineering.jpg"
+    features:
+      - title: "Accelerate development cycles with continuous integration and delivery."
+        cta_name: "View Detail"
+      - title: "Manage infrastructure using code for reproducibility and scalability."
+        cta_name: "View Detail"
+      - title: "Keep an eye on your infrastructure with real-time automated monitoring."
+        cta_name: "View Detail"
+      - title: "Enable systems to automatically recover from failures without manual intervention."
+        cta_name: "View Detail"
 
 ---
 

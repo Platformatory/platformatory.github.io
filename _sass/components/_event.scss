@@ -31,7 +31,7 @@
     }}
 }
 @mixin talk-grid{
-    padding: 2rem ;
+    padding: 2rem 0;
     padding-left: 5px;
     display: flex;
     flex-wrap: wrap;
@@ -60,6 +60,9 @@
     &::-webkit-scrollbar-thumb:hover {
         background: var(--v2-primary-color); 
         }
+        @include media-breakpoint-up(xl) {
+            padding-right: 2rem;
+        }
 }
 
 @mixin talk-card-up-lg{
@@ -69,7 +72,7 @@
                 display: flex;
                 width: 100% !important;
                 .talk-top-position{
-                    width: 70%;
+                    width: 60%;
                     .talk-video{
                         width: 100%;
                         max-height: 100%;
@@ -77,6 +80,7 @@
                     }
                 }
                 .talk-item{
+                    width: 40%;
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-end;
@@ -91,7 +95,7 @@
                 display: flex;
                 width: 100% !important;
                 .talk-top-position{
-                    width: 70%;
+                    width: 60%;
                     .talk-video{
                         width: 100%;
                         max-height: 100%;
@@ -99,6 +103,7 @@
                     }
                 }
                 .talk-item{
+                    width: 40%;
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-end;
