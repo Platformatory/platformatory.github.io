@@ -23,10 +23,11 @@ bodyClass: page-events-list
 
 <section class="horizontal-talks">
     <div class="container pb-md-6">
-        <!-- <div class="upcoming-events-card mt-1">
-            <a href="/v2/events">Upcoming Events 🎟️</a>
-        </div> -->
+        
         <div class="talks-container">
+            <div class="past-events-card mt-1">
+                <h4 >Past Events 📹</h4>
+            </div>
             {% for event in site.events reversed %}
             {% assign event_date_str = event.date | date: "%Y-%m-%d" %}
             {% assign current_date_str = site.time | date: "%Y-%m-%d" %}

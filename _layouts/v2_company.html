@@ -25,10 +25,9 @@ bodyClass: v2-page-layout
     </section>
   <!-- </div>
 </div> -->
-
+<!-- | sort: 'weight' | reverse -->
 {%if page.sections%}
-{% assign sorted_section = page.sections | sort: 'weight' |
-                reverse %}
+{% assign sorted_section = page.sections  %}
 
 <!-- <div class="content"> -->
 {% for section in sorted_section %}

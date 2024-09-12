@@ -8,88 +8,90 @@ intro_image_hide_on_mobile: true
 what_we_do_label: "Our superpowers in the cloud native landscape"
 what_we_do: "Boutique engineering expertise, breadth & depth across, <br><strong>Hyperscale Data, Event Streaming, Machine Learning and API-based connectivity</strong>."
 sections:
-  - title: "Infrastructure Automation"
-    featured: true
+  - title: Platform & Product Engineering, for the AI age.
+    featured: false
+    summary: "We transform our customers' tech estate and operating model with cloud-native infrastructure, real-time data and modern integration."
+    raw_content: |
+      <section style="background-image: url(../images/v2/banners/white.jpg)" class="raw-section-container">
+        <div class="container  text-left">
+          <div class="row">
+            <h1 class="col-md-8 col-12">Platform & Product Engineering, for the AI age.</h1>
+            <p class="col-md-4 col-12">
+              We transform our customers' tech estate and operating model with cloud-native infrastructure, real-time data and modern integration.  
+            </p>
+          </div>
+          <div class="">
+            <blockquote>
+              A product is useless without a platform, or more precisely and accurately, a platform-less product will always be replaced by an equivalent platform-ized product – <strong>Steve Yegge</strong>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+  - title: "APIs and interfaces are the real moat. Protocols trump platforms. Open source is the most robust form of capitalism."
+    featured: false
     weight: 3
-    summary: "Automate infrastructure management for speed, efficiency, and consistency."
+    summary: "We uniquely specialize in ubiquitous distributed system (platform) interfaces that power the cloud. "
     image: "../images/icons/automation.png"
     caption: "Automated deployment and scaling."
     hash: "infrastructure-automation"
-    section:
-      features_class: "bullet-point-container"
-      image: "../images/v2/banners/platform-engineering.jpg"
-    features:
-      - title: "Accelerate development cycles with continuous integration and delivery."
-        cta_name: "View Detail"
-      - title: "Manage infrastructure using code for reproducibility and scalability."
-        cta_name: "View Detail"
-      - title: "Keep an eye on your infrastructure with real-time automated monitoring."
-        cta_name: "View Detail"
-      - title: "Enable systems to automatically recover from failures without manual intervention."
-        cta_name: "View Detail"
-  - title: "Security Engineering"
+    raw_content: |
+       <section class="raw-section-container">
+        <div class=" container  text-left">
+          <div class="row">
+          <div class="col-md-6 col-12">
+           <h2>We uniquely specialize in ubiquitous distributed system (platform) interfaces that power the cloud.</h2>
+          </div>
+            <div class="col-md-6 col-12 mt-2">
+            <p>APIs and interfaces are the real moat.</p>
+            <p>Protocols trump platforms.</p>
+           <p>Open source is the most robust form of capitalism.</p>
+            </div>
+          </div>
+          <div class="features-images">
+            <img src="../images/v2/technology/kafka.png" alt="Apache Kafka">
+            <img src="../images/v2/technology/kubernetes.png" alt="Kubernetes">
+            <img src="../images/v2/technology/postgres.png" alt="Postgres">
+            <img src="../images/v2/technology/iceberg.png" alt="Apache Iceberg">
+            <img src="../images/v2/technology/apache_cassandra.png" alt="Cassandra">
+            <img src="../images/v2/technology/amazon-s3.png" alt="S3">
+          </div>
+        </div>
+       </section>
+  - title: "We execute a unique delivery model that is practitioner led. One-pizza teams are the rule. Punch above your weight, consistently."
     featured: true
     weight: 2
     summary: "Embed security into every layer of your platform for robust protection."
     image: "../images/icons/security-engineering.png"
     caption: "Comprehensive security strategies."
     hash: "security-engineering"
-    section:
-      features_class: "box-card-container"
-    features:
-      - title: "Threat Modeling"
-        summary: "Identify and mitigate potential security threats early in the development process."
-        span_class: "icon-serv py-2"
-        icon: "security"
-        cta_name: "View Detail"
-      - title: "Secure Coding Practices"
-        summary: "Implement best practices in secure coding to reduce vulnerabilities."
-        span_class: "icon-serv py-2"
-        icon: "lock"
-        cta_name: "View Detail"
-      - title: "Automated Security Testing"
-        summary: "Continuously test your platform's security posture with automated tools."
-        span_class: "icon-serv py-2"
-        icon: "verified_user"
-        cta_name: "View Detail"
-      - title: "Compliance Management"
-        summary: "Ensure your platform meets industry regulations and compliance standards."
-        span_class: "icon-serv py-2"
-        icon: "gavel"
-        cta_name: "View Detail"
-  - title: "Security Engineering"
-    featured: true
+    raw_content: |
+      <section class="raw-section-container">
+        <div class="container">
+          <h4>We execute a unique delivery model that is practitioner led. One-pizza teams are the rule. Punch above your weight, consistently.</h4>
+         
+        </div>
+      </section>
+  - title: "Professional services & Partner-led growth"
+    featured: false
     weight: 1
-    summary: "Efficient, scalable, and secure platforms are the backbone of any successful digital operation. Our platform engineering services focus on building robust, cloud-native platforms tailored to your specific needs. From infrastructure automation to CI/CD pipelines, we deliver solutions that enhance your development velocity and operational efficiency."
+    summary: "Partnerships are truly strategic. Our partners value us for unparalleled customer centricity and our customers value us for our non-partisan commitment to the craft."
     image: "../images/icons/security-engineering.png"
     caption: "Comprehensive security strategies."
     hash: "security-engineering"
+    # raw_content: |
+    #   <section class="split-content">
+    #   </section>
     section:
-      features_class: "split-container"
-      image: "../images/v2/banners/druid.jpg"
-  - title: "Infrastructure Automation"
-    featured: true
-    weight: 3
-    summary: "Automate infrastructure management for speed, efficiency, and consistency."
-    image: "../images/icons/automation.png"
-    caption: "Automated deployment and scaling."
-    hash: "infrastructure-automation"
-    section:
-      features_class: "bullet-point-container"
-      image: "../images/v2/banners/platform-engineering.jpg"
-    features:
-      - title: "Accelerate development cycles with continuous integration and delivery."
-        cta_name: "View Detail"
-      - title: "Manage infrastructure using code for reproducibility and scalability."
-        cta_name: "View Detail"
-      - title: "Keep an eye on your infrastructure with real-time automated monitoring."
-        cta_name: "View Detail"
-      - title: "Enable systems to automatically recover from failures without manual intervention."
-        cta_name: "View Detail"
+      class: "split-container"
+      # image: "../images/v2/banners/druid.jpg"
 
----
+--- 
 
-# Co-create modern products & platforms.
+# Platform & Product Engineering, for the AI age.
+
+We transform our customers' tech estate and operating model with cloud-native infrastructure, real-time data and modern integration.
+
+> A product is useless without a platform, or more precisely and accurately, a platform-less product will always be replaced by an equivalent platform-ized product – Steve Yegge 
 
 <!-- <section>
   <div id="monitor" class="theme-green">

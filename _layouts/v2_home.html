@@ -3,48 +3,34 @@ layout: v2_home_default
 bodyClass: v2-page-layout
 ---
 
-<!-- <section> -->
-<!-- <div class="reveal">
-  <div class="slides"> -->
-    <section class="section-top">
-      <div class="section-intro-container row mx-0">
-        <div class="section-content col-lg-6 p-0 col-12">
-          <div class="intro-content py-2">{{ content }}</div>
-        </div>
-        <div
-          class="intro-image-conatainer col-lg-6 p-0 col-12 order-lg-1 order-first flex-xl-row-reverse"
-        >
-          <img src="/{{page.intro_image}}" alt="{{page.title}}" />
-        </div>
-      </div>
-    </section>
-  <!-- </div>
-</div> -->
+<section>
 
+<!-- | sort: 'weight' | reverse -->
 {%if page.sections%}
-{% assign sorted_section = page.sections | sort: 'weight' |
-                reverse %}
+{% assign sorted_section = page.sections %}
 
-<!-- <div class="content"> -->
 {% for section in sorted_section %}
-<!-- <section> -->
-  <section class="{{section.section.features_class | default: 'box-card-container'}}">
+  {% if section.raw_content %}
+        {{section.raw_content | raw}}
+      {% else %}
+  <section class="{{section.section.class | default: 'box-card-container'}}">
+    
     <div
-      class="section-container {% if section.section.features_class !='split-container' %}container{% endif %} mb-md-0 servce-summary"
+      class="section-container {% if section.section.grid_order_class %}{{section.section.grid_order_class}}{% endif %} {% if section.section.class !='split-container' %}container{% endif %} mb-md-0 servce-summary"
       id="{{ section.hash }}"
     >
       <!-- style="background-color: {{ section.section.background | default: '#6c973c' }};" -->
       <div class="strip service-section">
-        <div class="p-2 mt-2">
+        <div class="p-2 p-sm-0 mr-md-2 mt-md-0 mt-2">
           <div class="mx-0 text-center text-left">
             <h2 class="service-title">
               <a href="#{{ section.hash }}">{{ section.title }}</a>
             </h2>
-            <div class=""><p class="m-0">{{ section.summary  }}</p></div>
+            <div class="mt-2"><p class="m-0">{{ section.summary  }}</p></div>
           </div>
         </div>
       </div>
-      <div class="content-list-item">
+      <div class="content-list-item  ">
         {% if section.features %}
         <ul class="container-context">
           {% for feature in section.features %}
@@ -81,9 +67,11 @@ bodyClass: v2-page-layout
         {%endif %}
         
       </div>
+      
     </div>
+    
   </section>
-<!-- </section> -->
+  {% endif %}
 {% endfor %}
-<!-- </div>  -->
 {% endif %}
+</section>

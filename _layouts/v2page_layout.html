@@ -21,9 +21,10 @@ bodyClass: v2-page-layout
   <!-- </div>
 </div> -->
 
+<!-- | sort: 'weight' | reverse -->
+
 {%if page.sections%}
-{% assign sorted_section = page.sections | sort: 'weight' |
-                reverse %}
+{% assign sorted_section = page.sections  %}
 
 <!-- <div class="content"> -->
 {% for section in sorted_section %}
@@ -36,18 +37,19 @@ bodyClass: v2-page-layout
       <!-- style="background-color: {{ section.section.background | default: '#6c973c' }};" -->
       <div class="strip service-section">
         <div class="p-2 mt-2">
-          <div class="mx-0 text-center text-left">
+          <div class="mx-0 text-left">
             <h2 class="service-title">
               <a href="#{{ section.hash }}">{{ section.title }}</a>
             </h2>
             <div class=""><p class="m-0">{{ section.summary  }}</p></div>
           </div>
+          
         </div>
       </div>
-      <div class="content-list-item">
+      <div class="content-list-item {% if section.section.grid_order_class %}{{section.section.grid_order_class}}{% endif %}">
         {% if section.features %}
         <ul class="container-context">
-          {% for feature in section.features %}
+          {% for feature in section.fsection.section.grid_order_classeatures %}
           <li>
             <a {% if feature.path %}href="{{feature.path}}"{% endif %}>
               <div
