@@ -296,8 +296,9 @@ p{
           object-fit: cover;
         }
       }
-      @include media-breakpoint-down(sm){
+      @include media-breakpoint-down(md){
         .strip{
+          padding: 0 5px;
           .service-title{
             margin-top: 1rem;
             h2{

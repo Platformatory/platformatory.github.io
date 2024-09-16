@@ -37,7 +37,7 @@ bodyClass: v2-page-layout
       <!-- style="background-color: {{ section.section.background | default: '#6c973c' }};" -->
       <div class="strip service-section">
         <div class="p-2 mt-2">
-          <div class="mx-0 text-left">
+          <div class="mx-0">
             <h2 class="service-title">
               <a href="#{{ section.hash }}">{{ section.title }}</a>
             </h2>
@@ -49,7 +49,7 @@ bodyClass: v2-page-layout
       <div class="content-list-item {% if section.section.grid_order_class %}{{section.section.grid_order_class}}{% endif %}">
         {% if section.features %}
         <ul class="container-context">
-          {% for feature in section.fsection.section.grid_order_classeatures %}
+          {% for feature in section.features %}
           <li>
             <a {% if feature.path %}href="{{feature.path}}"{% endif %}>
               <div
