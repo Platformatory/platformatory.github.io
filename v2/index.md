@@ -80,9 +80,20 @@ sections:
     hash: "security-engineering"
     # raw_content: |
     #   <section class="split-content">
+
     #   </section>
     section:
       class: "split-container"
+      feature_type: "images"
+    features: 
+      - name: ""
+        url: "../images/features/confluent.png"
+      - name: ""
+        url: "../images/features/vmware-logo.png"
+      - name: ""
+        url: "../images/features/kong.png"
+      - name: ""
+        url: "../images/features/solo-io.png"
       # image: "../images/v2/banners/druid.jpg"
 
 --- 

@@ -287,6 +287,28 @@ p{
         margin: 0;
         padding: 0;
         background-color: #ededed;
+        ul{
+          display: flex;  
+          height: 100%;
+          align-items: center;
+          justify-content: space-evenly;
+          flex-wrap: wrap;
+          gap: 10px;
+          margin: 0;
+          padding: 3rem;
+          li{
+            background: none;
+            padding: 0;
+            width: fit-content;
+            &:hover{
+              background: none;
+            }
+            img{
+                width: 100px;
+                height: auto;
+            }
+          }
+        }
         img{
           margin:0;
           width: 100%;
