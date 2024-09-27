@@ -12,88 +12,106 @@ sections:
     featured: false
     summary: "We transform our customers' tech estate and operating model with cloud-native infrastructure, real-time data and modern integration."
     raw_content: |
-      <section style="background-image: url(../images/v2/banners/home-bg.jpg)" class="raw-section-container">
-        <div class="container  text-left">
-          <div class="row">
-            <h1 class="col-md-8 col-12">Platform & Product Engineering, for the AI age.</h1>
-            <p class="col-md-4 col-12">
-              We transform our customers' tech estate and operating model with cloud-native infrastructure, real-time data and modern integration.  
-            </p>
-          </div>
-          <div class="">
-            <blockquote>
-              A product is useless without a platform, or more precisely and accurately, a platform-less product will always be replaced by an equivalent platform-ized product – <strong>Steve Yegge</strong>
-            </blockquote>
-          </div>
+      <section  class="raw-section-container">
+        <div class="container ">
+          <div >
+            <h1 class="text-capitalize mb-1">We Engineer Platforms & Products. the AI age.</h1>
+           <p> <span class="quote">A product is useless without a platform, or more precisely and accurately, a platform-less product will always be replaced by an equivalent platform-ized product</span>  – Steve Yegge</p>
+          </div>  
         </div>
       </section>
-  - title: "APIs and interfaces are the real moat. Protocols trump platforms. Open source is the most robust form of capitalism."
+  - title: Our field expertise here is unparalleled. 
     featured: false
+    summary: ""
+    raw_content: |
+      <section class="raw-section-container">
+        <div class="container align-items-center">
+          <img class="plf-infra text-center mt-0" src="../images/v2/plf-infra.png" alt="platformatory-infra">
+          <h2 class="text-capitalize">Our field expertise here is unparalleled.</h2>
+        </div>
+      </section>
+  - title: "We have a unique thesis on what it takes to scale platform-led products."
+    featured: true
     weight: 3
-    summary: "We uniquely specialize in ubiquitous distributed system (platform) interfaces that power the cloud. "
+    summary: ""
     image: "../images/icons/automation.png"
     caption: "Automated deployment and scaling."
     hash: "infrastructure-automation"
-    raw_content: |
-       <section class="raw-section-container">
-        <div class=" container  text-left">
-          <div class="row">
-          <div class="col-md-6 col-12">
-           <h2>We uniquely specialize in ubiquitous distributed system (platform) interfaces that power the cloud.</h2>
-          </div>
-            <div class="col-md-6 col-12 mt-2">
-            <p>APIs and interfaces are the real moat.</p>
-            <p>Protocols trump platforms.</p>
-           <p>Open source is the most robust form of capitalism.</p>
-            </div>
-          </div>
-          <div class="features-images">
-            <img src="../images/v2/technology/kafka.png" alt="Apache Kafka">
-            <img src="../images/v2/technology/kubernetes.png" alt="Kubernetes">
-            <img src="../images/v2/technology/postgres.png" alt="Postgres">
-            <img src="../images/v2/technology/iceberg.png" alt="Apache Iceberg">
-            <img src="../images/v2/technology/apache_cassandra.png" alt="Cassandra">
-            <img src="../images/v2/technology/amazon-s3.png" alt="S3">
-          </div>
-        </div>
-       </section>
-  - title: "We execute a unique delivery model that is practitioner led. One-pizza teams are the rule. Punch above your weight, consistently."
+    section:
+      class: "split-container"
+      feature_type: "list"
+    features:
+      - name: "Building on great platform primitives"
+        description: "Specialize deeply on ubiquitous distributed systems interfaces (such as Apache Kafka, Kubernetes, PostgreSQL, Temporal and more). These are the building blocks."
+      - name: "A commitment to small"
+        description: "Create highly skilled, “one-pizza” teams to build & operate platforms that extract common cross-cutting concerns."
+      - name: "A minimum viable level of self-service"
+        description: "First class DevX, Human augmented AI and well governed, secure foundational tooling (for just about everything)"
+
+  - title: "Partnerships (without partisanship)"
     featured: true
     weight: 2
-    summary: "Embed security into every layer of your platform for robust protection."
+    summary: "A promise to deliver real customer value on platform investments. "
     image: "../images/icons/security-engineering.png"
     caption: "Comprehensive security strategies."
     hash: "security-engineering"
-    raw_content: |
-      <section class="raw-section-container">
-        <div class="container">
-          <h4>We execute a unique delivery model that is practitioner led. One-pizza teams are the rule. Punch above your weight, consistently.</h4>
-         
-        </div>
-      </section>
-  - title: "Professional services & Partner-led growth"
-    featured: false
-    weight: 1
-    summary: "Partnerships are truly strategic. Our partners value us for unparalleled customer centricity and our customers value us for our non-partisan commitment to the craft."
-    image: "../images/icons/security-engineering.png"
-    caption: "Comprehensive security strategies."
-    hash: "security-engineering"
-    # raw_content: |
-    #   <section class="split-content">
+    section:
+      class: "split-container"
+      feature_type: "images"
+      grid_order_class: "reverse"
+    features: 
+      - name: "Partners"
+        images: 
+          - name: "Confluent"
+            url: "../images/features/confluent.png"
+          - name: "VmWare"
+            url: "../images/features/vmware-logo.png"
+          - name: "Kong"
+            url: "../images/features/kong.png"
+          - name: "solo.io"
+            url: "../images/features/solo-io.png"
+      - name: "Customers"
+        images:
+          - name: "bosch"
+            url: "../images/v2/customers/bosch-logo.png"
+          - name: "clearCaption"
+            url: "../images/v2/customers/clearcaptions-logo.jpg"
+          - name: "ruller"
+            url: "../images/v2/customers/ruller.jpg"
 
-    #   </section>
+  - title: "Open-source, community and thought leadership"
+    featured: true
+    weight: 1
+    summary: ""
+    image: "../images/icons/security-engineering.png"
+    caption: "Comprehensive security strategies."
+    hash: "security-engineering"
     section:
       class: "split-container"
       feature_type: "images"
     features: 
-      - name: ""
-        url: "../images/features/confluent.png"
-      - name: ""
-        url: "../images/features/vmware-logo.png"
-      - name: ""
-        url: "../images/features/kong.png"
-      - name: ""
-        url: "../images/features/solo-io.png"
+      - name: "Meetup Communities"
+        images: 
+          - name: "Bengaluru streams"
+            url: "../images/v2/meetup-community/streams.png"
+          - name: "Large Scale Systems Bangalore"
+            url: "../images/v2/meetup-community/large_scale_systems.png"
+          - name: "Kong Meetup"
+            url: "../images/v2/meetup-community/kong.png"
+          - name: "Temporal Meetup"
+            url: "../images/v2/meetup-community/temporal.png"
+          - name: "Grafana Meetup"
+            url: "../images/v2/meetup-community/grafana.png"
+          - name: "Kafka"
+            url: "../images/v2/meetup-community/apache-kafka.png"
+      - name: "Our SaaS Products"
+        images:
+          - name: "Apinomy"
+            url: "../images/v2/products/apinomy-logo.png"
+          - name: "Eventception"
+            url: "../images/v2/products/eventception-logo.png"
+          - name: "RTDx"
+            url: "../images/v2/products/rtdx-logo.png"
       # image: "../images/v2/banners/druid.jpg"
 
 --- 

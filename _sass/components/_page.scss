@@ -241,12 +241,11 @@ p{
           height: 50%;
         }
       }
-     
       .strip{
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #ededed73;
+        background-color: inherit;
         div{
           width: 100%;
           }
@@ -266,10 +265,9 @@ p{
           }
         }
         .service-title{
-          font-size: 4rem !important;
-          text-align: start;
+          font-size: 6rem !important;
           h2{
-            font-size: 4rem;
+            font-size: 6rem;
             margin-bottom: 10px;
           }
           a{
@@ -279,44 +277,70 @@ p{
         }
         p{
           text-align: start;
-          font-size: 1.5rem;
+          font-size: 3rem;
           font-family: inherit;
         }
       }
-      .content-list-item{
+      .list-items{
         margin: 0;
         padding: 0;
-        background-color: #ededed;
+        background-color: #292929;
         ul{
           display: flex;  
-          height: 100%;
-          align-items: center;
-          justify-content: space-evenly;
-          flex-wrap: wrap;
-          gap: 10px;
-          margin: 0;
-          padding: 3rem;
-          li{
-            background: none;
-            padding: 0;
-            width: fit-content;
-            &:hover{
-              background: none;
+            height: 100%;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1em;
+            margin: 0;
+            padding: 3rem;
+            li{
+              list-style: none;
             }
-            img{
-                width: 100px;
-                height: auto;
+        }
+      }
+      .images-items{
+        margin: 0;
+        padding: 0;
+        background-color: #292929;
+          ul{
+            display: flex;  
+            height: 100%;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1em;
+            margin: 0;
+            padding: 3rem;
+            li{
+              
+              list-style: none;
+              background: none;
+              padding: 0;
+              width: 100%;
+              // width:  fit-content;
+              &:hover{  
+                background: none;
+              }
+              .images-container{
+                display: grid;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                justify-content: space-around;
+                align-items: center;
+                gap: 1em;
+                img{
+                  width: 5em;
+                  border-radius: 1rem;
+                  height: auto;
+                  max-width: 100% !important;
+                  max-height: 100% !important;
+                  object-fit: cover;
+                }
+              }
+              
             }
           }
-        }
-        img{
-          margin:0;
-          width: 100%;
-          max-width: 100% !important;
-          max-height: 100% !important;
-          height: 100%;
-          object-fit: cover;
-        }
+          
+       
+        
       }
       @include media-breakpoint-down(md){
         .strip{
@@ -337,15 +361,34 @@ p{
       }
     }
     .reverse{
-      .strip>div>div{
+      .strip{
+        background-color: #292929 !important;
+      }
+      .strip>div{
         margin-left: 0 !important;
         margin-right: auto !important;
         @include media-breakpoint-up(lg){
           padding-left: 3rem;
         }
       }
-      .content-list-item{
+      .images-items{
         order:-1;
+        background-color: inherit !important;
+        ul{
+          margin-left: 2em;
+          width: fit-content;
+          li{
+            .images-container{
+              display: flex;
+              flex-wrap: wrap;
+              img{
+                width: 3em;
+                border-radius: 0;
+              }
+            } 
+          }
+          
+        }
       }
     }
   
@@ -822,6 +865,9 @@ p{
     display: flex;  
     flex-direction: column;
     justify-content: space-evenly;
+    .plf-infra{
+      width: 70%;
+    }
   }
   h1{
     font-size: 8rem !important;
@@ -858,6 +904,19 @@ p{
     p, blockquote{
       font-size: 2rem;
       
+    }
+  }
+}
+
+section{
+  p{
+    .quote{
+      &::before{
+        content: "“";
+      }
+      &::after{
+        content: "”";
+      }
     }
   }
 }
