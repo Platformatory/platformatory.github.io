@@ -13,9 +13,9 @@ sections:
     summary: "We transform our customers' tech estate and operating model with cloud-native infrastructure, real-time data and modern integration."
     raw_content: |
       <section  class="raw-section-container">
-        <div class="container ">
-          <div >
-            <h1 class="text-capitalize mb-1">We Engineer Platforms & Products. the AI age.</h1>
+        <div class="container">
+          <div>
+            <h1 class="text-capitalize mb-1 mb-xl-5">We Engineer Platforms & Products. the AI age.</h1>
            <p> <span class="quote">A product is useless without a platform, or more precisely and accurately, a platform-less product will always be replaced by an equivalent platform-ized product</span>  – Steve Yegge</p>
           </div>  
         </div>
@@ -63,21 +63,21 @@ sections:
       - name: "Partners"
         images: 
           - name: "Confluent"
-            url: "../images/features/confluent.png"
+            url: "../images/v2/partners/confluent.png"
           - name: "VmWare"
-            url: "../images/features/vmware-logo.png"
+            url: "../images/v2/partners/vmware.png"
           - name: "Kong"
-            url: "../images/features/kong.png"
+            url: "../images/v2/partners/kong.png"
           - name: "solo.io"
-            url: "../images/features/solo-io.png"
+            url: "../images/v2/partners/solo.png"
       - name: "Customers"
         images:
           - name: "bosch"
-            url: "../images/v2/customers/bosch-logo.png"
+            url: "../images/v2/customers/bosch.png"
           - name: "clearCaption"
-            url: "../images/v2/customers/clearcaptions-logo.jpg"
+            url: "../images/v2/customers/clearcaptions.png"
           - name: "ruller"
-            url: "../images/v2/customers/ruller.jpg"
+            url: "../images/v2/customers/ruller.png"
 
   - title: "Open-source, community and thought leadership"
     featured: true
@@ -103,15 +103,15 @@ sections:
           - name: "Grafana Meetup"
             url: "../images/v2/meetup-community/grafana.png"
           - name: "Kafka"
-            url: "../images/v2/meetup-community/apache-kafka.png"
+            url: "../images/v2/meetup-community/kafka.png"
       - name: "Our SaaS Products"
         images:
-          - name: "Apinomy"
-            url: "../images/v2/products/apinomy-logo.png"
+          - name: "Apinomy" 
+            url: "../images/v2/products/apinomy.png"
           - name: "Eventception"
-            url: "../images/v2/products/eventception-logo.png"
+            url: "../images/v2/products/eventception.png"
           - name: "RTDx"
-            url: "../images/v2/products/rtdx-logo.png"
+            url: "../images/v2/products/rtdx.png"
       # image: "../images/v2/banners/druid.jpg"
 
 --- 

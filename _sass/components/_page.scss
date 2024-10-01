@@ -369,7 +369,11 @@ p{
         margin-right: auto !important;
         @include media-breakpoint-up(lg){
           padding-left: 3rem;
+          .service-title{
+            margin-bottom: 5rem;
+          }
         }
+        
       }
       .images-items{
         order:-1;
@@ -377,16 +381,6 @@ p{
         ul{
           margin-left: 2em;
           width: fit-content;
-          li{
-            .images-container{
-              display: flex;
-              flex-wrap: wrap;
-              img{
-                width: 3em;
-                border-radius: 0;
-              }
-            } 
-          }
           
         }
       }
