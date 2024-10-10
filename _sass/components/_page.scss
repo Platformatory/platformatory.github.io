@@ -290,7 +290,7 @@ p{
              margin-top: 2em;
             }
           li{
-            font-size: 3rem;
+            font-size: 2.6rem;
             position: relative;
             padding-left: 40px;
             &::before{
@@ -336,7 +336,7 @@ p{
             // gap: 1em;
             padding: 3rem;
             li{
-              
+              min-height: 50%;
               list-style: none;
               background: none;
               padding: 0;
@@ -351,6 +351,7 @@ p{
                 justify-content: space-around;
                 align-items: center;
                 justify-items: center;
+                height: 100%;
                 // gap: 1rem;
                 img{
                   width: 5em;
