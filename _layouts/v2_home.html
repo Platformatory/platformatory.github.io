@@ -28,11 +28,18 @@ bodyClass: v2-page-layout
             </h2>
             <div class="mt-2"><p class="m-0 text-center">{{ section.summary  }}</p></div>
           </div>
+          {% if section.features_list and section.section.grid_order_class !='reverse' %}
+          <ul class="feature-sub-list">
+            {% for f_list in section.features_list %}
+              <li class="list-item">{{f_list}}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
         </div>
       </div>
       <div class="{{section.section.feature_type}}-items">
         {% if section.features %}
-        <ul class="container-context">
+        <ul  class="container-context">
           {% for feature in section.features %}
           <li>
             <h4>{{feature.name}}</h4>
@@ -47,18 +54,27 @@ bodyClass: v2-page-layout
             {% endif %}
           </li>
           {% endfor %}
+          {% if section.features_list and section.section.grid_order_class =='reverse' %}
+          <ul class="feature-sub-list">
+            {% for f_list in section.features_list %}
+              <li class="list-item">{{f_list}}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
         </ul>
         {% endif %}
         {%if section.section.image %}
         <img src="/{{section.section.image}}"/>
         {%endif %}
         {%if section.section.images %}
-        <div class="feature-images"></div>
+        <div class="feature-images">
         {% for image in section.section.images%}
         <img src="/{{image.url}}" alt="{{image.name}}"/>
         {% endfor %}
+        
         </div>
         {% endif %}
+        
         
       </div>
       

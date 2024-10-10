@@ -242,27 +242,29 @@ p{
         }
       }
       .strip{
+        padding: 1em;
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: inherit;
         div{
           width: 100%;
+          
           }
-          div{
-            margin-left: auto !important;
+          // div{
+            // margin-left: auto !important;
             
-            @include media-breakpoint-up(lg){
-              width: 450px;
-            }
-            @media (min-width: 1600px) {
-              width: 712px !important;
-            }
-            @media (min-width:1300px) and (max-width: 1599px) {
-              width: 567px !important;
-            }
+            // @include media-breakpoint-up(lg){
+            //   width: 450px;
+            // }
+            // @media (min-width: 1600px) {
+            //   width: 712px !important;
+            // }
+            // @media (min-width:1300px) and (max-width: 1599px) {
+            //   width: 567px !important;
+            // }
 
-          }
+          // }
         }
         .service-title{
           font-size: 6rem !important;
@@ -279,6 +281,25 @@ p{
           text-align: start;
           font-size: 3rem;
           font-family: inherit;
+        }
+        .feature-sub-list{
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          @media (min-width: 1600px) {
+             margin-top: 2em;
+            }
+          li{
+            font-size: 3rem;
+            position: relative;
+            padding-left: 40px;
+            &::before{
+              content: '→'; 
+              position: absolute; 
+              left: 0; 
+              color: #ffffff;
+            }
+          }
         }
       }
       .list-items{
@@ -298,17 +319,21 @@ p{
             }
         }
       }
+
+      
       .images-items{
         margin: 0;
         padding: 0;
         background-color: #292929;
           ul{
+            margin: 0;
+            width: 100%;
             display: flex;  
             height: 100%;
             flex-direction: column;
             justify-content: center;
-            gap: 1em;
-            margin: 0;
+            align-items: center;
+            // gap: 1em;
             padding: 3rem;
             li{
               
@@ -322,14 +347,16 @@ p{
               }
               .images-container{
                 display: grid;
-                grid-template-columns: repeat(3, minmax(0, 1fr));
+                grid-template-columns: repeat(2, minmax(0, 1fr));
                 justify-content: space-around;
                 align-items: center;
-                gap: 1em;
+                justify-items: center;
+                // gap: 1rem;
                 img{
                   width: 5em;
                   border-radius: 1rem;
                   height: auto;
+                  background-color: white;
                   max-width: 100% !important;
                   max-height: 100% !important;
                   object-fit: cover;
@@ -337,9 +364,31 @@ p{
               }
               
             }
+            .feature-sub-list{
+              height: fit-content;
+              display: block;
+              list-style: none;
+              padding: 0;
+              margin: 0;
+              width: fit-content;
+              // margin-left: 3rem;
+              // @media (min-width: 1600px) {
+                //  margin-top: 2rem;
+                // }
+              li{
+                font-size: 2.6rem;
+                position: relative;
+                padding-left: 40px;
+                &::before{
+                  content: '→'; 
+                  position: absolute; 
+                  left: 0; 
+                  color: #ffffff;
+                }
+              }
+            }
           }
           
-       
         
       }
       @include media-breakpoint-down(md){
@@ -378,11 +427,11 @@ p{
       .images-items{
         order:-1;
         background-color: inherit !important;
-        ul{
-          margin-left: 2em;
-          width: fit-content;
+        // ul{
+          // margin-left: 2em;
+          // width: fit-content;
           
-        }
+        // }
       }
     }
   
