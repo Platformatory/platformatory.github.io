@@ -12,15 +12,15 @@ sections:
     featured: false
     summary: "We transform our customers' tech estate and operating model with cloud-native infrastructure, real-time data and modern integration."
     raw_content: |
-      <section  class="raw-section-container">
+      <section style="background-image: url(../images/v2/wave.svg);" class="raw-section-container">
         <div class="container">
           <div style="justify-content: space-evenly;" class="d-flex flex-column h-100 ">
-            <div>
+            <div >
               <h1 class="text-capitalize mb-1">We Engineer.</h1>
               <h1 class="text-capitalize mb-1">Platforms & Products.</h1>
-              <h4>Powered by real-time data & AI.</h4>
+              <h3>Powered by real-time data & AI.</h3>
             </div>
-           <p> <span class="quote">A product is useless without a platform, or more precisely and accurately, a platform-less product will always be replaced by an equivalent platform-ized product</span>  – Steve Yegge</p>
+           <p class="quote-content"> <span class="quote">A product is useless without a platform, or more precisely and accurately, a platform-less product will always be replaced by an equivalent platform-ized product</span>  – Steve Yegge</p>
           </div>  
         </div>
       </section>
@@ -30,7 +30,7 @@ sections:
     raw_content: |
       <section class="raw-section-container">
         <div class="container align-items-center">
-          <img class="plf-infra text-center mt-0" src="../images/v2/plf.png" alt="platformatory-infra">
+          <img class="plf-infra text-center mt-0" src="../images/v2/plf.svg" alt="platformatory-infra">
           <h3 class="text-capitalize">Our field expertise here is unparalleled.</h3>
         </div>
       </section>
@@ -44,9 +44,6 @@ sections:
     section:
       class: "split-container"
       feature_type: "list"
-    features_list:
-     - "A Platform Engineering manifesto >>"
-     - "Three pillars of the modern platform >>"
     features:
       - name: "Building on great platform primitives"
         description: "Specialize deeply on ubiquitous distributed systems interfaces(such as Apache Kafka, Kubernetes, PostgreSQL, Temporal and more). These are the building blocks."
@@ -66,27 +63,25 @@ sections:
       class: "split-container"
       feature_type: "images"
       grid_order_class: "reverse"
-    features_list:
-       - "The most interesting infrastructure companies >>"
-       - "A leaderless future (of streaming) >>"
-       - "Real-time for prime-time >>"
     features: 
       - name: ""
+        cta: false
+        class: "partners"
         images: 
           - name: "Confluent"
             url: "../images/v2/partners/confluent.png"
           - name: "VmWare"
-            url: "../images/v2/partners/redpanda.png"
-          - name: "temporal"
+          #   url: "../images/v2/partners/redpanda.png"
+          # - name: "temporal"
             url: "../images/v2/partners/temporal.png"
           - name: "kong"
             url: "../images/v2/partners/kong.png"
-          - name: "clickhouse"
-            url: "../images/v2/partners/clickhouse.png"
-          - name: "imply"
-            url: "../images/v2/partners/imply.png"
-          - name: "startree"
-            url: "../images/v2/partners/startree.png"
+          # - name: "clickhouse"
+          #   url: "../images/v2/partners/clickhouse.png"
+          # - name: "imply"
+          #   url: "../images/v2/partners/imply.png"
+          # - name: "startree"
+          #   url: "../images/v2/partners/startree.png"
           - name: "areospike"
             url: "../images/v2/partners/areospike.png"
 
@@ -100,15 +95,20 @@ sections:
       feature_type: "images"
     features:
       - name: ""
+        cta: false
+        class: "solutions"
         images:
           - name: "Apinomy" 
             url: "../images/v2/products/apinomy.png"
+            summary: "Apinomy enables you to monetize your data and APIs by bundling them into meaningful products and attaching flexible rate plans to it"
           - name: "Eventception"
             url: "../images/v2/products/eventception.png"
+            summary: "Eventception is a platform to synthesize events from API transactions for building event driven systems"
           - name: "RTDx"
             url: "../images/v2/products/rtdx.png"
-          - name: "kEDgy"
-            url: "../images/v2/products/kedgy.png"
+            summary: "RTDx is a platform for exchanging operational and analytical data in real-time"
+          # - name: "kEDgy"
+          #   url: "../images/v2/products/kedgy.png"
   - title: "Open-source, community and thought leadership"
     featured: true
     weight: 1
@@ -121,19 +121,26 @@ sections:
       feature_type: "images"
     features: 
       - name: ""
+        cta: true
+        class: "community"
         images: 
           - name: "Bengaluru streams"
             url: "../images/v2/meetup-community/streams.png"
-          - name: "Large Scale Systems Bangalore"
+            link: "https://meetup.com/bangalore-streams/"
+          - name: "Large Scale Distributed Systems"
             url: "../images/v2/meetup-community/large_scale_systems.png"
+            link: "https://meetup.com/lsds-bangalore"
           - name: "Kong Meetup"
             url: "../images/v2/meetup-community/kong.png"
-          - name: "Temporal Meetup"
+            link: "meetup.com/kong-bengaluru"
+          - name: "Temporal Community"
             url: "../images/v2/meetup-community/temporal.png"
+            link: "https://temporal.io/community"
           - name: "Grafana Meetup"
             url: "../images/v2/meetup-community/grafana.png"
-          - name: "Kafka"
+          - name: "Bangalore Kafka"
             url: "../images/v2/meetup-community/kafka.png"
+            link: "https://meetup.com/bangalore-kafka-data-streams/"
 
 --- 
 

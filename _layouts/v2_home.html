@@ -28,13 +28,6 @@ bodyClass: v2-page-layout
             </h2>
             <div class="mt-2"><p class="m-0 text-center">{{ section.summary  }}</p></div>
           </div>
-          {% if section.features_list and section.section.grid_order_class !='reverse' %}
-          <ul class="feature-sub-list">
-            {% for f_list in section.features_list %}
-              <li class="list-item">{{f_list}}</li>
-            {% endfor %}
-          </ul>
-          {% endif %}
         </div>
       </div>
       <div class="{{section.section.feature_type}}-items">
@@ -44,9 +37,17 @@ bodyClass: v2-page-layout
           <li>
             <h4>{{feature.name}}</h4>
             {% if section.section.feature_type == "images" %}
-            <div class="images-container">
+            <div class="images-container {{feature.class}}">
+
               {% for image in feature.images %}
-             <img src="{{image.url}}" alt="{{image.name}}">
+             <div >
+               <img src="{{image.url}}" alt="{{image.name}}">
+               
+               {% if feature.cta %}
+               <a href="{{image.link}}" target="_blank" rel="noopener noreferrer">{{image.name}}</a>
+               {% endif %}
+             </div>
+             <p class="summary">{{image.summary}}</p>
              {% endfor %}
             </div>
             {% else %}
@@ -54,13 +55,6 @@ bodyClass: v2-page-layout
             {% endif %}
           </li>
           {% endfor %}
-          {% if section.features_list and section.section.grid_order_class =='reverse' %}
-          <ul class="feature-sub-list">
-            {% for f_list in section.features_list %}
-              <li class="list-item">{{f_list}}</li>
-            {% endfor %}
-          </ul>
-          {% endif %}
         </ul>
         {% endif %}
         {%if section.section.image %}
