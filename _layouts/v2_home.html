@@ -34,17 +34,21 @@ bodyClass: v2-page-layout
         {% if section.features %}
         <ul  class="container-context">
           {% for feature in section.features %}
-          <li>
+          <li class="{{feature.class}}">
             <h4>{{feature.name}}</h4>
             {% if section.section.feature_type == "images" %}
             <div class="images-container {{feature.class}}">
 
               {% for image in feature.images %}
              <div >
-               <img src="{{image.url}}" alt="{{image.name}}">
+               
                
                {% if feature.cta %}
-               <a href="{{image.link}}" target="_blank" rel="noopener noreferrer">{{image.name}}</a>
+               <a href="{{image.link}}" target="_blank" rel="noopener noreferrer">
+                <img src="{{image.url}}" alt="{{image.name}}">
+               </a> 
+               {% else %}
+               <img src="{{image.url}}" alt="{{image.name}}">
                {% endif %}
              </div>
              <p class="summary">{{image.summary}}</p>
@@ -52,6 +56,9 @@ bodyClass: v2-page-layout
             </div>
             {% else %}
              <p>{{feature.description}}</p>
+             {%if feature.link %}
+             <a href="{{feature.link.url}}">{{feature.link.name}}</a>
+            {% endif %}
             {% endif %}
           </li>
           {% endfor %}

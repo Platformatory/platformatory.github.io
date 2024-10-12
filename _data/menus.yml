@@ -34,15 +34,16 @@ v2_main:
     url: "/v2"
     weight: -1
   - name: "Consulting"
+    url: "/v2/consulting"
     weight: 0
-    children:
-      items:
-        - name: "Real-time data & AI"
-          url: "/v2/consulting/real-time-data&ai"
-        - name: "Platform Engineering"
-          url: "/v2/consulting/platform-engineering"
-        - name: "Platform led SaaS"
-          url: "/v2/consulting/platform-led-saas"
+    # children:
+    #   items:
+    #     - name: "Real-time data & AI"
+    #       url: "/v2/consulting/real-time-data&ai"
+    #     - name: "Platform Engineering"
+    #       url: "/v2/consulting/platform-engineering"
+    #     - name: "Platform led SaaS"
+    #       url: "/v2/consulting/platform-led-saas"
   - name: "Services"
     weight: 2
     children:

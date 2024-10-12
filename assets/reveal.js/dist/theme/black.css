@@ -12,14 +12,14 @@ section.has-light-background, section.has-light-background h1, section.has-light
  * GLOBAL STYLES
  *********************************************/
 :root {
-  --r-background-color: #222831;
+  --r-background-color: #0d1926;
   --r-main-font: "Titillium Web", sans-serif;
   --r-main-font-size: 42px;
   --r-main-color: #fff;
   --r-block-margin: 20px;
   --r-heading-margin: 0 0 20px 0;
   --r-heading-font: "Titillium Web", sans-serif;
-  --r-heading-color: #fff;
+  --r-heading-color: #83FF08;
   --r-heading-line-height: 1.2;
   --r-heading-letter-spacing: normal;
   --r-heading-text-transform: uppercase;
@@ -31,9 +31,9 @@ section.has-light-background, section.has-light-background h1, section.has-light
   --r-heading3-size: 1.3em;
   --r-heading4-size: 1em;
   --r-code-font: monospace;
-  --r-link-color: #81B94C;
+  --r-link-color: #ffff33;
   --r-link-color-dark: #86c24f;
-  --r-link-color-hover: #81B94C;
+  --r-link-color-hover: #FDED02;
   --r-selection-background-color: rgba(66, 175, 250, 0.75);
   --r-selection-color: #fff;
   --r-overlay-element-bg-color: 240, 240, 240;

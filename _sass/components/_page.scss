@@ -248,7 +248,7 @@ p{
           ul{
             display: block;
             li,li>p{
-              font-size: 2.6rem;
+              font-size: 1.6rem;
             }
           }
         }
@@ -288,7 +288,7 @@ p{
           // }
         }
         .service-title{
-          font-size: 6rem !important;
+          // font-size: 6rem !important;
           h2{
             font-size: 6rem;
             margin-bottom: 10px;
@@ -299,7 +299,7 @@ p{
           }
         }
         p{
-          text-align: start;
+          // text-align: start;
           font-size: 3rem;
           font-family: inherit;
         }
@@ -326,7 +326,7 @@ p{
       .list-items{
         margin: 0;
         padding: 0;
-        background-color: #393E46;
+        background-color: #0a2126;
         ul{
           display: flex;  
             height: 100%;
@@ -337,15 +337,26 @@ p{
             padding: 3rem;
             li{
               list-style: none;
+              p{
+                margin-bottom: 0;
+              }
+              a{
+                font-size: 1.8rem;
+              }
             }
+
         }
       }
 
-      
+     
+      .image-items{
+        display: flex;
+        background-color: #0a2126;
+      }
       .images-items{
         margin: 0;
         padding: 0;
-        background-color: #393E46;
+        background-color: #0a2126;
           ul{
             margin: 0;
             width: 100%;
@@ -366,6 +377,7 @@ p{
               &:hover{  
                 background: none;
               }
+              
               .images-container{
                 display: grid;
                 
@@ -374,6 +386,13 @@ p{
                 justify-items: center;
                 height: 100%;
                 // gap: 1rem;
+                a{
+                 img{
+                  &:hover{
+                    transform: scale(1.1);
+                  }
+                 }
+                }
                 .summary{
                   display: none;
                 }
@@ -388,15 +407,9 @@ p{
                   max-width: 100% !important;
                   max-height: 100% !important;
                   object-fit: cover;
+                  
                 }
-                a{
-                  color: #e2e2e2;
-                  display: block;
-                  font-size: 1.8rem;
-                  &:hover{
-                    color: #fff;  
-                  }
-                }
+                
                 
               }
               .solutions{
@@ -473,7 +486,7 @@ p{
     }
     .reverse{
       // .strip{
-      //   background-color: #393E46 !important;
+      //   background-color: #0a2126 !important;
       // }
       .strip>div{
         margin-left: 0 !important;
@@ -486,7 +499,7 @@ p{
         }
         
       }
-      .images-items{
+      .images-items,.list-items{
         order:-1;
         // background-color: inherit !important;
         // ul{
@@ -980,8 +993,11 @@ p{
   h2{
     margin: 0 !important;
   }
+  h3{
+    color: #FDED02 !important;
+  }
   p, blockquote{
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: inherit;
   }
   .features-images{
@@ -1000,14 +1016,11 @@ p{
         margin: 0 !important;
       }
     }
-    h1,h2{
-      font-size: 4rem !important;
-    }
     p{
       margin: 0 !important;
     }
     p, blockquote{
-      font-size: 2rem;
+      font-size: 1.5rem;
       
     }
   }
@@ -1016,7 +1029,9 @@ p{
 section{
   .quote-content{
     color: #ffffff;
-    background-color: #00000057;
+    // text-align: start;
+    border-left: 1.5rem solid #ffff33;
+    // background-color: #00000057;
     padding: 1rem;
     font-weight: bold;
     .quote{
@@ -1028,6 +1043,42 @@ section{
         content: "”";
         padding-left: 5px;
       }
+    }
+  }
+}
+
+.reveal{
+  @media (min-width:600px) and (max-width:990px) {
+    h1{
+      font-size: 4rem !important;
+    }
+    h2{
+      font-size: 3rem !important;
+    }h3{
+      font-size: 2rem !important;
+    }
+    .split-container{ 
+      .images-items{
+         ul li{
+           .solutions{
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            .summary{
+              grid-column: span 2 / span 2;
+            }
+         }
+       }
+     }
+   }
+  }
+  @media(max-width:600px) {
+    h1{
+      font-size: 3rem !important;
+    }
+    h2{
+      font-size: 2.6rem !important;
+    }
+    h3{
+      font-size: 1.6rem !important;
     }
   }
 }
