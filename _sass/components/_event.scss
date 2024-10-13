@@ -116,9 +116,9 @@
 }
 
 @mixin talk-card{           
-    background-color: #f7f7f7c7;
+    background-color: var(--v2-background-secondary);
     min-width: 364px;
-    border: 1px solid #e7e7e7;
+    // border: 1px solid #e7e7e7;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
     width: 100%;
     .talk-video{

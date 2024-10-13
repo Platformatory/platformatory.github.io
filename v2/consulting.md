@@ -1,5 +1,5 @@
 ---
-layout: v2_home
+layout: v2_page_layout
 title: Trusted Advisory For Technology & Engineering Leaders.
 intro_image: "images/v2/banners/real-time_data.jpg"
 intro_image_absolute: true

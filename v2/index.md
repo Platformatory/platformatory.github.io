@@ -15,10 +15,10 @@ sections:
       <section class="raw-section-container">
         <div class="container">
           <div style="justify-content: space-evenly;" class="d-flex flex-column h-100 ">
-            <div >
-              <h1 class="text-capitalize mb-1">We Engineer.</h1>
-              <h1 class="text-capitalize mb-1">Platforms & Products.</h1>
-              <h3>Powered by real-time data & AI.</h3>
+            <div>
+              <h1 class="text-capitalize mb-1 title">We Engineer.</h1>
+              <h1 class="text-capitalize mb-1 title">Platforms & Products.</h1>
+              <h3 class="sub-title">Powered by real-time data & AI.</h3>
             </div>
             <div class="d-flex justify-content-center">
               <p class="quote-content"> <span class="quote">A product is useless without a platform, or more precisely and accurately, a platform-less product will always be replaced by an equivalent platform-ized product</span>  – Steve Yegge</p>

@@ -11,7 +11,7 @@ $black: #2f2f41;
 $white: #ffffff;
 $white-offset: #fff6f8;
 $steel: #7b7b7b; 
-$paragraph-color: #c2c2c2;              
+$paragraph-color: #D6D5D4;              
 
 // Links
 $link-color: $primary;
@@ -70,6 +70,10 @@ $sub-footer-text-color: $white;
 
 
 :root{
+    --v2-background-primary: #0d1926;
+    --v2-background-secondary: #333333;
+    --v2-text-primary: #00ff00;
+    --v2-text-secondary: #ffff33;
     --v2-heading-color: #0a130b;
     --v2-sub-heading-color: #353535;
     --v2-primary-color: #1d6427;

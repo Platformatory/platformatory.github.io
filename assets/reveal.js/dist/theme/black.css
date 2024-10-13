@@ -19,7 +19,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
   --r-block-margin: 20px;
   --r-heading-margin: 0 0 20px 0;
   --r-heading-font: "Titillium Web", sans-serif;
-  --r-heading-color: #83FF08;
+  --r-heading-color: #fff;
   --r-heading-line-height: 1.2;
   --r-heading-letter-spacing: normal;
   --r-heading-text-transform: uppercase;
@@ -32,7 +32,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
   --r-heading4-size: 1em;
   --r-code-font: monospace;
   --r-link-color: #ffff33;
-  --r-link-color-dark: #86c24f;
+  --r-link-color-dark: #FDED02;
   --r-link-color-hover: #FDED02;
   --r-selection-background-color: rgba(66, 175, 250, 0.75);
   --r-selection-color: #fff;
