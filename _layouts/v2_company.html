@@ -6,7 +6,7 @@ bodyClass: v2-page-layout
 <!-- <section> -->
 <!-- <div class="reveal">
   <div class="slides"> -->
-    <section class="section-top">
+    <section class="company-section-top section-top">
       <div class="section-intro-container row mx-0">
         <div class="section-content col-lg-6 p-0 col-12">
           <div class="intro-content py-2">
@@ -15,7 +15,6 @@ bodyClass: v2-page-layout
           </div>
         </div>
         <div
-          style="background-color: #efefef;"
           class="intro-image-conatainer d-flex align-items-center col-lg-6 p-0 col-12 order-lg-1 order-first flex-xl-row-reverse"
         >
         {{content}}
@@ -31,63 +30,79 @@ bodyClass: v2-page-layout
 
 <!-- <div class="content"> -->
 {% for section in sorted_section %}
-<!-- <section> -->
-  <section class="{{section.section.features_class | default: 'box-card-container'}}">
-    <div
-      class="section-container {% if section.section.features_class !='split-container' %}container{% endif %} mb-md-0 servce-summary"
-      id="{{ section.hash }}"
-    >
-      <!-- style="background-color: {{ section.section.background | default: '#6c973c' }};" -->
-      <div class="strip service-section">
-        <div class="p-2 mt-2">
-          <div class="mx-0 text-center text-left">
-            <h2 class="service-title">
-              <a href="#{{ section.hash }}">{{ section.title }}</a>
-            </h2>
-            <div class=""><p class="m-0">{{ section.summary  }}</p></div>
-          </div>
-        </div>
-      </div>
-      <div class="content-list-item">
-        {% if section.features %}
-        <ul class="container-context">
-          {% for feature in section.features %}
-          <li>
-            <a {% if feature.path %}href="{{feature.path}}"{% endif %}>
-              <div
-                class="d-flex justify-content-around  flex-column feature-card {{ feature.div_class | default: ' platform-strategy' }}"
-              >
-              {%if feature.icon %}
-                <div class=" icon">
-                  <span
-                    class="material-icons {{ feature.span_class | default: 'icon-serv py-1' }}"
-                  >
-                    {{ feature.icon }}
-                  </span>
-                </div>
-                {% endif %}
-                <h2 class="{{ feature.h2_class | default: 'text-left' }}">
-                  {{ feature.title }}
-                </h2>
-                <span class="feature-summary"> {{ feature.summary }} </span>
-                {% if feature.cta_name %}
-              <p class="m-0 mt-auto">{{feature.cta_name}}</p>
-              {% endif %}
-              </div>
-              
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
-        {% endif %}
-        {%if section.section.image %}
-        <img src="/{{section.section.image}}"/>
-        {%endif %}
-        
-      </div>
+{% if section.raw_content %}
+{{section.raw_content | raw}}
+{% else %}
+<section class="{{section.section.class | default: 'box-card-container'}}">
+
+<div
+class="section-container {% if section.section.grid_order_class %}{{section.section.grid_order_class}}{% endif %} {% if section.section.class !='split-container' %}container{% endif %} mb-md-0 servce-summary"
+id="{{ section.hash }}"
+>
+<!-- style="background-color: {{ section.section.background | default: '#6c973c' }};" -->
+<div class="strip service-section">
+<div class="p-2 p-lg-0 mr-md-2 mt-md-0 mt-2">
+  <div class="mx-0 text-center">
+    <h2 class="service-title">
+     {{ section.title }}
+    </h2>
+    <div class="mt-2"><p class="m-0 text-center">{{ section.summary  }}</p></div>
+  </div>
+</div>
+</div>
+<div class="{{section.section.feature_type}}-items">
+{% if section.features %}
+<ul  class="container-context">
+  {% for feature in section.features %}
+  <li class="{{feature.class}}">
+    <h4>{{feature.name}}</h4>
+    {% if section.section.feature_type == "images" %}
+    <div class="images-container {{feature.class}}">
+
+      {% for image in feature.images %}
+     <div >
+       
+       
+       {% if feature.cta %}
+       <a href="{{image.link}}" target="_blank" rel="noopener noreferrer">
+        <img src="{{image.url}}" alt="{{image.name}}">
+       </a> 
+       {% else %}
+       <img src="{{image.url}}" alt="{{image.name}}">
+       {% endif %}
+     </div>
+     <p class="summary">{{image.summary}}</p>
+     {% endfor %}
     </div>
-  </section>
-<!-- </section> -->
+    {% else %}
+     <p>{{feature.description}}</p>
+     {%if feature.link %}
+     <a href="{{feature.link.url}}">{{feature.link.name}}</a>
+    {% endif %}
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+{%if section.section.image %}
+<img src="/{{section.section.image}}"/>
+{%endif %}
+{%if section.section.images %}
+<div class="feature-images">
+{% for image in section.section.images%}
+<img src="/{{image.url}}" alt="{{image.name}}"/>
+{% endfor %}
+
+</div>
+{% endif %}
+
+
+</div>
+
+</div>
+
+</section>
+{% endif %}
 {% endfor %}
 <!-- </div>  -->
 {% endif %}

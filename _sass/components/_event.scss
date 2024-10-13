@@ -488,7 +488,7 @@
     display: flex;
     margin: 0 15px 10px;
     h4{
-        background: var(--v2-heading-color);
+        background: var(--v2-text-secondary);
         border-radius: 8px;
         display: block;
         padding: 1rem 2rem;
@@ -496,7 +496,7 @@
         height: 100%;
         text-align: center;
         font-size: 2.4rem;
-        color: white !important;
+        color: var(--v2-background-secondary);
         // &:hover {
         //     transform: scale(1.05); /* Zoom effect on hover */
         //   }

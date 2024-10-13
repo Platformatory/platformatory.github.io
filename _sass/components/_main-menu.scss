@@ -70,7 +70,7 @@
         color: #333;
         cursor:default;
       }
-      text-align: center;
+      // text-align: center;
       font-weight: bold;
       margin: 0;
     }
@@ -82,7 +82,7 @@
       flex-direction: column;
       flex-wrap: wrap;
       max-height: 180px;
-      padding: 10px 20px;
+      // padding: 10px 20px;
         .child-menu-item{
             display: block;
             padding: 6px 20px; 
@@ -112,7 +112,7 @@
 .main-menu{
   .dropdown-menu{
     .sub-menu{
-      max-height: 430px ;
+      max-height: 270px ;
       @include sub-menu;
     }
   }
