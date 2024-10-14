@@ -35,6 +35,27 @@ bodyClass: v2-page-layout
 {% else %}
 <section class="{{section.section.class | default: 'box-card-container'}}">
 
+{% if section.section.feature_type == "contact" %}
+<div id="contact" class="row">
+  <div class="col-12 col-md-6 hbspot-form">
+    <h2 class="contact-title">Contact Us</h2>
+    {% include contactform.html %}
+  </div>
+  <div class="col-12 col-md-6 address-info">
+    <h2 class="address-region">USA</h2>
+    <p class="address"> {{ site.data.contact.us_office }}</p>
+    <p class="contact"><a href="tel: {{ site.data.contact.phone }}"> {{ site.data.contact.phone_us }} </a></p>
+    <div class="line-seperator"></div>
+      <h2 class="mt-4 address-region">India</h2>
+      <p class="address">{{ site.data.contact.india_office }}</p>
+      <p  class="contact"><a href="tel: {{ site.data.contact.phone }}"> {{ site.data.contact.phone_in }} </a></p>
+      <div class="d-flex email-block">
+        <span>Email : </span>
+        <a href="mailto: {{ site.data.contact.email }}">{{ site.data.contact.email }}</a>
+      </div>
+    </div>
+</div>
+{% else %}
 <div
 class="section-container {% if section.section.grid_order_class %}{{section.section.grid_order_class}}{% endif %} {% if section.section.class !='split-container' %}container{% endif %} mb-md-0 servce-summary"
 id="{{ section.hash }}"
@@ -55,14 +76,11 @@ id="{{ section.hash }}"
 <ul  class="container-context">
   {% for feature in section.features %}
   <li class="{{feature.class}}">
-    <h4>{{feature.name}}</h4>
     {% if section.section.feature_type == "images" %}
     <div class="images-container {{feature.class}}">
 
       {% for image in feature.images %}
      <div >
-       
-       
        {% if feature.cta %}
        <a href="{{image.link}}" target="_blank" rel="noopener noreferrer">
         <img src="{{image.url}}" alt="{{image.name}}">
@@ -74,7 +92,16 @@ id="{{ section.hash }}"
      <p class="summary">{{image.summary}}</p>
      {% endfor %}
     </div>
+    {% elsif section.section.feature_type == "teams" %}
+    <div class="team-container">
+      <img class="team-image" src="/{{feature.image}}" alt="{{feature.name}}">
+      <h4 class="title">{{feature.name}}</h4>
+      <p class="job-description">{{feature.description}}</p>
+      <div class="social-lists-items"><a href="http://twitter.com/platformatory" target="_blank"><img src="/images/v2/twitter.svg"></a>
+        <a href="{{ feature.linkedinurl }}" target="_blank"><img src="/images/v2/linkedin.svg"></a><a href="https://github.com/platformatory" target="_blank"><img src="/images/v2/github.svg"></a></div>
+    </div>
     {% else %}
+    <h4>{{feature.name}}</h4>
      <p>{{feature.description}}</p>
      {%if feature.link %}
      <a href="{{feature.link.url}}">{{feature.link.name}}</a>
@@ -84,6 +111,7 @@ id="{{ section.hash }}"
   {% endfor %}
 </ul>
 {% endif %}
+
 {%if section.section.image %}
 <img src="/{{section.section.image}}"/>
 {%endif %}
@@ -100,7 +128,7 @@ id="{{ section.hash }}"
 </div>
 
 </div>
-
+{% endif %}
 </section>
 {% endif %}
 {% endfor %}

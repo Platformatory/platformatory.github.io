@@ -35,13 +35,12 @@ bodyClass: v2-page-layout
         <ul  class="container-context">
           {% for feature in section.features %}
           <li class="{{feature.class}}">
-            <h4>{{feature.name}}</h4>
+            
             {% if section.section.feature_type == "images" %}
             <div class="images-container {{feature.class}}">
 
               {% for image in feature.images %}
              <div >
-               
                
                {% if feature.cta %}
                <a href="{{image.link}}" target="_blank" rel="noopener noreferrer">
@@ -55,6 +54,7 @@ bodyClass: v2-page-layout
              {% endfor %}
             </div>
             {% else %}
+            <h4>{{feature.name}}</h4>
              <p>{{feature.description}}</p>
              {%if feature.link %}
              <a href="{{feature.link.url}}">{{feature.link.name}}</a>

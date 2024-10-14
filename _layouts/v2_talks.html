@@ -26,7 +26,7 @@ bodyClass: page-events-list
         
         <div class="talks-container">
             <div class="past-events-card mt-1">
-                <h4 >Past Events 📹</h4>
+                <h4 >Past Events</h4>
             </div>
             {% for event in site.events reversed %}
             {% assign event_date_str = event.date | date: "%Y-%m-%d" %}
@@ -69,7 +69,7 @@ bodyClass: page-events-list
     </div>
     <div class="events-container">
         <div class="upcoming-events-card mt-1">
-            <h4 >Upcoming Events 🎟️</h4>
+            <h4 >Upcoming Events</h4>
         </div> 
         {% for event in site.events %}
                 {% assign event_date_str = event.date | date: "%Y-%m-%d" %}

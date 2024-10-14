@@ -257,8 +257,8 @@ p{
         .strip,.content-list-item{
           height: 50%;
         }
-        .images-items,.list-items{
-          min-height: 46%;
+        .images-items,.list-items,.image-items{
+          min-height: 50%;
         }
         .list-items{
           ul{
@@ -368,10 +368,63 @@ p{
         }
       }
 
-     
+     .teams-items{
+        background-color: var(--v2-background-secondary);
+        ul{
+          margin: 0;
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          height: 100%;
+          align-content: center;
+          li{
+            list-style: none;
+            text-align: center;
+            margin-top: 2rem;
+            .team-container{
+              .team-image{
+                width: 10rem;
+                height: 10rem;
+                border-radius: 50%;
+                background-color: #ffffff;
+                object-fit: cover;
+                margin: 0;
+              }
+              .title{
+                font-size: 1.5rem;
+                margin: 5px 0;
+              }
+              .job-description{
+                font-size: .9rem;
+                margin: 5px 0;
+              }
+              .social-lists-items{
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                a{
+                  font-size: 0;
+                  img{
+                    width: 2rem;
+                    margin: 0;
+                    border-radius: 50%;
+                    background-color: white;
+                  }
+                }
+              }
+          }
+        }
+     }
+     }
       .image-items{
-        display: flex;
+        // display: flex;
+        @include media-breakpoint-up(lg){
+          display: flex;
+        }
         background-color:var(--v2-background-secondary);
+        img{
+          max-width: 100%;
+          min-height: 100%;
+        }
       }
       .images-items{
         margin: 0;
@@ -1008,7 +1061,7 @@ p{
     }
   }
   .title{
-    font-size: 8rem !important;
+    font-size: 8rem ;
   }
   h2{
     margin: 0 !important;
@@ -1046,6 +1099,54 @@ p{
   }
 }
 
+.contact-container{
+  width: 100%;
+  height: 100%;
+  #contact{
+    height: 100%;
+  }
+  .hbspot-form{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px 8rem;
+    .contact-title{
+      font-size: 2.5rem;
+      color: var(--v2-background-secondary);
+    }
+    iframe{
+      max-width: 100%;
+      min-height: 100%;
+    }
+  }
+  .address-info{
+    background-color: var(--v2-background-secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .line-seperator{
+      border-bottom: dashed 2px #fff;
+      width: 100%;
+    }
+    .address-region{
+      font-size: 2.5rem;
+    }
+    .address,.contact{
+      font-size: 1.5rem;
+    }
+    .email-block{
+      background-color: var(--v2-text-primary);
+      font-size: 1.5rem;
+      color: var(--v2-background-secondary);
+      a{
+        color: var(--v2-background-secondary);
+      }
+    }
+  }
+
+}
 section{
   .quote-content{
     color: #ffffff;
