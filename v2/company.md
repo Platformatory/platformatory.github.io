@@ -42,6 +42,14 @@ sections:
         image: "images/team/nr.png"
         description: "Director, North America"
         linkedinurl: "https://www.linkedin.com/in/raghavendran-nehru-44b761/"
+      - name: "Ben Noonan"
+        image: "images/team/vince-fleming-613817-unsplash.jpg"
+        description: "Consultant"
+        linkedinurl: "https://www.linkedin.com/in/"
+      - name: "Deepak"
+        image: "images/team/vince-fleming-613817-unsplash.jpg"
+        description: "Consultant"
+        linkedinurl: "https://www.linkedin.com/in/"
   - title: "Contact Us"
     featured: false
     section:

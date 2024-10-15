@@ -518,7 +518,8 @@
         .intro-container{
             padding: 30px 10px;
             margin-bottom: 2rem;
-            background: linear-gradient(90deg, rgb(206, 255, 246) 0%, rgb(200, 255, 225) 50%, rgb(161, 255, 212) 100%);
+            background-color: var(--v2-text-secondary)
+            // background: linear-gradient(90deg, var(--v2-background-secondary), var(--v2-text-secondary), var(--v2-text-primary) 100%);
         }
         .talks-container{
             @include talk-section-title;
@@ -540,18 +541,21 @@
         }
         .event-detail-title{
             font-size: 4rem;
-            
+            color: var(--v2-background-primary);
         }
         .event-date{
             font-size: 2rem;
             margin: 0;
+            color: var(--v2-background-secondary);
         }
         .event-venue-title,h3{
             font-size: 2.5rem ;
+            color: var(--v2-background-primary);
         }
         .event-detail-items{
             .venue-title{
                 font-size: 2rem;
+                color: var(--v2-background-secondary);
             }
             .direction{
                 padding: 10px 20px;
@@ -568,6 +572,7 @@
             }
             p{
                 font-size: 1.5rem;
+                color: var(--v2-background-secondary);
             }
         }
         .event-content{
@@ -579,22 +584,23 @@
                 font-size: 1.5rem;
             }
             table{
+                border: 1px solid #fff;
                 margin: 0;
                 width: 100%;
                 tr:nth-child(odd) {
-                    background-color: #f2f2f2; /* Light grey for odd rows */
+                    background-color: var--(v2-background-primary); /* Light grey for odd rows */
                   }
                   tr:nth-child(even) {
-                    background-color: #dfdfdf; /* White for even rows */
+                    background-color: var(--v2-background-secondary); /* White for even rows */
                   }
                 thead{
                     tr{
-                        background-color: #9ad3a4 !important;
+                        background-color: var(--v2-text-primary) !important;
                     }
                     
                 }
                 th,td{
-                    border: none;
+                    border-collapse: collapse;
                     padding: 1.2em 0.5em 1.2em 0.5em;
                 }
                 tr{
@@ -617,14 +623,14 @@
                 }
             }
             strong,em{
-                color: #000000;
+                color: #fff;
             }
             ol{
                 width: 100%;
                 li{
                     font-size: 2rem;
                     &::marker{
-                        color: #000000;
+                        color: #fff;
                     }
                     &::before{
                         display: none;
@@ -671,6 +677,9 @@
                 }
                 ol{
                     margin: 0;
+                    li::marker{
+                        color: inherit;
+                    }
                 }
                 ul{
                     margin-left: 20px;

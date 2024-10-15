@@ -32,6 +32,10 @@
 }
 
 @include media-breakpoint-down(lg){
+    #monitor{
+        margin-top: 7rem !important;
+
+    }
     #crt{
         min-width: 32ch !important;
     }
@@ -40,18 +44,60 @@
 @include media-breakpoint-down(sm){
     #monitor{
         padding:2rem !important;
+        #screen{
+            border-image-slice: 40 fill;
+            border: 20px solid transparent;
+            border-image-source: url(/images/monitor-bezel.png);
+            border-image-slice: 30 fill;
+            border-image-outset: 0;
+            overflow: hidden;
+        }
     }
     #crt{
         min-width: 18ch !important;
         height: 100% !important;
-        min-height: 45rem;
+        min-height: 35rem;
         .terminal{
-            padding: 1rem !important;
+            padding: 0.5rem !important;
+            font-size: 0.8rem !important;
         }
        
     }
 
 }
+
+@media (min-width: 1376px) and (max-width: 1524px) {
+    #monitor{
+        padding: 3.5rem !important;
+    }
+    #crt{
+        min-width: 18em !important;
+    }
+}
+@media (min-width: 992px) and (max-width: 1376px) {
+    #monitor{
+        padding: 2.6rem !important;
+    }
+    #crt{
+        min-width: 15em !important;
+        .terminal{
+            font-size: .9rem;
+        }
+    }
+}
+@media (min-width:600px) and (max-width: 768px) {
+    #monitor{
+        padding: 2.6rem !important;
+    }
+    #crt{
+        min-width: 24ch !important;
+        .terminal{
+            font-size: .9rem !important;
+        }
+    }
+}
+
+
 .intro-image-conatainer{
     #crt{
         min-width: 36ch;

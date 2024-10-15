@@ -236,6 +236,12 @@ p{
   .intro-image-conatainer{
     background-color: var(--v2-background-secondary);
   }
+  @media (max-width:992px) {
+    h1{
+      font-size: 3rem !important;
+    }
+    
+  }
 }
 
 // section {
@@ -246,7 +252,20 @@ p{
     // margin-top: 0px;
     width: 100%;
     height: 100%;
-    
+    @media (max-width:992px) {
+      #leadership{
+       
+        .strip,.content-list-item{
+          height: 35%;
+          .service-title{
+            font-size: 3rem !important;
+          }
+        }
+        .teams-items{
+          min-height: 65%;
+        }
+      }
+    }
     .section-container{
       height: 100%;
       @include media-breakpoint-up(lg){
@@ -254,26 +273,46 @@ p{
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
       @media (max-width: 992px){
+        
         .strip,.content-list-item{
           height: 50%;
         }
         .images-items,.list-items,.image-items{
           min-height: 50%;
         }
+        
+        
         .list-items{
           ul{
             display: block;
             li,li>p,h4{
-              font-size: 1.6rem;
+              font-size: 1.5rem;
+              margin: 5px;
+            }
+            li>a{
+              font-size: 1.4rem;
             }
           }
         }
       }
       @media (max-width: 600px) {
+        .strip,.content-list-item{
+          height: 40%;
+        }
+        .images-items,.list-items,.image-items{
+          min-height: 60%;
+          display: flex;
+          align-items: center;
+          // margin-top: -2rem;
+        }
+
         .list-items{
           ul{
               li,li>p{
-                font-size: 1.8rem;
+                font-size: 1.3rem;
+              }
+              li>a{
+                font-size: 1.2rem;
               }
           }
         }
@@ -369,11 +408,12 @@ p{
       }
 
      .teams-items{
+        min-height: 50%;
         background-color: var(--v2-background-secondary);
         ul{
           margin: 0;
           display: grid;
-          grid-template-columns: repeat(2, minmax(0, 1fr));
+          grid-template-columns: repeat(3, minmax(0, 1fr));
           height: 100%;
           align-content: center;
           li{
@@ -412,6 +452,43 @@ p{
                 }
               }
           }
+        }
+     }
+     @media (min-width:856px) and (max-width:992px) {
+        ul{
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+     }
+     @media (max-width:856px) {
+      ul{
+        li{
+          margin-top: 1rem;
+          .team-container{
+            .team-image{
+              width: 6rem;
+              height: 6rem;
+            }
+            .title{
+              font-size: 1.1rem;
+            }
+            .job-description{
+              font-size: 0.8rem;
+            }
+            .social-lists-items{
+              gap: 5px;
+              a{
+                img{
+                  width: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+     }
+     @media (max-width: 600px) {
+        ul{
+          grid-template-columns: repeat(2, minmax(0, 1fr));
         }
      }
      }
@@ -491,9 +568,51 @@ p{
                   font-size: 2rem;
                 }
               }
-              @media (min-width:600px) {
+              @media (min-width:992px) {
                 .images-container{
                   grid-template-columns: repeat(2, minmax(0, 1fr));
+                }
+              }
+              @media (min-width:600px) and (max-width:992px) {
+                .images-container{
+                  grid-template-columns: repeat(3, minmax(0, 1fr));
+                  img{
+                    width: 4em;
+                  }
+                }
+                .solutions{
+                  justify-items: left;
+                  div{
+                    width: 100%;
+                  }
+                  img{
+                    margin: 5px 0;
+                  }
+                  .summary{
+                    font-size: 1.5rem !important;
+                    text-align: start;
+                  }
+                }
+              }
+              @media (max-width: 600px) {
+                .images-container{
+                  grid-template-columns: repeat(2, minmax(0, 1fr));
+                  img{
+                    width: 3em;
+                  }
+                }
+                .solutions{
+                  justify-items: left;
+                  div{
+                    width: 100%;
+                  }
+                  img{
+                    margin: 5px 0;
+                  }
+                  .summary{
+                    font-size: 1.2rem !important;
+                    text-align: start;
+                  }
                 }
               }
               @media (min-width: 1600px) {
@@ -507,9 +626,6 @@ p{
                 }
                 
               }
-              
-              
-              
             }
             .feature-sub-list{
               height: fit-content;
@@ -1102,6 +1218,7 @@ p{
 .contact-container{
   width: 100%;
   height: 100%;
+  overflow-y: auto;
   #contact{
     height: 100%;
   }
@@ -1130,6 +1247,16 @@ p{
       border-bottom: dashed 2px #fff;
       width: 100%;
     }
+    .direction{
+      background-color: var(--v2-background-primary);
+      color: #fff;
+      font-size: 1.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      img{
+        margin: 0;
+      }
+    }
     .address-region{
       font-size: 2.5rem;
     }
@@ -1145,7 +1272,14 @@ p{
       }
     }
   }
-
+  @media (max-width:992px) {
+    #contact{
+      margin-top: 64px;
+      .hbspot-form{
+        padding: 20px 4rem;
+      }
+    }
+  }
 }
 section{
   .quote-content{
@@ -1168,10 +1302,12 @@ section{
   }
 }
 
-.reveal{
-  @media (min-width:600px) and (max-width:990px) {
+
+  
+    .reveal{
+      @media (min-width:600px) and (max-width:990px) {
     h1{
-      font-size: 4rem !important;
+      font-size: 3rem !important;
     }
     h2{
       font-size: 3rem !important;
@@ -1200,6 +1336,11 @@ section{
     }
     h3{
       font-size: 1.6rem !important;
+    }
+  }
+  .raw-section-container{
+    h1{
+      font-size: 4rem !important;
     }
   }
 }

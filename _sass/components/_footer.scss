@@ -82,7 +82,7 @@
   }
   .main-footer-inner {
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
     justify-content: space-between;
     @include media-breakpoint-up(md) {
       flex-direction: row;
