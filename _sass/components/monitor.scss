@@ -96,6 +96,16 @@
         }
     }
 }
+@media (max-width: 410px) {
+    #crt{
+        min-width: 15ch !important ;
+        min-height: 26rem !important;
+        .terminal{
+            font-size: .65rem !important;
+            
+        }
+    }
+}
 
 
 .intro-image-conatainer{
