@@ -241,3 +241,23 @@ loadmonitor();
 
 //     typeLine();
 // });
+// 
+const text = "Platforms & Products.";
+let index=0;
+const typewriterElement = document.getElementById("typewriter-title");
+// const text = typewriterElement.innerHTML
+typewriterElement.innerHTML="";
+function titletypeWriter() {
+ 
+  
+  // typewriterElement.innerHTML="";
+  
+  if (index < text.length) {
+    // const typewriterElement = document.getElementById("typewriter-title");
+    typewriterElement.innerHTML += text[index];
+    index++;
+    setTimeout(titletypeWriter,100); // Adjust speed by changing the timeout value
+  }
+}
+
+  titletypeWriter(); 

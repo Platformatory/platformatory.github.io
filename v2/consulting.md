@@ -28,7 +28,7 @@ sections:
     section:
       class: "split-container"
       feature_type: "list"
-      grid_order_class: "reverse"
+      # grid_order_class: "reverse"
     features:
       - name: "Solving for e2e latencies <= 1s"
         class: "text-center"
@@ -49,7 +49,7 @@ sections:
     section:
       class: "split-container"
       feature_type: "list"
-      grid_order_class: "reverse"
+      # grid_order_class: "reverse"
     features:
       - name: "Fix the bottom-line"
         class: "text-center"

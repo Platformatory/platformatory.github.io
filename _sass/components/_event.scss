@@ -496,7 +496,7 @@
         height: 100%;
         text-align: center;
         font-size: 2.4rem;
-        color: var(--v2-background-secondary);
+        color: var(--v2-background-primary);
         // &:hover {
         //     transform: scale(1.05); /* Zoom effect on hover */
         //   }
@@ -546,7 +546,7 @@
         .event-date{
             font-size: 2rem;
             margin: 0;
-            color: var(--v2-background-secondary);
+            color: var(--v2-background-primary);
         }
         .event-venue-title,h3{
             font-size: 2.5rem ;
@@ -555,7 +555,7 @@
         .event-detail-items{
             .venue-title{
                 font-size: 2rem;
-                color: var(--v2-background-secondary);
+                color: var(--v2-background-primary);
             }
             .direction{
                 padding: 10px 20px;
@@ -572,7 +572,7 @@
             }
             p{
                 font-size: 1.5rem;
-                color: var(--v2-background-secondary);
+                color: #363636;
             }
         }
         .event-content{

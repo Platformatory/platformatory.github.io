@@ -31,3 +31,42 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+var places= [
+  { name: "Bangaluru", coords: [12.971599, 77.594566],style: {
+      initial: {
+        fill: 'green'
+      }
+    }
+},  // No offset
+  { name: 'Austin', coords: [30.2672, -97.7431],style: {
+      initial: {
+        fill: 'green'
+      }
+    } },        // No offset
+  { name: "Mangalore", coords: [13.0108, 74.7943], offsets: [-75, 0],style: {
+      initial: {
+        fill: 'green'
+      }
+    } } // Custom offset
+];
+var map = new jsVectorMap({
+labels: {
+  markers: {
+    // Render the marker name or fallback to 'Not available'
+    render(marker, index) {
+      return marker.name || marker.labelName || 'Not available';
+    },
+    // Add label offset from the marker object
+    offsets: function(marker) {
+      return places[marker].offsets || [0,0] // Default offset [0, 0] if not provided
+    }
+  }
+},
+selector: "#contact-map",
+map: "world",
+markers: places
+});
+
+
+

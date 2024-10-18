@@ -71,7 +71,7 @@ $sub-footer-text-color: $white;
 
 :root{
     --v2-background-primary: #0d1926;
-    --v2-background-secondary: #333333;
+    --v2-background-secondary: #ffffff40;
     --v2-text-primary: #00ff00;
     --v2-text-secondary: #ffff33;
     --v2-heading-color: #0a130b;
@@ -514,3 +514,13 @@ ol {
 }
 
 
+
+
+#contact-map{
+    margin-top: 4.5rem;
+    background-color: #fff !important;
+    .jvm-zoom-btn{
+        height: 40px !important;
+        width: fit-content !important;
+    }
+}

@@ -41,17 +41,17 @@ bodyClass: v2-page-layout
     <h2 class="contact-title">Contact Us</h2>
     {% include contactform.html %}
   </div>
+  
   <div class="col-12 col-lg-6 address-info">
-    <h2 class="address-region">USA</h2>
+    <div id="contact-map" style="width: 600px; height: 300px"></div>
+    <h2 class="mt-1 address-region">USA</h2>
     <p class="address"> {{ site.data.contact.us_office }}</p>
-    <a class="direction" href="{{site.data.contact.map_us}}" target="_blank" rel="noopener noreferrer">Map <img  src="/images/event/traffic-sign.png" alt="direciton image"></a>
 
-    <p class="contact"><a href="tel: {{ site.data.contact.phone_us }}"> {{ site.data.contact.phone_us }} </a></p>
+    <p class="contact mb-1"><a href="tel: {{ site.data.contact.phone_us }}"> {{ site.data.contact.phone_us }} </a></p>
     <div class="line-seperator"></div>
-      <h2 class="mt-4 address-region">India</h2>
+      <h2 class="mt-1 address-region">India</h2>
       <p class="address">{{ site.data.contact.india_office }}</p>
-      <a class="direction" href="{{site.data.contact.map_in}}" target="_blank" rel="noopener noreferrer">Map <img  src="/images/event/traffic-sign.png" alt="direciton image"></a>
-      <p  class="contact"><a href="tel: {{ site.data.contact.phone_in }}"> {{ site.data.contact.phone_in }} </a></p>
+      <p  class="contact mb-1"><a href="tel: {{ site.data.contact.phone_in }}"> {{ site.data.contact.phone_in }} </a></p>
       <div class="d-flex email-block">
         <span>Email : </span>
         <a href="mailto: {{ site.data.contact.email }}">{{ site.data.contact.email }}</a>

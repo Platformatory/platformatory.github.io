@@ -37,6 +37,10 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <!-- map -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap/dist/css/jsvectormap.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jsvectormap"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsvectormap/dist/maps/world.js"></script>
     {% if page.description %}
     <meta name="description" content="{{ page.description }}" />
     {% endif %}
@@ -86,6 +90,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="{{ '/assets/reveal.js/dist/reveal.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/monitor.js' | relative_url }}"></script>
+    
     <script>
       Reveal.initialize({
             controls: true,

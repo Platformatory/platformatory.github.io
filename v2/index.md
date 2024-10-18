@@ -17,7 +17,7 @@ sections:
           <div style="justify-content: space-evenly;" class="d-flex flex-column h-100 ">
             <div>
               <h1 class="text-capitalize mb-1 title">We Engineer.</h1>
-              <h1 class="text-capitalize mb-1 title">Platforms & Products.</h1>
+              <h1 id="typewriter-title" class="text-capitalize mb-1 title">Platforms & Products.</h1>
               <h3 class="sub-title">Powered by real-time data & AI.</h3>
             </div>
             <div class="d-flex justify-content-center">
@@ -73,7 +73,7 @@ sections:
     section:
       class: "split-container"
       feature_type: "images"
-      grid_order_class: "reverse"
+      # grid_order_class: "reverse"
     features: 
       - name: ""
         cta: false
