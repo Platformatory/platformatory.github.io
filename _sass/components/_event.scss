@@ -157,6 +157,7 @@
                 text-align: start;
                 font-size:1.5rem;
                 min-height: 9rem;
+                color: #363636;
             }
             .talk-speaker{
             min-height: 4rem;
@@ -582,6 +583,7 @@
             }
             .about,p{
                 font-size: 1.5rem;
+                color: #ffffff;
             }
             table{
                 border: 1px solid #fff;
@@ -591,7 +593,7 @@
                     background-color: var--(v2-background-primary); /* Light grey for odd rows */
                   }
                   tr:nth-child(even) {
-                    background-color: var(--v2-background-secondary); /* White for even rows */
+                    background-color: #363636; /* White for even rows */
                   }
                 thead{
                     tr{
@@ -618,7 +620,7 @@
                 font-weight: bold;
                 .speaker-description{
                     font-weight: 500;
-                    color: #595959;
+                    color: #979797;
                     font-size: 1.5rem;
                 }
             }

@@ -48,19 +48,19 @@ sections:
         class: "text-left"
         link:
           name: "→ The most interesting infrastructure companies"
-          url: ""
+          url: "/blog/platform-engineering-manifesto/"
         description: "Specialize deeply on ubiquitous distributed systems interfaces(such as Apache Kafka, Kubernetes, PostgreSQL, Temporal and more). These are the building blocks."
       - name: "Lean-operations"
         class: "text-left"
         link:
           name: "→ A leaderless future (of streaming)"
-          url: ""
+          url: "/blog/a-leaderless-future-kafka-streaming/"
         description: "Create highly skilled, “one-pizza” teams to build & operate platforms that extract common cross-cutting concerns."
       - name: "A minimum viable level of self-service."
         class: "text-left"
         link:
           name: "→ Real-time for prime-time"
-          url: ""
+          url: "/blog/real-time-data-prime-time/"
         description: "First class DevX, Human augmented AI and well governed, secure foundational tooling (for just about everything)"
 
   - title: "Partnerships (without partisanship)"
@@ -69,7 +69,7 @@ sections:
     summary: "A promise to deliver real customer value on platform investments. "
     image: "../images/icons/security-engineering.png"
     caption: "Comprehensive security strategies."
-    hash: "security-engineering"
+    hash: "partnerships"
     section:
       class: "split-container"
       feature_type: "images"
