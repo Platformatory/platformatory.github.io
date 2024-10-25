@@ -257,6 +257,12 @@ function titletypeWriter() {
     typewriterElement.innerHTML += text[index];
     index++;
     setTimeout(titletypeWriter,100); // Adjust speed by changing the timeout value
+  } else{
+    setTimeout(()=>{
+      typewriterElement.innerHTML = "";
+      index = 0;
+      titletypeWriter();
+    },1000)
   }
 }
 

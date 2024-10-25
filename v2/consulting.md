@@ -10,7 +10,7 @@ sections:
     summary: "Seamlessly transition your data infrastructure to the cloud for enhanced scalability and agility."
     raw_content: |
       <section class="raw-section-container">
-        <div class="container">
+        <div id="trusted-advisory" class="container">
           <div style="justify-content: space-evenly;" class="d-flex flex-column h-100 ">
             <div>
               <h1 class="text-capitalize mb-1">Trusted Advisory</h1>
@@ -25,6 +25,7 @@ sections:
   - title: Performance Engineering for distributed, data-intensive applications
     featured: true
     summary: ""
+    hash: "performance-engineering"
     section:
       class: "split-container"
       feature_type: "list"
@@ -36,6 +37,7 @@ sections:
   - title: Platform-led services and Developer Experience
     featured: true
     summary: ""
+    hash: "platform-led-services"
     section:
       class: "split-container"
       feature_type: "list"
@@ -46,6 +48,7 @@ sections:
   - title: Operational Excellence & TCO Reduction
     featured: true
     summary: ""
+    hash: "operational-excellence"
     section:
       class: "split-container"
       feature_type: "list"
@@ -56,6 +59,7 @@ sections:
         description: "Automate grunt work and right-sizing to cut every [CURRENCY] of unnecessary spend.</br>(real economics, no BS)"
   - title: Office of the CTO
     featured: true
+    hash: "office-of-the-cto"
     summary: ""
     section:
       class: "split-container"

@@ -13,11 +13,11 @@ sections:
     summary: "We transform our customers' tech estate and operating model with cloud-native infrastructure, real-time data and modern integration."
     raw_content: |
       <section class="raw-section-container">
-        <div class="container">
+        <div id="platform-product-engineering" class="container">
           <div style="justify-content: space-evenly;" class="d-flex flex-column h-100 ">
             <div>
               <h1 class="text-capitalize mb-1 title">We Engineer.</h1>
-              <h1 id="typewriter-title" class="text-capitalize mb-1 title">Platforms & Products.</h1>
+              <h1 class="text-capitalize mb-1 title"><span id="typewriter-title">Platforms & Products.</span></h1>
               <h3 class="sub-title">Powered by real-time data & AI.</h3>
             </div>
             <div class="d-flex justify-content-center">
@@ -29,17 +29,44 @@ sections:
   - title: Our field expertise here is unparalleled. 
     featured: false
     summary: ""
+    hash: "expertise"
     section:
       class: "split-container"
-      image: "./images/v2/plf.svg"
-      feature_type: "image"
+      feature_type: "images"
+    features:
+      - name: ""
+        cta: false
+        class: "expertise"
+        images:
+          - name: "Apache Kafka"
+            url: "../images/v2/expertise/apache-kafka.png"
+          - name: "Apache Flink"
+            url: "../images/v2/expertise/apache-flink.png"
+          - name: "Apache Spark"
+            url: "../images/v2/expertise/apache-spark.png"
+          - name: "Debezium"
+            url: "../images/v2/expertise/debezium.png"
+          - name: "Kafka Connect"
+            url: "../images/v2/expertise/kafka-connect.png"
+          - name: "Benthos"
+            url: "../images/v2/expertise/benthos.png"
+          - name: "Kong"
+            url: "../images/v2/partners/kong.png"
+          - name: "Temporal"
+            url: "../images/v2/partners/temporal.png"
+          - name: "ClickHouse"
+            url: "../images/v2/partners/clickhouse.png"
+          - name: "Druid"
+            url: "../images/v2/expertise/apache-druid.png"
+          - name: "Pinot"
+            url: "../images/v2/expertise/apache-pinot.png"
   - title: "We have a unique thesis on what it takes to scale platform-led products."
     featured: true
     weight: 3
     summary: ""
     image: "../images/icons/automation.png"
     caption: "Automated deployment and scaling."
-    hash: "infrastructure-automation"
+    hash: "scale-platform-led-products"
     section:
       class: "split-container"
       feature_type: "list"
@@ -104,7 +131,7 @@ sections:
     featured: true
     summary: ""
     caption: "Comprehensive security strategies."
-    hash: "security-engineering"
+    hash: "solutions"
     section:
       class: "split-container"
       feature_type: "images"
@@ -130,7 +157,7 @@ sections:
     summary: ""
     image: "../images/icons/security-engineering.png"
     caption: "Comprehensive security strategies."
-    hash: "security-engineering"
+    hash: "opensource-community"
     section:
       class: "split-container"
       feature_type: "images"
