@@ -110,7 +110,7 @@
     </script>
     <script>
       // Configuration: Set your base pixel URL and Pixel ID here
-      const BASE_PIXEL_URL = ' https://pkc-41p56.asia-south1.gcp.confluent.cloud:443/kafka/v3/clusters/lkc-do6r3z/topics/topic_0/records';
+      const BASE_PIXEL_URL = ' https://test.com/';
       // const PIXEL_ID = 'your_pixel_id';
     
       // Function to send data to your custom pixel
@@ -127,7 +127,6 @@
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
-              'Authorization': 'Basic RFBINk1PTk1GMjcyN0xXVzowZ20raTVlYlJRTUwvcWkySEJDMU1BcUJjMGVMTngxZk5XMWZldEJxT2RlQ1RrK2Nia25VaUVXTTJUdEhtM0pS'
             },
             body: payload
           });
