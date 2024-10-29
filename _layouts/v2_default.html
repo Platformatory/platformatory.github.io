@@ -103,12 +103,10 @@
         });
       let hash = window.location.hash
       Reveal.on("ready",(event)=>{
-        console.log(hash)
         window.location.hash = hash
       })
       Reveal.on('slidechanged', (event) => {
         // event.previousSlide, event.currentSlide, event.indexh, event.indexv
-          console.log(event.currentSlide)
             if (event.currentSlide.id.length>0){
             const hash=`#/${event.currentSlide.id }`
             window.location.hash = hash;
