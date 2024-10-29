@@ -14,7 +14,7 @@ sections:
           <div style="justify-content: space-evenly;" class="d-flex flex-column h-100 ">
             <div>
               <h1 class="text-capitalize mb-1">Trusted Advisory</h1>
-              <h2 class="text-capitalize mb-1">For Technology & Engineering Leaders.</h2>
+              <h2 class="text-capitalize mb-1"><span id="typewriter-title" >For Technology & Engineering Leaders.</span></h2>
             </div>
             <div class="d-flex justify-content-center">
               <p class="quote-content"> <span class="quote">In theory, there is no difference between theory and practice. In practice, there is.</span>  – Yogi Berra</p>
@@ -24,16 +24,21 @@ sections:
       </section>
   - title: Performance Engineering for distributed, data-intensive applications
     featured: true
-    summary: ""
+    summary: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
     hash: "performance-engineering"
     section:
       class: "split-container"
       feature_type: "list"
+      background-image: "/images/v2/banners/real-time_data.jpg"
       # grid_order_class: "reverse"
     features:
       - name: "Solving for e2e latencies <= 1s"
         class: "text-center"
         description: "in high throughput transactional and analytical platforms that need to scale to millions of concurrent users."
+        
+        link:
+          name: "Button"
+          url: "#"
   - title: Platform-led services and Developer Experience
     featured: true
     summary: ""

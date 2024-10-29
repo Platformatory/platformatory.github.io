@@ -81,7 +81,7 @@ html.reveal-full-page {
   width: 100%;
   height: 100%;
   height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
+  /* height: calc(var(--vh, 1vh) * 100); */
   height: 100svh;
   overflow: hidden;
 }
@@ -1701,7 +1701,7 @@ html.reveal-full-page {
 .reveal-viewport.reveal-scroll .scroll-page {
   position: relative;
   width: 100%;
-  height: calc(var(--page-height) + var(--page-scroll-padding));
+  /* height: calc(var(--page-height) + var(--page-scroll-padding)); */
   z-index: 1;
   overflow: visible;
 }

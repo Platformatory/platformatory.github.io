@@ -242,10 +242,9 @@ loadmonitor();
 //     typeLine();
 // });
 // 
-const text = "Platforms & Products.";
 let index=0;
 const typewriterElement = document.getElementById("typewriter-title");
-// const text = typewriterElement.innerHTML
+const text = String(typewriterElement.innerText)
 typewriterElement.innerHTML="";
 function titletypeWriter() {
  

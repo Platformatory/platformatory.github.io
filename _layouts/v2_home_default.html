@@ -72,7 +72,7 @@
   <body>
     {% include v2-main-menu-mobile.html %}
         {% include v2_header.html headerClass='header-extra' %}
-        <div class="reveal">
+        <div class="reveal home-page">
             <div class="slides">
                 {{ content }}
             </div>
@@ -88,11 +88,27 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script>
       Reveal.initialize({
-            view: "scroll",
             hash: true,
+            view: "scroll",
             scrollProgress: true,
             scrollActivationWidth: null,
-        });
+        })
+    let hash = window.location.hash
+    Reveal.on("ready",(event)=>{
+      console.log(hash)
+      window.location.hash = hash
+    })
+    Reveal.on('slidechanged', (event) => {
+      // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+        console.log(event.currentSlide)
+          if (event.currentSlide.id.length>0){
+          const hash=`#/${event.currentSlide.id }`
+          window.location.hash = hash;
+          }else{
+            history.replaceState(null, null,window.location.pathname)
+          }
+    });
+    
     </script>
   </body>
 </html>

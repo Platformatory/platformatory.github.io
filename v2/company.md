@@ -13,7 +13,7 @@ sections:
     summary: "Our experienced leadership team guides our vision and success."
     image: "../images/icons/leadership.png"
     caption: "Experienced leaders steering the company."
-    hash: "leadership"
+    hash: "teams"
     section:
         class: "split-container"
         feature_type: "teams"
@@ -52,6 +52,7 @@ sections:
         linkedinurl: "https://www.linkedin.com/in/deepakmk"
   - title: "Contact Us"
     featured: false
+    hash: "contact"
     section:
       class: "contact-container"
       feature_type: "contact"

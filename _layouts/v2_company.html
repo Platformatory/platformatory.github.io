@@ -33,7 +33,7 @@ bodyClass: v2-page-layout
 {% if section.raw_content %}
 {{section.raw_content | raw}}
 {% else %}
-<section class="{{section.section.class | default: 'box-card-container'}}">
+<section id="{{ section.hash }}" class="{{section.section.class | default: 'box-card-container'}}">
 
 {% if section.section.feature_type == "contact" %}
 <div id="contact" class="row">
@@ -61,7 +61,7 @@ bodyClass: v2-page-layout
 {% else %}
 <div
 class="section-container {% if section.section.grid_order_class %}{{section.section.grid_order_class}}{% endif %} {% if section.section.class !='split-container' %}container{% endif %} mb-md-0 servce-summary"
-id="{{ section.hash }}"
+
 >
 <!-- style="background-color: {{ section.section.background | default: '#6c973c' }};" -->
 <div class="strip service-section">
