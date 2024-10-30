@@ -1,6 +1,7 @@
 <script>
     Reveal.initialize({
           hash: true,
+          controls: true,
           view: "scroll",
           scrollProgress: true,
           scrollActivationWidth: null,
@@ -15,6 +16,7 @@
     // redirecting to matching hash path
     let hashindex =[] 
     artibutes.map((item)=>{if(item.id)hashindex[item.id] =[Number(item['data-index-h']),Number(item['data-index-v'])]});
+    window.hashindex = hashindex;
     console.log(hashindex)
     console.log(hashindex[hash.replace('#','')],"current hash")
     let CurrentIndex = hashindex[hash.replace('#','')]
