@@ -1,0 +1,41 @@
+<script>
+    Reveal.initialize({
+          hash: true,
+          view: "scroll",
+          scrollProgress: true,
+          scrollActivationWidth: null,
+      })
+  let hash = window.location.hash
+  Reveal.on("ready",(event)=>{
+    const artibutes = Reveal.getSlidesAttributes();
+    console.log(event, artibutes)
+    console.log(window.location.hash)
+    console.log(hash)
+    // redirecting to matching hash path
+    for (let i=0; i<artibutes.length; i++){
+      if (artibutes[i].id && hash.replace('#','')===artibutes[i].id){
+        console.log(artibutes[i], hash.replace("#",''));
+        console.log(artibutes[i]['data-index-h'],artibutes[i]['data-index-v'])
+        let indexh = Number(artibutes[i]['data-index-h']);
+        let indexv = Number(artibutes[i]['data-index-v']);
+        console.log(Reveal.getSlide(indexh, indexv))
+        Reveal.slide(indexh,indexv)
+        // if(indexh >2){
+        //   Reveal.next();
+        // }
+        
+      }
+    }
+  });
+
+  Reveal.on('slidechanged', (event) => {
+    // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+        if (event.currentSlide.id.length>0){
+        const hash=`#${event.currentSlide.id }`
+        window.location.hash = hash;
+        }else{
+          history.replaceState(null, null,window.location.pathname)
+        }
+  });
+  
+  </script>

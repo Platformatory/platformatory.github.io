@@ -78,9 +78,9 @@
     {% include v2-main-menu-mobile.html %}
         {% include v2_header.html headerClass='header-extra' %}
         <div class="reveal">
-            <div class="slides">
+            <!-- <div class="slides"> -->
                 {{ content }}
-            </div>
+            <!-- </div> -->
         </div>
         <!-- {% include v2_footer.html %} -->
     <!-- {% include footer.html %} {%    include sub-footer.html %} -->
@@ -91,30 +91,7 @@
     <script src="{{ '/assets/reveal.js/dist/reveal.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/monitor.js' | relative_url }}"></script>
     
-    <script>
-      Reveal.initialize({
-            hash: true,
-            // center:false
-            view: "scroll",
-            scrollProgress: true,
-
-            // slideNumber: true,
-            // plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ] 
-        });
-      let hash = window.location.hash
-      Reveal.on("ready",(event)=>{
-        window.location.hash = hash
-      })
-      Reveal.on('slidechanged', (event) => {
-        // event.previousSlide, event.currentSlide, event.indexh, event.indexv
-            if (event.currentSlide.id.length>0){
-            const hash=`#/${event.currentSlide.id }`
-            window.location.hash = hash;
-            }else{
-              history.replaceState(null, null,window.location.pathname)
-            }
-      });
-    </script>
+    {% include reveal.html %}
     {% include pixel.html %}
     {% include google-analytics.html %}
   </body>
