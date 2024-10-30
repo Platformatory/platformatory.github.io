@@ -9,33 +9,27 @@
   Reveal.on("ready",(event)=>{
     const artibutes = Reveal.getSlidesAttributes();
     console.log(event, artibutes)
-    console.log(window.location.hash)
-    console.log(hash)
+    console.log(window.location.hash, "window.location.hash")
+    // console.log(hash, "outside")
+    console.log(Reveal.getQueryHash(),"getQueryHash");
     // redirecting to matching hash path
-    for (let i=0; i<artibutes.length; i++){
-      if (artibutes[i].id && hash.replace('#','')===artibutes[i].id){
-        console.log(artibutes[i], hash.replace("#",''));
-        console.log(artibutes[i]['data-index-h'],artibutes[i]['data-index-v'])
-        let indexh = Number(artibutes[i]['data-index-h']);
-        let indexv = Number(artibutes[i]['data-index-v']);
-        console.log(Reveal.getSlide(indexh, indexv))
-        Reveal.slide(indexh,indexv)
-        // if(indexh >2){
-        //   Reveal.next();
-        // }
-        
-      }
-    }
+    let hashindex =[] 
+    artibutes.map((item)=>{if(item.id)hashindex[item.id] =[Number(item['data-index-h']),Number(item['data-index-v'])]});
+    console.log(hashindex)
+    console.log(hashindex[hash.replace('#','')],"current hash")
+    let CurrentIndex = hashindex[hash.replace('#','')]
+    console.log(CurrentIndex, hash.replace('#',''));
+    Reveal.slide(CurrentIndex[0],CurrentIndex[1])
   });
 
-  Reveal.on('slidechanged', (event) => {
-    // event.previousSlide, event.currentSlide, event.indexh, event.indexv
-        if (event.currentSlide.id.length>0){
-        const hash=`#${event.currentSlide.id }`
-        window.location.hash = hash;
-        }else{
-          history.replaceState(null, null,window.location.pathname)
-        }
-  });
+  // Reveal.on('slidechanged', (event) => {
+  //   // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+  //       if (event.currentSlide.id.length>0){
+  //       const hash=`#${event.currentSlide.id }`
+  //       window.location.hash = hash;
+  //       }else{
+  //         history.replaceState(null, null,window.location.pathname)
+  //       }
+  // });
   
   </script>
