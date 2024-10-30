@@ -584,11 +584,12 @@ p{
                 div{
                   &:nth-last-child(1){
                     grid-column: span 3 / span 3;
-                    border: 2px solid var(--v2-text-primary);
+                    background-color: var(--v2-text-secondary);
                     width: 100%;
                     img{
-                      width: 35%;
-                      
+                      // width: 30%;
+                      width: 6em;
+                      background-color: transparent;
                     }
                   }
                 }

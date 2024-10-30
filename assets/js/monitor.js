@@ -255,13 +255,13 @@ function titletypeWriter() {
     // const typewriterElement = document.getElementById("typewriter-title");
     typewriterElement.innerHTML += text[index];
     index++;
-    setTimeout(titletypeWriter,100); // Adjust speed by changing the timeout value
+    setTimeout(titletypeWriter,300); // Adjust speed by changing the timeout value
   } else{
     setTimeout(()=>{
       typewriterElement.innerHTML = "";
       index = 0;
       titletypeWriter();
-    },1000)
+    },5000)
   }
 }
 

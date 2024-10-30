@@ -100,8 +100,10 @@ class="section-container {% if section.section.grid_order_class %}{{section.sect
       <img class="team-image" src="/{{feature.image}}" alt="{{feature.name}}">
       <h4 class="title">{{feature.name}}</h4>
       <p class="job-description">{{feature.description}}</p>
-      <div class="social-lists-items"><a href="http://twitter.com/platformatory" target="_blank"><img src="/images/v2/twitter.svg"></a>
-        <a href="{{ feature.linkedinurl }}" target="_blank"><img src="/images/v2/linkedin.svg"></a><a href="https://github.com/platformatory" target="_blank"><img src="/images/v2/github.svg"></a></div>
+      <div class="social-lists-items">
+        <!-- <a href="http://twitter.com/platformatory" target="_blank"><img src="/images/v2/twitter.svg"></a> -->
+        <a href="{{ feature.linkedinurl }}" target="_blank"><img src="/images/v2/linkedin.svg"></a>
+        <a href="https://github.com/platformatory" target="_blank"><img src="/images/v2/github.svg"></a></div>
     </div>
     {% else %}
     <h4>{{feature.name}}</h4>
