@@ -1,0 +1,83 @@
+<script>
+    // Configuration: Set your base pixel URL and Pixel ID here
+    const BASE_PIXEL_URL = ' https://test.com/';
+    // const PIXEL_ID = 'your_pixel_id';
+  
+    // Function to send data to your custom pixel
+    function sendToPixel(data) {
+      const pixelUrl = `${BASE_PIXEL_URL}`;
+      // ?pixel_id=${PIXEL_ID}
+      const payload = JSON.stringify(data);
+  
+      // Attempt to use sendBeacon first, falling back to fetch and XMLHttpRequest
+      if (navigator.sendBeacon) {
+        navigator.sendBeacon(pixelUrl, payload);
+      } else if (window.fetch) {
+        fetch(pixelUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: payload
+        });
+      } else {
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', pixelUrl, true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(payload);
+      }
+    }
+  
+    // 1. Wrap `gtag` to intercept event data
+    const originalGtag = window.gtag;
+    window.gtag = function() {
+      const args = Array.from(arguments);
+  
+      // Only intercept 'event' type calls
+      if (args[0] === 'event') {
+        console.log('Intercepted gtag event:', args);
+        sendToPixel(args); // Forward to custom pixel
+      }
+  
+      // Continue with the original gtag function
+      originalGtag.apply(this, args);
+    };
+  
+    // 2. Wrap `sendBeacon` to intercept GA data
+    const originalSendBeacon = navigator.sendBeacon;
+    navigator.sendBeacon = function(url, data) {
+      if (url.includes('google-analytics.com')) {
+        console.log('Intercepted GA beacon data:', data);
+        sendToPixel({ url, data });
+      }
+      return originalSendBeacon.apply(this, arguments);
+    };
+  
+    // 3. Wrap `fetch` to intercept GA data
+    const originalFetch = window.fetch;
+    window.fetch = function(url, options) {
+      if (url.includes('google-analytics.com')) {
+        console.log('Intercepted GA fetch data:', options?.body);
+        sendToPixel({ url, data: options?.body });
+      }
+      return originalFetch.apply(this, arguments);
+    };
+  
+    // 4. Wrap `XMLHttpRequest` to intercept GA data
+    const originalXHROpen = XMLHttpRequest.prototype.open;
+    XMLHttpRequest.prototype.open = function(method, url) {
+      if (url.includes('google-analytics.com')) {
+        this.isGARequest = true;
+      }
+      originalXHROpen.apply(this, arguments);
+    };
+  
+    const originalXHRSend = XMLHttpRequest.prototype.send;
+    XMLHttpRequest.prototype.send = function(data) {
+      if (this.isGARequest) {
+        console.log('Intercepted GA XHR data:', data);
+        sendToPixel({ url: this.responseURL, data });
+      }
+      originalXHRSend.apply(this, arguments);
+    };
+  </script>
