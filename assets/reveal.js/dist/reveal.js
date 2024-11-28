@@ -1527,10 +1527,10 @@
           autoAnimateElements: i.querySelectorAll(".scroll-auto-animate-page"),
           autoAnimatePages: [],
         });
-        // n.pageElement.style.setProperty(
-        //   "--slide-height",
-        //   !0 === e.center ? "auto" : t.height + "px"
-        // ),
+        n.pageElement.style.setProperty(
+          "--slide-height",
+          !0 === e.center ? "auto" : t.height + "px"
+        ),
           this.slideTriggers.push({
             page: n,
             activate: () => this.activatePage(n),
