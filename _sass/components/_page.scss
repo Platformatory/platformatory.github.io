@@ -581,6 +581,7 @@ p{
                   margin: 0.5rem 0;
                   width: 4em;
                 }
+                
                 div{
                   &:nth-last-child(1){
                     grid-column: span 3 / span 3;
@@ -588,8 +589,20 @@ p{
                     width: 100%;
                     img{
                       // width: 30%;
-                      width: 6em;
+                      width: 5em;
                       background-color: transparent;
+                    }
+                  }
+                }
+                @include media-breakpoint-down(md){
+                  img{
+                    width: 2.5em;
+                  }
+                  div{
+                    &:nth-last-child(1){
+                      img{
+                        width: 3.5em;
+                      }
                     }
                   }
                 }
