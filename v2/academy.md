@@ -14,7 +14,7 @@ sections:
           <div style="justify-content: space-evenly;" class="d-flex flex-column h-100 ">
             <div>
               <h1 class="text-capitalize mb-1">Platformatory Academy</h1>
-              <h3 class="text-capitalize mb-1"><span id="typewriter-title" >For anyone with keen interest to embrace the world of Data & AI.</span></h3>
+              <h3 class="text-capitalize mb-1"><span id="typewriter-title" >Embrace the world of Data & AI.</span></h3>
             </div>
             <div class="d-flex justify-content-center">
               <p class="quote-content"> <span class="quote">Develop a passion for learning. If you do, you will never cease to grow.</span>  – Anthony J. D'Angelo</p>
@@ -78,18 +78,16 @@ sections:
       class: "split-container"
       feature_type: "list"
     features:
-      - name: "GenAI and Data 101 (Weeks 1-2)"
+      - name: "GenAI and Platform 101 (Weeks 1-2):"
         class: "text-left"
-        description: "GenAI 101: Introduction to Generative AI and its applications
-                <br>GenAI 101: Building AI-powered application with OpenAI or Gemini APIs
-                <br>Data 101: Introduction to Data Engineering and Management
-                <br>Data 101: Getting started with Apache Kafka"
-      - name: "Data Infrastructure and Streaming (Weeks 3-6)"
+        description: "GenAI 101: Introduction to Generative AI and OpenAI APIs
+                <br>Platform 101: Introduction to Containers and Orchestrations"
+      - name: "Data Infrastructure and Streaming (Weeks 3-6):"
         class: "text-left"
         description: "Docker and Kubernetes: Containerization and orchestration for scalable applications.
                 <br>Apache Kafka: Event streaming, Kafka Connect, and Streams API.
                 <br>Apache Flink: Real-time data processing and analytics."
-      - name: "Capstone Project (Weeks 7-11)"
+      - name: "Capstone Project (Weeks 7-11):"
         class: "text-left"
         description: "Identify an application to build with the assigned mentor
                 <br>Gather requirements, design and build the application.
