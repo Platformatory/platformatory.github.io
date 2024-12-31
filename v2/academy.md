@@ -9,7 +9,7 @@ sections:
     featured: true
     summary: "TBD"
     raw_content: |
-      <section class="raw-section-container">
+      <section class="raw-section-container typewirter-and-quotes">
         <div id="trusted-advisory" class="container">
           <div style="justify-content: space-evenly;" class="d-flex flex-column h-100 ">
             <div>

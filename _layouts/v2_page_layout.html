@@ -32,7 +32,10 @@ bodyClass: v2-page-layout
       </div>
       <div style="background-image: url({{section.section.background-image}});" class="{{section.section.feature_type}}-items">
         {% if section.features %}
-        <ul  class="container-context">
+        <ul  class="container-context"> 
+          {% if section.section.header %}
+           <h3 class="feature-title">{{section.section.header}}</h3>
+          {% endif %}
           {% for feature in section.features %}
           <li  class="{{feature.class}}">
             
@@ -62,6 +65,9 @@ bodyClass: v2-page-layout
             {% endif %}
           </li>
           {% endfor %}
+          {% if section.cta_text%}
+          <a class="section-cta-btn" href="{{section.cta_link}}" >{{section.cta_text}}</a>
+          {% endif %}
         </ul>
         {% endif %}
         {%if section.section.image %}
