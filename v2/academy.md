@@ -29,8 +29,6 @@ sections:
     section:
       class: "split-container"
       feature_type: "list"
-      background-image: "/images/v2/banners/real-time_data.jpg"
-      # grid_order_class: "reverse"
     features:
       - name: "<i>Platformatory Academy</i> is committed to empower individuals to upskill on Data and AI."
         class: "text-center"
@@ -53,7 +51,6 @@ sections:
     section:
       class: "split-container"
       feature_type: "list"
-      # grid_order_class: "reverse"
     features:
       - name: "Comprehensive Curriculum"
         class: "text-left"
@@ -103,7 +100,6 @@ sections:
     section:
       class: "split-container"
       feature_type: "list"
-      # grid_order_class: "reverse"
     features:
       - name: ""
         class: "text-left"
@@ -121,7 +117,6 @@ sections:
     section:
       class: "split-container"
       feature_type: "list"
-      # grid_order_class: "reverse"
     features:
       - name: "Upcoming cohort"
         class: "text-left"

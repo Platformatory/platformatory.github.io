@@ -110,7 +110,6 @@ sections:
     section:
       class: "split-container"
       feature_type: "images"
-      # grid_order_class: "reverse"
     features: 
       - name: ""
         cta: false
@@ -128,14 +127,6 @@ sections:
             url: "../images/v2/customers/bosch.png"
           - name: "Jollibee"
             url: "../images/v2/customers/jollibee.png"
-          # - name: "clickhouse"
-          #   url: "../images/v2/partners/clickhouse.png"
-          # - name: "imply"
-          #   url: "../images/v2/partners/imply.png"
-          # - name: "startree"
-          #   url: "../images/v2/partners/startree.png"
-          # - name: "areospike"
-          #   url: "../images/v2/partners/areospike.png"
 
   - title: "A new category of solutions."
     featured: true
@@ -159,8 +150,6 @@ sections:
           - name: "RTDx"
             url: "../images/v2/products/rtdx.png"
             summary: "RTDx is a platform for exchanging operational and analytical data in real-time."
-          # - name: "kEDgy"
-          #   url: "../images/v2/products/kedgy.png"
   - title: "Open-source, community and thought leadership."
     featured: true
     weight: 1

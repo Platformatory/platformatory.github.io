@@ -54,7 +54,6 @@ sections:
     section:
       class: "split-container"
       feature_type: "list"
-      # grid_order_class: "reverse"
     features:
       - name: "Fix the bottom-line"
         class: "text-center"
