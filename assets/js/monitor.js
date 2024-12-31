@@ -218,51 +218,36 @@ async function loadmonitor() {
 
 loadmonitor();
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     const monitor = document.getElementById("monitor");
-//     monitor.classList.remove("off");
-//     monitor.classList.add("theme-green");
-//     const typewriterElement = document.getElementById("typewriter-content");
-//     // const terminal = document.getElementsById("crt");
-//     const lines = typewriterElement.innerHTML.split("\n");
-//     typewriterElement.innerHTML = "";
-//     let lineIndex = 0;
 
-//     function typeLine() {
-//         if (lineIndex < lines.length) {
-//             typewriterElement.innerHTML += lines[lineIndex] + "\n";
-//             lineIndex++;
-//             setTimeout(typeLine, 500); // Adjust typing speed here
-//         } else {
-//             // Move the cursor to the end of the prompt
-//             typewriterElement.innerHTML += " ";
-//         }
-//     }
-
-//     typeLine();
-// });
-// 
 let index=0;
 const typewriterElement = document.getElementById("typewriter-title");
-const text = String(typewriterElement.innerText)
+const text = typewriterElement.textContent;
 typewriterElement.innerHTML="";
-function titletypeWriter() {
+console.log(text)
+const typewriterText = new Typewriter(typewriterElement, {
+  loop: true,
+  delay: 75,
+});
+
+typewriterText.pauseFor(1500);
+typewriterText.typeString(text).pauseFor(2500).start()
+// function titletypeWriter() {
  
   
-  // typewriterElement.innerHTML="";
+//   // typewriterElement.innerHTML="";
   
-  if (index < text.length) {
-    // const typewriterElement = document.getElementById("typewriter-title");
-    typewriterElement.innerHTML += text[index];
-    index++;
-    setTimeout(titletypeWriter,300); // Adjust speed by changing the timeout value
-  } else{
-    setTimeout(()=>{
-      typewriterElement.innerHTML = "";
-      index = 0;
-      titletypeWriter();
-    },5000)
-  }
-}
+//   if (index < text.length) {
+//     // const typewriterElement = document.getElementById("typewriter-title");
+//     typewriterElement.innerHTML += text[index];
+//     index++;
+//     setTimeout(titletypeWriter,300); // Adjust speed by changing the timeout value
+//   } else{
+//     setTimeout(()=>{
+//       typewriterElement.innerHTML = "";
+//       index = 0;
+//       titletypeWriter();
+//     },5000)
+//   }
+// }
 
-  titletypeWriter(); 
+//   titletypeWriter(); 
