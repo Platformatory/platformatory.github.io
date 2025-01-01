@@ -311,11 +311,11 @@ p{
               margin-bottom: 1rem ;
             }
             li,li>p,h4{
-              font-size: 1.5rem;
+              font-size: 1.3rem;
               margin: 5px;
             }
             li>a{
-              font-size: 1.4rem;
+              font-size: 1.2rem;
             }
           }
         }
@@ -334,10 +334,10 @@ p{
         .list-items,.list-bulletpoint-items{
           ul{
               li,li>p{
-                font-size: 1.3rem;
+                font-size: 1.2rem;
               }
               li>a{
-                font-size: 1.2rem;
+                font-size: 1rem;
               }
           }
         }
@@ -501,7 +501,10 @@ p{
                 }
               }
             }
-
+            @media (max-width: 600px) {
+              padding: 1rem;
+              padding-top: 0;
+            }
         }
       }
 
@@ -520,8 +523,8 @@ p{
             margin-top: 2rem;
             .team-container{
               .team-image{
-                width: 10rem;
-                height: 10rem;
+                width: 9rem;
+                height: 9rem;
                 border-radius: 50%;
                 background-color: #ffffff;
                 object-fit: cover;
@@ -543,7 +546,7 @@ p{
                 a{
                   font-size: 0;
                   img{
-                    width: 2rem;
+                    width: 1.5rem;
                     margin: 0;
                     border-radius: 50%;
                     background-color: white;
@@ -558,6 +561,14 @@ p{
      @media (min-width:856px) and (max-width:992px) {
         ul{
           grid-template-columns: repeat(4, minmax(0, 1fr));
+          li{
+            .team-container{
+              .team-image{
+                width: 8rem;
+                height: 8rem;
+              }
+            }
+          }
         }
      }
      @media (max-width:856px) {
@@ -588,8 +599,9 @@ p{
       }
      }
      @media (max-width: 600px) {
+        min-height: 60%;
         ul{
-          grid-template-columns: repeat(2, minmax(0, 1fr));
+          grid-template-columns: repeat(3, minmax(0, 1fr));
         }
      }
      @media (max-width: 410px) {
@@ -657,7 +669,7 @@ p{
                 }
                 @include media-breakpoint-down(md){
                   img{
-                    width: 2.5em;
+                    width: 2.2em;
                   }
                   div{
                     &:nth-last-child(1){
@@ -668,7 +680,29 @@ p{
                   }
                 }
               }
-              
+              @media (min-width:600px) and (max-width:992px) {
+                  .images-container{
+                    grid-template-columns: repeat(4, minmax(0, 1fr));
+                    div{
+                      &:nth-last-child(1){
+                        grid-column: span 4 / span 4 !important;
+                      }
+                    }
+                  }
+                }
+                @media (max-width: 600px) {
+                  .images-container{
+                    grid-template-columns: repeat(3, minmax(0, 1fr));
+                    div{
+                      &:nth-last-child(1){
+                        grid-column: span 3 / span 3 !important;
+                      }
+                    }
+                    img{
+                      width: 2em !important;
+                    }
+                  }
+                }
             }
             li{
               min-height: 50%;
@@ -751,7 +785,7 @@ p{
                 .images-container{
                   grid-template-columns: repeat(2, minmax(0, 1fr));
                   img{
-                    width: 3em;
+                    width: 2.5em !important;
                   }
                 }
                 .solutions{
@@ -804,7 +838,15 @@ p{
                 }
               }
             }
+            @media (min-width:600px) and (max-width:992px) {
+              padding: 2rem;
+            }
+            @media (max-width:600px) {
+              padding: 1rem;
+              padding-top: 0  ;
+            }
           }
+        
           
         
       }
@@ -1503,21 +1545,32 @@ section{
   @media(max-width:600px) {
     .raw-section-container{
       h1{
-        font-size: 4rem !important;
+        font-size: 2.5rem !important;
+      }
+      p,blockquote{
+        font-size: 1.2rem !important;
       }
     }
     h1{
-      font-size: 3rem !important;
+      font-size: 2.5rem !important;
     }
     h2{
-      font-size: 2.6rem !important;
+      font-size: 2rem !important;
     }
     h3{
-      font-size: 1.6rem !important;
+      font-size: 1.5rem !important;
     }
   }
   
   @media (max-width: 410px) {
+    .raw-section-container{
+      h1{
+        font-size: 2rem !important;
+      }
+      p,blockquote{
+        font-size: 1rem;
+      }
+    }
     h1{
       font-size: 2rem !important;
     }

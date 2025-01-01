@@ -62,20 +62,26 @@ sections:
     hash: "strategic-program-delivery"
     section:
       class: "split-container"
-      feature_type: "list-bulletpoint"
-      header: "Strategic Program Delivery"
+      feature_type: "list"
     features:
       - name: "Detailed Planning & Execution"
         class: "text-left"
         description: "End-to-end management of complex projects, from detailed planning to flawless execution."
+        link:
+          name: "→ A leaderless future (of streaming)"
+          url: "/blog/a-leaderless-future-kafka-streaming/"
       - name: "Seamless Delivery"
         class: "text-left"
         description: "We ensure smooth transitions, maintaining minimal disruption while delivering results."
+        link:
+          name: "→ A leaderless future (of streaming)"
+          url: "/blog/a-leaderless-future-kafka-streaming/"
       - name: "Continuous Evaluation"
         class: "text-left"
         description: "Monitoring and refining processes to drive continuous improvement throughout the project lifecycle."
-    cta_text: "Learn More" 
-    cta_link: "#"
+        link:
+          name: "→ A leaderless future (of streaming)"
+          url: "/blog/a-leaderless-future-kafka-streaming/"
   - title: "Mission Critical Support"
     featured: true
     summary: "24/7 support for your most crucial tech infrastructure and applications, ensuring high availability and resilience."

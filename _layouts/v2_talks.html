@@ -68,9 +68,26 @@ bodyClass: page-events-list
             {% endfor %}
     </div>
     <div class="events-container">
+        {% assign upcoming_events_found = false %}
+            
+        <!-- Check for upcoming events before the title -->
+        {% for event in site.events %}
+            {% assign event_date_str = event.date | date: "%Y-%m-%d" %}
+            {% assign current_date_str = site.time | date: "%Y-%m-%d" %}
+            {% if event_date_str >= current_date_str %}
+                {% assign upcoming_events_found = true %}
+                {% break %}
+            {% endif %}
+        {% endfor %}
+        
+        <!-- Display the title if there are upcoming events -->
+        {% if upcoming_events_found %}
         <div class="upcoming-events-card mt-1">
             <h4 >Upcoming Events</h4>
         </div> 
+        {% endif %}
+           
+       
         {% for event in site.events %}
                 {% assign event_date_str = event.date | date: "%Y-%m-%d" %}
                 {% assign current_date_str = site.time | date: "%Y-%m-%d" %}

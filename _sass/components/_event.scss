@@ -178,6 +178,15 @@
             img{
                 width: 20px;
             }
+            @include media-breakpoint-down(md) {
+                .talk-card-title{
+                    font-size: 1.2rem !important;
+                    min-height: 6rem !important;
+                }
+                .talk-speaker{
+                    font-size: 1.2rem !important;
+                }
+            }
         }}
         &:hover {
             transform: scale(1.02); /* Zoom effect on hover */
@@ -489,7 +498,7 @@
     display: flex;
     margin: 0 15px 10px;
     h4{
-        background: var(--v2-text-secondary);
+        background:#efefef;
         border-radius: 8px;
         display: block;
         padding: 1rem 2rem;
@@ -501,6 +510,12 @@
         // &:hover {
         //     transform: scale(1.05); /* Zoom effect on hover */
         //   }
+    }
+ }
+ @include media-breakpoint-down(md) {
+    h4{
+        font-size: 2rem !important;
+        padding: 0.6 1rem !important;
     }
  }
  

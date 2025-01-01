@@ -69,25 +69,6 @@ sections:
       - name: "Strategic Program Advisory"
         class: "text-center"
         description: "For net new tech development and modernization efforts.</br> (by engineers, for engineers, to engineers)"
-  - title: "Sample Section with Header, Bullet Points, and CTA" 
-    featured: true 
-    summary: "An example section to showcase our expertise." 
-    hash: "sample-section" 
-    section: 
-      class: "split-container" 
-      feature_type: "list-bulletpoint" 
-      header: "Our Expertise"
-    features:
-      - name: "Comprehensive Curriculum"
-        class: "text-left"
-      - name: "Enhanced performance and security."
-        class: "text-left"
-      - name: "Seamless integration with existing systems."
-        class: "text-left"
-      - name: "High scalability and reliability."
-        class: "text-left"
-    cta_text: "Learn More" 
-    cta_link: "#"
 ---
 
 # Accelerate Your Data Evolution with Real-Time Modernization
