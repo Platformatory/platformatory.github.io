@@ -10,111 +10,70 @@ sections:
     summary: "Explore our range of services designed to meet your technology and engineering needs."
     raw_content: |
       <section class="raw-section-container typewriter-and-quotes">
-        <div id="what-we-do" class="container">
-          <div class="d-flex flex-column h-100 justify-content-center">
+        <div id="what-we-do" class="container d-flex justify-content-between">
+          <div style="gap: 1.5em;" class="d-flex flex-column h-100 justify-content-center">
             <div>
-              <h1 class="text-capitalize mb-1">What We Do</h1>
-              <h2 class="text-capitalize mb-1"><span id="typewriter-title">Our Expertise & Services</span></h2>
+              <h1 class="text-capitalize mb-1">Deliver mission critical.</h1>
             </div>
             <div class="d-flex justify-content-center">
-              <p class="quote-content"> <span class="quote">“Innovation distinguishes between a leader and a follower.”</span> – Steve Jobs</p>
+              <p class="quote-content"> <span class="quote">In theory, there is no difference between theory and practice. In practice, there is.</span> –  Yogi Berra</p>
             </div>
           </div>
         </div>
       </section>
-  - title: "Professional Services"
+  - title: "Partner Professional Services"
     featured: true
-    summary: "Expert consulting to elevate your technology operations and drive business success."
+    summary: ""
     hash: "professional-services"
     section:
       class: "split-container"
       feature_type: "list"
     features:
-      - name: "Consulting"
+      - name: "Platform Deployment"
         class: "text-left"
-        description: "Providing expert insights and strategic guidance to streamline and optimize your IT infrastructure."
-      - name: "Implementation"
+        description: "Design, size and deploy platforms for reliability and impact, starting day zero."
+      - name: "Platform Adoption & Maturity"
         class: "text-left"
-        description: "Seamless integration and deployment of enterprise-grade solutions, tailored to your unique needs."
-      - name: "Support"
+        description: "Self-service, tooling and governance, for day two and beyond."
+      - name: "Field Engineering"
         class: "text-left"
-        description: "Offering proactive, around-the-clock support for your critical systems to minimize downtime."
-  - title: "Field Engineering"
+        description: "Bespoke engineering: Plugins,  bolt-ons, connectors and stuff at large."
+      - name: "Managed Services & Support"
+        class: "text-left"
+        description: "Support mission critical systems. Engineer on call 24x7."
+  - title: "Platform Verticals"
     featured: true
-    summary: "On-site support to ensure optimal performance of your technology and prompt interventions when necessary."
-    hash: "field-engineering"
+    summary: ""
+    hash: "platform-verticals"
     section:
       class: "split-container"
       feature_type: "list"
     features:
-      - name: "On-Site Assistance"
+      - name: "Deep Personalization for retail"
         class: "text-left"
-        description: "Rapid response and troubleshooting for tech issues directly at your location."
-      - name: "Maintenance"
+        description: "Integrate and activate marketing data across omni-channel apps to drive high-touch customer experience and tangible GMV lift."
+      - name: "AI-enabled banking"
         class: "text-left"
-        description: "Regular on-site maintenance services to prevent potential disruptions and ensure system longevity."
-      - name: "Training"
+        description: "Specialized data products for new age banking, payments, risk and compliance."
+      - name: "Real-time retail"
         class: "text-left"
-        description: "Comprehensive, hands-on training for your team to effectively utilize and manage your tech solutions."
-  - title: "Strategic Program Delivery"
+        description: "Solving for inventory visibility, supply-chain and dynamic pricing."
+      - name: "Digital Twins"
+        class: "text-left"
+        description: "Solve for real-life simulation and operational insights of large scale IOT systems"
+  - title: "Co-creation & Incubation lab"
     featured: true
-    summary: "Expert management of large-scale technology projects to ensure timely, successful outcomes."
-    hash: "strategic-program-delivery"
+    summary: ""
+    hash: "co-creation-incubation-lab"
     section:
       class: "split-container"
       feature_type: "list"
     features:
-      - name: "Detailed Planning & Execution"
+      - name: "Product Engineering"
         class: "text-left"
-        description: "End-to-end management of complex projects, from detailed planning to flawless execution."
-        link:
-          name: "→ A leaderless future (of streaming)"
-          url: "/blog/a-leaderless-future-kafka-streaming/"
-      - name: "Seamless Delivery"
+        description: "Art of the possible, for new-age, multi-tenant SaaS and PaaS."
+      - name: "Data & Platform COE"
         class: "text-left"
-        description: "We ensure smooth transitions, maintaining minimal disruption while delivering results."
-        link:
-          name: "→ A leaderless future (of streaming)"
-          url: "/blog/a-leaderless-future-kafka-streaming/"
-      - name: "Continuous Evaluation"
-        class: "text-left"
-        description: "Monitoring and refining processes to drive continuous improvement throughout the project lifecycle."
-        link:
-          name: "→ A leaderless future (of streaming)"
-          url: "/blog/a-leaderless-future-kafka-streaming/"
-  - title: "Mission Critical Support"
-    featured: true
-    summary: "24/7 support for your most crucial tech infrastructure and applications, ensuring high availability and resilience."
-    hash: "mission-critical-support"
-    section:
-      class: "split-container"
-      feature_type: "list"
-    features:
-      - name: "24/7 Monitoring"
-        class: "text-left"
-        description: "Always-on monitoring of your systems, ensuring issues are identified and resolved proactively."
-      - name: "Issue Resolution"
-        class: "text-left"
-        description: "Rapid response to resolve critical incidents and minimize any potential system downtime."
-      - name: "Proactive Support"
-        class: "text-left"
-        description: "Preventative measures to address vulnerabilities and avoid system failures before they occur."
-  - title: "By Practice"
-    featured: true
-    summary: "Tailored solutions for your specific industry needs and challenges."
-    hash: "by-practice"
-    section:
-      class: "split-container"
-      feature_type: "list"
-    features:
-      - name: "Industry-Specific Solutions"
-        class: "text-left"
-        description: "Tailored solutions for various industries, ensuring that your technology aligns with business objectives."
-      - name: "Best Practices"
-        class: "text-left"
-        description: "Adopting industry-leading standards and practices to enhance efficiency, security, and scalability."
-      - name: "Continuous Improvement"
-        class: "text-left"
-        description: "Fostering an ongoing cycle of improvement to keep your systems optimized and ahead of technological trends."
+        description: "Specialized data & platform teams and operating model transition for GCCs."
    
 ---

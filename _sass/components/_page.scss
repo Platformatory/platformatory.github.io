@@ -238,7 +238,16 @@ p{
     p{
       color:  var(--v2-text-secondary);
     }
+    .company-intro{
+      li{
+        font-size: .9em;
+        h4{
+          font-size: .9em;
+        }
+      }
+    }
   }
+
   .intro-image-conatainer{
     background-color: var(--v2-background-secondary);
   }
@@ -246,7 +255,15 @@ p{
     h1{
       font-size: 3rem !important;
     }
+    h4,li{
+      font-size: .6em !important;
+    }
     
+  }
+  @media (max-width:600px) {
+    h4,li{
+      font-size: .5em !important;
+    }
   }
 }
 
@@ -343,7 +360,7 @@ p{
         }
       }
       .strip{
-        padding: 1em;
+        padding: 1.5em 1em   1em;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -465,10 +482,10 @@ p{
           display: flex;  
             height: 100%;
             flex-direction: column;
-            justify-content: space-evenly;
-            // gap: 1rem;
+            justify-content: center;
+            gap: 1em;
             margin: 0;
-            padding: 3rem;
+            padding: 6rem 3rem 3rem;
             li{
               list-style: none;
               h4{

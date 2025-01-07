@@ -11,7 +11,19 @@ bodyClass: v2-page-layout
         <div class="section-content col-lg-6 p-0 col-12">
           <div class="intro-content py-2">
             <h1>{{page.caption}}</h1>
-            <p>{{page.description}}</p> 
+            {% if page.features %}
+            <ul class="company-intro">
+            {% for feature in page.features %}
+            <li class="{{feature.class}}">
+            
+              <div class="team-container">
+                <h4 class="title">{{feature.name}}</h4>
+                <!-- <p class="job-description">{{feature.description}}</p> -->
+            
+            </li>
+            {% endfor %}
+          </ul>
+            {% endif %}
           </div>
         </div>
         <div

@@ -4,13 +4,22 @@ layout: v2_company
 intro_image: "images/v2/banners/people.jpg"
 intro_image_absolute: true
 intro_image_hide_on_mobile: false
-caption: "Meet the Innovators Driving Platformatory’s Success"
+caption: "Culture = Code."
 description: "Discover the passionate team committed to your success."
+features:
+  - name: "Our ethos: Old school craft,  Open-source software, to deliver on platform, data & AI challenges of today"
+    class: "text-start"
+  - name: "Our mission: Creative destruction in software engineering."
+    description: ""
+  - name: "Teaching & thought leadership"
+    description: ""
+  - name: "Seek simplicity"
+    description: ""
 sections:
-  - title: "Our Leadership"
+  - title: "Leadership team"
     featured: true
     weight: 1
-    summary: "Our experienced leadership team guides our vision and success."
+    summary: ""
     image: "../images/icons/leadership.png"
     caption: "Experienced leaders steering the company."
     hash: "teams"
