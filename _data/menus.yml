@@ -109,9 +109,9 @@ v2_main:
   - name: "Write Ahead Log"
     url: "/blog"
     weight: 6
-  - name: "Academy"
-    url: "/v2/academy/"
-    wight: 11
+  # - name: "Academy"
+  #   url: "/v2/academy/"
+  #   wight: 11
   - name: "Company"
     url: "/v2/company"
     weight: 7

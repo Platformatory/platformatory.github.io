@@ -83,21 +83,21 @@ sections:
     features:
       - name: "Building on great platform primitives"
         class: "text-left"
-        link:
-          name: "→ The most interesting infrastructure companies"
-          url: "/blog/platform-engineering-manifesto/"
+        # link:
+        #   name: "→ The most interesting infrastructure companies"
+        #   url: "/blog/platform-engineering-manifesto/"
         description: "Specialize deeply on ubiquitous distributed systems interfaces(such as Apache Kafka, Kubernetes, PostgreSQL, Temporal and more). These are the building blocks."
       - name: "Lean-operations"
         class: "text-left"
-        link:
-          name: "→ A leaderless future (of streaming)"
-          url: "/blog/a-leaderless-future-kafka-streaming/"
+        # link:
+        #   name: "→ A leaderless future (of streaming)"
+        #   url: "/blog/a-leaderless-future-kafka-streaming/"
         description: "Create highly skilled, “one-pizza” teams to build & operate platforms that extract common cross-cutting concerns."
       - name: "A minimum viable level of self-service."
         class: "text-left"
-        link:
-          name: "→ Real-time for prime-time"
-          url: "/blog/real-time-data-prime-time/"
+        # link:
+        #   name: "→ Real-time for prime-time"
+        #   url: "/blog/real-time-data-prime-time/"
         description: "First class DevX, Human augmented AI and well governed, secure foundational tooling (for just about everything)"
 
   - title: "Partnerships (without partisanship)"
@@ -152,7 +152,7 @@ sections:
             summary: "RTDx is a platform for exchanging operational and analytical data in real-time."
   - title: "Open-source, community and thought leadership."
     featured: true
-    weight: 1
+    weight: 1#3e4341
     summary: ""
     image: "../images/icons/security-engineering.png"
     caption: "Comprehensive security strategies."
