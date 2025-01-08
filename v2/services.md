@@ -28,6 +28,15 @@ sections:
     section:
       class: "split-container"
       feature_type: "list"
+      images: 
+        - name: "Confluent"
+          url: "../images/v2/partners/confluent.png"
+        - name: "Temporal"
+          url: "../images/v2/partners/temporal.png"
+        - name: "Clickhouse"
+          url: "./images/v2/partners/clickhouse.png"
+        - name: "Kong"
+          url: "../images/v2/partners/kong.png"
     features:
       - name: "Platform Deployment"
         class: "text-left"
@@ -41,6 +50,7 @@ sections:
       - name: "Managed Services & Support"
         class: "text-left"
         description: "Support mission critical systems. Engineer on call 24x7."
+      
   - title: "Platform Verticals"
     featured: true
     summary: ""

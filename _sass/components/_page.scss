@@ -523,6 +523,26 @@ p{
               padding-top: 0;
             }
         }
+        .feature-images{
+          display: flex;
+          gap: 0.7em;
+          img{
+            width: 4em;
+            margin: 0;
+          }
+          @media (min-width:600px ) and (max-width:992px) {
+            gap: 0.5em;
+            img{
+              width: 3em !important;
+            }
+          }
+          @media (max-width:600px) {
+            gap: 0.3em;
+            img{
+              width: 2em;
+            }
+          }
+        }
       }
 
      .teams-items{

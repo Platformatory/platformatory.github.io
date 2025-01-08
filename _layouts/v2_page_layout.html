@@ -68,12 +68,7 @@ bodyClass: v2-page-layout
           {% if section.cta_text%}
           <a class="section-cta-btn" href="{{section.cta_link}}" >{{section.cta_text}}</a>
           {% endif %}
-        </ul>
-        {% endif %}
-        {%if section.section.image %}
-        <img src="/{{section.section.image}}"/>
-        {%endif %}
-        {%if section.section.images %}
+          {%if section.section.images %}
         <div class="feature-images">
         {% for image in section.section.images%}
         <img src="/{{image.url}}" alt="{{image.name}}"/>
@@ -81,6 +76,12 @@ bodyClass: v2-page-layout
         
         </div>
         {% endif %}
+        </ul>
+        {% endif %}
+        {%if section.section.image %}
+        <img src="/{{section.section.image}}"/>
+        {%endif %}
+        
         
         
       </div>

@@ -50,23 +50,23 @@ var places= [
       }
     } } // Custom offset
 ];
-var map = new jsVectorMap({
-labels: {
-  markers: {
-    // Render the marker name or fallback to 'Not available'
-    render(marker, index) {
-      return marker.name || marker.labelName || 'Not available';
-    },
-    // Add label offset from the marker object
-    offsets: function(marker) {
-      return places[marker].offsets || [0,0] // Default offset [0, 0] if not provided
-    }
-  }
-},
-selector: "#contact-map",
-map: "world",
-markers: places
-});
+// var map = new jsVectorMap({
+// labels: {
+//   markers: {
+//     // Render the marker name or fallback to 'Not available'
+//     render(marker, index) {
+//       return marker.name || marker.labelName || 'Not available';
+//     },
+//     // Add label offset from the marker object
+//     offsets: function(marker) {
+//       return places[marker].offsets || [0,0] // Default offset [0, 0] if not provided
+//     }
+//   }
+// },
+// selector: "#contact-map",
+// map: "world",
+// markers: places
+// });
 
 
 

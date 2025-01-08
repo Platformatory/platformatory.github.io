@@ -1,30 +1,37 @@
 <script>
     Reveal.initialize({
+          plugins: [ RevealMenu ],
           hash: true,
           history: true,
           hashOneBasedIndex: true,
           view: "scroll",
           scrollProgress: true,
+          menu: {
+            number: false,
+            titleSelector: 'h1, h2, h3, h4, h5, h6',
+            keyboard: true,
+            autoOpen: true,
+          },
           jumpToSlide: true,
-          scrollActivationWidth: null,
+          // scrollActivationWidth: null,
       })
-  let hash = window.location.hash
-  Reveal.on("ready",(event)=>{
-    const artibutes = Reveal.getSlidesAttributes();
-    console.log(event, artibutes)
-    console.log(window.location.hash, "window.location.hash")
-    // console.log(hash, "outside")
-    console.log(Reveal.getQueryHash(),"getQueryHash");
-    // redirecting to matching hash path
-    let hashindex =[] 
-    artibutes.map((item)=>{if(item.id)hashindex[item.id] =[Number(item['data-index-h']),Number(item['data-index-v'])]});
-    window.hashindex = hashindex;
-    console.log(hashindex)
-    console.log(hashindex[hash.replace('#','')],"current hash")
-    let CurrentIndex = hashindex[hash.replace('#','')]
-    console.log(CurrentIndex, hash.replace('#',''));
-    Reveal.slide(CurrentIndex[0],CurrentIndex[1])
-  });
+  // let hash = window.location.hash
+  // Reveal.on("ready",(event)=>{
+  //   const artibutes = Reveal.getSlidesAttributes();
+  //   console.log(event, artibutes)
+  //   console.log(window.location.hash, "window.location.hash")
+  //   // console.log(hash, "outside")
+  //   console.log(Reveal.getQueryHash(),"getQueryHash");
+  //   // redirecting to matching hash path
+  //   let hashindex =[] 
+  //   artibutes.map((item)=>{if(item.id)hashindex[item.id] =[Number(item['data-index-h']),Number(item['data-index-v'])]});
+  //   window.hashindex = hashindex;
+  //   console.log(hashindex)
+  //   console.log(hashindex[hash.replace('#','')],"current hash")
+  //   let CurrentIndex = hashindex[hash.replace('#','')]
+  //   console.log(CurrentIndex, hash.replace('#',''));
+  //   Reveal.slide(CurrentIndex[0],CurrentIndex[1])
+  // });
 
   // Reveal.on('slidechanged', (event) => {
   //   // event.previousSlide, event.currentSlide, event.indexh, event.indexv
