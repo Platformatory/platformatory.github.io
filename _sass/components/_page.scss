@@ -210,6 +210,7 @@ p{
   .home-intro{
     text-align: center;
     @include media-breakpoint-down(lg) {
+      height: 80%;
       h5{
         margin-top: 1rem;
         font-size: 1.8rem !important ;
