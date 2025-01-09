@@ -62,6 +62,7 @@ sections:
     section:
       class: "split-container"
       feature_type: "list"
+      header: "What We Do?"
     features:
       - name: "Complex Migrations"
         class: "text-start"

@@ -16,7 +16,7 @@ sections:
               <h1 class="text-capitalize mb-1">Deliver mission critical.</h1>
             </div>
             <div class="d-flex justify-content-center">
-              <p class="quote-content"> <span class="quote">In theory, there is no difference between theory and practice. In practice, there is.</span> –  Yogi Berra</p>
+              <p class="quote-content"> <span class="quote">A product is useless without a platform, or more precisely and accurately, a platform-less product will always be replaced by an equivalent platform-ized product</span> –  Steve Yegge</p>
             </div>
           </div>
         </div>

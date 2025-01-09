@@ -160,6 +160,7 @@ p{
   background-color: #ffffff;
   // display: grid;
   // grid-template-columns: repeat(2, minmax(0, 1fr));
+  
   .intro-content{
     height: 100%;
     padding: 1rem;
@@ -171,11 +172,11 @@ p{
     }
     @include media-breakpoint-up(lg){
       padding: 1rem 1.5em;  
-      margin: 0 0 0 auto;
+      margin: 0 auto;
       width: 528px;
       h1{
         padding-bottom: 20px;
-        font-size: 5rem !important;
+        font-size: 1.6em !important;
       }
     }
    
@@ -185,11 +186,15 @@ p{
     flex-direction: column ;    
     justify-content: center;
     h1 {
-      font-size: 3rem ;
+      font-size: 4rem;
       margin: 0;
       color: #1d6427;
       font-weight: bold;
-    }   
+    }  
+    h5{
+      font-size: 2.5rem !important;
+      color: var(--v2-text-primary);
+    } 
     p{
       font-family: var(--r-main-font);
       font-size: 2rem;
@@ -200,6 +205,15 @@ p{
         font-size: 1.5rem;
       }
       
+    }
+  }
+  .home-intro{
+    text-align: center;
+    @include media-breakpoint-down(lg) {
+      h5{
+        margin-top: 1rem;
+        font-size: 1.8rem !important ;
+      }
     }
   }
   .ctas-list{
@@ -1414,8 +1428,14 @@ p{
       width: 70%;
     }
   }
+  .home-introduction{
+    gap: 1rem;
+  }
   .title{
     font-size: 8rem ;
+  }
+  h5{
+    font-size: 2.4rem;
   }
   h2{
     margin: 0 !important;
@@ -1443,12 +1463,29 @@ p{
         margin: 0 !important;
       }
     }
+    .home-introduction{
+      justify-content: space-evenly;
+    }
+    h4{
+      font-size: 3rem !important;
+    }
+    h5{
+      font-size: 1.8rem !important;
+    }
     p{
       margin: 0 !important;
     }
     p, blockquote{
       font-size: 1.5rem;
       
+    }
+  }
+  @include media-breakpoint-down(sm){
+    h4{
+      font-size: 2.5rem !important;
+    }
+    h5{
+      font-size: 1.5rem !important;
     }
   }
 }

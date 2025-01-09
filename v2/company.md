@@ -6,16 +6,28 @@ intro_image_absolute: true
 intro_image_hide_on_mobile: false
 caption: "Culture = Code."
 description: "Discover the passionate team committed to your success."
-features:
-  - name: "Our ethos: Old school craft,  Open-source software, to deliver on platform, data & AI challenges of today"
-    class: "text-start"
-  - name: "Our mission: Creative destruction in software engineering."
-    description: ""
-  - name: "Teaching & thought leadership"
-    description: ""
-  - name: "Seek simplicity"
-    description: ""
 sections:
+  - title: "Culture = Code."
+    featured: true
+    summary: ""
+    caption: "Discover the passionate team committed to your success."
+    hash: "culture"
+    section:
+      class: "split-container"
+      feature_type: "list"
+    features:
+      - name: ""
+        description: "Our ethos: Old school craft,  Open-source software, to deliver on platform, data & AI challenges of today"
+        class: "text-start"
+      - name: " "
+        class: "text-start"
+        description: "Our mission: Creative destruction in software engineering."
+      - name: ""
+        class: "text-start"
+        description: "Teaching & thought leadership"
+      - name: ""
+        class: "text-start" 
+        description: "Seek simplicity" 
   - title: "Leadership team"
     featured: true
     weight: 1
@@ -71,12 +83,12 @@ sections:
       feature_type: "contact"
 ---
 
-<!-- # Meet the Innovators Driving Platformatory’s Success
+# Meet the Innovators Driving Platformatory’s Success
 
-Discover the passionate team committed to your success. -->
+Discover the passionate team committed to your success.
 
 
-<div id="monitor" class="theme-green">
+<!-- <div id="monitor" class="theme-green">
     <div id="screen">
       <div id="crt">
         <div class="scanline"></div>
@@ -103,4 +115,4 @@ Discover the passionate team committed to your success. -->
         </div>
       </div>
     </div>
-  </div>
+  </div> -->

@@ -32,10 +32,10 @@
 }
 
 @include media-breakpoint-down(lg){
-    #monitor{
-        margin-top: 7rem !important;
+    // #monitor{
+    //     margin-top: 7rem !important;
 
-    }
+    // }
     #crt{
         min-width: 32ch !important;
     }
@@ -115,8 +115,8 @@
 }
 #crt {
     font-family: "VT323", monospace;
-    min-width: 42ch;
-    height: calc(34ch * 0.8);
+    min-width: 38ch;
+    height: calc(32ch * 0.8);
     font-size: max(1rem, 2.5rem);
     position: relative;
     background: var(--bg);
@@ -257,13 +257,13 @@ a {
 }
 
 #monitor {
-    margin: 2rem auto;
+    margin: 0 auto;
     padding: 4.5rem;
-    width: min-content;
+    width: min-content; 
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #3e4341;
+    background: #393030;
     border-radius: 0.5rem;
 
     &.off #crt {

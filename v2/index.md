@@ -7,25 +7,9 @@ intro_image_absolute: true
 intro_image_hide_on_mobile: true
 what_we_do_label: "Our superpowers in the cloud native landscape"
 what_we_do: "Boutique engineering expertise, breadth & depth across, <br><strong>Hyperscale Data, Event Streaming, Machine Learning and API-based connectivity</strong>."
+caption: "<span>We Engineer. <br/>Platforms & Products.</span>"
+sub_caption: "Powered by real-time data & AI."
 sections:
-  - title: Platform & Product Engineering, for the AI age.
-    featured: false
-    summary: "We transform our customers' tech estate and operating model with cloud-native infrastructure, real-time data and modern integration."
-    raw_content: |
-      <section class="raw-section-container typewirter-and-quotes">
-        <div id="platform-product-engineering" class="container">
-          <div style="justify-content: space-evenly;" class="d-flex flex-column h-100 ">
-            <div>
-              <h1 class="text-capitalize mb-1 title">We Engineer.</h1>
-              <h1 class="text-capitalize mb-1 title"><span id="typewriter-title">Platforms & Products.</span></h1>
-              <h3 class="sub-title">Powered by real-time data & AI.</h3>
-            </div>
-            <div class="d-flex justify-content-center">
-              <p class="quote-content"> <span class="quote">A product is useless without a platform, or more precisely and accurately, a platform-less product will always be replaced by an equivalent platform-ized product</span>  – Steve Yegge</p>
-           </div>
-          </div>  
-        </div>
-      </section>
   - title: Our field expertise here is unparalleled. 
     featured: false
     summary: ""
@@ -186,8 +170,32 @@ sections:
 
 --- 
 
-# Platform & Product Engineering, for the AI age.
 
-We transform our customers' tech estate and operating model with cloud-native infrastructure, real-time data and modern integration.
-
-> A product is useless without a platform, or more precisely and accurately, a platform-less product will always be replaced by an equivalent platform-ized product – Steve Yegge 
+<div id="monitor" class="theme-green">
+    <div id="screen">
+      <div id="crt">
+        <div class="scanline"></div>
+        <div class="terminal">
+          ### booting platformatory 
+  
+          [    0.000000] Platformatory kernel version 1.0.0 (gcc 10.3.0)
+  [    0.000001] Command line: BOOT_IMAGE=/boot/vmlinuz-1.0.0-generic root=UUID=platformatory ro quiet splash vt.handoff=7
+  [    0.000002] initializing subsys: culture, 10x engineering, and more
+  [    0.000003] initializing ordered polyglot stack: golang, rust, python, javascript, lua, c++, jvm (ugh)
+  [    0.000004] starting platform stack v 4.2.....
+  [    0.000005] initializing cloud-native and hybrid environments: metal, aws, gcp, azure, k8s
+  [    0.000006] initializing distributed streaming subsystems: kafka, redpanda, flink, kstreams 
+  [    0.000007] initializing data infra lite: duckdb, rocksdb, adf (and more)
+  [    0.000008] initializing data infra at large: hudi, delta lake, trino (and more)
+  [    0.000008] initializing networking & connectivity stack: envoy, kong (and more)
+  [    0.000009] initializing more MAD landscape: vector databases, RAG, real-time features, time series forecasting (not exhaustive)
+  [    0.000010] spawning our inner daemons: oss, community
+  [    1.234567] fast init done. do whatever to continue
+  
+  platformatory 20.24 LTS lifeuniverseandeverything tty1
+  
+  guest@platformatory:~$
+        </div>
+      </div>
+    </div>
+  </div>
