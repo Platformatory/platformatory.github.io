@@ -7,7 +7,7 @@ intro_image_hide_on_mobile: false
 caption: "Culture = Code."
 description: "Discover the passionate team committed to your success."
 sections:
-  - title: "Culture = Code."
+  - title: "Creative Destruction in Software Engineering"
     featured: true
     summary: ""
     caption: "Discover the passionate team committed to your success."
@@ -16,18 +16,18 @@ sections:
       class: "split-container"
       feature_type: "list"
     features:
-      - name: ""
-        description: "Our ethos: Old school craft,  Open-source software, to deliver on platform, data & AI challenges of today"
+      - name: "Intersectional expertise is a super power"
+        description: "Being T-shaped around the flux of evolving technologies is extremely rare and allows us to deliver orders of magnitude more value."
         class: "text-start"
-      - name: " "
+      - name: "Teaching, practicing, sharing"
         class: "text-start"
-        description: "Our mission: Creative destruction in software engineering."
-      - name: ""
+        description: "Being a 100% practitioner driven setup, allows us to build highly artisanal guilds with real mastery over craft. Teaching (the community) and sharing (OSS/libre) reinforces this culture."
+      - name: "Seek simplicty & elegance, relentlessly"
         class: "text-start"
-        description: "Teaching & thought leadership"
-      - name: ""
+        description: "Complexity is a disease. We (often) operate in a contrasting world of super-reductionist concretions and needless abstractions. Navigating this requires a principled approach, while understanding boundaries of the domain."
+      - name: "Keep it flat. Stay lean, stay young"
         class: "text-start" 
-        description: "Seek simplicity" 
+        description: "No delusions of building or scaling factories. No bulking & cutting cycles. A pursuit of achieving the highest level of skill attainable in a given context." 
   - title: "Leadership team"
     featured: true
     weight: 1

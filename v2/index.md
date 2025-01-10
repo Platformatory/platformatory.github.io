@@ -24,6 +24,35 @@ sections:
           </div>  
         </div>
       </section>
+  - title: "We have a unique thesis on what it takes to scale platform-led products."
+    featured: true
+    weight: 3
+    summary: ""
+    image: "../images/icons/automation.png"
+    caption: "Automated deployment and scaling."
+    hash: "scale-platform-led-products"
+    section:
+      class: "split-container"
+      feature_type: "list"
+    features:
+      - name: "Building on great platform primitives"
+        class: "text-left"
+        # link:
+        #   name: "→ The most interesting infrastructure companies"
+        #   url: "/blog/platform-engineering-manifesto/"
+        description: "Specialize deeply on ubiquitous distributed systems interfaces(such as Apache Kafka, Kubernetes, PostgreSQL, Temporal and more). These are the building blocks."
+      - name: "Lean-operations"
+        class: "text-left"
+        # link:
+        #   name: "→ A leaderless future (of streaming)"
+        #   url: "/blog/a-leaderless-future-kafka-streaming/"
+        description: "Create highly skilled, “one-pizza” teams to build & operate platforms that extract common cross-cutting concerns."
+      - name: "A minimum viable level of self-service."
+        class: "text-left"
+        # link:
+        #   name: "→ Real-time for prime-time"
+        #   url: "/blog/real-time-data-prime-time/"
+        description: "First class DevX, Human augmented AI and well governed, secure foundational tooling (for just about everything)"
   - title: Our field expertise here is unparalleled. 
     featured: false
     summary: ""
@@ -68,36 +97,6 @@ sections:
             url: "../images/v2/expertise/duckdb.png"
           - name: "Kubernetes"
             url: "../images/v2/expertise/kubernetes.png"
-  - title: "We have a unique thesis on what it takes to scale platform-led products."
-    featured: true
-    weight: 3
-    summary: ""
-    image: "../images/icons/automation.png"
-    caption: "Automated deployment and scaling."
-    hash: "scale-platform-led-products"
-    section:
-      class: "split-container"
-      feature_type: "list"
-    features:
-      - name: "Building on great platform primitives"
-        class: "text-left"
-        # link:
-        #   name: "→ The most interesting infrastructure companies"
-        #   url: "/blog/platform-engineering-manifesto/"
-        description: "Specialize deeply on ubiquitous distributed systems interfaces(such as Apache Kafka, Kubernetes, PostgreSQL, Temporal and more). These are the building blocks."
-      - name: "Lean-operations"
-        class: "text-left"
-        # link:
-        #   name: "→ A leaderless future (of streaming)"
-        #   url: "/blog/a-leaderless-future-kafka-streaming/"
-        description: "Create highly skilled, “one-pizza” teams to build & operate platforms that extract common cross-cutting concerns."
-      - name: "A minimum viable level of self-service."
-        class: "text-left"
-        # link:
-        #   name: "→ Real-time for prime-time"
-        #   url: "/blog/real-time-data-prime-time/"
-        description: "First class DevX, Human augmented AI and well governed, secure foundational tooling (for just about everything)"
-
   - title: "Partnerships (without partisanship)"
     featured: true
     weight: 2
@@ -185,7 +184,7 @@ sections:
 --- 
 
 
-  <div id="splash-screen" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #ffffff; z-index: 9999;">
+  <div id="splash-screen" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #0d1926; z-index: 9999;">
     <div class="home-banner-container">
     <div id="monitor" class="theme-green">
     <div id="screen">
@@ -194,27 +193,28 @@ sections:
         <div class="terminal">
           ### booting platformatory 
   
-          [    0.000000] Platformatory kernel version 1.0.0 (gcc 10.3.0)
-  [    0.000001] Command line: BOOT_IMAGE=/boot/vmlinuz-1.0.0-generic root=UUID=platformatory ro quiet splash vt.handoff=7
-  [    0.000002] initializing subsys: culture, 10x engineering, and more
-  [    0.000003] initializing ordered polyglot stack: golang, rust, python, javascript, lua, c++, jvm (ugh)
-  [    0.000004] starting platform stack v 4.2.....
-  [    0.000005] initializing cloud-native and hybrid environments: metal, aws, gcp, azure, k8s
-  [    0.000006] initializing distributed streaming subsystems: kafka, redpanda, flink, kstreams 
-  [    0.000007] initializing data infra lite: duckdb, rocksdb, adf (and more)
-  [    0.000008] initializing data infra at large: hudi, delta lake, trino (and more)
-  [    0.000008] initializing networking & connectivity stack: envoy, kong (and more)
-  [    0.000009] initializing more MAD landscape: vector databases, RAG, real-time features, time series forecasting (not exhaustive)
-  [    0.000010] spawning our inner daemons: oss, community
-  [    1.234567] fast init done. do whatever to continue
-  
-  platformatory 20.24 LTS lifeuniverseandeverything tty1
-  
-  guest@platformatory:~$
+        [    0.000000] Platformatory kernel version 1.0.0 (gcc 10.3.0)
+[    0.000001] Command line: BOOT_IMAGE=/boot/vmlinuz-1.0.0-generic root=UUID=platformatory ro quiet splash vt.handoff=7
+[    0.000002] initializing subsys: culture, 10x engineering, and more
+[    0.000003] initializing ordered polyglot stack: golang, rust, python, javascript, lua, c++, jvm (ugh)
+[    0.000004] starting platform stack v 4.2.....
+[    0.000005] initializing cloud-native and hybrid environments: metal, aws, gcp, azure, k8s
+[    0.000006] initializing distributed streaming subsystems: kafka, redpanda, flink, kstreams 
+[    0.000007] initializing data infra lite: duckdb, rocksdb, adf (and more)
+[    0.000008] initializing data infra at large: hudi, delta lake, trino (and more)
+[    0.000008] initializing networking & connectivity stack: envoy, kong (and more)
+[    0.000009] initializing more MAD landscape: vector databases, RAG, real-time features, time series forecasting (not exhaustive)
+[    0.000010] spawning our inner daemons: oss, community
+[    1.234567] fast init done. do whatever to continue
+
+platformatory 20.24 LTS lifeuniverseandeverything tty1
+
+guest@platformatory:~$
         </div>
       </div>
     </div>
+    <button class="enter-button" onclick="hideSplashScreen()"><svg height="4rem" width="4rem" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.143 30.143" xml:space="preserve" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path style="fill:#ffffff;" d="M20.034,2.357v3.824c3.482,1.798,5.869,5.427,5.869,9.619c0,5.98-4.848,10.83-10.828,10.83 c-5.982,0-10.832-4.85-10.832-10.83c0-3.844,2.012-7.215,5.029-9.136V2.689C4.245,4.918,0.731,9.945,0.731,15.801 c0,7.921,6.42,14.342,14.34,14.342c7.924,0,14.342-6.421,14.342-14.342C29.412,9.624,25.501,4.379,20.034,2.357z"></path> <path style="fill:#ffffff;" d="M14.795,17.652c1.576,0,1.736-0.931,1.736-2.076V2.08c0-1.148-0.16-2.08-1.736-2.08 c-1.57,0-1.732,0.932-1.732,2.08v13.496C13.062,16.722,13.225,17.652,14.795,17.652z"></path> </g> </g></svg></button>
   </div>
-  <button class="enter-button" onclick="hideSplashScreen()">Enter</button>
+  
   </div>
 </div>

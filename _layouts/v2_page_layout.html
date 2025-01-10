@@ -27,6 +27,14 @@ bodyClass: v2-page-layout
              {{ section.title }}
             </h2>
             <div class="mt-2"><p class="m-0 text-center">{{ section.summary  }}</p></div>
+            {%if section.section.images %}
+        <div class="feature-images">
+        {% for image in section.section.images%}
+        <img src="/{{image.url}}" alt="{{image.name}}"/>
+        {% endfor %}
+        
+        </div>
+        {% endif %}
           </div>
         </div>
       </div>
@@ -68,14 +76,7 @@ bodyClass: v2-page-layout
           {% if section.cta_text%}
           <a class="section-cta-btn" href="{{section.cta_link}}" >{{section.cta_text}}</a>
           {% endif %}
-          {%if section.section.images %}
-        <div class="feature-images">
-        {% for image in section.section.images%}
-        <img src="/{{image.url}}" alt="{{image.name}}"/>
-        {% endfor %}
-        
-        </div>
-        {% endif %}
+          
         </ul>
         {% endif %}
         {%if section.section.image %}

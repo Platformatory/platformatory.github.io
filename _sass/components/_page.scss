@@ -346,6 +346,9 @@ p{
               font-size: 1.3rem;
               margin: 5px;
             }
+            p{
+              padding-left: 0.5rem;
+            }
             li>a{
               font-size: 1.2rem;
             }
@@ -355,6 +358,7 @@ p{
       @media (max-width: 600px) {
         .strip,.content-list-item{
           height: 40%;
+          padding: 1.5em 0.2em 1em !important;
         }
         .images-items,.list-items,.image-items,.list-bulletpoint-items{
           min-height: 60%;
@@ -382,7 +386,9 @@ p{
         background-color: inherit;
         div{
           width: 100%;
-          
+          @include media-breakpoint-down(sm){
+            padding: 0 !important;
+          }
           }
           // div{
             // margin-left: auto !important;
@@ -474,6 +480,36 @@ p{
                 }
         }
       }
+      .feature-images{
+        margin-top: 3em;
+        display: flex;
+        gap: 0.7em;
+        img{
+          width: 4em;
+          margin: 0;
+          border-radius: 12px;
+        }
+        @media (min-width:992px) and (max-width:1612px) {
+          img{
+            width: 3.4em !important;
+          }
+        }
+
+        @media (min-width:600px ) and (max-width:992px) {
+          margin-top: 2em;
+          gap: 0.5em;
+          img{
+            width: 3em !important;
+          }
+        }
+        @media (max-width:600px) {
+          margin-top: 1em;
+          gap: 0.3em;
+          img{
+            width: 2em;
+          }
+        }
+      }
       .list-items{
         margin: 0;
         padding: 0;
@@ -512,6 +548,7 @@ p{
                 margin-top: 0.5rem;
                 margin-bottom: 0;
                 font-size: 2.2rem ;
+                padding-left: 1rem;
               }
               a{
                 font-size: 1.8rem;
@@ -538,26 +575,7 @@ p{
               padding-top: 0;
             }
         }
-        .feature-images{
-          display: flex;
-          gap: 0.7em;
-          img{
-            width: 4em;
-            margin: 0;
-          }
-          @media (min-width:600px ) and (max-width:992px) {
-            gap: 0.5em;
-            img{
-              width: 3em !important;
-            }
-          }
-          @media (max-width:600px) {
-            gap: 0.3em;
-            img{
-              width: 2em;
-            }
-          }
-        }
+        
       }
 
      .teams-items{
