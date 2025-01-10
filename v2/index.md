@@ -5,11 +5,25 @@ description: Platformatory home page.
 intro_image: "images/banners/pexels-maximilian-ruther-11589778.jpg"
 intro_image_absolute: true
 intro_image_hide_on_mobile: true
-what_we_do_label: "Our superpowers in the cloud native landscape"
-what_we_do: "Boutique engineering expertise, breadth & depth across, <br><strong>Hyperscale Data, Event Streaming, Machine Learning and API-based connectivity</strong>."
-caption: "<span>We Engineer. <br/>Platforms & Products.</span>"
-sub_caption: "Powered by real-time data & AI."
 sections:
+  - title: Platform & Product Engineering, for the AI age.
+    featured: false
+    summary: "We transform our customers' tech estate and operating model with cloud-native infrastructure, real-time data and modern integration."
+    raw_content: |
+      <section class="raw-section-container typewirter-and-quotes">
+        <div id="platform-product-engineering" class="container">
+          <div style="justify-content: space-evenly;" class="d-flex flex-column h-100 ">
+            <div>
+              <h1 class="text-capitalize mb-1 title">We Engineer.</h1>
+              <h1 class="text-capitalize mb-1 title"><span id="typewriter-title">Platforms & Products.</span></h1>
+              <h3 class="sub-title">Powered by real-time data & AI.</h3>
+            </div>
+            <div class="d-flex justify-content-center">
+              <p class="quote-content"> <span class="quote">A product is useless without a platform, or more precisely and accurately, a platform-less product will always be replaced by an equivalent platform-ized product</span>  – Steve Yegge</p>
+           </div>
+          </div>  
+        </div>
+      </section>
   - title: Our field expertise here is unparalleled. 
     featured: false
     summary: ""
@@ -171,7 +185,9 @@ sections:
 --- 
 
 
-<div id="monitor" class="theme-green">
+  <div id="splash-screen" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #ffffff; z-index: 9999;">
+    <div class="home-banner-container">
+    <div id="monitor" class="theme-green">
     <div id="screen">
       <div id="crt">
         <div class="scanline"></div>
@@ -199,3 +215,6 @@ sections:
       </div>
     </div>
   </div>
+  <button class="enter-button" onclick="hideSplashScreen()">Enter</button>
+  </div>
+</div>

@@ -30,6 +30,57 @@ document.addEventListener("DOMContentLoaded", function () {
       link.classList.add("down-nav-active");
     });
   });
+
+  const splashScreenId = "splash-screen";
+  const splashCookieName = "splash_shown";
+  const splashTimeout = 10000; // 10 seconds
+
+  function hasSeenSplashScreen() {
+      return document.cookie.split("; ").some(row => row.startsWith(`${splashCookieName}=true`));
+  }
+
+  function setSplashScreenCookie() {
+      const expires = new Date();
+      expires.setTime(expires.getTime() + 30 * 60 * 1000); // Cookie expires in 30 minutes
+      document.cookie = `${splashCookieName}=true; expires=${expires.toUTCString()}; path=/`;
+  }
+
+  function hideSplashScreen() {
+      const splashScreen = document.getElementById(splashScreenId);
+      if (splashScreen) {
+          splashScreen.style.display = "none";
+      }
+  }
+
+  function showSplashScreen() {
+      const splashScreen = document.getElementById(splashScreenId);
+      if (splashScreen) {
+          splashScreen.style.display = "block";
+
+          // Set timeout to hide splash screen automatically
+          const timeoutId = setTimeout(() => {
+              hideSplashScreen();
+              setSplashScreenCookie();
+          }, splashTimeout);
+
+          // Add event listener for "Enter" or "Escape" keys
+          const handleKeyPress = (event) => {
+              if (event.key === "Enter" || event.key === "Escape") {
+                  hideSplashScreen();
+                  setSplashScreenCookie();
+                  clearTimeout(timeoutId); // Clear the timeout to prevent double execution
+                  document.removeEventListener("keydown", handleKeyPress); // Remove listener after key press
+              }
+          };
+
+          document.addEventListener("keydown", handleKeyPress);
+      }
+  }
+
+  // Show splash screen if it hasn't been seen yet
+  if (!hasSeenSplashScreen()) {
+      showSplashScreen();
+  }
 });
 
 var places= [
@@ -68,5 +119,13 @@ var places= [
 // markers: places
 // });
 
+const splashScreenId = "splash-screen";
+
+function hideSplashScreen() {
+  const splashScreen = document.getElementById(splashScreenId);
+  if (splashScreen) {
+      splashScreen.style.display = "none";
+  }
+}
 
 

@@ -83,9 +83,9 @@ sections:
       feature_type: "contact"
 ---
 
-# Meet the Innovators Driving Platformatory’s Success
+<!-- # Meet the Innovators Driving Platformatory’s Success
 
-Discover the passionate team committed to your success.
+Discover the passionate team committed to your success. -->
 
 
 <!-- <div id="monitor" class="theme-green">
