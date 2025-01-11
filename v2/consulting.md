@@ -28,6 +28,7 @@ sections:
     section:
       class: "split-container"
       feature_type: "list"
+      header: "Our Expertise"
     features:
       - name: "Reactive Systems"
         class: "text-start"
@@ -45,6 +46,7 @@ sections:
     section:
       class: "split-container"
       feature_type: "list"
+      header: "Our Expertise"
     features:
       - name: "API Management"
         class: "text-start"
@@ -62,7 +64,7 @@ sections:
     section:
       class: "split-container"
       feature_type: "list"
-      header: "What We Do?"
+      header: "Our Expertise"
     features:
       - name: "Complex Migrations"
         class: "text-start"

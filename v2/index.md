@@ -24,7 +24,7 @@ sections:
           </div>  
         </div>
       </section>
-  - title: "We have a unique thesis on what it takes to scale platform-led products."
+  - title: "We have a unique thesis on what it takes to build and scale platform-led products."
     featured: true
     weight: 3
     summary: ""
@@ -40,13 +40,13 @@ sections:
         # link:
         #   name: "→ The most interesting infrastructure companies"
         #   url: "/blog/platform-engineering-manifesto/"
-        description: "Specialize deeply on ubiquitous distributed systems interfaces(such as Apache Kafka, Kubernetes, PostgreSQL, Temporal and more). These are the building blocks."
+        description: "Ubiquitous distributed systems interfaces (such as Apache Kafka, Kubernetes, PostgreSQL, Temporal and more)."
       - name: "Lean-operations"
         class: "text-left"
         # link:
         #   name: "→ A leaderless future (of streaming)"
         #   url: "/blog/a-leaderless-future-kafka-streaming/"
-        description: "Create highly skilled, “one-pizza” teams to build & operate platforms that extract common cross-cutting concerns."
+        description: <em>One-pizza</em> teams to build & operate platforms that extract common cross-cutting concerns.
       - name: "A minimum viable level of self-service."
         class: "text-left"
         # link:
@@ -193,23 +193,24 @@ sections:
         <div class="terminal">
           ### booting platformatory 
   
-        [    0.000000] Platformatory kernel version 1.0.0 (gcc 10.3.0)
+[    0.000000] Platformatory kernel version 1.0.0 (gcc 10.3.0)
 [    0.000001] Command line: BOOT_IMAGE=/boot/vmlinuz-1.0.0-generic root=UUID=platformatory ro quiet splash vt.handoff=7
-[    0.000002] initializing subsys: culture, 10x engineering, and more
+[    0.000002] initializing subsys: culture, 10x engineering
 [    0.000003] initializing ordered polyglot stack: golang, rust, python, javascript, lua, c++, jvm (ugh)
 [    0.000004] starting platform stack v 4.2.....
 [    0.000005] initializing cloud-native and hybrid environments: metal, aws, gcp, azure, k8s
-[    0.000006] initializing distributed streaming subsystems: kafka, redpanda, flink, kstreams 
+[    0.000006] initializing distributed streaming and real-time stack: apache kafka, flink, spark, clickhouse, pinot
 [    0.000007] initializing data infra lite: duckdb, rocksdb, adf (and more)
 [    0.000008] initializing data infra at large: hudi, delta lake, trino (and more)
 [    0.000008] initializing networking & connectivity stack: envoy, kong (and more)
-[    0.000009] initializing more MAD landscape: vector databases, RAG, real-time features, time series forecasting (not exhaustive)
+[    0.000009] initializing durable execution stack: cadence, temporal (annd more)
 [    0.000010] spawning our inner daemons: oss, community
 [    1.234567] fast init done. do whatever to continue
 
 platformatory 20.24 LTS lifeuniverseandeverything tty1
 
-guest@platformatory:~$
+guest@platformatory:~$ /etc/init.d/platformatorywebdm start
+Starting platformatorydm (via systemctl): platformatorywebdm.service.
         </div>
       </div>
     </div>
