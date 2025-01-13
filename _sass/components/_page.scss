@@ -337,18 +337,22 @@ p{
         
         .list-items,.list-bulletpoint-items{
           ul{
-            display: block;
+            gap: 0.1em;
             h3{
               font-size: 2.5rem !important;
               margin-bottom: 1rem ;
+            }
+            h4::before{
+              font-size: 15px;
+              margin-right: 0.5rem;
             }
             li,li>p,h4{
               font-size: 1.3rem;
               margin: 5px;
             }
-            p{
-              padding-left: 0.5rem;
-            }
+            // p{
+            //   padding-left: 1rem;
+            // }
             li>a{
               font-size: 1.2rem;
             }
@@ -442,7 +446,7 @@ p{
         }
       }
       .feature-title{
-        color: inherit;
+        color: var(--v2-background-primary);
         text-align: center;
         margin: 0;
       }
@@ -496,6 +500,7 @@ p{
         }
 
         @media (min-width:600px ) and (max-width:992px) {
+          justify-content: center;
           margin-top: 2em;
           gap: 0.5em;
           img{
@@ -503,10 +508,11 @@ p{
           }
         }
         @media (max-width:600px) {
+          justify-content: center;
           margin-top: 1em;
           gap: 0.3em;
           img{
-            width: 2em;
+            width: 1.99em;
           }
         }
       }
@@ -540,15 +546,21 @@ p{
             li{
               list-style: none;
               h4{
+                display: flex;
                 font-size: 2.2rem ;
                 margin-bottom:.5rem ;
                 color: var(--v2-background-primary);
               }
+              h4::before {
+                content: "→ "; 
+                font-size: 20px; 
+                margin-right: 0.5rem;
+            }
               p{
                 margin-top: 0.5rem;
                 margin-bottom: 0;
                 font-size: 2.2rem ;
-                padding-left: 1rem;
+                padding-left: 2rem;
               }
               a{
                 font-size: 1.8rem;
@@ -570,6 +582,7 @@ p{
                 }
               }
             }
+            
             @media (max-width: 600px) {
               padding: 1rem;
               padding-top: 0;
