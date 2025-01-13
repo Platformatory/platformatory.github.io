@@ -40,7 +40,7 @@ collections:
     output: true
   events:
     output: true
-    permalink: /v2/events/:path
+    permalink: /events/:path
   education:
     output: true
 

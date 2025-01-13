@@ -1,5 +1,5 @@
 ---
-layout: v2_event
+layout: event
 title: "Bangalore Streams meetup - August 2024"
 date: 2024-08-31
 time: 4:00pm - 7:30pm

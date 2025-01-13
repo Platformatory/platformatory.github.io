@@ -1,5 +1,5 @@
 ---
-layout: v2_event
+layout: event
 title: "Bangalore Streams meetup - December 2023"
 date: 2023-12-23
 time: 9:30am - 2:30pm

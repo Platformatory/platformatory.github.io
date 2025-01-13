@@ -1,5 +1,5 @@
 ---
-layout: v2_event
+layout: event
 title: "Apache Druid Meetup Bengaluru- November 2024"
 date: 2024-11-22
 time: 4:30pm - 8:30pm

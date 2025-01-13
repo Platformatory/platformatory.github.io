@@ -1,5 +1,5 @@
 ---
-layout: v2_event
+layout: event
 title: "Real time in Data Science"
 date: 2024-09-14
 time: 02:00pm - 05:30pm

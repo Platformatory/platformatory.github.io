@@ -1,12 +1,20 @@
-<div class='header'>
+<div class="main-header">
   <div class="container">
     <div class="logo">
-      <a href="{{site.baseurl}}/"><img height="{{ site.logo.desktop_height }}" alt="{{ site.title }}" src="{{ site.logo.desktop | relative_url }}" /></a>
+      <a href="{{site.baseurl}}/v2"
+        ><img
+          height="{{ site.logo.desktop_height }}"
+          alt="{{ site.title }}"
+          src="/images/v2/logo/plf-log.svg"
+      /></a>
     </div>
     <div class="logo-mobile">
-      <a href="{{site.baseurl}}/"><img alt="{{ site.title }}" src="{{ site.logo.mobile | relative_url }}" /></a>
+      <a href="{{site.baseurl}}/v2"
+        ><img
+          alt="{{ site.title }}"
+          src="/images/v2/logo/plf-log.svg"
+      /></a>
     </div>
-    {% include main-menu.html %}
-    {% include hamburger.html %}
+    {% include main-menu.html %} {% include hamburger.html %}
   </div>
 </div>

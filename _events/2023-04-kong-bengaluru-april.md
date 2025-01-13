@@ -1,5 +1,5 @@
 ---
-layout: v2_event
+layout: event
 title: "April Kong Bengaluru Meetup"
 date: 2023-04-29
 time: 10:00am - 2:00pm

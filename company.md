@@ -1,22 +1,118 @@
 ---
-title: "About Us"
-date: 2018-02-22T17:01:34+07:00
-layout: about
-bodyClass: page-about
-intro_image: "images/banners/platform.jpg"
+title: Company
+layout: company
+intro_image: "images/v2/banners/people.jpg"
 intro_image_absolute: true
-section:
-  background: "#0b1e4a"
-  color: "#ffffff"
+intro_image_hide_on_mobile: false
+caption: "Culture = Code."
+description: "Discover the passionate team committed to your success."
+sections:
+  - title: "Creative Destruction in Software Engineering"
+    featured: true
+    summary: ""
+    caption: "Discover the passionate team committed to your success."
+    hash: "culture"
+    section:
+      class: "split-container"
+      feature_type: "list"
+    features:
+      - name: "Intersectional expertise is a super power"
+        description: "Being T-shaped around the flux of evolving technologies is extremely rare and allows us to deliver orders of magnitude more value."
+        class: "text-start"
+      - name: "Teaching, practicing, sharing"
+        class: "text-start"
+        description: "Being a 100% practitioner driven setup, allows us to build highly artisanal guilds with real mastery over craft. Teaching (the community) and sharing (OSS/libre) reinforces this culture."
+      - name: "Seek simplicty & elegance, relentlessly"
+        class: "text-start"
+        description: "Complexity is a disease. We (often) operate in a contrasting world of super-reductionist concretions and needless abstractions. Navigating this requires a principled approach, while understanding boundaries of the domain."
+      - name: "Keep it flat. Stay lean, stay young"
+        class: "text-start" 
+        description: "No delusions of building or scaling factories. No bulking & cutting cycles. A pursuit of achieving the highest level of skill attainable in a given context." 
+  - title: "Leadership team"
+    featured: true
+    weight: 1
+    summary: ""
+    image: "../images/icons/leadership.png"
+    caption: "Experienced leaders steering the company."
+    hash: "teams"
+    section:
+        class: "split-container"
+        feature_type: "teams"
+    features:
+      - name:  "Pavan Keshavamurthy"
+        image: "images/team/pk.jpeg"
+        description: "Cofounder & CTO"
+        linkedinurl: "https://in.linkedin.com/in/pavankmurthy"
+      - name: "Venkatesh Keshavamurthy"
+        image: "images/team/vk.jpeg"
+        description: "Cofounder, Operations & PMO"
+        linkedinurl: "https://www.linkedin.com/in/venkateshkmurthy/"
+      - name: "Lakshmi Narasimhan Parthasarathy"
+        image: "images/team/ln.jpeg"
+        description: "Site Reliability Engineering & Platform Operations"
+        linkedinurl: "https://in.linkedin.com/in/lakshminp"
+      - name: "Ashwin Venkatesan"
+        image: "images/team/av.jpeg"
+        description: "Data Engineering & Machine Learning"
+        linkedinurl: "https://www.linkedin.com/in/ashwin-v-452363167/"
+      - name: "Avinash Upadhyaya K R"
+        image: "images/team/au.png"
+        description: "Data, Observability & API Infrastructure"
+        linkedinurl: "https://in.linkedin.com/in/avinash-upadhyaya"
+      - name: "Raghavendran Nehru"
+        image: "images/team/nr.png"
+        description: "Director, North America"
+        linkedinurl: "https://www.linkedin.com/in/raghavendran-nehru-44b761/"
+      - name: "Sunil Vijendra"
+        image: "images/team/sv.jpeg"
+        description: "Leader - Education"
+        linkedinurl: "https://www.linkedin.com/in/sunilvijendra"
+      - name: "Ajith R"
+        image: "images/team/ar.jpeg"  
+        description: "Leader - UK & EMEA"
+        linkedinurl: "https://www.linkedin.com/in/ajith-ramanath"
+      - name: "Deepak Mallya"
+        image: "images/team/dp.jpg"
+        description: "Leader - ANZ"
+        linkedinurl: "https://www.linkedin.com/in/deepakmk"
+  - title: "Contact Us"
+    featured: false
+    hash: "contact"
+    section:
+      class: "contact-container"
+      feature_type: "contact"
 ---
 
-# Culture = Code.
+<!-- # Meet the Innovators Driving Platformatory’s Success
 
-```common-lisp
-(loop
-   (progn
-     (get-things-done)
-     (learn)
-     (play)
-     (have-fun)))
-```
+Discover the passionate team committed to your success. -->
+
+
+<!-- <div id="monitor" class="theme-green">
+    <div id="screen">
+      <div id="crt">
+        <div class="scanline"></div>
+        <div class="terminal">
+          ### booting platformatory 
+  
+          [    0.000000] Platformatory kernel version 1.0.0 (gcc 10.3.0)
+  [    0.000001] Command line: BOOT_IMAGE=/boot/vmlinuz-1.0.0-generic root=UUID=platformatory ro quiet splash vt.handoff=7
+  [    0.000002] initializing subsys: culture, 10x engineering, and more
+  [    0.000003] initializing ordered polyglot stack: golang, rust, python, javascript, lua, c++, jvm (ugh)
+  [    0.000004] starting platform stack v 4.2.....
+  [    0.000005] initializing cloud-native and hybrid environments: metal, aws, gcp, azure, k8s
+  [    0.000006] initializing distributed streaming subsystems: kafka, redpanda, flink, kstreams 
+  [    0.000007] initializing data infra lite: duckdb, rocksdb, adf (and more)
+  [    0.000008] initializing data infra at large: hudi, delta lake, trino (and more)
+  [    0.000008] initializing networking & connectivity stack: envoy, kong (and more)
+  [    0.000009] initializing more MAD landscape: vector databases, RAG, real-time features, time series forecasting (not exhaustive)
+  [    0.000010] spawning our inner daemons: oss, community
+  [    1.234567] fast init done. do whatever to continue
+  
+  platformatory 20.24 LTS lifeuniverseandeverything tty1
+  
+  guest@platformatory:~$
+        </div>
+      </div>
+    </div>
+  </div> -->

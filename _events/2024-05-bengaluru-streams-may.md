@@ -1,5 +1,5 @@
 ---
-layout: v2_event
+layout: event
 title: "Bangalore Streams meetup - May 2024 [Kafka Summit Special]"
 date: 2024-05-04
 time: 4:00pm - 8:00pm

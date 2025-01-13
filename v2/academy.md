@@ -1,5 +1,5 @@
 ---
-layout: v2_page_layout
+layout: page_layout
 title: Platformatory Academy
 intro_image: "images/v2/banners/real-time_data.jpg"
 intro_image_absolute: true

@@ -1,41 +1,12 @@
 ---
-layout: v2_default
+layout: default
 bodyClass: v2-page-layout
 ---
 
 <div class="slides">
-<!-- <div class="reveal">
-  <div class="slides"> -->
-    <!-- <section class="company-section-top section-top">
-      <div class="section-intro-container row mx-0">
-        <div class="section-content col-lg-6 p-0 col-12">
-          <div class="intro-content py-2">
-            <h1>{{page.caption}}</h1>
-            {% if page.features %}  
-            <ul class="company-intro">
-            {% for feature in page.features %}
-            <li class="{{feature.class}}">
-            
-              <div class="team-container">
-                <h4 class="title">{{feature.name}}</h4>
-                <p class="job-description">{{feature.description}}</p>
-            
-            </li>
-            {% endfor %}
-          </ul>
-            {% endif %}
-          </div>
-        </div>
-        <div
-          class="intro-image-conatainer d-flex align-items-center col-lg-6 p-0 col-12 order-lg-1 order-first flex-xl-row-reverse"
-        > -->
+
         {{content}}
-          <!-- <img src="/{{page.intro_image}}" alt="{{page.title}}" /> -->
-        <!-- </div>
-      </div>
-    </section> -->
-  <!-- </div>
-</div> -->
+          
 <!-- | sort: 'weight' | reverse -->
 {%if page.sections%}
 {% assign sorted_section = page.sections  %}

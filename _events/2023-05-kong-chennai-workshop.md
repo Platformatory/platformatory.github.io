@@ -1,5 +1,5 @@
 ---
-layout: v2_event
+layout: event
 title: "Kong Chennai Hands-On Workshop"
 date: 2023-05-06
 time: 9:30am - 12:30pm

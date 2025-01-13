@@ -1,10 +1,40 @@
 <div id="main-menu" class="main-menu">
-  {% assign mainmenu = site.data.menus.main | sort: 'weight'  %}
-  <ul>
-    {% for item in mainmenu %}
-    <li class="{% if item.url == page.url %}active{% endif %}">
-      <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
-    </li>
-    {% endfor %}
-  </ul>
-</div>
+    {% assign mainmenu = site.data.menus.main  %}
+    <ul>
+      {% for item in mainmenu %}
+      <li class="{% if item.url == page.url %}active{% endif %}{% if item.children %} custom-dropdown{% endif %}">
+        <a class="{% if item.children %}custom-dropdown{% endif %}" {% if item.children %} data-toggle="dropdown" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false"  {% else %} href="{{ item.url | relative_url }}"{% endif %}  >{{ item.name }}</a>
+
+        {% if item.children %}
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <div class="">
+        <div class="sub-menu">
+          {% if item.children.name%}
+          <p class="sub-menu-title">{{ item.children.name }}</p>
+          {% endif %}
+          {% for sub_item in item.children.items %}
+            {% if sub_item.children %}
+            <div class="child-menu-section">
+                <p class="sub-menu-item child-dropdown ">{{ sub_item.name }}</p>
+                <div class="child-menu">
+                  {% for child_item in sub_item.children.items %}
+                  <a class="child-menu-item" href="{{ child_item.url || relative_url }}">{{ child_item.name }}</a>
+                  {% endfor %}
+                </div>
+             </div>
+            {% else %}
+            <a class="sub-menu-item"  href="{{ sub_item.url | relative_url }}">{{ sub_item.name }}</a>
+            {% endif %}
+            {% endfor %}
+        </div>
+        </div>
+    </div>
+    {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+
+  
+  

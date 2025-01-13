@@ -71,15 +71,13 @@
   </head>
 
   <body>
-    {% include v2-main-menu-mobile.html %}
-        {% include v2_header.html headerClass='header-extra' %}
+    {% include main-menu-mobile.html %}
+        {% include header.html headerClass='header-extra' %}
         <div class="reveal home-page">
-            <!-- <div class="slides"> -->
                 {{ content }}
-            <!-- </div> -->
         </div>
         <div class="home-footer">
-            {% include v2_footer.html %} 
+            {% include footer.html %} 
           </div>       
     
     <script src="{{ '/assets/reveal.js/dist/reveal.js' | relative_url }}"></script>

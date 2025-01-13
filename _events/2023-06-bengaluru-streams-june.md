@@ -1,5 +1,5 @@
 ---
-layout: v2_event
+layout: event
 title: "Bangalore Streams meetup - June 2023"
 date: 2023-06-17
 time: 9:30am - 2:30pm

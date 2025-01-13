@@ -1,5 +1,5 @@
 ---
-layout: v2_event
+layout: event
 title: "ClickHouse + PeerDB Bangalore Meetup"
 date: 2024-09-18
 time: 5:00pm - 9:00pm

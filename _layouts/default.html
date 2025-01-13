@@ -1,47 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-5CR3MF9');</script>
-  <!-- End Google Tag Manager -->
-  <meta charset="utf-8">
-  <title>{% if page.title %}{{page.title}} {% endif %} | {{ site.title | escape }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" type="image/png" href="{{ '/images/32s32favicon.svg' | relative_url }}">
-  <!--link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"-->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet">
-  {% if page.description %}
-  <meta name="description" content="{{ page.description }}" />
-  {% endif %}
-  <meta property="og:title" content="{{ page.title }} | {{site.title}}" />
-  <meta property="og:type" content="{{ site.seo.meta_og_type }}" />
-  <meta property="og:url" content="{{site.url}}{{ page.url | split: '/' | join: '/' }}" />
-  <meta property="og:image" content="{{site.url}}/{{ page.intro_image }}" />
-  <meta property="og:description" content="{% if page.layout != 'event' %}{{ page.content | remove: '# ' }}{% else %}{{page.description}}{% endif %}" />
-  <meta name="twitter:card" content="{{ site.seo.meta_twitter_card  }}" />
-  <meta name="twitter:site" content="{{ site.seo.meta_twitter_site }}" />
-  <meta name="twitter:creator" content="{{ site.seo.meta_twitter_creator }}" /> 
-</head>
-<body class='page {{page.bodyClass}}'>
-  {% include main-menu-mobile.html %}
-  <div id="wrapper" class="wrapper">
-    {% include header.html headerClass='header-extra' %}
-    {{content}}
-  </div>
-  {% include footer.html %}
-  {% include sub-footer.html %}
-  <script type="text/javascript" src="{{ "/assets/js/scripts.js" | relative_url }}""></script>
-  {% include google-analytics.html %}
-</body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5CR3MF9"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-5CR3MF9");
+    </script>
+    <!-- End Google Tag Manager -->
+    <title>
+      {% if page.title %}{{page.title}} {% endif %} | {{ site.title | escape }}
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ '/images/logo/plf-logo.svg' | relative_url }}"
+    />
+    <!--link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap"
+      rel="stylesheet"
+    />
+     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- map -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap/dist/css/jsvectormap.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jsvectormap"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsvectormap/dist/maps/world.js"></script>
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}" />
+    {% endif %}
+    <meta property="og:title" content="{{ page.title }} | {{site.title}}" />
+    <meta property="og:type" content="{{ site.seo.meta_og_type }}" />
+    <meta
+      property="og:url"
+      content="{{site.url}}{{ page.url | split: '/' | join: '/' }}"
+    />
+    <meta property="og:image" content="{{site.url}}/{{ page.intro_image }}" />
+    <meta
+      property="og:description"
+      content="{{ page.description }}"
+    />
+    <meta name="twitter:card" content="{{ site.seo.meta_twitter_card  }}" />
+    <meta name="twitter:site" content="{{ site.seo.meta_twitter_site }}" />
+    <meta
+      name="twitter:creator"
+      content="{{ site.seo.meta_twitter_creator }}"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Reveal.js style -->
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/reveal.js/dist/reveal.css' | relative_url }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/reveal.js/dist/theme/black.css' | relative_url }}"
+      id="theme"
+    />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  </head>
+
+  <body>
+    {% include main-menu-mobile.html %}
+        {% include header.html headerClass='header-extra' %}
+        <div class="reveal">
+                {{ content }}
+        </div>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="{{ '/assets/reveal.js/dist/reveal.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/monitor.js' | relative_url }}"></script>
+    <script type="text/javascript" src="{{ '/assets/js/scripts.js' | relative_url }}"></script>
+    
+    {% include reveal.html %}
+    {% include pixel.html %}
+    {% include google-analytics.html %}
+  </body>
 </html>

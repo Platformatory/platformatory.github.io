@@ -1,5 +1,5 @@
 ---
-layout: v2_event
+layout: event
 title: "November Kong Bengaluru Meetup"
 date: 2022-11-05
 time: 10:30am - 2:00pm

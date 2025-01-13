@@ -1,5 +1,5 @@
 ---
-layout: v2_event
+layout: event
 title: "June Kong Bengaluru Meetup"
 date: 2022-06-18
 time: 10:30am - 2:00pm

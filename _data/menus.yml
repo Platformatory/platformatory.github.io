@@ -3,122 +3,24 @@ main:
     url: "/"
     weight: -1
   - name: "Consulting"
-    url: "/consulting/"
+    url: "/consulting"
     weight: 0
   - name: "Services"
-    url: "/services/"
+    url: "/services"
     weight: 2
-  - name: "Field Engineering"
-    url: "/field-engineering/"
-    weight: 2
-  - name: "Solutions"
-    url: "/solutions/"
-    weight: 2
-  - name: "Events"
-    url: "/events/"
-    weight: 4
-  - name: "Education"
-    url: "/education/"
-    weight: 5
-  - name: "Write Ahead Log"
-    url: "/blog"
-    weight: 6
-  - name: "Company"
-    url: "/company/"
-    weight: 7
-  - name: "Get in touch"
-    url: "/contact/"
-    weight: 8
-v2_main:
-  - name: "Home"
-    url: "/v2"
-    weight: -1
-  - name: "Consulting"
-    url: "/v2/consulting"
-    weight: 0
-    # children:
-    #   items:
-    #     - name: "Real-time data & AI"
-    #       url: "/v2/consulting/real-time-data&ai"
-    #     - name: "Platform Engineering"
-    #       url: "/v2/consulting/platform-engineering"
-    #     - name: "Platform led SaaS"
-    #       url: "/v2/consulting/platform-led-saas"
-  - name: "Services"
-    url: "/v2/services"
-    weight: 2
-    # children:
-    #   name: "What We Do"
-    #   items:
-    #     - name: "Professional Services"
-    #       url: "/v2/services/professional-services"
-    #     - name: "Field Engineering"
-    #       url: "/v2/services/field-engineering"
-    #     - name: "Strategic Program Delivery"
-    #       url: "/v2/services/strategic-program-delivery"
-    #     - name: "Mission Critical Support"
-    #       url: "/v2/services/mission-critical-support"
-    #     - name: "By Practice"
-    #       children:
-    #         name: "By Practice"
-    #         items:
-    #           - name: "Streaming"
-    #             url: "/v2/practice/streaming"
-    #           - name: "Operational Data"
-    #             url: "/v2/practice/operational-data"
-    #           - name: "Real-time Analytics"
-    #             url: "/v2/practice/realtime-analytics"
-    #           - name: "Durable execution"
-    #             url: "/v2/practice/durable-execution"
-    #           - name: "API Management"
-    #             url: "/v2/practice/api-management"
-    #     - name: "By Technology"
-    #       children:
-    #         name: "By Technology"
-    #         items:
-    #           - name: "Confluent & Apache Kafka"
-    #             url: "/v2/services/technology/confluent"
-    #           - name: "Temporal"
-    #             url: "/v2/services/technology/temporal"
-    #           - name: "Kong"
-    #             url: "/v2/services/technology/kong"
-    #     - name: "By Industries"
-    #       children:
-    #         name: "By Industries"
-    #         items:
-    #           - name: "SaaS & Digital Native"
-    #             url: "/v2/industries/saas&digital-native"
-    #           - name: "Retail & Ecommerce"
-    #             url: "/v2/industries/retail&ecommerce"
-   
-  # - name: "Industries"
-  #   children: 
-  #     items:
-  #       - name: "SaaS & Digital Native"
-  #         url: "/v2/industries/saas&digital-native"
-  #       - name: "Retail & Ecommerce"
-  #         url: "/v2/industries/retail&ecommerce"
-  #       - name: "Financial Services"
-  #         url: "/v2/industries/financial-services"
-  #       - name: "Internet of Things"
-  #         url: "/v2/industries/internet-of-things"
-  #   weight: 2
   - name: "Talks"
-    url: "/v2/talks/"
+    url: "/talks/"
     weight: 4
   - name: "Write Ahead Log"
     url: "/blog"
     weight: 6
-  # - name: "Academy"
-  #   url: "/v2/academy/"
-  #   wight: 11
   - name: "Company"
-    url: "/v2/company"
+    url: "/company"
     weight: 7
 footer:
   - name: "Home"
     url: "/"
     weight: 1
   - name: "Get in touch"
-    url: "/contact/"
+    url: "/company/"
     weight: 2

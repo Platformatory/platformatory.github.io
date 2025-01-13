@@ -1,5 +1,5 @@
 ---
-layout: v2_event
+layout: event
 title: "Apache Kafka workshop in Mangaluru"
 date: 2024-10-26
 time: 09:30am - -01:00pm
