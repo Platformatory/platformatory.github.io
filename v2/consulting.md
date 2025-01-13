@@ -13,7 +13,7 @@ sections:
         <div id="trusted-advisory" class="container">
           <div style="justify-content: space-evenly;" class="d-flex flex-column h-100 ">
             <div>
-              <h1 class="text-capitalize mb-1">Hands-on, practitioner led consulting.</h1>
+              <h1>Platform & Data modernization, led by hands-on experts.</h1>
             </div>
             <div class="d-flex justify-content-center">
               <p class="quote-content"> <span class="quote">In theory, there is no difference between theory and practice. In practice, there is.</span>  – Yogi Berra</p>

@@ -13,15 +13,15 @@ sections:
         <div id="what-we-do" class="container d-flex justify-content-between">
           <div style="gap: 1.5em;" class="d-flex flex-column h-100 justify-content-center">
             <div>
-              <h1 class="text-capitalize mb-1">Deliver mission critical.</h1>
+              <h1 class="text-capitalize mb-1">Deliver mission critical platforms.</h1>
             </div>
             <div class="d-flex justify-content-center">
-              <p class="quote-content"> <span class="quote">A product is useless without a platform, or more precisely and accurately, a platform-less product will always be replaced by an equivalent platform-ized product</span> –  Steve Yegge</p>
+              <p class="quote-content"> <span class="quote">A product is useless without a platform, or more precisely and accurately, a platform-less product will always be replaced by an equivalent platform-ized product</span>  – Steve Yegge</p>
             </div>
           </div>
         </div>
       </section>
-  - title: "Partner Professional Services"
+  - title: "OSS and Partner professional services"
     featured: true
     summary: ""
     hash: "professional-services"
@@ -51,7 +51,7 @@ sections:
         class: "text-left"
         description: "Support mission critical systems. Engineer on call 24x7."
       
-  - title: "Platform Verticals"
+  - title: "Domain expertise where it matters"
     featured: true
     summary: ""
     hash: "platform-verticals"
@@ -71,7 +71,7 @@ sections:
       - name: "Digital Twins"
         class: "text-left"
         description: "Solve for real-life simulation and operational insights of large scale IOT systems"
-  - title: "Co-creation & Incubation lab"
+  - title: "Co-creation & Incubation laboratory"
     featured: true
     summary: ""
     hash: "co-creation-incubation-lab"
@@ -82,8 +82,10 @@ sections:
       - name: "Product Engineering"
         class: "text-left"
         description: "Art of the possible, for new-age, multi-tenant SaaS and PaaS."
-      - name: "Data & Platform COE"
+      - name: "Data & Platform Office"
         class: "text-left"
-        description: "Specialized data & platform teams and operating model transition for GCCs."
-   
+        description: "Specialized data & platform teams for global capability centers."
+      - name: "Purpose-built systems"
+        class: "text-left"
+        description: "Specialized distributed systems development in the data, AI and infrastructure space."   
 ---
