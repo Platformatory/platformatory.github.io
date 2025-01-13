@@ -1,10 +1,9 @@
 ---
 layout: page_layout
 title: Trusted Advisory For Technology & Engineering Leaders.
-intro_image: "images/banners/pexels-magda-ehlers-2569842.jpg"
+intro_image: "images/v2/banners/real-time_data.jpg"
 intro_image_absolute: true
 intro_image_hide_on_mobile: false
-description: "Seamlessly transition your data infrastructure to the cloud for enhanced scalability and agility."
 sections:
   - title: "Trusted Advisory For Technology & Engineering Leaders."
     featured: true
@@ -14,7 +13,7 @@ sections:
         <div id="trusted-advisory" class="container">
           <div style="justify-content: space-evenly;" class="d-flex flex-column h-100 ">
             <div>
-              <h1 class="text-capitalize mb-1">Hands-on, practitioner led consulting.</h1>
+              <h1>Platform & Data modernization, led by hands-on experts.</h1>
             </div>
             <div class="d-flex justify-content-center">
               <p class="quote-content"> <span class="quote">In theory, there is no difference between theory and practice. In practice, there is.</span>  – Yogi Berra</p>

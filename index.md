@@ -18,13 +18,10 @@ sections:
               <h1 class="text-capitalize mb-1 title"><span id="typewriter-title">Platforms & Products.</span></h1>
               <h3 class="sub-title">Powered by real-time data & AI.</h3>
             </div>
-            <div class="d-flex justify-content-center">
-              <p class="quote-content"> <span class="quote">A product is useless without a platform, or more precisely and accurately, a platform-less product will always be replaced by an equivalent platform-ized product</span>  – Steve Yegge</p>
-           </div>
           </div>  
         </div>
       </section>
-  - title: "We have a unique thesis on what it takes to build and scale platform-led products."
+  - title: "We have a unique thesis on building and scaling platform-led products"
     featured: true
     weight: 3
     summary: ""
@@ -44,7 +41,7 @@ sections:
       - name: "A minimum viable level of self-service."
         class: "text-left"
         description: "First class DevX, Human augmented AI and well governed, secure foundational tooling (for just about everything)"
-  - title: Our field expertise here is unparalleled. 
+  - title: Globally distinguished field expertise 
     featured: false
     summary: ""
     hash: "expertise"
@@ -88,10 +85,10 @@ sections:
             url: "../images/v2/expertise/duckdb.png"
           - name: "Kubernetes"
             url: "../images/v2/expertise/kubernetes.png"
-  - title: "Partnerships (without partisanship)"
+  - title: "Customer partnership, without partisanship"
     featured: true
     weight: 2
-    summary: "A promise to deliver real customer value on platform investments. "
+    #summary: "A promise to deliver real customer value on platform investments. "
     image: "../images/icons/security-engineering.png"
     caption: "Comprehensive security strategies."
     hash: "partnerships"
@@ -116,7 +113,7 @@ sections:
           - name: "Jollibee"
             url: "../images/v2/customers/jollibee.png"
 
-  - title: "A new category of solutions."
+  - title: "Incubating a new category of PaaS solutions"
     featured: true
     summary: ""
     caption: "Comprehensive security strategies."
@@ -138,7 +135,7 @@ sections:
           - name: "RTDx"
             url: "../images/v2/products/rtdx.png"
             summary: "RTDx is a platform for exchanging operational and analytical data in real-time."
-  - title: "Open-source, community and thought leadership."
+  - title: "Thought leadership through open-source tech and communities"
     featured: true
     weight: 1#3e4341
     summary: ""

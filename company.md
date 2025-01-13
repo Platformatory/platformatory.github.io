@@ -1,5 +1,5 @@
 ---
-title: Company
+title: People
 layout: company
 intro_image: "images/v2/banners/people.jpg"
 intro_image_absolute: true
@@ -7,7 +7,23 @@ intro_image_hide_on_mobile: false
 caption: "Culture = Code."
 description: "Discover the passionate team committed to your success."
 sections:
-  - title: "Creative Destruction in Software Engineering"
+  - title: "What We Do"
+    featured: true
+    summary: "Explore our range of services designed to meet your technology and engineering needs."
+    raw_content: |
+      <section class="raw-section-container typewriter-and-quotes">
+        <div id="what-we-do" class="container d-flex justify-content-between">
+          <div style="gap: 1.5em;" class="d-flex flex-column h-100 justify-content-center">
+            <div>
+              <h1 class="text-capitalize mb-1">Creative Destruction in Software Engineering.</h1>
+            </div>
+            <div class="d-flex justify-content-center">
+              <p class="quote-content"> <span class="quote">A human being should be able to change a diaper, plan an invasion, butcher a hog, conn a ship, design a building, write a sonnet, balance accounts, build a wall, set a bone, comfort the dying, take orders, give orders, cooperate, act alone, solve equations, analyze a new problem, pitch manure, program a computer, cook a tasty meal, fight efficiently, die gallantly. <br />Specialization is for insects.</span> — Robert A. Heinlein</p>
+            </div>
+          </div>
+        </div>
+       </section>
+  - title: "Boutique engineering, global scale"
     featured: true
     summary: ""
     caption: "Discover the passionate team committed to your success."
@@ -15,19 +31,20 @@ sections:
     section:
       class: "split-container"
       feature_type: "list"
+      header: "10X Culture"
     features:
-      - name: "Intersectional expertise is a super power"
-        description: "Being T-shaped around the flux of evolving technologies is extremely rare and allows us to deliver orders of magnitude more value."
+      - name: "100% practitoner-led expertise"
+        description: "Our leadership mantra: Coding and coaching on a daily basis. Management and business are functions, not roles. Everyone is a technical contributor. Our overheads are ~0."
         class: "text-start"
-      - name: "Teaching, practicing, sharing"
+      - name: "Ethos of open-source"
         class: "text-start"
-        description: "Being a 100% practitioner driven setup, allows us to build highly artisanal guilds with real mastery over craft. Teaching (the community) and sharing (OSS/libre) reinforces this culture."
-      - name: "Seek simplicty & elegance, relentlessly"
+        description: "F/OSS is creative license to tinker, take apart and put things back. Evidently the best form of capitalism. We care deeply enough to contribute, evangelize and organize communities."
+      - name: "SWAT team is the default topology"
         class: "text-start"
-        description: "Complexity is a disease. We (often) operate in a contrasting world of super-reductionist concretions and needless abstractions. Navigating this requires a principled approach, while understanding boundaries of the domain."
-      - name: "Keep it flat. Stay lean, stay young"
+        description: "Punch above the collective weight of headcount. The post AI age signals the rise of a new class of artisanal guilds, quite unlike system integrators or software factories."
+      - name: "For the love of real-world customer problems"
         class: "text-start" 
-        description: "No delusions of building or scaling factories. No bulking & cutting cycles. A pursuit of achieving the highest level of skill attainable in a given context." 
+        description: "We could all be doing almost anything else, but solving real-life business problems gives us a high." 
   - title: "Leadership team"
     featured: true
     weight: 1
@@ -47,7 +64,7 @@ sections:
         image: "images/team/vk.jpeg"
         description: "Cofounder, Operations & PMO"
         linkedinurl: "https://www.linkedin.com/in/venkateshkmurthy/"
-      - name: "Lakshmi Narasimhan Parthasarathy"
+      - name: "Lakshmi Narasimhan"
         image: "images/team/ln.jpeg"
         description: "Site Reliability Engineering & Platform Operations"
         linkedinurl: "https://in.linkedin.com/in/lakshminp"
@@ -55,19 +72,19 @@ sections:
         image: "images/team/av.jpeg"
         description: "Data Engineering & Machine Learning"
         linkedinurl: "https://www.linkedin.com/in/ashwin-v-452363167/"
-      - name: "Avinash Upadhyaya K R"
+      - name: "Avinash Upadhyaya"
         image: "images/team/au.png"
         description: "Data, Observability & API Infrastructure"
         linkedinurl: "https://in.linkedin.com/in/avinash-upadhyaya"
-      - name: "Raghavendran Nehru"
-        image: "images/team/nr.png"
-        description: "Director, North America"
-        linkedinurl: "https://www.linkedin.com/in/raghavendran-nehru-44b761/"
       - name: "Sunil Vijendra"
         image: "images/team/sv.jpeg"
         description: "Leader - Education"
         linkedinurl: "https://www.linkedin.com/in/sunilvijendra"
-      - name: "Ajith R"
+      - name: "Raghavendran Nehru"
+        image: "images/team/nr.png"
+        description: "Leader, AMER and Canada"
+        linkedinurl: "https://www.linkedin.com/in/raghavendran-nehru-44b761/"
+      - name: "Ajith Ramanath"
         image: "images/team/ar.jpeg"  
         description: "Leader - UK & EMEA"
         linkedinurl: "https://www.linkedin.com/in/ajith-ramanath"
@@ -83,36 +100,4 @@ sections:
       feature_type: "contact"
 ---
 
-<!-- # Meet the Innovators Driving Platformatory’s Success
 
-Discover the passionate team committed to your success. -->
-
-
-<!-- <div id="monitor" class="theme-green">
-    <div id="screen">
-      <div id="crt">
-        <div class="scanline"></div>
-        <div class="terminal">
-          ### booting platformatory 
-  
-          [    0.000000] Platformatory kernel version 1.0.0 (gcc 10.3.0)
-  [    0.000001] Command line: BOOT_IMAGE=/boot/vmlinuz-1.0.0-generic root=UUID=platformatory ro quiet splash vt.handoff=7
-  [    0.000002] initializing subsys: culture, 10x engineering, and more
-  [    0.000003] initializing ordered polyglot stack: golang, rust, python, javascript, lua, c++, jvm (ugh)
-  [    0.000004] starting platform stack v 4.2.....
-  [    0.000005] initializing cloud-native and hybrid environments: metal, aws, gcp, azure, k8s
-  [    0.000006] initializing distributed streaming subsystems: kafka, redpanda, flink, kstreams 
-  [    0.000007] initializing data infra lite: duckdb, rocksdb, adf (and more)
-  [    0.000008] initializing data infra at large: hudi, delta lake, trino (and more)
-  [    0.000008] initializing networking & connectivity stack: envoy, kong (and more)
-  [    0.000009] initializing more MAD landscape: vector databases, RAG, real-time features, time series forecasting (not exhaustive)
-  [    0.000010] spawning our inner daemons: oss, community
-  [    1.234567] fast init done. do whatever to continue
-  
-  platformatory 20.24 LTS lifeuniverseandeverything tty1
-  
-  guest@platformatory:~$
-        </div>
-      </div>
-    </div>
-  </div> -->
