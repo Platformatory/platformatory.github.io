@@ -514,7 +514,7 @@
  }
  @include media-breakpoint-down(md) {
     h4{
-        font-size: 2rem !important;
+        font-size: 1.5rem !important;
         padding: 0.6 1rem !important;
     }
  }
@@ -625,7 +625,7 @@
                 }
                 @include media-breakpoint-down(md){
                     tr{
-                        font-size: 1rem;
+                        font-size: 0.9rem;
                     }
                 }
             }
@@ -659,6 +659,16 @@
                     font-size: 2rem;
                 }
             }
+        @include media-breakpoint-down(md){
+            ol,ul{
+                li{
+                    font-size: 1.5rem;
+                }
+            }
+            p{
+                font-size: 1.2rem;
+            }
+        }
         }
         @include media-breakpoint-down(md){
             .rsvp-link{
@@ -671,7 +681,7 @@
                 font-size: 1.3rem;
             }
             .event-detail-title,.event-venue-title{
-                font-size: 2rem;
+                font-size: 2rem !important;
             }
             .event-detail-items{
                 .venue-title,p{
