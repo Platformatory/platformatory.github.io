@@ -33,12 +33,12 @@ sections:
       - name: "Reactive Systems"
         class: "text-start"
         description: "Build rich, domain-driven, data-intensive applications for scale and resilience."
-      - name: "Data Streaming Platform"
+      - name: "Data lakehouse & Streaming Platform"
         class: "text-start"
-        description: "Stream processing, data exchange and multi-modal data products, with a central nervous system metaphor."
+        description: "Data exchange and multi-modal data products, on a Kappa foundation & open table formats."
       - name: "Real-time analytics & ML"
         class: "text-start"
-        description: "Crunch insights from petabyte scale data at sub-second latencies."
+        description: "Serve insights, reporting & inference from petabyte scale data at sub-second latencies."
   - title: Platform-ification and DevX
     featured: true
     summary: ""
