@@ -17,6 +17,9 @@ main:
   - name: "Company"
     url: "/company"
     weight: 7
+  - name: "Careers"
+    url: "/careers"
+    weight: 8
 footer:
   - name: "Home"
     url: "/"
