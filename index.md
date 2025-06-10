@@ -158,7 +158,7 @@ sections:
             link: "https://meetup.com/lsds-bangalore"
           - name: "Kong Meetup"
             url: "../images/v2/meetup-community/kong.png"
-            link: "meetup.com/kong-bengaluru"
+            link: "https://meetup.com/kong-bengaluru"
           - name: "Temporal Community"
             url: "../images/v2/meetup-community/temporal.png"
             link: "https://temporal.io/community"
