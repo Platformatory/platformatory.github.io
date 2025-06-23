@@ -86,14 +86,7 @@
     </style>
     {% include main-menu-mobile.html %}
         {% include header.html headerClass='header-extra' %}
-        <div id="iframe-container">
-            <iframe src="https://platformatory-1632407309031.freshteam.com/jobs" name="Platformatory Careers"></iframe>
-        </div>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const myIframe = document.getElementsByName('myIframe')[0];
-                myIframe.src = "https://platformatory-1632407309031.freshteam.com/jobs";
-            });
-        </script>
+        {{content}}
+        
   </body>
 </html>
