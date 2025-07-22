@@ -1557,8 +1557,9 @@ p{
         flex-direction: column;
         gap: 1.5rem;
         width: 100%;
-        .row{
-          align-items: flex-start;
+        .two-cols{
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
           gap: 1rem;
         }
         .contact-region{
@@ -1628,9 +1629,8 @@ p{
     .contact-address-container{
       padding: 0 1rem;
       gap: 1.5rem;
-      .row{
-        align-items: flex-start;
-        gap: 1rem;
+      .two-cols{
+        grid-template-columns: 1fr;
       }
       .contact-region{
         align-items: flex-start;
