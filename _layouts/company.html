@@ -25,30 +25,35 @@ bodyClass: v2-page-layout
     {% include contactform.html %}
   </div>
   
-  <div class="col-12 col-lg-6 address-info">
-    <div class="contact-address-container">
-      <div class="contact-address-item">
-        <h2 class="mt-1 address-region">North America</h2>
-        <p class="address"><strong>USA:</strong><br>{{ site.data.contact.us_office }}</p>
-        <p  class="contact mb-1"><a href="tel: {{ site.data.contact.phone_us }}"> {{ site.data.contact.phone_us }} </a></p>
-        <div class="line-seperator my-2"></div>
-        <p class="address"><strong>Canada:</strong><br>{{ site.data.contact.canada_office }}</p>
+    <div class="col-12 col-lg-6 address-info">
+      <div class="contact-address-container">
+        <div class="contact-region">
+          <h2 class="mt-1 address-region">North America</h2>
+          <div class="mt-1">
+            <p class="address"><strong>USA:</strong><br>{{ site.data.contact.us_office }}</p>
+            <p class="contact mb-1"><a href="tel: {{ site.data.contact.phone_us }}"> {{ site.data.contact.phone_us }} </a></p>
+            <p class="address"><strong>Canada:</strong><br>{{ site.data.contact.canada_office }}</p>
+          </div>
+        </div>
+        <div class="contact-region">
+          <h2 class="mt-1 address-region">Middle East</h2>
+          <div class="mt-1">
+            <p class="address"><strong>UAE:</strong><br>{{ site.data.contact.uae_office }}</p>
+            <p class="contact mb-1"><a href="tel: {{ site.data.contact.phone_uae }}"> {{ site.data.contact.phone_uae }} </a></p>
+          </div>
+        </div>
+        <div class="contact-region">
+          <h2 class="mt-1 address-region">APAC</h2>
+          <div class="mt-1">
+            <p class="address"><strong>India:</strong><br>{{ site.data.contact.india_office }}</p>
+            <p class="contact mb-1"><a href="tel: {{ site.data.contact.phone_in }}"> {{ site.data.contact.phone_in }} </a></p>
+          </div>
+        </div>
       </div>
-      <div class="contact-address-item">
-        <h2 class="mt-1 address-region">Middle East</h2>
-        <p class="address"><strong>UAE:</strong><br>{{ site.data.contact.uae_office }}</p>
-        <p  class="contact mb-1"><a href="tel: {{ site.data.contact.phone_uae }}"> {{ site.data.contact.phone_uae }} </a></p>
-      </div>
-      <div class="contact-address-item">
-        <h2 class="mt-1 address-region">APAC</h2>
-        <p class="address"><strong>India:</strong><br>{{ site.data.contact.india_office }}</p>
-        <p  class="contact mb-1"><a href="tel: {{ site.data.contact.phone_in }}"> {{ site.data.contact.phone_in }} </a></p>
-      </div>
-    </div>
-      <div class="d-flex mt-1 email-block">
-        <span>Email : </span>
-        <a href="mailto: {{ site.data.contact.email }}">{{ site.data.contact.email }}</a>
-      </div>
+        <div class="d-flex mt-1 email-block">
+          <span>Email : </span>
+          <a href="mailto: {{ site.data.contact.email }}">{{ site.data.contact.email }}</a>
+        </div>
   </div>
 </div>
 {% else %}
