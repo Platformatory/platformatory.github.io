@@ -41,18 +41,20 @@ bodyClass: v2-page-layout
             </div>
           </div>
         </div>
-        <div class="row mt-3">
-          <div class="col-md-6 contact-region">
-            <h3 class="region-name">Middle East</h3>
-            <p class="address">{{ site.data.contact.uae_office }}</p>
-            <p class="contact mb-1"><a href="tel: {{ site.data.contact.phone_uae }}">{{ site.data.contact.phone_uae }}</a></p>
+          <div class="row mt-3">
+            <div class="col-md-6 contact-region">
+              <h3 class="region-name">Middle East</h3>
+              <h4 class="country-name">UAE</h4>
+              <p class="address">{{ site.data.contact.uae_office }}</p>
+              <p class="contact mb-1"><a href="tel: {{ site.data.contact.phone_uae }}">{{ site.data.contact.phone_uae }}</a></p>
+            </div>
+            <div class="col-md-6 contact-region">
+              <h3 class="region-name">APAC</h3>
+              <h4 class="country-name">India</h4>
+              <p class="address">{{ site.data.contact.india_office }}</p>
+              <p class="contact mb-1"><a href="tel: {{ site.data.contact.phone_in }}">{{ site.data.contact.phone_in }}</a></p>
+            </div>
           </div>
-          <div class="col-md-6 contact-region">
-            <h3 class="region-name">APAC</h3>
-            <p class="address">{{ site.data.contact.india_office }}</p>
-            <p class="contact mb-1"><a href="tel: {{ site.data.contact.phone_in }}">{{ site.data.contact.phone_in }}</a></p>
-          </div>
-        </div>
       </div>
       <div class="d-flex mt-1 email-block">
         <span>Email : </span>
