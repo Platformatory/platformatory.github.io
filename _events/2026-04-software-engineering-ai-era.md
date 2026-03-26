@@ -11,7 +11,7 @@ partners: Data + AI Academy & 43 Workspace
 mode: In-Person
 description: Join us for an exclusive deep dive into the architectural backbone of modern AI. We're moving past the hype to discuss how real-world systems from streaming data platforms to production AI actually run.
 event_space_link: /events/2026-04-software-engineering-ai-era/confirmation/
-link: https://docs.google.com/forms/d/e/1FAIpQLSfVWCt-VcxMgb2hDpbf6yDSDyrp-LR6x0-8k57fhVf-mDaGdg/viewform?usp=sharing&ouid=103431118362948721308
+link: https://www.meetup.com/data-ai-forum/events/313942031/
 map_link: https://share.google/3lsGJWPJbFgyz6G0u
 ---
 

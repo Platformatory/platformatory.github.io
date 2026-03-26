@@ -24,8 +24,8 @@ layout: default
                         {% assign current_date_str = site.time | date: "%Y-%m-%d" %}
                         <div class="d-flex align-items-center">
                             {% if page.event_space_link %}
-                            <a class="rsvp-link mr-3" style="margin-right:15px;" href="{{page.event_space_link}}"
-                                target="_blank">Register</a>
+                            <a class="rsvp-link mr-3" style="margin-right:15px;"
+                                href="{{page.event_space_link}}">Register</a>
                             {% endif %}
                             {% if page.link and event_date_str >= current_date_str %}
                             <a class="rsvp-link" href="{{page.link}}" target="_blank">RSVP</a>
