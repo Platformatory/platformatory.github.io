@@ -27,14 +27,17 @@ We are moving past the AI hype to discuss how massive data platforms and real wo
 
 ### Schedule
 
-| Name | Speaker | Start Time | End Time | Presentation | Recording |
-| ---- | ------- | ---------- | -------- | ------------ | --------- |
-| TBA | TBA | 11:00 AM | 02:00 PM | | |
+| Speaker | Start Time | End Time |
+| ------- | ---------- | -------- |
+| Rama K P | 11:00 AM | 12:30 PM |
+| Reshma Upadhyaya | 12:30 PM | 02:00 PM |
 
 ### Agenda
 
-- Yet to be decided
+- About Data Engineering
+- Data Engineering with Databricks
 
 ### Speakers
 
-- TBA
+- {:.speaker-name} Rama K P <br> <span class="speaker-description"> Ex-IBM</span>
+- {:.speaker-name} Reshma Upadhyaya <br> <span class="speaker-description"> Platformatory</span>
