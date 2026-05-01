@@ -1,5 +1,5 @@
 ---
-title: "Masterclass: Apache Kafka, Spark & Flink | Data+AI Academy"
+title: "Masterclass on Data Engineering for Real-time Applications"
 layout: page
 permalink: /events/2026-05-data-ai-academy-masterclass/confirmation/
 ---
@@ -56,8 +56,8 @@ permalink: /events/2026-05-data-ai-academy-masterclass/confirmation/
 }
 </style>
 
-A series of intermediate-to-advanced masterclass workshops on Apache Kafka, Spark and Flink — covering data infra theory, deep-dive data processing, hands-on labs and certification guidance.
+
 
 <br>
 <br>
-<iframe src="https://forms.gle/spc85vLJNYFhJVx6A" style="width: 100%; max-width: 100%; height: 2500px; border: none;" frameborder="0" marginheight="0" marginwidth="0">Masterclass: Apache Kafka, Spark & Flink | Data+AI Academy</iframe>
+<iframe src="https://forms.gle/spc85vLJNYFhJVx6A" style="width: 100%; max-width: 100%; height: 1850px; border: none;" frameborder="0" marginheight="0" marginwidth="0">Masterclass on Data Engineering for Real-time Applications</iframe>
