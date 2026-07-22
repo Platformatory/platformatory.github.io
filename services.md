@@ -9,8 +9,8 @@ sections:
     featured: true
     summary: "Explore our range of services designed to meet your technology and engineering needs."
     raw_content: |
-      <section class="raw-section-container typewriter-and-quotes">
-        <div id="what-we-do" class="container d-flex justify-content-between">
+      <section id="what-we-do" class="raw-section-container typewriter-and-quotes">
+        <div class="container d-flex justify-content-between">
           <div style="gap: 1.5em;" class="d-flex flex-column h-100 justify-content-center">
             <div>
               <h1 class="text-capitalize mb-1">Deliver mission critical platforms.</h1>
@@ -21,56 +21,6 @@ sections:
           </div>
         </div>
       </section>
-  - title: "OSS and Partner professional services"
-    featured: true
-    summary: ""
-    hash: "professional-services"
-    section:
-      class: "split-container"
-      feature_type: "list"
-      images: 
-        - name: "Confluent"
-          url: "../images/v2/partners/confluent.png"
-        - name: "Temporal"
-          url: "../images/v2/partners/temporal.png"
-        - name: "Clickhouse"
-          url: "./images/v2/partners/clickhouse.png"
-        - name: "Kong"
-          url: "../images/v2/partners/kong.png"
-    features:
-      - name: "Platform Deployment"
-        class: "text-left"
-        description: "Design, size and deploy platforms for reliability and impact, starting day zero."
-      - name: "Platform Adoption & Maturity"
-        class: "text-left"
-        description: "Self-service, tooling and governance, for day two and beyond."
-      - name: "Field Engineering"
-        class: "text-left"
-        description: "Bespoke engineering: Plugins,  bolt-ons, connectors and stuff at large."
-      - name: "Managed Services & Support"
-        class: "text-left"
-        description: "Support mission critical systems. Engineer on call 24x7."
-      
-  - title: "Domain expertise where it matters"
-    featured: true
-    summary: ""
-    hash: "platform-verticals"
-    section:
-      class: "split-container"
-      feature_type: "list"
-    features:
-      - name: "Deep Personalization for retail"
-        class: "text-left"
-        description: "Integrate and activate marketing data across omni-channel apps to drive high-touch customer experience and tangible GMV lift."
-      - name: "AI-enabled banking"
-        class: "text-left"
-        description: "Specialized data products for new age banking, payments, risk and compliance."
-      - name: "Real-time retail"
-        class: "text-left"
-        description: "Solving for inventory visibility, supply-chain and dynamic pricing."
-      - name: "Digital Twins"
-        class: "text-left"
-        description: "Solve for real-life simulation and operational insights of large scale IOT systems"
   - title: "Co-creation & Incubation laboratory"
     featured: true
     summary: ""
@@ -80,12 +30,48 @@ sections:
       feature_type: "list"
     features:
       - name: "Product Engineering"
-        class: "text-left"
-        description: "Art of the possible, for new-age, multi-tenant SaaS and PaaS."
+        class: "text-start"
+        description: "New-age, multi-tenant SaaS and PaaS"
+        link:
+          url: "/services-offerings#product-engineering"
+          name: "[1]"
+          class: "cite-link"
       - name: "Data & Platform Office"
-        class: "text-left"
-        description: "Specialized data & platform teams for global capability centers."
+        class: "text-start"
+        description: "Specialized data & platform teams for GCCs"
+        link:
+          url: "/services-offerings#data-platform-office"
+          name: "[2]"
+          class: "cite-link"
       - name: "Purpose-built systems"
-        class: "text-left"
-        description: "Specialized distributed systems development in the data, AI and infrastructure space."   
+        class: "text-start"
+        description: "Distributed systems in data, AI and infrastructure"
+        link:
+          url: "/services-offerings#purpose-built-systems"
+          name: "[3]"
+          class: "cite-link"
+  - title: "Managed Platform Services"
+    featured: true
+    summary: ""
+    hash: "managed-services-on-premise"
+    section:
+      class: "split-container"
+      feature_type: "list"
+    features:
+      - name: "On-premise Kafka, ClickHouse, Connect & Flink"
+        class: "text-start"
+        description: "Operate your streaming and analytics stack in your perimeter, day-2 maturity without the managed-service lock-in."
+      - name: "Compliance Assessment"
+        class: "text-start"
+        description: "Security, config and operational posture reviews"
+      - name: "Upgrades & Remediation"
+        class: "text-start"
+        description: "Version upgrades and patching with minimal disruption"
+      - name: "Performance Engineering"
+        class: "text-start"
+        description: "Capacity planning, tuning and tail-latency optimization"
+      - name: "Enterprise / SLA Support"
+        class: "text-start"
+        description: "Named coverage, incident response and contractual SLAs"
+
 ---

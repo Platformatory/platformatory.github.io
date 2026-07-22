@@ -7,7 +7,8 @@
             {% include social.html %}
           {% endif %}
           {% if site.footer.copyright_text %}
-          <div class="copyright">{{ site.footer.copyright_text }}</div>
+          {% assign current_year = site.time | date: "%Y" %}
+          <div class="copyright">{{ site.footer.copyright_text | replace: "YYYY", current_year }}</div>
           {% endif %}
         </div>
       </div>

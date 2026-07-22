@@ -2,12 +2,5 @@
 title: "Talks"
 date: 2024-09-04T17:01:34+07:00
 layout: talks
-bodyClass: page-talks
-intro_image: "images/v2/banners/talks.jpg"
-description: "Community stewardship for OSS flagship projects"
-intro_image_absolute: true
+description: "Recordings and slides from Bengaluru Streams and Platformatory community events."
 ---
-
-# Inspiring Talks & Event Highlight
-
-Community stewardship for OSS flagship projects

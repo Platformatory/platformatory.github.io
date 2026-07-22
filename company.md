@@ -11,14 +11,14 @@ sections:
     featured: true
     summary: "Explore our range of services designed to meet your technology and engineering needs."
     raw_content: |
-      <section class="raw-section-container typewriter-and-quotes">
-        <div id="what-we-do" class="container d-flex justify-content-between">
+      <section id="what-we-do" class="raw-section-container typewriter-and-quotes">
+        <div class="container d-flex justify-content-between">
           <div style="gap: 1.5em;" class="d-flex flex-column h-100 justify-content-center">
             <div>
               <h1 class="text-capitalize mb-1">Creative Destruction in Software Engineering.</h1>
             </div>
             <div class="d-flex justify-content-center">
-              <p class="quote-content"> <span class="quote">A human being should be able to change a diaper, plan an invasion, butcher a hog, conn a ship, design a building, write a sonnet, balance accounts, build a wall, set a bone, comfort the dying, take orders, give orders, cooperate, act alone, solve equations, analyze a new problem, pitch manure, program a computer, cook a tasty meal, fight efficiently, die gallantly. <br />Specialization is for insects.</span> — Robert A. Heinlein</p>
+              <p class="quote-content"> <span class="quote">A human being should be able to change a diaper, plan an invasion, butcher a hog, conn a ship, design a building, write a sonnet, balance accounts, build a wall, set a bone, comfort the dying, take orders, give orders, cooperate, act alone, solve equations, analyze a new problem, pitch manure, program a computer, cook a tasty meal, fight efficiently, die gallantly. <br />Specialization is for insects.</span> - Robert A. Heinlein</p>
             </div>
           </div>
         </div>
@@ -36,6 +36,10 @@ sections:
       - name: "100% practitoner-led expertise"
         description: "Our leadership mantra: Coding and coaching on a daily basis. Management and business are functions, not roles. Everyone is a technical contributor. Our overheads are ~0."
         class: "text-start"
+        link:
+          url: "/company-culture#practitioner-led-expertise"
+          name: "[1]"
+          class: "cite-link"
       - name: "Ethos of open-source"
         class: "text-start"
         description: "F/OSS is creative license to tinker, take apart and put things back. Evidently the best form of capitalism. We care deeply enough to contribute, evangelize and organize communities."
@@ -64,10 +68,6 @@ sections:
         image: "images/team/vk.jpeg"
         description: "Cofounder, Operations & PMO"
         linkedinurl: "https://www.linkedin.com/in/venkateshkmurthy/"
-      - name: "Lakshmi Narasimhan"
-        image: "images/team/ln.jpeg"
-        description: "Site Reliability Engineering & Platform Operations"
-        linkedinurl: "https://in.linkedin.com/in/lakshminp"
       - name: "Ashwin Venkatesan"
         image: "images/team/av.jpeg"
         description: "Data Engineering & Machine Learning"
@@ -76,18 +76,11 @@ sections:
         image: "images/team/au.png"
         description: "Data, Observability & API Infrastructure"
         linkedinurl: "https://in.linkedin.com/in/avinash-upadhyaya"
-      - name: "Sunil Vijendra"
-        image: "images/team/sv.jpeg"
-        description: "Leader - Education"
-        linkedinurl: "https://www.linkedin.com/in/sunilvijendra"
-      - name: "Raghavendran Nehru"
-        image: "images/team/nr.png"
-        description: "Leader, AMER and Canada"
-        linkedinurl: "https://www.linkedin.com/in/raghavendran-nehru-44b761/"
-      - name: "Deepak Mallya"
-        image: "images/team/dp.jpg"
-        description: "Leader - ANZ"
-        linkedinurl: "https://www.linkedin.com/in/deepakmk"
+  - title: "Careers"
+    featured: true
+    summary: ""
+    hash: "careers"
+    include: "careers-slide.html"
   - title: "Contact Us"
     featured: false
     hash: "contact"

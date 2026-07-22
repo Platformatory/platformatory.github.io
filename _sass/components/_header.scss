@@ -47,19 +47,21 @@
   .main-menu{
     ul >li{
       padding: 12px 0px;
+      flex-shrink: 0;
     }
     ul >li >a {
-      padding: 18px 12px 14px 12px;
+      padding: 18px 10px 14px 10px;
       color: rgb(218, 218, 218);
+      white-space: nowrap;
       &:hover{
         color: white !important;
         font-weight: bold;
         cursor: pointer;
       }
-    } 
+    }
     ul > li.active > a{
       color: white !important;
-  }   
+  }
 }
   .container {
     display: flex;

@@ -5,12 +5,12 @@ intro_image: "images/v2/banners/real-time_data.jpg"
 intro_image_absolute: true
 intro_image_hide_on_mobile: false
 sections:
-  - title: "Trusted Advisory For Technology & Engineering Leaders."
+  - title: "Trusted Advisory For Technology & Engineering Leaders"
     featured: true
     summary: "Seamlessly transition your data infrastructure to the cloud for enhanced scalability and agility."
     raw_content: |
-      <section  class="raw-section-container typewirter-and-quotes">
-        <div id="trusted-advisory" class="container">
+      <section id="trusted-advisory" class="raw-section-container typewirter-and-quotes">
+        <div class="container">
           <div style="justify-content: space-evenly;" class="d-flex flex-column h-100 ">
             <div>
               <h1>Platform & Data modernization, led by hands-on experts.</h1>
@@ -23,40 +23,89 @@ sections:
       </section>
   - title: Streaming & Real-time data
     featured: true
-    summary: ""
+    summary: "Multi-modal data processing & insight. Engineered for sub-second latency"
     hash: "streaming-real-time-data"
     section:
       class: "split-container"
       feature_type: "list"
-      header: "Our Expertise"
     features:
       - name: "Reactive Systems"
         class: "text-start"
         description: "Build rich, domain-driven, data-intensive applications for scale and resilience."
+        link:
+          url: "/consulting-offerings#reactive-systems"
+          name: "[1]"
+          class: "cite-link"
       - name: "Data lakehouse & Streaming Platform"
         class: "text-start"
         description: "Data exchange and multi-modal data products, on a Kappa foundation & open table formats."
+        link:
+          url: "/consulting-offerings#data-lakehouse-streaming-platform"
+          name: "[2]"
+          class: "cite-link"
       - name: "Real-time analytics & ML"
         class: "text-start"
         description: "Serve insights, reporting & inference from petabyte scale data at sub-second latencies."
+        link:
+          url: "/consulting-offerings#real-time-analytics-ml"
+          name: "[3]"
+          class: "cite-link"
+      - name: "Event-driven Integration"
+        class: "text-start"
+        description: "CDC, event mesh and system sync, always-on exchange across systems of record and engagement."
+        link:
+          url: "/consulting-offerings#event-driven-integration"
+          name: "[4]"
+          class: "cite-link"
+  - title: Agentic AI
+    featured: true
+    summary: "Build multi-agent AI systems with guardrails and humans in the loop."
+    hash: "agentic-ai"
+    section:
+      class: "split-container"
+      feature_type: "list"
+    features:
+      - name: "Agentic Workflows"
+        class: "text-start"
+        description: "Orchestrate multi-agent plans that plan, tool-call, and hand off across real business processes."
+      - name: "Harness Engineering"
+        class: "text-start"
+        description: "Eval loops, sandboxes, and runtime guardrails so agents improve without drifting into chaos."
+      - name: "Open Source Models"
+        class: "text-start"
+        description: "Select, fine-tune, and operate open models where control, cost, and data gravity matter."
+      - name: "APIs and MCP"
+        class: "text-start"
+        description: "Expose tools and enterprise systems as first-class agent interfaces, APIs and MCP surfaces."
   - title: Platform-ification and DevX
     featured: true
-    summary: ""
+    summary: "Engineer the inner loop of software development"
     hash: "platform-ification-devx"
     section:
       class: "split-container"
       feature_type: "list"
-      header: "Our Expertise"
     features:
-      - name: "API Management"
+      - name: "Continuous Sec-Ops"
         class: "text-start"
-        description: "Solve for API design-time, runtime and day 2 operations at enterprise scale."
-      - name: "Developer Portals"
+        description: "Bake security into every stage of the delivery loop, continuous, not bolted on."
+        link:
+          url: "/consulting-offerings#continuous-sec-ops"
+          name: "[1]"
+          class: "cite-link"
+      - name: "Autonomous SRE"
         class: "text-start"
-        description: "Internal, External and Third party developer programs"
-      - name: "API Monetization & Marketplace"
+        description: "Automate detection, remediation and toil so reliability scales with the platform."
+        link:
+          url: "/consulting-offerings#autonomous-sre"
+          name: "[2]"
+          class: "cite-link"
+      - name: "Formal Verification Systems"
         class: "text-start"
-        description: "Data and APIs as first class revenue streams. Your company as a service."
+        description: "Prove critical properties of distributed systems before they ship to production."
+        link:
+          url: "/consulting-offerings#formal-verification-systems"
+          name: "[3]"
+          class: "cite-link"
   - title: Systems & Scale
     featured: true
     summary: ""
@@ -64,7 +113,6 @@ sections:
     section:
       class: "split-container"
       feature_type: "list"
-      header: "Our Expertise"
     features:
       - name: "Complex Migrations"
         class: "text-start"

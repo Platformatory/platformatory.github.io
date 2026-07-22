@@ -1,40 +1,279 @@
 <script>
-    Reveal.initialize({
-        //   plugins: [ Simplemenu ],
-          hash: true,
-          history: true,
-          hashOneBasedIndex: true,
-          view: "scroll",
-          scrollProgress: true,
-          jumpToSlide: true,
-          scrollActivationWidth: null,
-      })
-  // let hash = window.location.hash
-  // Reveal.on("ready",(event)=>{
-  //   const artibutes = Reveal.getSlidesAttributes();
-  //   console.log(event, artibutes)
-  //   console.log(window.location.hash, "window.location.hash")
-  //   // console.log(hash, "outside")
-  //   console.log(Reveal.getQueryHash(),"getQueryHash");
-  //   // redirecting to matching hash path
-  //   let hashindex =[] 
-  //   artibutes.map((item)=>{if(item.id)hashindex[item.id] =[Number(item['data-index-h']),Number(item['data-index-v'])]});
-  //   window.hashindex = hashindex;
-  //   console.log(hashindex)
-  //   console.log(hashindex[hash.replace('#','')],"current hash")
-  //   let CurrentIndex = hashindex[hash.replace('#','')]
-  //   console.log(CurrentIndex, hash.replace('#',''));
-  //   Reveal.slide(CurrentIndex[0],CurrentIndex[1])
-  // });
+(function () {
+ var syncingFromHash = false;
+ var syncingToHash = false;
+ var bootstrapping = true;
+ var initialHash = location.hash;
 
-  // Reveal.on('slidechanged', (event) => {
-  //   // event.previousSlide, event.currentSlide, event.indexh, event.indexv
-  //       if (event.currentSlide.id.length>0){
-  //       const hash=`#${event.currentSlide.id }`
-  //       window.location.hash = hash;
-  //       }else{
-  //         history.replaceState(null, null,window.location.pathname)
-  //       }
-  // });
-  
-  </script>
+ // Prefer bookmark hash over Reveal's session scroll restore
+ if (initialHash && initialHash.length > 1) {
+ try {
+ sessionStorage.removeItem("reveal-scroll-top");
+ sessionStorage.removeItem("reveal-scroll-origin");
+ } catch (e) {}
+ }
+
+ function slideId(slide) {
+ if (!slide) return "";
+ if (slide.id) return slide.id;
+ var nested = slide.querySelector("[id]");
+ return nested ? nested.id : "";
+ }
+
+ function parseHash(hash) {
+ var raw = (hash || "").replace(/^#\/?/, "");
+ if (!raw) return { type: "empty" };
+ var parts = raw.split("/");
+ var head = decodeURIComponent(parts[0] || "");
+ if (/^\d+$/.test(head)) {
+ return { type: "index", h: parseInt(head, 10) };
+ }
+ return { type: "id", id: head };
+ }
+
+ // Prefer nearest scroll-page by viewport position, more reliable than
+ // Reveal's current slide in scroll view (esp. first/last pages).
+ function getActiveSlideFromScroll() {
+ var vp = Reveal.getViewportElement && Reveal.getViewportElement();
+ var pages = document.querySelectorAll(".scroll-page");
+ if (!vp || !pages.length) {
+ return Reveal.getCurrentSlide && Reveal.getCurrentSlide();
+ }
+
+ var max = Math.max(vp.scrollHeight - vp.clientHeight, 0);
+ // Pin to last/first page at the extremes
+ if (max > 0 && vp.scrollTop >= max - 2) {
+ return pages[pages.length - 1].querySelector("section") || pages[pages.length - 1];
+ }
+ if (vp.scrollTop <= 2) {
+ return pages[0].querySelector("section") || pages[0];
+ }
+
+ var y = vp.scrollTop + vp.clientHeight * 0.35;
+ var best = null;
+ var bestDist = Infinity;
+ for (var i = 0; i < pages.length; i++) {
+ var page = pages[i];
+ var center = page.offsetTop + page.offsetHeight / 2;
+ var dist = Math.abs(center - y);
+ if (dist < bestDist) {
+ bestDist = dist;
+ best = page.querySelector("section") || page;
+ }
+ }
+ return best || (Reveal.getCurrentSlide && Reveal.getCurrentSlide());
+ }
+
+ function writeHashForSlide(slide) {
+ if (syncingFromHash || bootstrapping) return;
+ var id = slideId(slide);
+ var next = id ? "#" + id : "";
+ if (location.hash === next) return;
+ if (!id && (!location.hash || location.hash === "#")) return;
+
+ syncingToHash = true;
+ if (id) {
+ history.replaceState(null, "", next);
+ } else {
+ history.replaceState(null, "", location.pathname + location.search);
+ }
+ setTimeout(function () {
+ syncingToHash = false;
+ }, 0);
+ }
+
+ function syncHashFromScroll() {
+ writeHashForSlide(getActiveSlideFromScroll());
+ }
+
+ var scrollJumpId = 0;
+
+ function scrollToPage(page) {
+ if (!page) return;
+ var vp = Reveal.getViewportElement && Reveal.getViewportElement();
+ if (vp && vp.classList.contains("reveal-scroll")) {
+ var max = Math.max(vp.scrollHeight - vp.clientHeight, 0);
+ var top = Math.min(Math.max(page.offsetTop, 0), max);
+ var pages = document.querySelectorAll(".scroll-page");
+ var last = pages.length ? pages[pages.length - 1] : null;
+ var pageSection = page.matches("section")
+ ? page
+ : page.querySelector("section");
+ var lastSection = last && last.querySelector("section");
+ if (last && pageSection && pageSection === lastSection) {
+ top = max;
+ }
+
+ var jumpId = ++scrollJumpId;
+ var prevSnap = vp.style.scrollSnapType;
+ vp.style.setProperty("scroll-snap-type", "none", "important");
+ if (typeof vp.scrollTo === "function") {
+ vp.scrollTo({ top: top, behavior: "instant" });
+ } else {
+ vp.scrollTop = top;
+ }
+ vp.dispatchEvent(new Event("scroll"));
+ setTimeout(function () {
+ // Ignore stale jumps superseded by a newer navigation
+ if (jumpId !== scrollJumpId) return;
+ if (typeof vp.scrollTo === "function") {
+ vp.scrollTo({ top: top, behavior: "instant" });
+ } else {
+ vp.scrollTop = top;
+ }
+ vp.dispatchEvent(new Event("scroll"));
+ if (prevSnap) {
+ vp.style.scrollSnapType = prevSnap;
+ } else {
+ vp.style.removeProperty("scroll-snap-type");
+ }
+ }, 450);
+ } else {
+ page.scrollIntoView({ block: "start" });
+ }
+ }
+
+ function goToHash(hash, attempt) {
+ if (typeof Reveal === "undefined") return;
+ attempt = attempt || 0;
+ var parsed = parseHash(hash);
+
+ function settle(expectedId) {
+ setTimeout(function () {
+ syncingFromHash = false;
+ bootstrapping = false;
+ if (expectedId) {
+ var next = "#" + expectedId;
+ if (location.hash !== next) {
+ syncingToHash = true;
+ history.replaceState(null, "", next);
+ setTimeout(function () {
+ syncingToHash = false;
+ }, 0);
+ }
+ } else {
+ syncHashFromScroll();
+ }
+ }, 400);
+ }
+
+ syncingFromHash = true;
+
+ if (parsed.type === "empty") {
+ var firstPage =
+ document.querySelector(".scroll-page") ||
+ document.querySelector(".slides > section");
+ scrollToPage(firstPage);
+ settle(slideId(firstPage && firstPage.querySelector("section")));
+ return;
+ }
+
+ if (parsed.type === "index") {
+ var oneBased = Reveal.getConfig().hashOneBasedIndex;
+ var h = oneBased ? Math.max(parsed.h - 1, 0) : parsed.h;
+ var pages = document.querySelectorAll(".scroll-page");
+ if (pages.length === 0 && attempt < 20) {
+ setTimeout(function () {
+ goToHash(hash, attempt + 1);
+ }, 50);
+ return;
+ }
+ if (pages[h]) {
+ scrollToPage(pages[h]);
+ settle(slideId(pages[h].querySelector("section")));
+ } else {
+ Reveal.slide(h);
+ settle();
+ }
+ return;
+ }
+
+ var el = document.getElementById(parsed.id);
+ if (!el) {
+ syncingFromHash = false;
+ bootstrapping = false;
+ return;
+ }
+
+ var slide =
+ el.matches && el.matches(".slides section")
+ ? el
+ : el.closest(".slides section");
+ if (!slide) {
+ syncingFromHash = false;
+ bootstrapping = false;
+ return;
+ }
+
+ var page = slide.closest(".scroll-page");
+ if (!page && attempt < 20) {
+ setTimeout(function () {
+ goToHash(hash, attempt + 1);
+ }, 50);
+ return;
+ }
+ scrollToPage(page || slide);
+ settle(parsed.id);
+ }
+
+ function bindScrollHash() {
+ var vp = Reveal.getViewportElement && Reveal.getViewportElement();
+ if (!vp) return;
+ var ticking = false;
+ vp.addEventListener(
+ "scroll",
+ function () {
+ if (syncingFromHash || bootstrapping || ticking) return;
+ ticking = true;
+ requestAnimationFrame(function () {
+ ticking = false;
+ syncHashFromScroll();
+ });
+ },
+ { passive: true }
+);
+ }
+
+ var ready = Reveal.initialize({
+ hash: false,
+ history: false,
+ hashOneBasedIndex: true,
+ view: "scroll",
+ scrollProgress: true,
+ jumpToSlide: true,
+ scrollActivationWidth: null,
+ });
+
+ function onReady() {
+ bindScrollHash();
+ if (initialHash && initialHash.length > 1) {
+ goToHash(initialHash);
+ } else {
+ bootstrapping = false;
+ syncHashFromScroll();
+ }
+ // Safety: never leave bootstrapping stuck if settle is skipped
+ setTimeout(function () {
+ bootstrapping = false;
+ syncingFromHash = false;
+ }, 2000);
+ }
+
+ if (ready && typeof ready.then === "function") {
+ ready.then(onReady);
+ } else if (Reveal.isReady && Reveal.isReady()) {
+ onReady();
+ } else {
+ Reveal.on("ready", onReady);
+ }
+
+ Reveal.on("slidechanged", function () {
+ syncHashFromScroll();
+ });
+
+ window.addEventListener("hashchange", function () {
+ if (syncingToHash) return;
+ goToHash(location.hash);
+ });
+})();
+</script>

@@ -1,0 +1,101 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-5CR3MF9");
+    </script>
+    <title>
+      {% if page.title %}{{ page.title }} {% endif %}| {{ site.title | escape }}
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ '/images/logo/favicon.png' | relative_url }}"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Titillium+Web:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet" />
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}" />
+    {% endif %}
+    <meta property="og:title" content="{{ page.title }} | {{ site.title }}" />
+    <meta property="og:type" content="{{ site.seo.meta_og_type }}" />
+    <meta
+      property="og:url"
+      content="{{ site.url }}{{ page.url | split: '/' | join: '/' }}"
+    />
+    <meta property="og:description" content="{{ page.description }}" />
+  </head>
+
+  <body class="case-studies-page">
+    {% include main-menu-mobile.html %}
+    {% include header.html headerClass='header-extra' %}
+
+    <main class="case-studies">
+      {% if page.collection == "case-studies" %}
+      <article class="case-study">
+        <header class="case-study-hero">
+          <div class="case-study-inner">
+            <p class="case-study-kicker">
+              <a href="/case-studies/">Case Studies</a>
+              {% if page.industry %}<span aria-hidden="true"> · </span>{{ page.industry }}{% endif %}
+            </p>
+            {% if page.logo %}
+            <img class="case-study-logo" src="{{ page.logo | relative_url }}" alt="{{ page.customer | default: page.title }}" />
+            {% endif %}
+            <h1>{{ page.title }}</h1>
+            {% if page.customer %}
+            <p class="case-study-customer">{{ page.customer }}</p>
+            {% endif %}
+            {% if page.summary %}
+            <p class="case-study-summary">{{ page.summary }}</p>
+            {% endif %}
+          </div>
+        </header>
+
+        <div class="case-study-body">
+          <div class="case-study-inner">
+            {% if page.outcomes %}
+            <ul class="case-study-outcomes">
+              {% for outcome in page.outcomes %}
+              <li>{{ outcome }}</li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+            {{ content }}
+          </div>
+        </div>
+
+        <footer class="case-study-nav">
+          <div class="case-study-inner">
+            <a href="/case-studies/">← All case studies</a>
+            <a class="case-study-cta" href="/company#contact">Talk to us<span aria-hidden="true"> →</span></a>
+          </div>
+        </footer>
+      </article>
+      {% else %}
+      {{ content }}
+      {% endif %}
+    </main>
+
+    {% include footer.html %}
+    <script type="text/javascript" src="{{ '/assets/js/scripts.js' | relative_url }}"></script>
+  </body>
+</html>

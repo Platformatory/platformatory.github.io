@@ -1,0 +1,293 @@
+// Principles, maxim mosaic (37signals-inspired density, Platformatory voice)
+
+.principles-page {
+  --pr-ink: #0d1926;
+  --pr-muted: #5a6570;
+  --pr-soft: #8a939c;
+  --pr-line: rgba(13, 25, 38, 0.1);
+  --pr-green: var(--v2-text-primary, #6c973c);
+  --pr-green-bright: #7cc846;
+  --pr-paper: #eef1ef;
+  --pr-card: #ffffff;
+  background: var(--pr-paper);
+  color: var(--pr-ink);
+}
+
+.principles {
+  font-family: "Titillium Web", sans-serif;
+}
+
+// -- Hero ------------------------------------------------
+
+.principles-hero {
+  background:
+    radial-gradient(ellipse 80% 70% at 100% 0%, rgba(108, 151, 60, 0.18), transparent 55%),
+    linear-gradient(165deg, #0a1219 0%, var(--pr-ink) 55%, #122233 100%);
+  color: #fff;
+  padding: 4.75rem 1.5rem 2.75rem;
+}
+
+.principles-hero-inner {
+  width: min(72rem, 100%);
+  margin: 0 auto;
+  max-width: 40rem;
+}
+
+.principles-brand {
+  margin: 0 0 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--pr-green-bright);
+}
+
+.principles-hero h1 {
+  margin: 0 0 1rem;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: clamp(3rem, 7vw, 4.75rem);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  color: #fff;
+}
+
+.principles-lede {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.72);
+  max-width: 32rem;
+}
+
+// -- Maxim mosaic ----------------------------------------
+
+.principles-maxims {
+  padding: 2.5rem 1.25rem 1rem;
+}
+
+.principles-maxims-inner {
+  width: min(72rem, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+
+  @media (min-width: 960px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.85rem;
+  }
+
+  @media (max-width: 560px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.principle-card {
+  --i: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-height: 9.75rem;
+  padding: 1rem 1.05rem 1.05rem;
+  background: var(--pr-card);
+  border: 1px solid var(--pr-line);
+  border-radius: 2px;
+  color: inherit;
+  text-decoration: none !important;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+  animation: principle-card-in 0.5s ease both;
+  animation-delay: calc(var(--i) * 0.04s);
+
+  &:hover,
+  &:focus-visible {
+    border-color: rgba(124, 200, 70, 0.55);
+    box-shadow: 0 12px 28px rgba(13, 25, 38, 0.07);
+    transform: translateY(-2px);
+    color: inherit;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--pr-green);
+    outline-offset: 2px;
+  }
+}
+
+.principle-card-num {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--pr-green);
+  line-height: 1;
+}
+
+.principle-card-title {
+  margin: 0;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: clamp(1.15rem, 1.65vw, 1.35rem);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  color: var(--pr-ink);
+  text-wrap: balance;
+}
+
+.principle-card-maxim {
+  margin: 0;
+  margin-top: auto;
+  padding-top: 0.35rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--pr-muted);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+}
+
+// -- Essays ----------------------------------------------
+
+.principles-essays {
+  padding: 3rem 1.25rem 1rem;
+}
+
+.principles-essays-inner {
+  width: min(42rem, 100%);
+  margin: 0 auto;
+}
+
+.principles-essays-label {
+  margin: 0 0 1.75rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--pr-soft);
+}
+
+.principle-essay {
+  padding: 2.25rem 0;
+  border-top: 1px solid var(--pr-line);
+  scroll-margin-top: 5.5rem;
+
+  &:target {
+    .principle-essay-head h2 {
+      color: var(--pr-green);
+    }
+  }
+}
+
+.principle-essay-head {
+  margin-bottom: 1rem;
+}
+
+.principle-essay-num {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--pr-green);
+}
+
+.principle-essay-head h2 {
+  margin: 0;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: clamp(1.55rem, 3vw, 2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--pr-ink);
+  text-wrap: balance;
+  transition: color 0.2s ease;
+}
+
+.principle-essay-body {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--pr-muted);
+
+  p {
+    margin: 0 0 1rem;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  em {
+    color: var(--pr-ink);
+    font-style: italic;
+  }
+}
+
+// -- Footer ----------------------------------------------
+
+.principles-foot {
+  border-top: 1px solid var(--pr-line);
+  padding: 3rem 1.25rem 4.5rem;
+  margin-top: 1.5rem;
+}
+
+.principles-foot-inner {
+  width: min(42rem, 100%);
+  margin: 0 auto;
+}
+
+.principles-foot p {
+  margin: 0 0 1.15rem;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  color: var(--pr-ink);
+  text-wrap: balance;
+}
+
+.principles-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.7rem 1.2rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #fff;
+  background: var(--pr-ink);
+  border-radius: 3px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+
+  &:hover,
+  &:focus {
+    background: var(--pr-green);
+    color: #fff;
+    text-decoration: none;
+    transform: translateY(-1px);
+  }
+}
+
+@keyframes principle-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .principle-card {
+    animation: none;
+  }
+
+  .principle-card:hover,
+  .principle-card:focus-visible {
+    transform: none;
+  }
+}

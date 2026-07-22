@@ -14,73 +14,79 @@ document.addEventListener("DOMContentLoaded", function () {
 
   navLinks.forEach(function (link) {
     link.addEventListener("click", function (event) {
-      // Get the target section's ID from the link's href
-      var targetId = link.getAttribute("href").substring(1);
+      var href = link.getAttribute("href") || "";
+      if (!href.startsWith("#")) return;
 
-      var targetSection = document.getElementById(targetId);
+      event.preventDefault();
+      var targetId = href.substring(1);
+      if (!targetId) return;
 
-      targetSection.scrollIntoView({
-        behavior: "smooth",
-      });
+      // Drive Reveal (and the URL) through the hash so bookmarks stay in sync
+      var target = document.getElementById(targetId);
+      if (target) {
+        var page =
+          target.closest(".scroll-page") ||
+          target.closest(".slides section") ||
+          target;
+        var vp =
+          typeof Reveal !== "undefined" && Reveal.getViewportElement
+            ? Reveal.getViewportElement()
+            : null;
+        if (vp && vp.classList.contains("reveal-scroll")) {
+          vp.scrollTop = page.offsetTop;
+          vp.dispatchEvent(new Event("scroll"));
+        } else {
+          page.scrollIntoView({ block: "start" });
+        }
+      }
+      if (location.hash !== "#" + targetId) {
+        location.hash = targetId;
+      }
 
       navLinks.forEach(function (navLink) {
         navLink.classList.remove("down-nav-active");
       });
-
       link.classList.add("down-nav-active");
     });
   });
 
-  const splashScreenId = "splash-screen";
-  const splashCookieName = "splash_shown";
-  const splashTimeout = 10000; // 10 seconds
-
-  function hasSeenSplashScreen() {
-      return document.cookie.split("; ").some(row => row.startsWith(`${splashCookieName}=true`));
+  function shuffleNodes(nodes) {
+    var items = Array.prototype.slice.call(nodes);
+    for (var i = items.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = items[i];
+      items[i] = items[j];
+      items[j] = tmp;
+    }
+    return items;
   }
 
-  function setSplashScreenCookie() {
-      const expires = new Date();
-      expires.setTime(expires.getTime() + 30 * 60 * 1000); // Cookie expires in 30 minutes
-      document.cookie = `${splashCookieName}=true; expires=${expires.toUTCString()}; path=/`;
-  }
-
-  function hideSplashScreen() {
-      const splashScreen = document.getElementById(splashScreenId);
-      if (splashScreen) {
-          splashScreen.style.display = "none";
+  // Homepage thesis: randomly sample N principles from the collection
+  document.querySelectorAll(".principles-sample").forEach(function (list) {
+    var count = parseInt(list.getAttribute("data-sample-count") || "4", 10);
+    var items = shuffleNodes(list.querySelectorAll(".principle-candidate"));
+    if (items.length <= count) {
+      items.forEach(function (item) {
+        item.classList.remove("is-sampled-out");
+      });
+      return;
+    }
+    items.forEach(function (item, index) {
+      if (index < count) {
+        item.classList.remove("is-sampled-out");
+        list.appendChild(item);
+      } else {
+        item.classList.add("is-sampled-out");
       }
-  }
+    });
+  });
 
-  function showSplashScreen() {
-      const splashScreen = document.getElementById(splashScreenId);
-      if (splashScreen) {
-          splashScreen.style.display = "block";
-
-          // Set timeout to hide splash screen automatically
-          const timeoutId = setTimeout(() => {
-              hideSplashScreen();
-              setSplashScreenCookie();
-          }, splashTimeout);
-
-          // Add event listener for "Enter" or "Escape" keys
-          const handleKeyPress = (event) => {
-              if (event.key === "Enter" || event.key === "Escape") {
-                  hideSplashScreen();
-                  setSplashScreenCookie();
-                  clearTimeout(timeoutId); // Clear the timeout to prevent double execution
-                  document.removeEventListener("keydown", handleKeyPress); // Remove listener after key press
-              }
-          };
-
-          document.addEventListener("keydown", handleKeyPress);
-      }
-  }
-
-  // Show splash screen if it hasn't been seen yet
-  if (!hasSeenSplashScreen()) {
-      showSplashScreen();
-  }
+  // Partnership logos: reshuffle order on every page load
+  document.querySelectorAll(".images-container.partners").forEach(function (grid) {
+    shuffleNodes(grid.querySelectorAll(".image-item")).forEach(function (item) {
+      grid.appendChild(item);
+    });
+  });
 });
 
 var places= [
@@ -118,14 +124,4 @@ var places= [
 // map: "world",
 // markers: places
 // });
-
-const splashScreenId = "splash-screen";
-
-function hideSplashScreen() {
-  const splashScreen = document.getElementById(splashScreenId);
-  if (splashScreen) {
-      splashScreen.style.display = "none";
-  }
-}
-
 

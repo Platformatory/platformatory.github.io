@@ -1,0 +1,106 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-5CR3MF9");
+    </script>
+    <title>
+      {% if page.title %}{{ page.title }} {% endif %}| {{ site.title | escape }}
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ '/images/logo/favicon.png' | relative_url }}"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Titillium+Web:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet" />
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}" />
+    {% endif %}
+    <meta property="og:title" content="{{ page.title }} | {{ site.title }}" />
+    <meta property="og:type" content="{{ site.seo.meta_og_type }}" />
+    <meta
+      property="og:url"
+      content="{{ site.url }}{{ page.url | split: '/' | join: '/' }}"
+    />
+    <meta property="og:description" content="{{ page.description }}" />
+  </head>
+
+  <body class="principles-page">
+    {% include main-menu-mobile.html %}
+    {% include header.html headerClass='header-extra' %}
+
+    <main class="principles">
+      <header class="principles-hero">
+        <div class="principles-hero-inner">
+          <p class="principles-brand">Platformatory</p>
+          <h1>{{ page.title }}</h1>
+          <p class="principles-lede">{{ content | strip_html | strip }}</p>
+        </div>
+      </header>
+
+      {% assign sorted = site.principles | sort: "weight" %}
+
+      <section class="principles-maxims" aria-label="Principles">
+        <div class="principles-maxims-inner">
+          {% for principle in sorted %}
+          <a
+            class="principle-card"
+            href="#{{ principle.slug }}"
+            style="--i: {{ forloop.index0 }}"
+          >
+            <span class="principle-card-num">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+            <h2 class="principle-card-title">{{ principle.title }}</h2>
+            <p class="principle-card-maxim">{{ principle.description }}</p>
+          </a>
+          {% endfor %}
+        </div>
+      </section>
+
+      <section class="principles-essays" aria-label="Essays">
+        <div class="principles-essays-inner">
+          <p class="principles-essays-label">Read deeper</p>
+          {% for principle in sorted %}
+          <article class="principle-essay" id="{{ principle.slug }}">
+            <header class="principle-essay-head">
+              <span class="principle-essay-num">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+              <h2>{{ principle.title }}</h2>
+            </header>
+            <div class="principle-essay-body">
+              {{ principle.content }}
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+      </section>
+
+      <footer class="principles-foot">
+        <div class="principles-foot-inner">
+          <p>These principles evolve as we ship. Want to pressure-test them against your platform?</p>
+          <a class="principles-cta" href="/company#contact">Talk to us<span aria-hidden="true"> →</span></a>
+        </div>
+      </footer>
+    </main>
+
+    {% include footer.html %}
+    <script type="text/javascript" src="{{ '/assets/js/scripts.js' | relative_url }}"></script>
+  </body>
+</html>

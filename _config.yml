@@ -1,7 +1,7 @@
 baseurl: ""
 exclude: ["README.md"]
 permalink: pretty
-title: "Platformatory Labs"
+title: "Platformatory | Forward Deployed Engineering Firm: Data, AI & Modernization"
 
 google_analytics_id: "G-PWW2W71JX1"
 homepage:
@@ -9,9 +9,9 @@ homepage:
 logo:
   mobile: "images/logo/plf-logo.svg"
   desktop: "images/logo/plf-logo.svg"
-  desktop_height: "60px"
+  desktop_height: "76px"
 footer:
-  copyright_text: "&copy; All rights reserved 2024. Platformatory LLC"
+  copyright_text: "&copy; All rights reserved YYYY. Platformatory LLC"
 
 seo:
   meta_og_title: "Platformatory"
@@ -43,6 +43,11 @@ collections:
     permalink: /events/:path
   education:
     output: true
+  principles:
+    output: false
+  case-studies:
+    output: true
+    permalink: /case-studies/:name/
 
 # For events
 future: true
