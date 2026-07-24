@@ -22,9 +22,9 @@ description: "A capability brief covering Platformatory's service offerings acro
     <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">03</span><a href="#real-time-retail">Real-time retail</a></div>
     <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">04</span><a href="#digital-twins">Digital Twins</a></div>
     <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">05</span><a href="#product-engineering">Product Engineering</a></div>
-    <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">06</span><a href="#data-platform-office">Data &amp; Platform Office</a></div>
-    <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">07</span><a href="#purpose-built-systems">Purpose-built systems</a></div>
-    <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">08</span><a href="#on-premise-stack">On-premise Kafka, ClickHouse, Connect &amp; Flink</a></div>
+    <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">06</span><a href="#data-platform-office">Data &amp; AI Platform Office</a></div>
+    <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">07</span><a href="#micro-gcc">Micro GCC</a></div>
+    <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">08</span><a href="#forward-deployed-engineering">Forward Deployed Engineering</a></div>
     <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">09</span><a href="#compliance-assessment">Compliance Assessment</a></div>
     <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">10</span><a href="#upgrades-remediation">Upgrades &amp; Remediation</a></div>
     <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">11</span><a href="#managed-performance-engineering">Performance Engineering</a></div>
@@ -95,7 +95,7 @@ description: "A capability brief covering Platformatory's service offerings acro
 <div class="wp-item" id="product-engineering">
   <span class="wp-item-num">05 · Co-creation &amp; Incubation laboratory</span>
   <h3>Product Engineering<span class="wp-badge">Content needed</span></h3>
-  <p class="wp-lead">Art of the possible, for new-age, multi-tenant SaaS and PaaS.</p>
+  <p class="wp-lead">Design and ship new-age, multi-tenant SaaS and PaaS with platform primitives, paved paths, and production-grade operability from day one.</p>
   <div class="wp-stats">
     <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
     <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
@@ -107,45 +107,45 @@ description: "A capability brief covering Platformatory's service offerings acro
 
 <div class="wp-item" id="data-platform-office">
   <span class="wp-item-num">06 · Co-creation &amp; Incubation laboratory</span>
-  <h3>Data &amp; Platform Office<span class="wp-badge">Content needed</span></h3>
-  <p class="wp-lead">Specialized data &amp; platform teams for global capability centers.</p>
+  <h3>Data &amp; AI Platform Office<span class="wp-badge">Content needed</span></h3>
+  <p class="wp-lead">Stand up specialized data and AI platform teams for GCCs, shared services, standards, and a charter that compounds across product lines.</p>
   <div class="wp-stats">
     <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
     <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
     <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
   </div>
-  <div class="wp-diagram">[Insert architecture diagram or process illustration for Data &amp; Platform Office]</div>
-  <p class="wp-todo">Add 2–3 paragraphs here: approach, methodology, and a representative outcome for Data &amp; Platform Office engagements.</p>
+  <div class="wp-diagram">[Insert architecture diagram or process illustration for Data &amp; AI Platform Office]</div>
+  <p class="wp-todo">Add 2–3 paragraphs here: approach, methodology, and a representative outcome for Data &amp; AI Platform Office engagements.</p>
 </div>
 
-<div class="wp-item" id="purpose-built-systems">
+<div class="wp-item" id="micro-gcc">
   <span class="wp-item-num">07 · Co-creation &amp; Incubation laboratory</span>
-  <h3>Purpose-built systems<span class="wp-badge">Content needed</span></h3>
-  <p class="wp-lead">Specialized distributed systems development in the data, AI and infrastructure space.</p>
+  <h3>Micro GCC<span class="wp-badge">Content needed</span></h3>
+  <p class="wp-lead">A lean, high-leverage capability cell embedded with your domain, small enough to move fast, strong enough to own platform outcomes.</p>
   <div class="wp-stats">
     <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
     <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
     <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
   </div>
-  <div class="wp-diagram">[Insert architecture diagram or process illustration for Purpose-built systems]</div>
-  <p class="wp-todo">Add 2–3 paragraphs here: approach, methodology, and a representative outcome for Purpose-built systems engagements.</p>
+  <div class="wp-diagram">[Insert architecture diagram or process illustration for Micro GCC]</div>
+  <p class="wp-todo">Add 2–3 paragraphs here: approach, methodology, and a representative outcome for Micro GCC engagements.</p>
+</div>
+
+<div class="wp-item" id="forward-deployed-engineering">
+  <span class="wp-item-num">08 · Co-creation &amp; Incubation laboratory</span>
+  <h3>Forward Deployed Engineering<span class="wp-badge">Content needed</span></h3>
+  <p class="wp-lead">Engineers in the trenches with your teams, domain immersion plus delivery so the hard problems get solved where production actually hurts.</p>
+  <div class="wp-stats">
+    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
+    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
+    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
+  </div>
+  <div class="wp-diagram">[Insert architecture diagram or process illustration for Forward Deployed Engineering]</div>
+  <p class="wp-todo">Add 2–3 paragraphs here: approach, methodology, and a representative outcome for Forward Deployed Engineering engagements.</p>
 </div>
 
 <div class="wp-part">
   <h2>Managed Platform Services</h2>
-</div>
-
-<div class="wp-item" id="on-premise-stack">
-  <span class="wp-item-num">08 · Managed Platform Services</span>
-  <h3>On-premise Kafka, ClickHouse, Connect &amp; Flink<span class="wp-badge">Content needed</span></h3>
-  <p class="wp-lead">Operate your streaming and analytics stack in your perimeter, day-2 maturity without the managed-service lock-in.</p>
-  <div class="wp-stats">
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-  </div>
-  <div class="wp-diagram">[Insert architecture diagram or process illustration for on-premise managed platforms]</div>
-  <p class="wp-todo">Add 2–3 paragraphs here: approach, methodology, and a representative outcome for on-premise Kafka, ClickHouse, Connect &amp; Flink engagements.</p>
 </div>
 
 <div class="wp-item" id="compliance-assessment">

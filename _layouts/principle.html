@@ -1,0 +1,94 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-5CR3MF9");
+    </script>
+    <title>
+      {% if page.title %}{{ page.title }} {% endif %}| {{ site.title | escape }}
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ '/images/logo/favicon.png' | relative_url }}"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Titillium+Web:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet" />
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}" />
+    {% endif %}
+    <meta property="og:title" content="{{ page.title }} | {{ site.title }}" />
+    <meta property="og:type" content="{{ site.seo.meta_og_type }}" />
+    <meta
+      property="og:url"
+      content="{{ site.url }}{{ page.url | split: '/' | join: '/' }}"
+    />
+    <meta property="og:description" content="{{ page.description }}" />
+    <meta property="og:image" content="{{ site.seo.meta_og_image }}" />
+  </head>
+
+  <body class="principles-page principle-detail-page">
+    {% include main-menu-mobile.html %}
+    {% include header.html headerClass='header-extra' %}
+
+    <main class="principles principle-detail">
+      <div class="principle-detail-inner">
+        <p class="principle-detail-back">
+          <a href="{{ '/platform-engineering/' | relative_url }}#{{ page.slug }}">← Platform Engineering is dead. Long live Platform Engineering!</a>
+        </p>
+
+        <article class="principle-detail-article">
+          <h1 class="principle-detail-title">{{ page.title }}</h1>
+          <p class="principle-detail-maxim">{{ page.description }}</p>
+
+          {% assign body = content | strip_html | strip %}
+          {% if body != "" %}
+          <div class="principle-detail-body">
+            {{ content }}
+          </div>
+          {% endif %}
+
+          {% if page.see_also and page.see_also.size > 0 %}
+          <aside class="principle-see-also" aria-label="See also">
+            <p class="principle-see-also-label">See also</p>
+            <ul class="principle-see-also-list">
+              {% for related_slug in page.see_also %}
+              {% assign related = site.principles | where: "slug", related_slug | first %}
+              {% if related %}
+              <li>
+                <a href="{{ related.url | relative_url }}">
+                  <span class="principle-see-also-title">{{ related.title }}</span>
+                  <span class="principle-see-also-maxim">{{ related.description }}</span>
+                </a>
+              </li>
+              {% endif %}
+              {% endfor %}
+            </ul>
+          </aside>
+          {% endif %}
+        </article>
+      </div>
+    </main>
+
+    {% include footer.html %}
+    <script type="text/javascript" src="{{ '/assets/js/scripts.js' | relative_url }}"></script>
+  </body>
+</html>

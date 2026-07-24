@@ -9,6 +9,30 @@ menuTrigger.onclick = function () {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
+  function goToSlideHash(targetId) {
+    if (!targetId) return;
+    var target = document.getElementById(targetId);
+    if (target) {
+      var page =
+        target.closest(".scroll-page") ||
+        target.closest(".slides section") ||
+        target;
+      var vp =
+        typeof Reveal !== "undefined" && Reveal.getViewportElement
+          ? Reveal.getViewportElement()
+          : null;
+      if (vp && vp.classList.contains("reveal-scroll")) {
+        vp.scrollTop = page.offsetTop;
+        vp.dispatchEvent(new Event("scroll"));
+      } else {
+        page.scrollIntoView({ block: "start" });
+      }
+    }
+    if (location.hash !== "#" + targetId) {
+      location.hash = targetId;
+    }
+  }
+
   // Get all navigation links
   var navLinks = document.querySelectorAll(".down-panel div > ul li a");
 
@@ -18,35 +42,22 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!href.startsWith("#")) return;
 
       event.preventDefault();
-      var targetId = href.substring(1);
-      if (!targetId) return;
-
-      // Drive Reveal (and the URL) through the hash so bookmarks stay in sync
-      var target = document.getElementById(targetId);
-      if (target) {
-        var page =
-          target.closest(".scroll-page") ||
-          target.closest(".slides section") ||
-          target;
-        var vp =
-          typeof Reveal !== "undefined" && Reveal.getViewportElement
-            ? Reveal.getViewportElement()
-            : null;
-        if (vp && vp.classList.contains("reveal-scroll")) {
-          vp.scrollTop = page.offsetTop;
-          vp.dispatchEvent(new Event("scroll"));
-        } else {
-          page.scrollIntoView({ block: "start" });
-        }
-      }
-      if (location.hash !== "#" + targetId) {
-        location.hash = targetId;
-      }
+      goToSlideHash(href.substring(1));
 
       navLinks.forEach(function (navLink) {
         navLink.classList.remove("down-nav-active");
       });
       link.classList.add("down-nav-active");
+    });
+  });
+
+  // In-slide hash CTAs (e.g. hero "Learn more") need the same Reveal scroll path
+  document.querySelectorAll(".hero-cta-btn[href^='#'], .section-cta-btn[href^='#']").forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      var href = link.getAttribute("href") || "";
+      if (!href.startsWith("#") || href.length < 2) return;
+      event.preventDefault();
+      goToSlideHash(href.substring(1));
     });
   });
 
@@ -81,11 +92,72 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Partnership logos: reshuffle order on every page load
-  document.querySelectorAll(".images-container.partners").forEach(function (grid) {
-    shuffleNodes(grid.querySelectorAll(".image-item")).forEach(function (item) {
+  // Partnership + expertise logos: reshuffle order on every page load
+  document.querySelectorAll(".images-container.partners, .images-container.expertise").forEach(function (grid) {
+    var fixed = Array.prototype.slice.call(grid.querySelectorAll(".image-item--underpin"));
+    var movable = Array.prototype.slice.call(grid.querySelectorAll(".image-item:not(.image-item--underpin)"));
+    shuffleNodes(movable).forEach(function (item) {
       grid.appendChild(item);
     });
+    fixed.forEach(function (item) {
+      grid.appendChild(item);
+    });
+  });
+
+  // Principles studio: randomize index + left/right selection
+  document.querySelectorAll("[data-principles-index]").forEach(function (indexList) {
+    var studio = indexList.closest(".principles-studio");
+    if (!studio) return;
+    var buttons = shuffleNodes(indexList.querySelectorAll(".principles-index-item"));
+    buttons.forEach(function (btn, i) {
+      indexList.appendChild(btn);
+      var num = btn.querySelector("[data-principle-num]");
+      if (num) {
+        num.textContent = i + 1 < 10 ? "0" + (i + 1) : String(i + 1);
+      }
+    });
+
+    function selectPrinciple(slug, pushHash) {
+      if (!slug) return;
+      var panels = studio.querySelectorAll("[data-principle-panel]");
+      var items = indexList.querySelectorAll(".principles-index-item");
+      var matched = false;
+      items.forEach(function (btn) {
+        var active = btn.getAttribute("data-principle") === slug;
+        btn.classList.toggle("is-active", active);
+        btn.setAttribute("aria-pressed", active ? "true" : "false");
+        if (active) matched = true;
+      });
+      panels.forEach(function (panel) {
+        var active = panel.getAttribute("data-principle-panel") === slug;
+        panel.classList.toggle("is-active", active);
+        if (active) {
+          panel.removeAttribute("hidden");
+        } else {
+          panel.setAttribute("hidden", "");
+        }
+      });
+      if (!matched && buttons[0]) {
+        selectPrinciple(buttons[0].getAttribute("data-principle"), false);
+        return;
+      }
+      if (pushHash && location.hash !== "#" + slug) {
+        history.replaceState(null, "", "#" + slug);
+      }
+    }
+
+    indexList.addEventListener("click", function (event) {
+      var btn = event.target.closest(".principles-index-item");
+      if (!btn || !indexList.contains(btn)) return;
+      selectPrinciple(btn.getAttribute("data-principle"), true);
+    });
+
+    var initial = (location.hash || "").replace(/^#/, "");
+    if (initial) {
+      selectPrinciple(initial, false);
+    } else if (buttons[0]) {
+      selectPrinciple(buttons[0].getAttribute("data-principle"), false);
+    }
   });
 });
 

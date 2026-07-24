@@ -3,9 +3,22 @@
     <div class="row">
       <div class="col-12">
         <div class="main-footer-inner">
-          {% if site.data.social %} {% include social.html %} {% endif %} {% if
-          site.footer.copyright_text %} {% assign current_year = site.time |
-          date: "%Y" %}
+          <div class="main-footer-left">
+            {% if site.data.social %}{% include social.html %}{% endif %}
+            {% if site.data.menus.footer %}
+            <nav class="main-footer-nav" aria-label="Footer">
+              <ul>
+                {% for item in site.data.menus.footer %}
+                <li>
+                  <a href="{{ item.url | relative_url }}"{% if item.external %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ item.name }}</a>
+                </li>
+                {% endfor %}
+              </ul>
+            </nav>
+            {% endif %}
+          </div>
+          {% if site.footer.copyright_text %}
+          {% assign current_year = site.time | date: "%Y" %}
           <div class="copyright">{{ site.footer.copyright_text | replace: "YYYY", current_year }}</div>
           {% endif %}
         </div>

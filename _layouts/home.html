@@ -58,8 +58,8 @@ bodyClass: v2-page-layout
             <div class="images-container {{feature.class}}">
 
               {% for image in feature.images %}
-             <div class="image-item{% if image.summary %} has-summary{% endif %}">
-               {% if feature.cta or image.link %}
+             <div class="image-item{% if image.summary %} has-summary{% endif %}{% if image.underpin %} image-item--underpin{% endif %}">
+               {% if image.link %}
                <a class="image-logo-link" href="{{ image.link }}"{% if image.link contains 'http' %} target="_blank" rel="noopener noreferrer"{% endif %}>
                 <img src="{{ image.url }}" alt="{{ image.name }}">
                </a>
@@ -81,11 +81,6 @@ bodyClass: v2-page-layout
           </li>
           {% endfor %}
         </ul>
-        {% endif %}
-        {% if section.cta_text %}
-        <div class="section-cta">
-          <a class="section-cta-btn" href="{{ section.cta_link }}"{% if section.cta_link contains 'http' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ section.cta_text }}<span class="section-cta-arrow" aria-hidden="true">→</span></a>
-        </div>
         {% endif %}
         {% assign has_refs = false %}
         {% if section.link %}{% assign has_refs = true %}{% endif %}
@@ -121,6 +116,11 @@ bodyClass: v2-page-layout
       </div>
       
     </div>
+    {% if section.cta_text %}
+    <div class="section-cta">
+      <a class="section-cta-btn" href="{{ section.cta_link }}"{% if section.cta_link contains 'http' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ section.cta_text }}<span class="section-cta-arrow" aria-hidden="true">→</span></a>
+    </div>
+    {% endif %}
     
   </section>
   {% endif %}

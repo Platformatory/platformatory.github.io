@@ -1,5 +1,10 @@
 baseurl: ""
-exclude: ["README.md"]
+url: "https://platformatory.io"
+exclude:
+  - "README.md"
+  - "brand"
+  - "v2"
+  - "vendor"
 permalink: pretty
 title: "Platformatory | Forward Deployed Engineering Firm: Data, AI & Modernization"
 
@@ -16,35 +21,36 @@ footer:
 seo:
   meta_og_title: "Platformatory"
   meta_og_type: "website"
-  meta_og_url: "http://platformatory.io"
-  meta_og_image: "http://platformatory.io/images/logo/plf-logo.svg"
-  meta_og_description: "Platform, Data & ML Engineering Studio"
+  meta_og_url: "https://platformatory.io"
+  meta_og_image: "https://platformatory.io/images/logo/plf-logo.svg"
+  meta_og_description: "Forward Deployed Engineering Firm: Data, AI & Modernization"
   meta_twitter_card: "summary"
   meta_twitter_site: "@platformatory"
   meta_twitter_creator: "@platformatory"
 
 collections:
   services:
-    output: true
+    output: false
   team:
     output: true
   consulting:
-    output: true
+    output: false
   solutions:
-    output: true
+    output: false
   openings:
-    output: true
+    output: false
   engineering:
-    output: true
+    output: false
   field-engineering:
-    output: true
+    output: false
   events:
     output: true
     permalink: /events/:path
   education:
-    output: true
-  principles:
     output: false
+  principles:
+    output: true
+    permalink: /platform-engineering/:name/
   case-studies:
     output: true
     permalink: /case-studies/:name/
@@ -60,3 +66,10 @@ sass:
 plugins:
   - jekyll-environment-variables
   - jekyll-menus
+
+defaults:
+  - scope:
+      path: ""
+      type: principles
+    values:
+      layout: principle

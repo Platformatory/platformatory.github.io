@@ -1,30 +1,34 @@
 ---
 layout: page_layout
-title: Trusted Advisory For Technology & Engineering Leaders.
+title: Consulting
+description: "Platform & data modernization, agentic AI, and systems at scale, led by hands-on experts."
 intro_image: "images/v2/banners/real-time_data.jpg"
 intro_image_absolute: true
 intro_image_hide_on_mobile: false
 sections:
   - title: "Trusted Advisory For Technology & Engineering Leaders"
     featured: true
-    summary: "Seamlessly transition your data infrastructure to the cloud for enhanced scalability and agility."
+    summary: ""
     raw_content: |
       <section id="trusted-advisory" class="raw-section-container typewirter-and-quotes">
         <div class="container">
           <div style="justify-content: space-evenly;" class="d-flex flex-column h-100 ">
             <div>
-              <h1>Platform & Data modernization, led by hands-on experts.</h1>
+              <h1 class="text-capitalize mb-1 title">Platform & Data modernization.</h1>
+              <h3 class="sub-title">Led by hands-on experts.</h3>
             </div>
             <div class="d-flex justify-content-center">
-              <p class="quote-content"> <span class="quote">In theory, there is no difference between theory and practice. In practice, there is.</span>  – Yogi Berra</p>
+              <p class="quote-content"> <span class="quote">In theory, there is no difference between theory and practice. In practice, there is.</span> - Yogi Berra</p>
             </div>
-          </div>  
+          </div>
         </div>
       </section>
-  - title: Streaming & Real-time data
+  - title: "Streaming & real-time data"
     featured: true
-    summary: "Multi-modal data processing & insight. Engineered for sub-second latency"
+    summary: "Multi-modal data processing & insight. Engineered for sub-second latency."
     hash: "streaming-real-time-data"
+    cta_text: "Explore offerings"
+    cta_link: "/consulting-offerings/#reactive-systems"
     section:
       class: "split-container"
       feature_type: "list"
@@ -33,34 +37,24 @@ sections:
         class: "text-start"
         description: "Build rich, domain-driven, data-intensive applications for scale and resilience."
         link:
-          url: "/consulting-offerings#reactive-systems"
+          url: "/consulting-offerings/#reactive-systems"
           name: "[1]"
           class: "cite-link"
       - name: "Data lakehouse & Streaming Platform"
         class: "text-start"
         description: "Data exchange and multi-modal data products, on a Kappa foundation & open table formats."
-        link:
-          url: "/consulting-offerings#data-lakehouse-streaming-platform"
-          name: "[2]"
-          class: "cite-link"
       - name: "Real-time analytics & ML"
         class: "text-start"
         description: "Serve insights, reporting & inference from petabyte scale data at sub-second latencies."
-        link:
-          url: "/consulting-offerings#real-time-analytics-ml"
-          name: "[3]"
-          class: "cite-link"
       - name: "Event-driven Integration"
         class: "text-start"
         description: "CDC, event mesh and system sync, always-on exchange across systems of record and engagement."
-        link:
-          url: "/consulting-offerings#event-driven-integration"
-          name: "[4]"
-          class: "cite-link"
-  - title: Agentic AI
+  - title: "Agentic AI"
     featured: true
     summary: "Build multi-agent AI systems with guardrails and humans in the loop."
     hash: "agentic-ai"
+    cta_text: "Explore offerings"
+    cta_link: "/consulting-offerings/#agentic-workflows"
     section:
       class: "split-container"
       feature_type: "list"
@@ -77,10 +71,12 @@ sections:
       - name: "APIs and MCP"
         class: "text-start"
         description: "Expose tools and enterprise systems as first-class agent interfaces, APIs and MCP surfaces."
-  - title: Platform-ification and DevX
+  - title: "Platform-ification and DevX"
     featured: true
-    summary: "Engineer the inner loop of software development"
+    summary: "Engineer the inner loop of software development."
     hash: "platform-ification-devx"
+    cta_text: "Explore offerings"
+    cta_link: "/consulting-offerings/#continuous-sec-ops"
     section:
       class: "split-container"
       feature_type: "list"
@@ -88,28 +84,21 @@ sections:
       - name: "Continuous Sec-Ops"
         class: "text-start"
         description: "Bake security into every stage of the delivery loop, continuous, not bolted on."
-        link:
-          url: "/consulting-offerings#continuous-sec-ops"
-          name: "[1]"
-          class: "cite-link"
       - name: "Autonomous SRE"
         class: "text-start"
         description: "Automate detection, remediation and toil so reliability scales with the platform."
-        link:
-          url: "/consulting-offerings#autonomous-sre"
-          name: "[2]"
-          class: "cite-link"
       - name: "Formal Verification Systems"
         class: "text-start"
         description: "Prove critical properties of distributed systems before they ship to production."
-        link:
-          url: "/consulting-offerings#formal-verification-systems"
-          name: "[3]"
-          class: "cite-link"
-  - title: Systems & Scale
+      - name: "Enterprise Spec-Ops & Planning"
+        class: "text-start"
+        description: "SpecKit and formal specifications for agents, so plans, contracts, and acceptance criteria are executable, reviewable, and enforceable."
+  - title: "Systems & scale"
     featured: true
-    summary: ""
+    summary: "Migrations, performance, and cost when the blast radius is real."
     hash: "systems-scale"
+    cta_text: "Explore offerings"
+    cta_link: "/consulting-offerings/#complex-migrations"
     section:
       class: "split-container"
       feature_type: "list"
@@ -119,13 +108,11 @@ sections:
         description: "Strategize zero-downtime, active-active data(base) and application migrations."
       - name: "Performance Engineering"
         class: "text-start"
-        description: "Tail optimization for parallel-distributed and concurrent user facing systems"
+        description: "Tail optimization for parallel-distributed and concurrent user-facing systems."
       - name: "Cost Rationalization"
         class: "text-start"
-        description: "First-principles spend optimization and fin-ops: For cloud, on-prem and PaaS."
-
+        description: "First-principles spend optimization and fin-ops for cloud, on-prem and PaaS."
+      - name: "Purpose-built Systems"
+        class: "text-start"
+        description: "Distributed systems in data, AI and infrastructure."
 ---
-
-# Accelerate Your Data Evolution with Real-Time Modernization
-
-Transform your data architecture for real-time insights with expert-led modernization.

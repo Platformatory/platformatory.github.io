@@ -1,4 +1,4 @@
-// Principles, maxim mosaic (37signals-inspired density, Platformatory voice)
+// Platform Engineering thesis: index + maxim studio
 
 .principles-page {
   --pr-ink: #0d1926;
@@ -17,199 +17,219 @@
   font-family: "Titillium Web", sans-serif;
 }
 
-// -- Hero ------------------------------------------------
+// -- Studio: left index / right maxim --------------------
 
-.principles-hero {
-  background:
-    radial-gradient(ellipse 80% 70% at 100% 0%, rgba(108, 151, 60, 0.18), transparent 55%),
-    linear-gradient(165deg, #0a1219 0%, var(--pr-ink) 55%, #122233 100%);
-  color: #fff;
-  padding: 4.75rem 1.5rem 2.75rem;
+.principles-studio {
+  padding: 4.5rem 1.25rem 3.5rem;
 }
 
-.principles-hero-inner {
+.principles-studio-head {
   width: min(72rem, 100%);
-  margin: 0 auto;
-  max-width: 40rem;
+  margin: 0 auto 1.25rem;
 }
 
-.principles-brand {
-  margin: 0 0 0.85rem;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--pr-green-bright);
-}
-
-.principles-hero h1 {
-  margin: 0 0 1rem;
-  font-family: "Source Serif 4", Georgia, serif;
-  font-size: clamp(3rem, 7vw, 4.75rem);
-  font-weight: 700;
-  line-height: 0.98;
-  letter-spacing: -0.03em;
-  color: #fff;
-}
-
-.principles-lede {
+.principles-studio-title {
   margin: 0;
-  font-size: 1.1rem;
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.72);
-  max-width: 32rem;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: clamp(1.65rem, 3.4vw, 2.35rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: var(--pr-ink);
+  text-wrap: balance;
+  max-width: 28ch;
 }
 
-// -- Maxim mosaic ----------------------------------------
-
-.principles-maxims {
-  padding: 2.5rem 1.25rem 1rem;
-}
-
-.principles-maxims-inner {
+.principles-studio-inner {
   width: min(72rem, 100%);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.75rem;
+  grid-template-columns: minmax(15rem, 24rem) minmax(0, 1fr);
+  gap: 0;
+  background: var(--pr-card);
+  border: 1px solid var(--pr-line);
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(13, 25, 38, 0.06);
 
-  @media (min-width: 960px) {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0.85rem;
-  }
-
-  @media (max-width: 560px) {
+  @media (max-width: 860px) {
     grid-template-columns: 1fr;
   }
 }
 
-.principle-card {
-  --i: 0;
+.principles-index {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
-  min-height: 9.75rem;
-  padding: 1rem 1.05rem 1.05rem;
-  background: var(--pr-card);
-  border: 1px solid var(--pr-line);
-  border-radius: 2px;
+  border-right: 1px solid var(--pr-line);
+  background: #f7f8f7;
+
+  @media (max-width: 860px) {
+    border-right: 0;
+    border-bottom: 1px solid var(--pr-line);
+  }
+}
+
+.principles-index-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0.5rem 0;
+}
+
+.principles-index-item {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+  column-gap: 0.65rem;
+  align-items: start;
+  width: 100%;
+  margin: 0;
+  padding: 0.7rem 1.1rem;
+  border: 0;
+  border-left: 3px solid transparent;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
   color: inherit;
-  text-decoration: none !important;
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease,
-    transform 0.2s ease;
-  animation: principle-card-in 0.5s ease both;
-  animation-delay: calc(var(--i) * 0.04s);
+  transition: background-color 0.15s ease, border-color 0.15s ease;
 
   &:hover,
   &:focus-visible {
-    border-color: rgba(124, 200, 70, 0.55);
-    box-shadow: 0 12px 28px rgba(13, 25, 38, 0.07);
-    transform: translateY(-2px);
-    color: inherit;
+    background: rgba(108, 151, 60, 0.08);
+    outline: none;
   }
 
-  &:focus-visible {
-    outline: 2px solid var(--pr-green);
-    outline-offset: 2px;
+  &.is-active {
+    background: #fff;
+    border-left-color: var(--pr-green);
+
+    .principles-index-title {
+      color: var(--pr-ink);
+      font-weight: 700;
+    }
   }
 }
 
-.principle-card-num {
+.principles-index-num {
   font-size: 0.68rem;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.08em;
   color: var(--pr-green);
-  line-height: 1;
+  line-height: 1.45;
+  padding-top: 0.12rem;
 }
 
-.principle-card-title {
-  margin: 0;
+.principles-index-title {
   font-family: "Source Serif 4", Georgia, serif;
-  font-size: clamp(1.15rem, 1.65vw, 1.35rem);
-  font-weight: 700;
-  line-height: 1.18;
-  letter-spacing: -0.02em;
-  color: var(--pr-ink);
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+  color: var(--pr-muted);
   text-wrap: balance;
 }
 
-.principle-card-maxim {
+.principles-detail {
+  position: relative;
+  min-height: 22rem;
+  background: var(--pr-card);
+  display: flex;
+  align-items: stretch;
+}
+
+.principles-detail-panel {
+  display: none;
+  width: 100%;
+  padding: clamp(1.75rem, 4vw, 3rem) clamp(1.35rem, 4vw, 3.25rem);
+  animation: principle-panel-in 0.28s ease both;
+
+  &.is-active {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0;
+  }
+}
+
+.principles-detail-title {
+  margin: 0 0 1.75rem;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: clamp(2rem, 4.2vw, 3.15rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--pr-ink);
+  text-wrap: balance;
+  max-width: 18ch;
+}
+
+.principles-detail-maxim {
   margin: 0;
-  margin-top: auto;
-  padding-top: 0.35rem;
-  font-size: 0.9rem;
-  line-height: 1.4;
-  color: var(--pr-muted);
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
-  overflow: hidden;
+  max-width: 34rem;
+  padding: 0.15rem 0 0.15rem 1.15rem;
+  border: 0;
+  border-left: 3px solid var(--pr-green);
+  color: var(--pr-ink);
+
+  p {
+    margin: 0;
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: clamp(1.15rem, 2.1vw, 1.4rem);
+    font-weight: 600;
+    line-height: 1.45;
+    text-wrap: pretty;
+  }
 }
 
-// -- Essays ----------------------------------------------
+// -- Single principle detail -----------------------------
 
-.principles-essays {
-  padding: 3rem 1.25rem 1rem;
+.principle-detail {
+  padding: 4.5rem 1.25rem 3rem;
 }
 
-.principles-essays-inner {
+.principle-detail-inner {
   width: min(42rem, 100%);
   margin: 0 auto;
 }
 
-.principles-essays-label {
+.principle-detail-back {
   margin: 0 0 1.75rem;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--pr-soft);
-}
 
-.principle-essay {
-  padding: 2.25rem 0;
-  border-top: 1px solid var(--pr-line);
-  scroll-margin-top: 5.5rem;
+  a {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--pr-muted);
+    text-decoration: none;
 
-  &:target {
-    .principle-essay-head h2 {
+    &:hover {
       color: var(--pr-green);
     }
   }
 }
 
-.principle-essay-head {
-  margin-bottom: 1rem;
-}
-
-.principle-essay-num {
-  display: block;
-  margin-bottom: 0.45rem;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  color: var(--pr-green);
-}
-
-.principle-essay-head h2 {
-  margin: 0;
+.principle-detail-title {
+  margin: 0 0 1rem;
   font-family: "Source Serif 4", Georgia, serif;
-  font-size: clamp(1.55rem, 3vw, 2rem);
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
   font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
   color: var(--pr-ink);
   text-wrap: balance;
-  transition: color 0.2s ease;
 }
 
-.principle-essay-body {
+.principle-detail-maxim {
+  margin: 0 0 1.75rem;
+  font-size: 1.25rem;
+  line-height: 1.45;
+  color: var(--pr-muted);
+  text-wrap: pretty;
+}
+
+.principle-detail-body {
   font-size: 1.05rem;
   line-height: 1.65;
   color: var(--pr-muted);
+  margin-bottom: 2rem;
 
   p {
     margin: 0 0 1rem;
@@ -219,61 +239,95 @@
     margin-bottom: 0;
   }
 
-  em {
+  a {
+    color: var(--pr-green);
+    text-decoration: underline;
+    text-underline-offset: 0.12em;
+  }
+
+  blockquote {
+    margin: 0.35rem 0 1rem;
+    padding: 0.15rem 0 0.15rem 1rem;
+    border-left: 3px solid var(--pr-green);
     color: var(--pr-ink);
-    font-style: italic;
+
+    p {
+      margin: 0 0 0.65rem;
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 1.08rem;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+      font-family: inherit;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--pr-muted);
+    }
   }
 }
 
-// -- Footer ----------------------------------------------
-
-.principles-foot {
+.principle-see-also {
+  margin-top: 2.25rem;
+  padding-top: 1.5rem;
   border-top: 1px solid var(--pr-line);
-  padding: 3rem 1.25rem 4.5rem;
-  margin-top: 1.5rem;
 }
 
-.principles-foot-inner {
-  width: min(42rem, 100%);
-  margin: 0 auto;
-}
-
-.principles-foot p {
-  margin: 0 0 1.15rem;
-  font-family: "Source Serif 4", Georgia, serif;
-  font-size: 1.25rem;
-  line-height: 1.4;
-  color: var(--pr-ink);
-  text-wrap: balance;
-}
-
-.principles-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  padding: 0.7rem 1.2rem;
-  font-size: 0.92rem;
+.principle-see-also-label {
+  margin: 0 0 0.85rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.02em;
-  color: #fff;
-  background: var(--pr-ink);
-  border-radius: 3px;
-  text-decoration: none;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--pr-soft);
+}
 
-  &:hover,
-  &:focus {
-    background: var(--pr-green);
-    color: #fff;
+.principle-see-also-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.65rem;
+
+  a {
+    display: block;
+    padding: 0.9rem 1rem;
+    background: var(--pr-card);
+    border: 1px solid var(--pr-line);
+    border-radius: 2px;
     text-decoration: none;
-    transform: translateY(-1px);
+    transition: border-color 0.15s ease, transform 0.15s ease;
+
+    &:hover {
+      border-color: rgba(108, 151, 60, 0.45);
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
   }
 }
 
-@keyframes principle-card-in {
+.principle-see-also-title {
+  display: block;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--pr-ink);
+  margin-bottom: 0.25rem;
+}
+
+.principle-see-also-maxim {
+  display: block;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--pr-muted);
+}
+
+@keyframes principle-panel-in {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(8px);
   }
   to {
     opacity: 1;
@@ -282,12 +336,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .principle-card {
+  .principles-detail-panel {
     animation: none;
-  }
-
-  .principle-card:hover,
-  .principle-card:focus-visible {
-    transform: none;
   }
 }

@@ -33,7 +33,7 @@ bodyClass: v2-page-layout
           <div class="contact-country">
             <span class="region-tag">North America</span>
             <h4 class="country-name">USA</h4>
-            <p class="address">{{ site.data.contact.us_office }}</p>
+            <p class="address"><a class="address-map-link" href="{{ site.data.contact.map_us }}" target="_blank" rel="noopener noreferrer">{{ site.data.contact.us_office }}</a></p>
             <p class="contact mb-1"><a href="tel: {{ site.data.contact.phone_us }}">{{ site.data.contact.phone_us }}</a></p>
           </div>
           <div class="contact-country">
@@ -51,7 +51,7 @@ bodyClass: v2-page-layout
           <div class="contact-country">
             <span class="region-tag">APAC</span>
             <h4 class="country-name">India</h4>
-            <p class="address">{{ site.data.contact.india_office }}</p>
+            <p class="address"><a class="address-map-link" href="{{ site.data.contact.map_in }}" target="_blank" rel="noopener noreferrer">{{ site.data.contact.india_office }}</a></p>
             <p class="contact mb-1"><a href="tel: {{ site.data.contact.phone_in }}">{{ site.data.contact.phone_in }}</a></p>
           </div>
         </div>
@@ -108,9 +108,10 @@ class="section-container {% if section.section.grid_order_class %}{{section.sect
       <h4 class="title">{{feature.name}}</h4>
       <p class="job-description">{{feature.description}}</p>
       <div class="social-lists-items">
-        <!-- <a href="http://twitter.com/platformatory" target="_blank"><img src="/images/v2/twitter.svg"></a> -->
-        <a href="{{ feature.linkedinurl }}" target="_blank"><img src="/images/v2/linkedin.svg"></a>
-        <a href="https://github.com/platformatory" target="_blank"><img src="/images/v2/github.svg"></a></div>
+        {% if feature.linkedinurl and feature.linkedinurl != "" %}
+        <a href="{{ feature.linkedinurl }}" target="_blank" rel="noopener noreferrer"><img src="/images/v2/linkedin.svg" alt="LinkedIn"></a>
+        {% endif %}
+      </div>
     </div>
     {% else %}
     <h4>{{feature.name}}</h4>

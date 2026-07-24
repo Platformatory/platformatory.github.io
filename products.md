@@ -18,7 +18,7 @@ sections:
               <h1 class="mb-1">Platform products, forged in the reality of customer problems.</h1>
             </div>
             <div class="d-flex justify-content-center">
-              <p class="quote-content"> <span class="quote">We're spawning a new generation of platform products, solutions built in the reality of customer problems.</span></p>
+              <p class="quote-content"> <span class="quote">The way to get startup ideas is not to try to think of startup ideas. It’s to look for problems, preferably problems you have yourself.</span> - Paul Graham</p>
             </div>
           </div>
         </div>

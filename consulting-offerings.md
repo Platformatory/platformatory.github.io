@@ -28,9 +28,10 @@ description: "A capability brief covering Platformatory's consulting offerings a
     <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">09</span><a href="#continuous-sec-ops">Continuous Sec-Ops</a></div>
     <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">10</span><a href="#autonomous-sre">Autonomous SRE</a></div>
     <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">11</span><a href="#formal-verification-systems">Formal Verification Systems</a></div>
-    <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">12</span><a href="#complex-migrations">Complex Migrations</a></div>
-    <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">13</span><a href="#performance-engineering">Performance Engineering</a></div>
-    <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">14</span><a href="#cost-rationalization">Cost Rationalization</a></div>
+    <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">12</span><a href="#enterprise-spec-ops-planning">Enterprise Spec-Ops &amp; Planning</a></div>
+    <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">13</span><a href="#complex-migrations">Complex Migrations</a></div>
+    <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">14</span><a href="#performance-engineering">Performance Engineering</a></div>
+    <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">15</span><a href="#cost-rationalization">Cost Rationalization</a></div>
   </div>
 </div>
 
@@ -189,12 +190,25 @@ description: "A capability brief covering Platformatory's consulting offerings a
   <p class="wp-todo">Add 2–3 paragraphs here: approach, methodology, and a representative outcome for Formal Verification engagements.</p>
 </div>
 
+<div class="wp-item" id="enterprise-spec-ops-planning">
+  <span class="wp-item-num">12 · Platform-ification and DevX</span>
+  <h3>Enterprise Spec-Ops &amp; Planning<span class="wp-badge">Content needed</span></h3>
+  <p class="wp-lead">SpecKit and formal specifications for agents, so plans, contracts, and acceptance criteria are executable, reviewable, and enforceable.</p>
+  <div class="wp-stats">
+    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
+    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
+    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
+  </div>
+  <div class="wp-diagram">[Insert architecture diagram or process illustration for Enterprise Spec-Ops &amp; Planning]</div>
+  <p class="wp-todo">Add 2–3 paragraphs here: approach, methodology, and a representative outcome for SpecKit / enterprise spec-ops engagements.</p>
+</div>
+
 <div class="wp-part">
   <h2>Systems &amp; Scale</h2>
 </div>
 
 <div class="wp-item" id="complex-migrations">
-  <span class="wp-item-num">12 · Systems &amp; Scale</span>
+  <span class="wp-item-num">13 · Systems &amp; Scale</span>
   <h3>Complex Migrations<span class="wp-badge">Content needed</span></h3>
   <p class="wp-lead">Strategize zero-downtime, active-active data(base) and application migrations.</p>
   <div class="wp-stats">
@@ -207,7 +221,7 @@ description: "A capability brief covering Platformatory's consulting offerings a
 </div>
 
 <div class="wp-item" id="performance-engineering">
-  <span class="wp-item-num">13 · Systems &amp; Scale</span>
+  <span class="wp-item-num">14 · Systems &amp; Scale</span>
   <h3>Performance Engineering<span class="wp-badge">Content needed</span></h3>
   <p class="wp-lead">Tail optimization for parallel-distributed and concurrent user facing systems.</p>
   <div class="wp-stats">
@@ -220,7 +234,7 @@ description: "A capability brief covering Platformatory's consulting offerings a
 </div>
 
 <div class="wp-item" id="cost-rationalization">
-  <span class="wp-item-num">14 · Systems &amp; Scale</span>
+  <span class="wp-item-num">15 · Systems &amp; Scale</span>
   <h3>Cost Rationalization<span class="wp-badge">Content needed</span></h3>
   <p class="wp-lead">First-principles spend optimization and fin-ops: for cloud, on-prem and PaaS.</p>
   <div class="wp-stats">

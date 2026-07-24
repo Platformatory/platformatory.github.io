@@ -72,14 +72,76 @@ layout: null
 
         <div class="case-study-body">
           <div class="case-study-inner">
-            {% if page.outcomes %}
-            <ul class="case-study-outcomes">
-              {% for outcome in page.outcomes %}
-              <li>{{ outcome }}</li>
-              {% endfor %}
-            </ul>
-            {% endif %}
-            {{ content }}
+            <nav class="case-study-toc" aria-label="Case study sections">
+              <a href="#the-customer">The Customer</a>
+              <a href="#the-challenge">The Challenge / Opportunity</a>
+              <a href="#the-tech">The Tech</a>
+              <a href="#our-impact">Our Impact</a>
+            </nav>
+
+            <section class="case-study-section" id="the-customer">
+              <h2 class="case-study-section-title">
+                <span class="case-study-section-num" aria-hidden="true">01</span>
+                The Customer
+              </h2>
+              <div class="case-study-section-body">
+                {% if page.the_customer %}
+                  {{ page.the_customer | markdownify }}
+                {% else %}
+                  <p class="case-study-placeholder">Customer profile to be added.</p>
+                {% endif %}
+              </div>
+            </section>
+
+            <section class="case-study-section" id="the-challenge">
+              <h2 class="case-study-section-title">
+                <span class="case-study-section-num" aria-hidden="true">02</span>
+                The Challenge / Opportunity
+              </h2>
+              <div class="case-study-section-body">
+                {% if page.challenge %}
+                  {{ page.challenge | markdownify }}
+                {% else %}
+                  <p class="case-study-placeholder">Challenge and opportunity to be added.</p>
+                {% endif %}
+              </div>
+            </section>
+
+            <section class="case-study-section" id="the-tech">
+              <h2 class="case-study-section-title">
+                <span class="case-study-section-num" aria-hidden="true">03</span>
+                The Tech
+              </h2>
+              <div class="case-study-section-body">
+                {% if page.tech and page.tech.size > 0 %}
+                  <ul class="case-study-tech">
+                    {% for item in page.tech %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                  </ul>
+                {% else %}
+                  <p class="case-study-placeholder">Technology stack to be added.</p>
+                {% endif %}
+              </div>
+            </section>
+
+            <section class="case-study-section" id="our-impact">
+              <h2 class="case-study-section-title">
+                <span class="case-study-section-num" aria-hidden="true">04</span>
+                Our Impact
+              </h2>
+              <div class="case-study-section-body">
+                {% if page.impact and page.impact.size > 0 %}
+                  <ul class="case-study-outcomes">
+                    {% for item in page.impact %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                  </ul>
+                {% else %}
+                  <p class="case-study-placeholder">Impact to be added.</p>
+                {% endif %}
+              </div>
+            </section>
           </div>
         </div>
 
