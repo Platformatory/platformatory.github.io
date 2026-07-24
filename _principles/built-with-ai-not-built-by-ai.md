@@ -4,4 +4,8 @@ description: "You still can't build serious software autonomously. Taste of the 
 weight: 90
 ---
 
-Human throughput from tokens to code may be lower. Judgment is not. Use AI as leverage, not as a substitute for craft.
+Tokens accelerate drafting, scaffolding, and exploration. They do not replace accountability for correctness, safety, or product judgment.
+
+Serious software still requires humans who can taste the difference between plausible output and production-grade systems. Throughput from tokens to committed code may look high; judgment remains the bottleneck.
+
+Use AI as leverage inside a craft culture. Do not outsource the definition of done to a model that cannot own the pager.

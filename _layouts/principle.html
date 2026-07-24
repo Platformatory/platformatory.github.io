@@ -50,14 +50,19 @@ layout: null
     {% include header.html headerClass='header-extra' %}
 
     <main class="principles principle-detail">
-      <div class="principle-detail-inner">
+      <div class="principles-inner">
         <p class="principle-detail-back">
-          <a href="{{ '/platform-engineering/' | relative_url }}#{{ page.slug }}">← Platform Engineering is dead. Long live Platform Engineering!</a>
+          <a href="{{ '/platform-engineering/' | relative_url }}#{{ page.slug }}">Platform Engineering</a>
         </p>
 
         <article class="principle-detail-article">
-          <h1 class="principle-detail-title">{{ page.title }}</h1>
+          <header class="principle-detail-header" data-principle-title-float>
+            <h1 class="principle-detail-title">{{ page.title }}</h1>
+          </header>
+
+          {% if page.description %}
           <p class="principle-detail-maxim">{{ page.description }}</p>
+          {% endif %}
 
           {% assign body = content | strip_html | strip %}
           {% if body != "" %}
@@ -69,7 +74,7 @@ layout: null
           {% if page.see_also and page.see_also.size > 0 %}
           <aside class="principle-see-also" aria-label="See also">
             <p class="principle-see-also-label">See also</p>
-            <ul class="principle-see-also-list">
+            <ol class="principle-see-also-list">
               {% for related_slug in page.see_also %}
               {% assign related = site.principles | where: "slug", related_slug | first %}
               {% if related %}
@@ -81,7 +86,7 @@ layout: null
               </li>
               {% endif %}
               {% endfor %}
-            </ul>
+            </ol>
           </aside>
           {% endif %}
         </article>

@@ -104,60 +104,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Principles studio: randomize index + left/right selection
-  document.querySelectorAll("[data-principles-index]").forEach(function (indexList) {
-    var studio = indexList.closest(".principles-studio");
-    if (!studio) return;
-    var buttons = shuffleNodes(indexList.querySelectorAll(".principles-index-item"));
-    buttons.forEach(function (btn, i) {
-      indexList.appendChild(btn);
-      var num = btn.querySelector("[data-principle-num]");
-      if (num) {
-        num.textContent = i + 1 < 10 ? "0" + (i + 1) : String(i + 1);
-      }
+  // Principle detail: float title bar once sticky engages
+  document.querySelectorAll("[data-principle-title-float]").forEach(function (header) {
+    var sentinel = document.createElement("div");
+    sentinel.setAttribute("aria-hidden", "true");
+    sentinel.style.cssText = "position:relative;height:1px;margin:0;pointer-events:none;";
+    header.parentNode.insertBefore(sentinel, header);
+    if (!("IntersectionObserver" in window)) return;
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          header.classList.toggle("is-floating", !entry.isIntersecting);
+        });
+      },
+      { rootMargin: "-76px 0px 0px 0px", threshold: 0 }
+    );
+    observer.observe(sentinel);
+  });
+
+  // Case studies: reshuffle card order on every page load
+  document.querySelectorAll("[data-case-studies-grid]").forEach(function (grid) {
+    shuffleNodes(grid.querySelectorAll(".case-study-card")).forEach(function (card) {
+      grid.appendChild(card);
     });
-
-    function selectPrinciple(slug, pushHash) {
-      if (!slug) return;
-      var panels = studio.querySelectorAll("[data-principle-panel]");
-      var items = indexList.querySelectorAll(".principles-index-item");
-      var matched = false;
-      items.forEach(function (btn) {
-        var active = btn.getAttribute("data-principle") === slug;
-        btn.classList.toggle("is-active", active);
-        btn.setAttribute("aria-pressed", active ? "true" : "false");
-        if (active) matched = true;
-      });
-      panels.forEach(function (panel) {
-        var active = panel.getAttribute("data-principle-panel") === slug;
-        panel.classList.toggle("is-active", active);
-        if (active) {
-          panel.removeAttribute("hidden");
-        } else {
-          panel.setAttribute("hidden", "");
-        }
-      });
-      if (!matched && buttons[0]) {
-        selectPrinciple(buttons[0].getAttribute("data-principle"), false);
-        return;
-      }
-      if (pushHash && location.hash !== "#" + slug) {
-        history.replaceState(null, "", "#" + slug);
-      }
-    }
-
-    indexList.addEventListener("click", function (event) {
-      var btn = event.target.closest(".principles-index-item");
-      if (!btn || !indexList.contains(btn)) return;
-      selectPrinciple(btn.getAttribute("data-principle"), true);
-    });
-
-    var initial = (location.hash || "").replace(/^#/, "");
-    if (initial) {
-      selectPrinciple(initial, false);
-    } else if (buttons[0]) {
-      selectPrinciple(buttons[0].getAttribute("data-principle"), false);
-    }
   });
 });
 

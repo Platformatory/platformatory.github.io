@@ -4,4 +4,8 @@ description: "Many great advances arrive as leaps, not single-digit gains. Somet
 weight: 70
 ---
 
-You needn't always crawl, then walk. Innovation often compounds in jumps—plan for both steady progress and discontinuous moves.
+Roadmaps that only allow crawl-then-walk miss how real advances land. Many step-changes arrive as discontinuous moves: a new substrate, a new operating model, a new data path that makes the old curve irrelevant.
+
+Incrementalism is still necessary for reliability and compounding. It is not a religion. When the leap is available—and the organization can absorb it—run.
+
+Plan for both: steady improvement in the estate you have, and the courage to replace curves instead of polishing them.

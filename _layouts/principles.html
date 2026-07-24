@@ -52,43 +52,25 @@ layout: null
     <main class="principles">
       {% assign sorted = site.principles | sort: "weight" %}
 
-      <section class="principles-studio" aria-label="{{ page.title }}">
-        <div class="principles-studio-head">
-          <h1 class="principles-studio-title">{{ page.title }}</h1>
-        </div>
-        <div class="principles-studio-inner">
-          <aside class="principles-index" aria-label="Principle index">
-            <nav class="principles-index-list" data-principles-index>
-              {% for principle in sorted %}
-              <button
-                type="button"
-                class="principles-index-item{% if forloop.first %} is-active{% endif %}"
-                data-principle="{{ principle.slug }}"
-                aria-controls="principle-panel-{{ principle.slug }}"
-                aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}"
-              >
-                <span class="principles-index-num" data-principle-num></span>
-                <span class="principles-index-title">{{ principle.title }}</span>
-              </button>
-              {% endfor %}
-            </nav>
-          </aside>
+      <section class="principles-index-page">
+        <div class="principles-inner">
+          <header class="principles-index-head">
+            <h1>{{ page.title }}</h1>
+            {% if page.description %}
+            <p class="principles-index-lede">{{ page.description }}</p>
+            {% endif %}
+          </header>
 
-          <div class="principles-detail" data-principles-detail>
+          <ol class="principles-lemmas">
             {% for principle in sorted %}
-            <article
-              class="principles-detail-panel{% if forloop.first %} is-active{% endif %}"
-              id="principle-panel-{{ principle.slug }}"
-              data-principle-panel="{{ principle.slug }}"
-              {% unless forloop.first %}hidden{% endunless %}
-            >
-              <h2 class="principles-detail-title">{{ principle.title }}</h2>
-              <blockquote class="principles-detail-maxim">
+            <li id="{{ principle.slug }}">
+              <a href="{{ principle.url | relative_url }}">
+                <h2>{{ principle.title }}</h2>
                 <p>{{ principle.description }}</p>
-              </blockquote>
-            </article>
+              </a>
+            </li>
             {% endfor %}
-          </div>
+          </ol>
         </div>
       </section>
     </main>

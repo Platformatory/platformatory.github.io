@@ -6,4 +6,8 @@ see_also:
   - co-create
 ---
 
-You must build and execute. Fair markets sell commodities; they do not sell your edge.
+Fair markets sell what everyone else can also buy. If the capability is available as a commodity SKU, it is not where your edge lives.
+
+Differentiation requires bespoke execution: domain models, workflows, data paths, and product surfaces that encode how you win. You can buy infrastructure and tools. You cannot buy judgment about your market packaged as a fair-market product.
+
+Build where the alpha is. Buy where the problem is solved and undifferentiated. Pretending those two are the same is how strategy decks become procurement theater.
