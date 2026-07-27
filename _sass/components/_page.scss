@@ -27,6 +27,28 @@ p{
 // }
 } 
 
+// Reveal scroll view centers each section with absolute + translate(-50%).
+// With transform-origin: 0 0 that spills past the right edge and paints a
+// ghost duplicate of the left column (title text) into the right half.
+.reveal-viewport.reveal-scroll .scroll-page section {
+  position: relative !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: auto !important;
+  bottom: auto !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  transform: none !important;
+  transform-origin: center center !important;
+  inset: auto !important;
+}
+
+.reveal-viewport.reveal-scroll .scroll-page,
+.reveal-viewport.reveal-scroll .scroll-page-content {
+  overflow: hidden;
+}
+
 // Section CTA pinned bottom-right of the visible slide
 .slides > section:has(> .section-cta),
 .scroll-page > section:has(> .section-cta),
@@ -402,6 +424,12 @@ p{
     // margin-top: 0px;
     width: 100%;
     height: 100%;
+    overflow: hidden;
+
+    .section-container{
+      overflow: hidden;
+      max-width: 100%;
+    }
     
     .service-section{
       p{
@@ -496,6 +524,8 @@ p{
         height: 100%;
         min-height: 100%;
         align-self: stretch;
+        overflow: hidden;
+        min-width: 0;
         div{
           width: 100%;
           @include media-breakpoint-down(sm){
@@ -518,9 +548,11 @@ p{
           // }
         }
         .service-title{
-          // Allow full multi-line titles, no ellipsis truncation
+          // Keep titles inside the left strip — overflow was painting
+          // a ghost copy of the heading into the right half on desktop.
           display: block;
-          overflow: visible;
+          overflow: hidden;
+          max-width: 100%;
           text-wrap: balance;
           margin-bottom: 1rem;
           font-size: clamp(2.1rem, 3.4vw, 3.35rem);
@@ -635,6 +667,10 @@ p{
         height: 100%;
         min-height: 100%;
         align-self: stretch;
+        position: relative;
+        z-index: 2;
+        min-width: 0;
+        overflow: hidden;
         ul{
           display: flex;
           flex-direction: column;
@@ -711,6 +747,94 @@ p{
                 p{
                   font-size: clamp(1rem, 1.3vw, 1.15rem);
                   line-height: 1.55;
+                }
+              }
+
+              &.product-lemma{
+                grid-template-columns: 2.4rem minmax(0, 1fr);
+                column-gap: 1.1rem;
+                row-gap: 0.4rem;
+                padding: 1.75rem 0 1.85rem;
+                border-bottom-color: rgba(13, 25, 38, 0.08);
+
+                &::before{
+                  grid-column: 1;
+                  grid-row: 1 / span 3;
+                  margin-top: 0.55rem;
+                  color: var(--v2-primary-color);
+                }
+
+                .lemma-logo{
+                  grid-column: 2;
+                  grid-row: 1;
+                  display: flex;
+                  align-items: center;
+                  gap: 0.9rem;
+                  min-width: 0;
+
+                  a{
+                    flex: 0 0 auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 4.5rem;
+                    height: 4.5rem;
+                    padding: 0.45rem;
+                    background: #0d1926;
+                    border-radius: 4px;
+                    font-size: inherit !important;
+                    color: inherit;
+                    line-height: 0;
+                  }
+
+                  img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    object-position: center;
+                  }
+
+                  .lemma-name{
+                    margin: 0;
+                    font-family: $font-family-heading;
+                    font-size: clamp(1.15rem, 1.6vw, 1.4rem);
+                    font-weight: 700;
+                    line-height: 1.25;
+                    color: var(--v2-background-primary);
+                  }
+                }
+
+                h4{
+                  /* title rendered beside logo via .lemma-name */
+                  display: none;
+                }
+
+                p,
+                .lemma-cta{
+                  grid-column: 2;
+                }
+
+                p{
+                  max-width: none;
+                  padding-right: 1rem;
+                  font-size: 1.02rem;
+                  line-height: 1.5;
+                }
+
+                .lemma-cta{
+                  margin-top: 0.15rem;
+                  font-size: 0.84rem !important;
+                  font-weight: 600;
+                  letter-spacing: 0.02em;
+                  color: rgba(13, 25, 38, 0.42);
+                  text-decoration: none !important;
+                  width: fit-content;
+
+                  &:hover{
+                    color: var(--v2-primary-color);
+                    text-decoration: underline !important;
+                    text-underline-offset: 0.15em;
+                  }
                 }
               }
 
@@ -2462,6 +2586,38 @@ section{
       }
     }
   }
+
+  &.products-lemmas{
+    .list-items{
+      ul{
+        padding: 2.5rem 3rem 2.25rem;
+        justify-content: space-evenly;
+        gap: 0;
+
+        @media (max-width: 700px) {
+          padding: 1.5rem 1.25rem 1.25rem;
+          justify-content: flex-start;
+        }
+
+        li.product-lemma{
+          padding: 1.85rem 0 1.95rem;
+
+          &:first-child{
+            padding-top: 0.35rem;
+          }
+
+          &:last-child{
+            border-bottom: 0;
+            padding-bottom: 0.35rem;
+          }
+
+          a.lemma-cta{
+            font-size: 0.84rem !important;
+          }
+        }
+      }
+    }
+  }
 }
 
 
@@ -2561,9 +2717,11 @@ section{
   height: 100%;
   background-color: #fff;
   padding: 0 !important;
+  text-align: left !important;
 
   .careers-container {
     height: 100%;
+    text-align: left;
   }
 }
 
@@ -2585,6 +2743,7 @@ section{
     padding: 0;
     height: 100%;
     overflow: hidden;
+    text-align: left;
 
     .careers-copy-inner {
       box-sizing: border-box;
@@ -2592,8 +2751,10 @@ section{
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: flex-start;
       padding: 3rem 3.5rem 3.5rem;
       overflow-y: auto;
+      text-align: left;
     }
 
     .careers-kicker {
@@ -2615,6 +2776,7 @@ section{
       max-width: 22rem;
       position: relative;
       padding-top: 0.75rem;
+      text-align: left;
 
       &::before {
         content: "";
@@ -2629,12 +2791,15 @@ section{
 
     .careers-body {
       max-width: 34rem;
+      width: 100%;
+      text-align: left;
 
       p {
         font-size: 1.02rem;
         line-height: 1.65;
         color: #c7ccd3;
         margin: 0 0 1.15rem;
+        text-align: left;
 
         &:last-child {
           margin-bottom: 0;

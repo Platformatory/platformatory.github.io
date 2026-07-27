@@ -22,11 +22,16 @@ seo:
   meta_og_title: "Platformatory"
   meta_og_type: "website"
   meta_og_url: "https://platformatory.io"
-  meta_og_image: "https://platformatory.io/images/logo/plf-logo.svg"
+  meta_og_image: "https://platformatory.io/images/logo/plf-logo.png"
   meta_og_description: "Forward Deployed Engineering Firm: Data, AI & Modernization"
-  meta_twitter_card: "summary"
+  meta_twitter_card: "summary_large_image"
   meta_twitter_site: "@platformatory"
   meta_twitter_creator: "@platformatory"
+  organization_name: "Platformatory"
+  brand_name: "Platformatory"
+  legal_name: "Platformatory LLC"
+  logo_url: "https://platformatory.io/images/logo/plf-logo.png"
+  locale: "en_US"
 
 collections:
   services:
@@ -54,6 +59,9 @@ collections:
   case-studies:
     output: true
     permalink: /case-studies/:name/
+  offerings:
+    output: true
+    permalink: /:name/
 
 # For events
 future: true
@@ -73,3 +81,8 @@ defaults:
       type: principles
     values:
       layout: principle
+  - scope:
+      path: ""
+      type: offerings
+    values:
+      layout: offering

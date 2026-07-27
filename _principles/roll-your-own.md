@@ -2,8 +2,6 @@
 title: "Roll your own"
 description: "When the problem is large enough, inventing infrastructure is worth it."
 weight: 100
-see_also:
-  - dont-invent-infrastructure
 ---
 
 This is the exception to not inventing infrastructure. Most teams should compose. A few problems are large enough, differentiating enough, and durable enough that building the substrate is the strategy.

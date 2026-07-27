@@ -3,7 +3,7 @@ layout: page_layout
 title: Products
 description: "Platform products built in the reality of customer problems: streaming, APIs, CDC, and real-time data exchange."
 permalink: /products/
-intro_image: "images/v2/banners/our-services.jpg"
+intro_image: "images/v2/banners/pf-services.jpg"
 intro_image_absolute: true
 intro_image_hide_on_mobile: false
 sections:
@@ -43,8 +43,8 @@ sections:
     featured: true
     summary: "Usage-based billing & monetization for Data, APIs and AI Models."
     hash: "apinomy"
-    cta_text: "Visit apinomy.com"
-    cta_link: "https://apinomy.com"
+    cta_text: "Visit apinomy.platformatory.io"
+    cta_link: "https://apinomy.platformatory.io"
     section:
       class: "split-container"
       feature_type: "list"
@@ -59,8 +59,8 @@ sections:
     featured: true
     summary: "Change data capture & event enrichment at the API edge."
     hash: "eventception"
-    cta_text: "Visit eventception.io"
-    cta_link: "https://eventception.io"
+    cta_text: "Visit eventception.platformatory.io"
+    cta_link: "https://eventception.platformatory.io"
     section:
       class: "split-container"
       feature_type: "list"
@@ -75,8 +75,8 @@ sections:
     featured: true
     summary: "A platform for exchanging operational and analytical data in real-time."
     hash: "rtdx"
-    cta_text: "Get in touch"
-    cta_link: "/company#contact"
+    cta_text: "Visit rtdx.platformatory.io"
+    cta_link: "https://rtdx.platformatory.io"
     section:
       class: "split-container"
       feature_type: "list"

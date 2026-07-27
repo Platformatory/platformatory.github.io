@@ -33,13 +33,9 @@ sections:
       feature_type: "list"
       header: "10X Culture"
     features:
-      - name: "100% practitoner-led expertise"
+      - name: "100% practitioner-led expertise"
         description: "Our leadership mantra: Coding and coaching on a daily basis. Management and business are functions, not roles. Everyone is a technical contributor. Our overheads are ~0."
         class: "text-start"
-        link:
-          url: "/company-culture#practitioner-led-expertise"
-          name: "[1]"
-          class: "cite-link"
       - name: "Ethos of open-source"
         class: "text-start"
         description: "F/OSS is creative license to tinker, take apart and put things back. Evidently the best form of capitalism. We care deeply enough to contribute, evangelize and organize communities."
@@ -62,11 +58,11 @@ sections:
     features:
       - name: "Pavan Keshavamurthy"
         image: "images/team/pk.jpeg"
-        description: "Chief Talking Officer"
+        description: "Founder & Chief Talking Officer"
         linkedinurl: "https://in.linkedin.com/in/pavankmurthy"
       - name: "Venkatesh Keshavamurthy"
         image: "images/team/vk.jpeg"
-        description: "Chief of Staff & Operations"
+        description: "Cofounder & COO"
         linkedinurl: "https://www.linkedin.com/in/venkateshkmurthy/"
       - name: "Ashwin Venkatesan"
         image: "images/team/av.jpeg"

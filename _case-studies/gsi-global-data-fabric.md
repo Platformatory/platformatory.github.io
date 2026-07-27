@@ -1,11 +1,12 @@
 ---
 layout: case-study
 title: "Global data fabric across operational & business lakes"
-customer_label: "Leading global systems integrator"
+customer_label: "CIO Org of a Top Global SI"
 industry: "Systems integration"
-domains:
-  - Data platform
-  - Analytics
+tags:
+  - Data Platform
+  - Data Engineering
+  - Modernization
 technologies:
   - Apache Kafka
   - Apache Flink
@@ -14,26 +15,26 @@ technologies:
   - Apache Spark
   - Apache Hudi
   - ClickHouse
-summary: "Global data fabric across Operational and Business lakes—write-once / read-many fanout (~100× less redundant copy), incremental pipelines at ~5 min p95, retirement of a home-grown batch estate operated by a 20-person team."
+summary: "Operational and Business lakes on one fabric—write once, read many (~100× less redundant copy), incremental pipelines at ~5 min p95, and retirement of a home-grown batch estate that needed a 20-person team."
 weight: 10
 draft_status: approved
 the_customer: |
-  A leading global systems integrator with two primary lake surfaces—an Operational Data lake and a Business Data lake—feeding BI applications, downstream data consumers, ML applications, and more.
+  The CIO organization of a top global systems integrator. Two lake surfaces mattered most: an Operational Data lake and a Business Data lake, feeding BI, downstream consumers, and ML.
 
-  Sources spanned enterprise SaaS and the long tail of IT: Workday, Salesforce, Zendesk, ServiceNow, plus homegrown systems emitting change through queues, CDC, and related corridors.
+  Sources spanned enterprise SaaS and the long tail of IT—Workday, Salesforce, Zendesk, ServiceNow, plus homegrown systems pushing change through queues and CDC.
 
 challenge: |
   Federate the Operational and Business lakes without paying a full-refresh tax for every consumer.
 
-  Prior pipelines were full-refresh on a batch schedule: roughly once every four hours on average, with the most frequent and costly jobs around 30 minutes. That cadence forced redundant copies and high fan-out waste. A legacy home-grown batch processor and scheduler absorbed a 20-member operating team.
+  Prior pipelines ran full refresh on a batch schedule: about every four hours on average, with the most frequent and costly jobs near 30 minutes. That cadence meant redundant copies and a lot of wasted fan-out. A home-grown batch processor and scheduler absorbed a 20-person operating team.
 
 work: |
-  Built the fabric end to end. Kafka / Flink / Confluent carried incremental change from SaaS and homegrown sources; Databricks / Spark / Hudi shaped lakehouse processing; ClickHouse served interactive analytics where sub-second reads mattered.
+  Built the fabric end to end. Incremental change from SaaS and homegrown sources landed through Kafka, Flink, and Confluent; Databricks, Spark, and Hudi shaped lakehouse processing; ClickHouse covered interactive analytics where sub-second reads mattered.
 
-  Architecture centered on high fanout—write once, read many—so reduction in redundant copy was a property of the platform, not a one-off pipeline rewrite.
+  The design principle was write once, read many—so cutting redundant copy was a property of the platform, not a one-off pipeline rewrite.
 
 impact:
-  - "~100× less redundant data copy via write-once / read-many fanout across Operational and Business lakes"
-  - "Incremental processing at ~5 min p95—down from ~4-hour average batch (and ~30 min for the most frequent, costly jobs)"
-  - "Replaced a legacy home-grown batch processor / scheduler that required a 20-person team to keep running"
+  - "~100× less redundant data copy via write-once / read-many fanout across both lakes"
+  - "Incremental processing at ~5 min p95—down from ~4-hour average batch (~30 min for the heaviest jobs)"
+  - "Replaced a home-grown batch processor / scheduler that took a 20-person team to keep running"
 ---

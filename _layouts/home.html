@@ -53,7 +53,20 @@ bodyClass: v2-page-layout
           {% endif %}
           {% for feature in section.features %}
           <li class="{{feature.class}}">
+            {% if feature.logo %}
+            <span class="lemma-logo">
+              {% if feature.href %}
+              <a href="{{ feature.href }}"{% if feature.href contains 'http' %} target="_blank" rel="noopener noreferrer"{% endif %}>
+                <img src="{{ feature.logo }}" alt="">
+              </a>
+              {% else %}
+              <img src="{{ feature.logo }}" alt="">
+              {% endif %}
+              {% if feature.name %}<span class="lemma-name">{{ feature.name }}</span>{% endif %}
+            </span>
+            {% else %}
             <h4>{{feature.name}}{% if feature.link %} <a class="{{ feature.link.class }}" href="{{ feature.link.url }}"{% if feature.link.url contains 'http' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ feature.link.name }}</a>{% endif %}</h4>
+            {% endif %}
             {% if section.section.feature_type == "images" %}
             <div class="images-container {{feature.class}}">
 
@@ -76,7 +89,10 @@ bodyClass: v2-page-layout
              {% endfor %}
             </div>
             {% else %}
-             <p>{{feature.description}}</p>
+             {% if feature.description %}<p>{{feature.description}}</p>{% endif %}
+             {% if feature.href and feature.cta_text %}
+             <a class="lemma-cta" href="{{ feature.href }}"{% if feature.href contains 'http' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ feature.cta_text }}</a>
+             {% endif %}
             {% endif %}
           </li>
           {% endfor %}

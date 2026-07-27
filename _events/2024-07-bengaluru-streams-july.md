@@ -13,26 +13,22 @@ description: Special interest group focused on event streaming and real time ana
 link: https://www.meetup.com/bangalore-streams/events/301289568
 map_link: https://maps.app.goo.gl/SywptxCo6Z8hcws6A
 talks:
- # - title: Realtime Triggers in Kestra
- # speaker: Shruti Mantri, Moveworks
- # video: R45jlnvOnOI
- # slide: https://drive.google.com/file/d/1oQj536qWWsAnr4BQY6K7-kwaY1QvZ-ul/view?usp=sharing
- - title: "Moving from Batch to Realtime : Inspired by a true production incident"
- speaker: Shivji Jha, Nutanix 
- video: BgwHe_S3IoY
- slide: https://www.slideshare.net/slideshow/batch-to-near-realtime-inspired-by-a-real-production-incident/270137775
- - title: Challenges & Learnings with using Kafka/Redpanda at a huge scale
- speaker: Anuraj Jain, Sharechat
- video: NFKC5qsbYUw
- slide: https://docs.google.com/presentation/d/1aYXqZCD7ynU-A7CU_HuEvEzBBQHGgPSM/edit?usp=sharing&ouid=105484769521359459132&rtpof=true&sd=true
- - title: Unleashing Data Powerhouses - Benthos
- speaker: Shivam Yadav & Shubham Dhal, Sharechat
- video: 6xs5j0QL7e0
- slide: https://drive.google.com/file/d/1A5NYJQ6AVM1aj0RP0GzTtSpvryxNV2I-/view?usp=sharing
- - title: Push Query Layer for Stream Processing Systems (Apache Flink)
- speaker: Avinash Upadhyaya & Pavan Keshavamurthy, Platformatory
- video: RmZUgSQwVRM
- slide: https://docs.google.com/presentation/d/1NuDjzcDkAHTXIUELIKgJAta3jqDO-7AVPKP3xBl4Ilw/edit?usp=sharing
+  - title: "Moving from Batch to Realtime : Inspired by a true production incident"
+    speaker: Shivji Jha, Nutanix
+    video: BgwHe_S3IoY
+    slide: https://www.slideshare.net/slideshow/batch-to-near-realtime-inspired-by-a-real-production-incident/270137775
+  - title: Challenges & Learnings with using Kafka/Redpanda at a huge scale
+    speaker: Anuraj Jain, Sharechat
+    video: NFKC5qsbYUw
+    slide: https://docs.google.com/presentation/d/1aYXqZCD7ynU-A7CU_HuEvEzBBQHGgPSM/edit?usp=sharing&ouid=105484769521359459132&rtpof=true&sd=true
+  - title: Unleashing Data Powerhouses - Benthos
+    speaker: Shivam Yadav & Shubham Dhal, Sharechat
+    video: 6xs5j0QL7e0
+    slide: https://drive.google.com/file/d/1A5NYJQ6AVM1aj0RP0GzTtSpvryxNV2I-/view?usp=sharing
+  - title: Push Query Layer for Stream Processing Systems (Apache Flink)
+    speaker: Avinash Upadhyaya & Pavan Keshavamurthy, Platformatory
+    video: RmZUgSQwVRM
+    slide: https://docs.google.com/presentation/d/1NuDjzcDkAHTXIUELIKgJAta3jqDO-7AVPKP3xBl4Ilw/edit?usp=sharing
 ---
 
 <div class="about">

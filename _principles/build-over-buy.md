@@ -2,8 +2,6 @@
 title: "Build over buy"
 description: "Differentiation takes a certain level of bespoke. You can't buy that in a fair market."
 weight: 20
-see_also:
-  - co-create
 ---
 
 Fair markets sell what everyone else can also buy. If the capability is available as a commodity SKU, it is not where your edge lives.

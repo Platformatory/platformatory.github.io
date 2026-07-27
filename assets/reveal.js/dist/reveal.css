@@ -1721,15 +1721,18 @@ html.reveal-full-page {
 .reveal-viewport.reveal-scroll .scroll-page section {
   visibility: visible !important;
   display: block !important;
-  position: absolute !important;
-  /* width: var(--slide-width) !important;
-  height: var(--slide-height) !important; */
-  top: 50% !important;
-  left: 50% !important;
+  /* Full-bleed homepage slides: do not absolutely center. The old
+     left/top 50% + translate(-50%) + transform-origin 0 0 layout
+     spilled past the right edge and duplicated left-column text. */
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+  top: 0 !important;
+  left: 0 !important;
   opacity: 1 !important;
-  transform: translate(-50%, -50%) !important;
+  transform: none !important;
   transform-style: flat !important;
-  transform-origin: 0 0 !important;
+  transform-origin: center center !important;
 }
 .reveal-viewport.reveal-scroll .slide-background {
   display: block !important;

@@ -36,26 +36,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    {% if page.description %}
-    <meta name="description" content="{{ page.description }}" />
-    {% endif %}
-    <meta property="og:title" content="{{ page.title }} | {{site.title}}" />
-    <meta property="og:type" content="{{ site.seo.meta_og_type }}" />
-    <meta
-      property="og:url"
-      content="{{site.url}}{{ page.url | split: '/' | join: '/' }}"
-    />
-    <meta property="og:image" content="{{site.url}}/{{ page.intro_image }}" />
-    <meta
-      property="og:description"
-      content="{{page.description}}"
-    />
-    <meta name="twitter:card" content="{{ site.seo.meta_twitter_card  }}" />
-    <meta name="twitter:site" content="{{ site.seo.meta_twitter_site }}" />
-    <meta
-      name="twitter:creator"
-      content="{{ site.seo.meta_twitter_creator }}"
-    />
+    {% include seo.html %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Reveal.js style -->
     <link
@@ -68,6 +49,20 @@
       id="theme"
     />
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script>
+      // Products used to own #solutions; that slug is now the Domain Expertise landing.
+      (function () {
+        function redirectSolutionsHash() {
+          if (/^#\/?solutions\/?$/i.test(location.hash || "")) {
+            location.replace("/solutions/");
+            return true;
+          }
+          return false;
+        }
+        if (redirectSolutionsHash()) return;
+        window.addEventListener("hashchange", redirectSolutionsHash);
+      })();
+    </script>
   </head>
 
   <body>

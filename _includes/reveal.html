@@ -5,6 +5,13 @@
  var bootstrapping = true;
  var initialHash = location.hash;
 
+ // Legacy homepage hash: products used to own #solutions.
+ // /solutions/ is now the Domain Expertise offering landing.
+ if (/^#\/?solutions\/?$/i.test(initialHash || "")) {
+  location.replace("/solutions/");
+  return;
+ }
+
  // Prefer bookmark hash over Reveal's session scroll restore
  if (initialHash && initialHash.length > 1) {
  try {
@@ -25,6 +32,10 @@
  if (!raw) return { type: "empty" };
  var parts = raw.split("/");
  var head = decodeURIComponent(parts[0] || "");
+ if (/^solutions$/i.test(head)) {
+  location.replace("/solutions/");
+  return { type: "empty" };
+ }
  if (/^\d+$/.test(head)) {
  return { type: "index", h: parseInt(head, 10) };
  }
@@ -243,6 +254,10 @@
  jumpToSlide: true,
  scrollActivationWidth: null,
  controls: false,
+ // Scroll view already fills the viewport per page. Reveal's absolute
+ // center transform (left/top 50% + translate -50%) paints a duplicate
+ // of the left half into the right edge on desktop widths.
+ center: false,
  });
 
  function onReady() {

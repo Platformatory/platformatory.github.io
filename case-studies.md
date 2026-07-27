@@ -1,7 +1,7 @@
 ---
 layout: case-study
 title: Case Studies
-description: "Selected Platformatory engagements across banking, public sector, manufacturing, capital markets, D2C, and accessibility."
+description: "Selected Platformatory engagements across banking, public sector, manufacturing, capital markets, retail, and accessibility."
 permalink: /case-studies/
 ---
 
@@ -16,10 +16,10 @@ permalink: /case-studies/
         <span class="case-study-card-industry">{{ study.industry }}</span>
         <h2>{{ study.title }}</h2>
         <p>{{ study.summary }}</p>
-        {% if study.technologies and study.technologies.size > 0 %}
+        {% if study.tags and study.tags.size > 0 %}
         <ul class="case-study-card-tags">
-          {% for tech in study.technologies limit: 4 %}
-          <li>{{ tech }}</li>
+          {% for tag in study.tags limit: 4 %}
+          <li>{{ tag }}</li>
           {% endfor %}
         </ul>
         {% endif %}

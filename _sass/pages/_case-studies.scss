@@ -185,6 +185,29 @@
   text-wrap: pretty;
 }
 
+.case-study-tags {
+  list-style: none;
+  margin: 0 0 0.85rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.15rem;
+
+  li {
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--cs-ink);
+
+    &:not(:last-child)::after {
+      content: " ·";
+      font-weight: 400;
+      color: var(--cs-soft);
+      margin-right: 0.35rem;
+    }
+  }
+}
+
 .case-study-stack {
   margin: 0;
   padding-bottom: 1.5rem;
@@ -218,9 +241,18 @@
     padding: 1.35rem 0 1.4rem;
     border-bottom: 1px solid var(--cs-line);
     background: transparent;
+    min-width: 0;
 
     &::before {
       content: counter(cs-lemma, decimal-leading-zero);
+      // Reset global `ol li::before` marker (absolute square) from _content.scss
+      position: static;
+      left: auto;
+      top: auto;
+      z-index: auto;
+      background: none;
+      width: auto;
+      height: auto;
       grid-column: 1;
       grid-row: 1 / span 2;
       margin-top: 0.15rem;
@@ -251,6 +283,8 @@
 
 .case-study-lemma-body {
   grid-column: 2;
+  min-width: 0;
+  max-width: 100%;
 
   p {
     margin: 0 0 0.85rem;
@@ -278,30 +312,46 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  counter-reset: cs-impact;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 0.65rem;
+  min-width: 0;
+  width: 100%;
 
-  li {
+  > li {
     list-style: none;
-    counter-increment: cs-impact;
-    display: grid;
-    grid-template-columns: 1.75rem minmax(0, 1fr);
-    column-gap: 0.55rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.55rem;
     margin: 0;
     padding: 0;
+    min-width: 0;
+    width: 100%;
     color: var(--cs-ink);
     font-size: 1.02rem;
     line-height: 1.45;
+    position: static;
 
+    // Kill global `ol li::before` square from _content.scss
     &::before {
-      content: counter(cs-impact, decimal-leading-zero);
+      content: none;
+      display: none;
+    }
+
+    .case-study-impact-num {
+      flex: 0 0 1.75rem;
+      width: 1.75rem;
       font-size: 0.78rem;
       font-weight: 700;
       letter-spacing: 0.04em;
       color: var(--cs-green);
       padding-top: 0.2rem;
       font-variant-numeric: tabular-nums;
+    }
+
+    .case-study-impact-text {
+      flex: 1 1 auto;
+      min-width: 0;
     }
   }
 }

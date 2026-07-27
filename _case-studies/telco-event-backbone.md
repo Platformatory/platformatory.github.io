@@ -1,34 +1,41 @@
 ---
 layout: case-study
-title: "Telco event backbone modernization"
+title: "Org-wide event backbone"
 customer_label: "Leading South Asian telco"
 industry: "Telecommunications"
-domains:
-  - Event streaming
-  - Customer experience
+tags:
+  - Data Platform
+  - Data Engineering
+  - Modernization
 technologies:
   - Apache Kafka
-  - Apache Flink
-  - Confluent
-  - Kubernetes
-summary: "Event backbone modernization for CX and network-adjacent workloads—contracts and operability without freezing delivery."
+  - Kafka Connect
+  - Debezium
+  - Oracle CDC
+summary: "Kafka adopted as the org-wide event backbone—billing with transactional guarantees, bi-directional active-active MySQL↔Oracle, mobile clickstream. Write scale to ~150 MB/s CDC and GB/s on network and clickstream; streaming MVs for billing reversal / reconciliation reporting."
 weight: 90
 draft_status: approved
 the_customer: |
-  A leading South Asian telco where subscriber scale turns every platform decision into a reliability decision.
-
-  Activation, charging signals, and care events rode an event backbone that had aged into fragility.
+  A leading South Asian telco putting Apache Kafka at the center of the organization—billing, operational data movement, and digital experience on one backbone.
 
 challenge: |
-  Topics, consumers, and tribal runbooks had accumulated until nobody owned the spine.
+  Point-to-point integrations and database-centric corridors could not carry org-wide event traffic with consistent contracts: billing under load, cross-engine replication without dual-write chaos, and product clickstream at subscriber scale.
 
-  Product needed to ship; the bus could not freeze delivery for a multi-year rewrite.
+  The backbone had to land as a shared platform—not a one-off bus for a single program—and hold very large write throughput without freezing delivery.
 
 work: |
-  Backbone modernization on Confluent / Kafka / Flink / Kubernetes—architecture, migration discipline, producer/consumer contracts, and paved paths so CX and network-adjacent workloads could move at product speed without inheriting legacy operational debt.
+  Drove Kafka adoption as the central event backbone, with Kafka Connect, Debezium, and Oracle CDC so producers and consumers could share contracts without freezing delivery.
+
+  Use cases on the backbone:
+  - Billing—usage, charging, refunds, and user notifications—with transactional guarantees at high throughput
+  - Bi-directional active-active pipelines between MySQL and Oracle
+  - Clickstream from the mobile app
+
+  Built streaming materialised-view aggregates for real-time reporting on billing reversals and reconciliation.
 
 impact:
-  - "Modernized event backbone for CX and adjacent workloads"
-  - "Clearer producer/consumer contracts and platform operability"
-  - "Path to retire fragile legacy corridors without freezing delivery"
+  - "Org-wide Kafka backbone at write scale: ~150 MB/s CDC; GB/s on network and clickstream"
+  - "Billing path (usage, charging, refunds, notifications) with transactional guarantees under that load"
+  - "Streaming MV aggregates for real-time billing reversal / reconciliation reporting"
+  - "Active-active MySQL↔Oracle pipelines on Connect / Debezium / Oracle CDC"
 ---

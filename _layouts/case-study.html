@@ -32,16 +32,7 @@ layout: null
       rel="stylesheet"
     />
     <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet" />
-    {% if page.description %}
-    <meta name="description" content="{{ page.description }}" />
-    {% endif %}
-    <meta property="og:title" content="{{ page.title }} | {{ site.title }}" />
-    <meta property="og:type" content="{{ site.seo.meta_og_type }}" />
-    <meta
-      property="og:url"
-      content="{{ site.url }}{{ page.url | split: '/' | join: '/' }}"
-    />
-    <meta property="og:description" content="{{ page.description }}" />
+    {% include seo.html %}
   </head>
 
   <body class="case-studies-page">
@@ -63,6 +54,13 @@ layout: null
             <h1>{{ page.title }}</h1>
             {% if page.summary %}
             <p class="case-study-summary">{{ page.summary }}</p>
+            {% endif %}
+            {% if page.tags and page.tags.size > 0 %}
+            <ul class="case-study-tags">
+              {% for tag in page.tags %}
+              <li>{{ tag }}</li>
+              {% endfor %}
+            </ul>
             {% endif %}
             {% if page.technologies and page.technologies.size > 0 %}
             <p class="case-study-stack">
@@ -114,7 +112,10 @@ layout: null
                   {% if page.impact and page.impact.size > 0 %}
                     <ol class="case-study-impact">
                       {% for item in page.impact %}
-                      <li>{{ item }}</li>
+                      <li>
+                        <span class="case-study-impact-num" aria-hidden="true">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+                        <span class="case-study-impact-text">{{ item }}</span>
+                      </li>
                       {% endfor %}
                     </ol>
                   {% else %}

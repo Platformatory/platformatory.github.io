@@ -1,34 +1,36 @@
 ---
 layout: case-study
-title: "Enterprise Kafka & Flink platform"
+title: "System Twin — IoT"
 customer_label: "Global power tools manufacturer"
 industry: "Manufacturing"
-domains:
-  - Event streaming
-  - Industrial data
+tags:
+  - Performance Engineering
+  - Platform Excellence
+  - Data Engineering
 technologies:
   - Apache Kafka
+  - Kafka Streams
   - Apache Flink
-  - Confluent
+  - OpenTelemetry
+  - RocksDB
   - Kubernetes
-summary: "Enterprise Kafka and Flink platform—secure, multi-tenant, operable—for industrial and digital workloads."
+summary: "Architecture remediation for a manufacturing-execution streaming pipeline—lifecycle enrichment across global plants. Error rate from >5% to <0.5%, e2e latency from 120 minutes to <1 second, zero incidents over an operating year."
 weight: 70
 draft_status: approved
 the_customer: |
-  A global power tools manufacturer with factories, channels, and digital products that needed a shared event backbone.
-
-  Streaming had arrived in pockets; an enterprise platform posture had not.
+  A global power tools manufacturer running a streaming pipeline in manufacturing execution—enriching parts as they are produced across global plants and tracking lifecycle end to end.
 
 challenge: |
-  Per-program clusters, inconsistent security, and no shared contracts for schemas, tenancy, or SLOs.
+  Major performance issues on the manufacturing-execution streaming path.
 
-  Fragmentation scaled headcount, not capability, and turned every team into a broker administrator.
+  A large Kafka Streams topology owned enrichment and lifecycle tracking. Error rates and consistency failures showed up as missed join windows, state-store explosion, and poor data quality. The platform could not hold latency or correctness under plant-scale load.
 
 work: |
-  Built and hardened an enterprise Kafka / Flink / Confluent platform on Kubernetes: paved paths for producers and consumers, Flink job operability, multi-tenant security, and governance edges so industrial and digital teams could consume streaming as a product.
+  Owned architecture remediation. Vastly simplified the Kafka Streams topology and moved fault-prone segments to Flink for consistent snapshots and faster recovery. RocksDB and related state-store tuning. Institutionalized data-quality and freshness metrics. Scaled Flink (Flink operator) and Kafka Streams with partitioning so jobs could run in parallel safely. OpenTelemetry for observability across the path.
 
 impact:
-  - "Enterprise Kafka and Flink platform consumable across industrial and digital teams"
-  - "Shared tenancy, security, and operability instead of per-program snowflakes"
-  - "Streaming foundation product teams could extend"
+  - "Error rate down to <0.5% (from >5%)"
+  - "End-to-end latency from 120 minutes to <1 second"
+  - "Self-scaling / self-healing architecture with lower cost to operate"
+  - "Zero incidents over an entire operating year"
 ---

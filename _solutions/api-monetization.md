@@ -8,7 +8,7 @@ summary: "Adopt Kubernetes, Kong & Apache Kafka, across central IT, BU-wide and 
 image: "/images/products/apinomy-logo.png"
 caption: Unlock new revenue streams with usage-based subscription billing for API & Data Products
 hash: "apinomy"
-site_url: "https://apinomy.com"
+site_url: "https://apinomy.platformatory.io"
 section:
   background: "linear-gradient(to bottom right, #fdeef1, #fcfcfc)"
   color: "#212529"

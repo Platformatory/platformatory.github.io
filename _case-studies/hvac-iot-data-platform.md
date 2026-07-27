@@ -3,37 +3,33 @@ layout: case-study
 title: "Multi-region IoT hub & data platform"
 customer_label: "Global HVAC leader"
 industry: "Manufacturing / IoT"
-domains:
-  - IoT
-  - Industrial data
+tags:
+  - Platform Excellence
+  - Data Platform
 technologies:
   - Apache Kafka
-  - Apache Flink
-  - Databricks
-  - Apache Spark
+  - Kafka Connect
+  - MQTT Proxy
   - Apache Druid
-  - ClickHouse
   - Kubernetes
-summary: "Self-service multi-region IoT hub and data platform rails for product teams across regions."
+summary: "Global streaming and real-time analytics platform across 16+ locations and five regional hubs—cluster right-sizing for license inventory; roll-out on hyperscaler (including Chinese IaaS), on-prem, and edge; GA in ~3 months."
 weight: 50
 draft_status: approved
 the_customer: |
-  A global HVAC leader with connected equipment fleets spanning regions, brands, and firmware generations.
+  A global HVAC leader with connected equipment fleets across regions. Streaming and real-time analytics sit under product and operations data.
 
-  Scale included device count, regions, tenancy, and product teams blocked on central tickets.
+  The footprint spanned 16+ locations and five regional hubs—hyperscaler cloud (including Chinese IaaS), on-prem, and edge.
 
 challenge: |
-  Every IoT and analytics program risked inventing its own hub, ingest, and serving stack.
+  Keep the streaming and real-time analytics platform stable as it grew: Kafka, Kafka Connect, MQTT Proxy, and Druid.
 
-  Central approval for every cluster and pipeline became the bottleneck the platform team was hired to remove.
+  Growth multiplied topology and license pressure. They needed a coherent global architecture—and a way to right-size clusters without freezing roll-outs.
 
 work: |
-  Delivered self-service platform deployments for a multi-region IoT hub and surrounding data platform: Kafka / Flink as the event spine, Databricks / Spark for fleet analytics, Druid and ClickHouse for interactive industrial queries, Kubernetes as the deploy substrate.
-
-  Opinionated defaults—paved paths product teams could consume safely across regions.
+  Owned global platform architecture and assurance. Designed and guided the multi-hub topology across 16+ locations and five regional hubs. Right-sized clusters against license inventory. Drove roll-outs across hyperscaler environments (including Chinese IaaS), on-prem, and edge.
 
 impact:
-  - "Self-service deployment paths for multi-region IoT hub capacity"
-  - "Shared ingest and analytics primitives—no per-program reinvention"
-  - "Operability designed for fleet growth beyond the pilot region"
+  - "Stable streaming & real-time analytics posture across 16+ locations / 5 regional hubs"
+  - "Cluster right-sizing that freed license inventory without stalling expansion"
+  - "Global roll-out across hyperscaler, on-prem, and edge—GA in ~3 months"
 ---

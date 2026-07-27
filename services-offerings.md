@@ -1,205 +1,49 @@
 ---
-layout: whitepaper
-title: "Services Capabilities"
-description: "A capability brief covering Platformatory's service offerings across domain expertise, co-creation & incubation, and managed services for on-premise customers."
+layout: offering
+title: "Services Offerings"
+description: "Platformatory service landings—co-creation & incubation and Managed Platform Services."
+permalink: /services-offerings/
 ---
 
-<div class="wp-hero">
-  <span class="wp-kicker">Capability Brief</span>
-  <h1>Services Capabilities</h1>
-  <p class="wp-subtitle">An in-depth look at how Platformatory delivers domain-specific expertise, co-creation &amp; incubation, and managed services for on-premise data platforms.</p>
-  <div class="wp-meta">
-    <span>Platformatory</span>
-    <span>Capability Brief</span>
+<section class="off-hero">
+  <div class="off-hero-inner">
+    <p class="off-kicker">Services</p>
+    <h1>Service offerings</h1>
+    <p class="off-hero-lede">
+      Each services slide has its own landing—not a hash-scroll brief. Pick the motion that matches how you need to ship and operate.
+    </p>
+    <div class="off-hero-actions">
+      <a class="off-btn off-btn--primary" href="/company#contact">Talk to us</a>
+      <a class="off-btn off-btn--ghost" href="/services/">Back to services</a>
+    </div>
   </div>
-</div>
+</section>
 
-<div class="wp-toc">
-  <h2>In this brief</h2>
-  <div class="wp-toc-list" role="list">
-    <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">01</span><a href="#deep-personalization-retail">Deep Personalization for retail</a></div>
-    <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">02</span><a href="#ai-enabled-banking">AI-enabled banking</a></div>
-    <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">03</span><a href="#real-time-retail">Real-time retail</a></div>
-    <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">04</span><a href="#digital-twins">Digital Twins</a></div>
-    <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">05</span><a href="#product-engineering">Product Engineering</a></div>
-    <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">06</span><a href="#data-platform-office">Data &amp; AI Platform Office</a></div>
-    <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">07</span><a href="#micro-gcc">Micro GCC</a></div>
-    <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">08</span><a href="#forward-deployed-engineering">Forward Deployed Engineering</a></div>
-    <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">09</span><a href="#compliance-assessment">Compliance Assessment</a></div>
-    <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">10</span><a href="#upgrades-remediation">Upgrades &amp; Remediation</a></div>
-    <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">11</span><a href="#managed-performance-engineering">Performance Engineering</a></div>
-    <div class="wp-toc-row" role="listitem"><span class="wp-toc-num">12</span><a href="#enterprise-sla-support">Enterprise / SLA Support</a></div>
+<section class="off-section" id="offerings">
+  <div class="off-inner">
+    <div class="off-section-head">
+      <h2>Landings</h2>
+      <p>Open a full page per offering.</p>
+    </div>
+    <ul class="off-hub-nav">
+      <li>
+        <a href="/co-creation/">
+          <span class="off-hub-title">Co-creation &amp; Incubation Laboratory</span>
+          <span class="off-hub-desc">Skin-in-the-game builds for mid-market / SMB alpha</span>
+        </a>
+      </li>
+      <li>
+        <a href="/managed-services/">
+          <span class="off-hub-title">Managed Platform Services</span>
+          <span class="off-hub-desc">24×7 operations, Platform Operational Excellence, Enterprise Support</span>
+        </a>
+      </li>
+      <li>
+        <a href="/solutions/">
+          <span class="off-hub-title">Domain Expertise</span>
+          <span class="off-hub-desc">Retail personalization, AI-enabled banking, real-time retail, digital twins</span>
+        </a>
+      </li>
+    </ul>
   </div>
-</div>
-
-<div class="wp-part">
-  <h2>Domain expertise where it matters</h2>
-</div>
-
-<div class="wp-item" id="deep-personalization-retail">
-  <span class="wp-item-num">01 · Domain expertise where it matters</span>
-  <h3>Deep Personalization for retail<span class="wp-badge">Content needed</span></h3>
-  <p class="wp-lead">Integrate and activate marketing data across omni-channel apps to drive high-touch customer experience and tangible GMV lift.</p>
-  <div class="wp-stats">
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-  </div>
-  <div class="wp-diagram">[Insert architecture diagram or process illustration for Deep Personalization for retail]</div>
-  <p class="wp-todo">Add 2–3 paragraphs here: approach, methodology, and a representative outcome for Deep Personalization engagements.</p>
-</div>
-
-<div class="wp-item" id="ai-enabled-banking">
-  <span class="wp-item-num">02 · Domain expertise where it matters</span>
-  <h3>AI-enabled banking<span class="wp-badge">Content needed</span></h3>
-  <p class="wp-lead">Specialized data products for new age banking, payments, risk and compliance.</p>
-  <div class="wp-stats">
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-  </div>
-  <div class="wp-diagram">[Insert architecture diagram or process illustration for AI-enabled banking]</div>
-  <p class="wp-todo">Add 2–3 paragraphs here: approach, methodology, and a representative outcome for AI-enabled banking engagements.</p>
-</div>
-
-<div class="wp-item" id="real-time-retail">
-  <span class="wp-item-num">03 · Domain expertise where it matters</span>
-  <h3>Real-time retail<span class="wp-badge">Content needed</span></h3>
-  <p class="wp-lead">Solving for inventory visibility, supply-chain and dynamic pricing.</p>
-  <div class="wp-stats">
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-  </div>
-  <div class="wp-diagram">[Insert architecture diagram or process illustration for Real-time retail]</div>
-  <p class="wp-todo">Add 2–3 paragraphs here: approach, methodology, and a representative outcome for Real-time retail engagements.</p>
-</div>
-
-<div class="wp-item" id="digital-twins">
-  <span class="wp-item-num">04 · Domain expertise where it matters</span>
-  <h3>Digital Twins<span class="wp-badge">Content needed</span></h3>
-  <p class="wp-lead">Solve for real-life simulation and operational insights of large scale IOT systems.</p>
-  <div class="wp-stats">
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-  </div>
-  <div class="wp-diagram">[Insert architecture diagram or process illustration for Digital Twins]</div>
-  <p class="wp-todo">Add 2–3 paragraphs here: approach, methodology, and a representative outcome for Digital Twins engagements.</p>
-</div>
-
-<div class="wp-part">
-  <h2>Co-creation &amp; Incubation laboratory</h2>
-</div>
-
-<div class="wp-item" id="product-engineering">
-  <span class="wp-item-num">05 · Co-creation &amp; Incubation laboratory</span>
-  <h3>Product Engineering<span class="wp-badge">Content needed</span></h3>
-  <p class="wp-lead">Design and ship new-age, multi-tenant SaaS and PaaS with platform primitives, paved paths, and production-grade operability from day one.</p>
-  <div class="wp-stats">
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-  </div>
-  <div class="wp-diagram">[Insert architecture diagram or process illustration for Product Engineering]</div>
-  <p class="wp-todo">Add 2–3 paragraphs here: approach, methodology, and a representative outcome for Product Engineering engagements.</p>
-</div>
-
-<div class="wp-item" id="data-platform-office">
-  <span class="wp-item-num">06 · Co-creation &amp; Incubation laboratory</span>
-  <h3>Data &amp; AI Platform Office<span class="wp-badge">Content needed</span></h3>
-  <p class="wp-lead">Stand up specialized data and AI platform teams for GCCs, shared services, standards, and a charter that compounds across product lines.</p>
-  <div class="wp-stats">
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-  </div>
-  <div class="wp-diagram">[Insert architecture diagram or process illustration for Data &amp; AI Platform Office]</div>
-  <p class="wp-todo">Add 2–3 paragraphs here: approach, methodology, and a representative outcome for Data &amp; AI Platform Office engagements.</p>
-</div>
-
-<div class="wp-item" id="micro-gcc">
-  <span class="wp-item-num">07 · Co-creation &amp; Incubation laboratory</span>
-  <h3>Micro GCC<span class="wp-badge">Content needed</span></h3>
-  <p class="wp-lead">A lean, high-leverage capability cell embedded with your domain, small enough to move fast, strong enough to own platform outcomes.</p>
-  <div class="wp-stats">
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-  </div>
-  <div class="wp-diagram">[Insert architecture diagram or process illustration for Micro GCC]</div>
-  <p class="wp-todo">Add 2–3 paragraphs here: approach, methodology, and a representative outcome for Micro GCC engagements.</p>
-</div>
-
-<div class="wp-item" id="forward-deployed-engineering">
-  <span class="wp-item-num">08 · Co-creation &amp; Incubation laboratory</span>
-  <h3>Forward Deployed Engineering<span class="wp-badge">Content needed</span></h3>
-  <p class="wp-lead">Engineers in the trenches with your teams, domain immersion plus delivery so the hard problems get solved where production actually hurts.</p>
-  <div class="wp-stats">
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-  </div>
-  <div class="wp-diagram">[Insert architecture diagram or process illustration for Forward Deployed Engineering]</div>
-  <p class="wp-todo">Add 2–3 paragraphs here: approach, methodology, and a representative outcome for Forward Deployed Engineering engagements.</p>
-</div>
-
-<div class="wp-part">
-  <h2>Managed Platform Services</h2>
-</div>
-
-<div class="wp-item" id="compliance-assessment">
-  <span class="wp-item-num">09 · Managed Platform Services</span>
-  <h3>Compliance Assessment<span class="wp-badge">Content needed</span></h3>
-  <p class="wp-lead">Security, configuration, and operational posture reviews for on-prem Apache Kafka, Confluent Platform, ClickHouse, Kafka Connect, Debezium, Apache Camel, Apache Flink, and Apache Spark.</p>
-  <div class="wp-stats">
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-  </div>
-  <div class="wp-diagram">[Insert architecture diagram or process illustration for Compliance Assessment]</div>
-  <p class="wp-todo">Add 2–3 paragraphs here: approach, methodology, and a representative outcome for Compliance Assessment engagements.</p>
-</div>
-
-<div class="wp-item" id="upgrades-remediation">
-  <span class="wp-item-num">10 · Managed Platform Services</span>
-  <h3>Upgrades &amp; Remediation<span class="wp-badge">Content needed</span></h3>
-  <p class="wp-lead">Version upgrades, patching, and remediation of known issues with minimal disruption to production streaming and analytics platforms.</p>
-  <div class="wp-stats">
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-  </div>
-  <div class="wp-diagram">[Insert architecture diagram or process illustration for Upgrades &amp; Remediation]</div>
-  <p class="wp-todo">Add 2–3 paragraphs here: approach, methodology, and a representative outcome for Upgrades &amp; Remediation engagements.</p>
-</div>
-
-<div class="wp-item" id="managed-performance-engineering">
-  <span class="wp-item-num">11 · Managed Platform Services</span>
-  <h3>Performance Engineering<span class="wp-badge">Content needed</span></h3>
-  <p class="wp-lead">Capacity planning, tuning, and tail-latency optimization for on-prem streaming and analytics workloads.</p>
-  <div class="wp-stats">
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-  </div>
-  <div class="wp-diagram">[Insert architecture diagram or process illustration for Managed Performance Engineering]</div>
-  <p class="wp-todo">Add 2–3 paragraphs here: approach, methodology, and a representative outcome for managed Performance Engineering engagements.</p>
-</div>
-
-<div class="wp-item" id="enterprise-sla-support">
-  <span class="wp-item-num">12 · Managed Platform Services</span>
-  <h3>Enterprise / SLA Support<span class="wp-badge">Content needed</span></h3>
-  <p class="wp-lead">Named engineering coverage, incident response, and contractual SLAs for mission-critical on-premise platforms.</p>
-  <div class="wp-stats">
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-    <div class="wp-stat"><div class="wp-stat-value">-</div><div class="wp-stat-label">[Add metric]</div></div>
-  </div>
-  <div class="wp-diagram">[Insert architecture diagram or process illustration for Enterprise / SLA Support]</div>
-  <p class="wp-todo">Add 2–3 paragraphs here: approach, methodology, and a representative outcome for Enterprise / SLA Support engagements.</p>
-</div>
-
-<div class="wp-cta">
-  <a class="wp-cta-btn" href="/company#contact">Talk to our team</a>
-</div>
+</section>

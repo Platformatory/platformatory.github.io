@@ -2,8 +2,6 @@
 title: "Don't invent infrastructure"
 description: "You cannot vibe-code a database—yet. Build on best-in-breed OSS that has stood the test of time."
 weight: 30
-see_also:
-  - roll-your-own
 ---
 
 Distributed systems, storage engines, and compute primitives are hard—really hard. Most teams that invent them accidentally invent outages, staffing cliffs, and multi-year maintenance taxes.

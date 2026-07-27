@@ -31,16 +31,7 @@
       rel="stylesheet"
     />
     <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet">
-    {% if page.description %}
-    <meta name="description" content="{{ page.description }}" />
-    {% endif %}
-    <meta property="og:title" content="{{ page.title }} | {{site.title}}" />
-    <meta property="og:type" content="{{ site.seo.meta_og_type }}" />
-    <meta
-      property="og:url"
-      content="{{site.url}}{{ page.url | split: '/' | join: '/' }}"
-    />
-    <meta property="og:description" content="{{ page.description }}" />
+    {% include seo.html %}
   </head>
 
   <body class="whitepaper-page">

@@ -2,8 +2,6 @@
 title: "One-pizza teams"
 description: "Small is purposeful and efficient. Large teams create overhead with diminishing returns."
 weight: 80
-see_also:
-  - build-and-operate
 ---
 
 Coordination cost grows faster than headcount. Large teams create status meetings, ownership fog, and work that exists to justify the roster.

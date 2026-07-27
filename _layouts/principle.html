@@ -32,17 +32,7 @@ layout: null
       rel="stylesheet"
     />
     <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet" />
-    {% if page.description %}
-    <meta name="description" content="{{ page.description }}" />
-    {% endif %}
-    <meta property="og:title" content="{{ page.title }} | {{ site.title }}" />
-    <meta property="og:type" content="{{ site.seo.meta_og_type }}" />
-    <meta
-      property="og:url"
-      content="{{ site.url }}{{ page.url | split: '/' | join: '/' }}"
-    />
-    <meta property="og:description" content="{{ page.description }}" />
-    <meta property="og:image" content="{{ site.seo.meta_og_image }}" />
+    {% include seo.html %}
   </head>
 
   <body class="principles-page principle-detail-page">

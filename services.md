@@ -1,7 +1,8 @@
 ---
 layout: page_layout
 title: Our Services
-intro_image: "images/v2/banners/our-services.jpg"
+description: "Mission-critical platforms delivered end to end—co-creation, managed services, and product engineering for data, streaming, and AI estates."
+intro_image: "images/v2/banners/pf-services.jpg"
 intro_image_absolute: true
 intro_image_hide_on_mobile: false
 sections:
@@ -23,63 +24,47 @@ sections:
       </section>
   - title: "Co-creation & Incubation laboratory"
     featured: true
-    summary: ""
+    summary: "Skin-in-the-game collaboration to build new alpha in mid-market and SMB."
     hash: "co-creation-incubation-lab"
-    cta_text: "Explore offerings"
-    cta_link: "/services-offerings/#product-engineering"
+    cta_text: "Explore offering"
+    cta_link: "/co-creation/"
     section:
       class: "split-container"
       feature_type: "list"
     features:
       - name: "Product Engineering"
         class: "text-start"
-        description: "Design and ship new-age, multi-tenant SaaS and PaaS with platform primitives, paved paths, and production-grade operability from day one."
-        link:
-          url: "/services-offerings#product-engineering"
-          name: "[1]"
-          class: "cite-link"
+        description: "Multi-tenant SaaS/PaaS with paved paths and operability from day one."
       - name: "Data & AI Platform Office"
         class: "text-start"
-        description: "Stand up specialized data and AI platform teams for GCCs, shared services, standards, and a charter that compounds across product lines."
-        link:
-          url: "/services-offerings#data-platform-office"
-          name: "[2]"
-          class: "cite-link"
+        description: "Specialized data and AI platform teams with a compounding charter."
       - name: "Micro GCC"
         class: "text-start"
-        description: "A lean, high-leverage capability cell embedded with your domain, small enough to move fast, strong enough to own platform outcomes."
-        link:
-          url: "/services-offerings#micro-gcc"
-          name: "[3]"
-          class: "cite-link"
+        description: "A lean capability cell embedded in your domain—fast, accountable."
       - name: "Forward Deployed Engineering"
         class: "text-start"
-        description: "Engineers in the trenches with your teams, domain immersion plus delivery so the hard problems get solved where production actually hurts."
-        link:
-          url: "/services-offerings#forward-deployed-engineering"
-          name: "[4]"
-          class: "cite-link"
+        description: "In the trenches with your team where production actually hurts."
   - title: "Managed Platform Services for Mission Critical Infrastructure"
     featured: true
     summary: ""
     hash: "managed-platform-services"
-    cta_text: "Explore offerings"
-    cta_link: "/services-offerings/#managed-platform-services"
+    cta_text: "Explore offering"
+    cta_link: "/managed-services/"
     section:
       class: "split-container"
       feature_type: "list"
     features:
       - name: "Self-hosted Data & Analytics infrastructure"
         class: "text-start"
-        description: "Confluent Platform, Apache Kafka, Apache Flink, Kafka Connect, Debezium, ClickHouse, Apache Druid (and more)"
+        description: "Kafka, Flink, Connect, Debezium, ClickHouse, Druid—and the control plane around them"
       - name: "Operated by us, 24×7"
         class: "text-start"
-        description: "Incident response, service level objectives"
+        description: "Incident response, SLOs, change management—dedicated capacity when it hurts"
       - name: "Security & Compliance"
         class: "text-start"
         description: "SecOps posture, in joint responsibility with your teams"
       - name: "Enterprise Support"
         class: "text-start"
-        description: ""
+        description: "Assurance against major platform gaps—coverage underwritten, not hoped"
 
 ---
