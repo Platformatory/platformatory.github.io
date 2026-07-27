@@ -60,13 +60,17 @@ $sub-footer-text-color: $white;
 @import 'components/social';
 @import 'components/consulting';
 @import 'components/animations';
-@import 'components/monitor';
 @import 'components/event';
 
 // Pages
 @import 'pages/home';
 @import 'pages/team/team-summary';
 @import 'pages/services/page-services-single';
+@import 'pages/whitepaper';
+@import 'pages/offerings';
+@import 'pages/talks';
+@import 'pages/principles';
+@import 'pages/case-studies';
 
 
 :root{
@@ -519,7 +523,7 @@ ol {
 
 
 .reveal .controls{
-    color: #81B94C !important;
+    display: none !important;
 }
 
 

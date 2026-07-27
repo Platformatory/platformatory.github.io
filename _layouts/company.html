@@ -13,7 +13,9 @@ bodyClass: v2-page-layout
 
 <!-- <div class="content"> -->
 {% for section in sorted_section %}
-{% if section.raw_content %}
+{% if section.include %}
+{% include {{ section.include }} %}
+{% elsif section.raw_content %}
 {{section.raw_content | raw}}
 {% else %}
 <section id="{{ section.hash }}" class="{{section.section.class | default: 'box-card-container'}}">
@@ -27,43 +29,35 @@ bodyClass: v2-page-layout
   
     <div class="col-12 col-lg-6 address-info">
       <div class="contact-address-container">
-        <div class="region-group">
-          <h3 class="region-name">North America</h3>
-          <div class="two-cols na-row">
-            <div class="contact-country">
-              <h4 class="country-name">USA</h4>
-              <p class="address">{{ site.data.contact.us_office }}</p>
-              <p class="contact mb-1"><a href="tel: {{ site.data.contact.phone_us }}">{{ site.data.contact.phone_us }}</a></p>
-            </div>
-            <div class="contact-country">
-              <h4 class="country-name">Canada</h4>
-              <p class="address">{{ site.data.contact.canada_office }}</p>
-            </div>
+        <div class="offices-grid">
+          <div class="contact-country">
+            <span class="region-tag">North America</span>
+            <h4 class="country-name">USA</h4>
+            <p class="address"><a class="address-map-link" href="{{ site.data.contact.map_us }}" target="_blank" rel="noopener noreferrer">{{ site.data.contact.us_office }}</a></p>
+            <p class="contact mb-1"><a href="tel: {{ site.data.contact.phone_us }}">{{ site.data.contact.phone_us }}</a></p>
           </div>
-        </div>
-        <div class="region-group">
-          <div class="two-cols region-row mt-3">
-            <div class="contact-region">
-              <h3 class="region-name">Middle East</h3>
-              <div class="contact-country">
-              <h4 class="country-name">UAE</h4>
-              <p class="address">{{ site.data.contact.uae_office }}</p>
-              <p class="contact mb-1"><a href="tel: {{ site.data.contact.phone_uae }}">{{ site.data.contact.phone_uae }}</a></p>
-            </div>
-            </div>
-            <div class="contact-region">
-              <h3 class="region-name">APAC</h3>
-              <div class="contact-country">
-              <h4 class="country-name">India</h4>
-              <p class="address">{{ site.data.contact.india_office }}</p>
-              <p class="contact mb-1"><a href="tel: {{ site.data.contact.phone_in }}">{{ site.data.contact.phone_in }}</a></p>
-              </div>
-            </div>
+          <div class="contact-country">
+            <span class="region-tag">North America</span>
+            <h4 class="country-name">Canada</h4>
+            <p class="address">{{ site.data.contact.canada_office }}</p>
+            <p class="contact mb-1"><a href="tel: {{ site.data.contact.phone_us }}">{{ site.data.contact.phone_us }}</a></p>
+          </div>
+          <div class="contact-country">
+            <span class="region-tag">Middle East</span>
+            <h4 class="country-name">UAE</h4>
+            <p class="address">{{ site.data.contact.uae_office }}</p>
+            <p class="contact mb-1"><a href="tel: {{ site.data.contact.phone_uae }}">{{ site.data.contact.phone_uae }}</a></p>
+          </div>
+          <div class="contact-country">
+            <span class="region-tag">APAC</span>
+            <h4 class="country-name">India</h4>
+            <p class="address"><a class="address-map-link" href="{{ site.data.contact.map_in }}" target="_blank" rel="noopener noreferrer">{{ site.data.contact.india_office }}</a></p>
+            <p class="contact mb-1"><a href="tel: {{ site.data.contact.phone_in }}">{{ site.data.contact.phone_in }}</a></p>
           </div>
         </div>
       </div>
-      <div class="d-flex mt-1 email-block">
-        <span>Email : </span>
+      <div class="email-block">
+        <span class="region-tag">Email</span>
         <a href="mailto: {{ site.data.contact.email }}">{{ site.data.contact.email }}</a>
       </div>
     </div>
@@ -87,6 +81,9 @@ class="section-container {% if section.section.grid_order_class %}{{section.sect
 <div class="{{section.section.feature_type}}-items">
 {% if section.features %}
 <ul  class="container-context">
+  {% if section.link %}
+  <div class="section-cite-standalone"><a class="{{ section.link.class }}" href="{{section.link.url}}">{{section.link.name}}</a></div>
+  {% endif %}
   {% for feature in section.features %}
   <li class="{{feature.class}}">
     {% if section.section.feature_type == "images" %}
@@ -111,20 +108,36 @@ class="section-container {% if section.section.grid_order_class %}{{section.sect
       <h4 class="title">{{feature.name}}</h4>
       <p class="job-description">{{feature.description}}</p>
       <div class="social-lists-items">
-        <!-- <a href="http://twitter.com/platformatory" target="_blank"><img src="/images/v2/twitter.svg"></a> -->
-        <a href="{{ feature.linkedinurl }}" target="_blank"><img src="/images/v2/linkedin.svg"></a>
-        <a href="https://github.com/platformatory" target="_blank"><img src="/images/v2/github.svg"></a></div>
+        {% if feature.linkedinurl and feature.linkedinurl != "" %}
+        <a href="{{ feature.linkedinurl }}" target="_blank" rel="noopener noreferrer"><img src="/images/v2/linkedin.svg" alt="LinkedIn"></a>
+        {% endif %}
+      </div>
     </div>
     {% else %}
     <h4>{{feature.name}}</h4>
      <p>{{feature.description}}</p>
-     {%if feature.link %}
-     <a href="{{feature.link.url}}">{{feature.link.name}}</a>
-    {% endif %}
     {% endif %}
   </li>
   {% endfor %}
 </ul>
+{% assign has_refs = false %}
+{% if section.link %}{% assign has_refs = true %}{% endif %}
+{% for feature in section.features %}{% if feature.link %}{% assign has_refs = true %}{% endif %}{% endfor %}
+{% if has_refs %}
+<div class="section-references">
+  <span class="section-references-title">Recommended Reading</span>
+  <div class="section-references-list">
+    {% if section.link %}
+    <a href="{{section.link.url}}"><span class="ref-num">{{section.link.name}}</span>{{section.link.label | default: section.title}}</a>
+    {% endif %}
+    {% for feature in section.features %}
+    {% if feature.link %}
+    <a href="{{feature.link.url}}"><span class="ref-num">{{feature.link.name}}</span>{{feature.name}}</a>
+    {% endif %}
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
 {% endif %}
 
 {%if section.section.image %}

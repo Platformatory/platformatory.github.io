@@ -3,9 +3,12 @@
     <div class="row">
       <div class="col-12">
         <div class="main-footer-inner">
-          {% if site.data.social %} {% include social.html %} {% endif %} {% if
-          site.footer.copyright_text %}
-          <div class="copyright">{{ site.footer.copyright_text }}</div>
+          <div class="main-footer-left">
+            {% if site.data.social %}{% include social.html %}{% endif %}
+          </div>
+          {% if site.footer.copyright_text %}
+          {% assign current_year = site.time | date: "%Y" %}
+          <div class="copyright">{{ site.footer.copyright_text | replace: "YYYY", current_year }}</div>
           {% endif %}
         </div>
       </div>

@@ -9,8 +9,8 @@ sections:
     featured: true
     summary: "TBD"
     raw_content: |
-      <section class="raw-section-container typewirter-and-quotes">
-        <div id="trusted-advisory" class="container">
+      <section id="academy" class="raw-section-container typewirter-and-quotes">
+        <div class="container">
           <div style="justify-content: space-evenly;" class="d-flex flex-column h-100 ">
             <div>
               <h1 class="text-capitalize mb-1">Platformatory Academy</h1>
@@ -127,7 +127,7 @@ sections:
         link:
           name: "→ Location"
           url: "https://maps.app.goo.gl/dgq8nJMi2i1jRRVX6"         
-      - name: "Don’t miss this opportunity to gain skills that set you apart. Seats are limited—secure yours today!"
+      - name: "Don’t miss this opportunity to gain skills that set you apart. Seats are limited-secure yours today!"
         class: "text-left"
         description: "<br><br>And if you have questions, reach us at academy@platformatory.com. Lets envision and build the future together!"
         link:

@@ -27,45 +27,94 @@ bodyClass: v2-page-layout
             <h2 class="service-title">
              {{ section.title }}
             </h2>
+            {% if section.summary and section.summary != "" %}
             <div class="mt-2"><p class="m-0 text-center">{{ section.summary  }}</p></div>
+            {% endif %}
           </div>
         </div>
       </div>
       <div class="{{section.section.feature_type}}-items">
-        {% if section.features %}
+        {% if section.section.features_collection %}
+          {% assign collection_docs = site[section.section.features_collection] %}
+          {% assign sample_count = section.section.features_sample | default: 4 %}
+          <ul class="container-context principles-sample" data-sample-count="{{ sample_count }}">
+            {% assign sorted_docs = collection_docs | sort: "weight" %}
+            {% for doc in sorted_docs %}
+            <li class="text-left principle-candidate{% if forloop.index > sample_count %} is-sampled-out{% endif %}">
+              <h4>{{ doc.title }}</h4>
+              <p>{{ doc.description }}</p>
+            </li>
+            {% endfor %}
+          </ul>
+        {% elsif section.features %}
         <ul  class="container-context">
+          {% if section.link %}
+          <div class="section-cite-standalone"><a class="{{ section.link.class }}" href="{{section.link.url}}">{{section.link.name}}</a></div>
+          {% endif %}
           {% for feature in section.features %}
           <li class="{{feature.class}}">
-            <h4>{{feature.name}}</h4>
+            {% if feature.logo %}
+            <span class="lemma-logo">
+              {% if feature.href %}
+              <a href="{{ feature.href }}"{% if feature.href contains 'http' %} target="_blank" rel="noopener noreferrer"{% endif %}>
+                <img src="{{ feature.logo }}" alt="">
+              </a>
+              {% else %}
+              <img src="{{ feature.logo }}" alt="">
+              {% endif %}
+              {% if feature.name %}<span class="lemma-name">{{ feature.name }}</span>{% endif %}
+            </span>
+            {% else %}
+            <h4>{{feature.name}}{% if feature.link %} <a class="{{ feature.link.class }}" href="{{ feature.link.url }}"{% if feature.link.url contains 'http' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ feature.link.name }}</a>{% endif %}</h4>
+            {% endif %}
             {% if section.section.feature_type == "images" %}
             <div class="images-container {{feature.class}}">
 
               {% for image in feature.images %}
-             <div >
-               
-               
-               {% if feature.cta %}
-               <a href="{{image.link}}" target="_blank" rel="noopener noreferrer">
-                <img src="{{image.url}}" alt="{{image.name}}">
-               </a> 
+             <div class="image-item{% if image.summary %} has-summary{% endif %}{% if image.underpin %} image-item--underpin{% endif %}">
+               {% if image.link %}
+               <a class="image-logo-link" href="{{ image.link }}"{% if image.link contains 'http' %} target="_blank" rel="noopener noreferrer"{% endif %}>
+                <img src="{{ image.url }}" alt="{{ image.name }}">
+               </a>
                {% else %}
-               <img src="{{image.url}}" alt="{{image.name}}">
+               <img src="{{ image.url }}" alt="{{ image.name }}">
+               {% endif %}
+               {% if image.summary %}
+               <p class="summary">{{ image.summary }}</p>
+               {% endif %}
+               {% if image.cta_text and image.link %}
+               <a class="solution-cta" href="{{ image.link }}"{% if image.link contains 'http' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ image.cta_text }}<span class="solution-cta-arrow" aria-hidden="true">→</span></a>
                {% endif %}
              </div>
-             {% if image.summary%}
-             <p class="summary">{{image.summary}}</p>
-             {% endif %}
              {% endfor %}
             </div>
             {% else %}
-             <p>{{feature.description}}</p>
-             {%if feature.link %}
-             <a href="{{feature.link.url}}">{{feature.link.name}}</a>
-            {% endif %}
+             {% if feature.description %}<p>{{feature.description}}</p>{% endif %}
+             {% if feature.href and feature.cta_text %}
+             <a class="lemma-cta" href="{{ feature.href }}"{% if feature.href contains 'http' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ feature.cta_text }}</a>
+             {% endif %}
             {% endif %}
           </li>
           {% endfor %}
         </ul>
+        {% endif %}
+        {% assign has_refs = false %}
+        {% if section.link %}{% assign has_refs = true %}{% endif %}
+        {% for feature in section.features %}{% if feature.link %}{% assign has_refs = true %}{% endif %}{% endfor %}
+        {% if has_refs %}
+        <div class="section-references">
+          <span class="section-references-title">Recommended Reading</span>
+          <div class="section-references-list">
+            {% if section.link %}
+            <a href="{{section.link.url}}"><span class="ref-num">{{section.link.name}}</span>{{section.link.label | default: section.title}}</a>
+            {% endif %}
+            {% for feature in section.features %}
+            {% if feature.link %}
+            <a href="{{feature.link.url}}"><span class="ref-num">{{feature.link.name}}</span>{{feature.name}}</a>
+            {% endif %}
+            {% endfor %}
+          </div>
+        </div>
         {% endif %}
         {%if section.section.image %}
         <img src="/{{section.section.image}}"/>
@@ -83,6 +132,11 @@ bodyClass: v2-page-layout
       </div>
       
     </div>
+    {% if section.cta_text %}
+    <div class="section-cta">
+      <a class="section-cta-btn" href="{{ section.cta_link }}"{% if section.cta_link contains 'http' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ section.cta_text }}<span class="section-cta-arrow" aria-hidden="true">→</span></a>
+    </div>
+    {% endif %}
     
   </section>
   {% endif %}

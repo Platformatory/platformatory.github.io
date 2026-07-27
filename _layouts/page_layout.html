@@ -26,7 +26,9 @@ bodyClass: v2-page-layout
             <h2 class="service-title">
              {{ section.title }}
             </h2>
+            {% if section.summary and section.summary != "" %}
             <div class="mt-2"><p class="m-0 text-center">{{ section.summary  }}</p></div>
+            {% endif %}
             {%if section.section.images %}
         <div class="feature-images">
         {% for image in section.section.images%}
@@ -40,9 +42,11 @@ bodyClass: v2-page-layout
       </div>
       <div style="background-image: url({{section.section.background-image}});" class="{{section.section.feature_type}}-items">
         {% if section.features %}
-        <ul  class="container-context"> 
+        <ul  class="container-context">
           {% if section.section.header %}
-           <h3 class="feature-title">{{section.section.header}}</h3>
+           <h3 class="feature-title">{{section.section.header}}{% if section.link %} <a class="{{ section.link.class }}" href="{{section.link.url}}">{{section.link.name}}</a>{% endif %}</h3>
+          {% elsif section.link %}
+          <div class="section-cite-standalone"><a class="{{ section.link.class }}" href="{{section.link.url}}">{{section.link.name}}</a></div>
           {% endif %}
           {% for feature in section.features %}
           <li  class="{{feature.class}}">
@@ -51,33 +55,48 @@ bodyClass: v2-page-layout
             <div class="images-container {{feature.class}}">
 
               {% for image in feature.images %}
-             <div >
-               
-               {% if feature.cta %}
-               <a href="{{image.link}}" target="_blank" rel="noopener noreferrer">
-                <img src="{{image.url}}" alt="{{image.name}}">
-               </a> 
+             <div class="image-item{% if image.summary %} has-summary{% endif %}">
+               {% if feature.cta or image.link %}
+               <a class="image-logo-link" href="{{ image.link }}"{% if image.link contains 'http' %} target="_blank" rel="noopener noreferrer"{% endif %}>
+                <img src="{{ image.url }}" alt="{{ image.name }}">
+               </a>
                {% else %}
-               <img src="{{image.url}}" alt="{{image.name}}">
+               <img src="{{ image.url }}" alt="{{ image.name }}">
+               {% endif %}
+               {% if image.summary %}
+               <p class="summary">{{ image.summary }}</p>
+               {% endif %}
+               {% if image.cta_text and image.link %}
+               <a class="solution-cta" href="{{ image.link }}"{% if image.link contains 'http' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ image.cta_text }}<span class="solution-cta-arrow" aria-hidden="true">→</span></a>
                {% endif %}
              </div>
-             <p class="summary">{{image.summary}}</p>
              {% endfor %}
             </div>
             {% else %}
-            <h4>{{feature.name}}</h4>
+            <h4>{{feature.name}}{% if feature.link %} <a class="{{ feature.link.class }}" href="{{ feature.link.url }}">{{ feature.link.name }}</a>{% endif %}</h4>
              <p>{{feature.description}}</p>
-             {%if feature.link %}
-             <a  href="{{feature.link.url}}">{{feature.link.name}}</a>
-            {% endif %}
             {% endif %}
           </li>
           {% endfor %}
-          {% if section.cta_text%}
-          <a class="section-cta-btn" href="{{section.cta_link}}" >{{section.cta_text}}</a>
-          {% endif %}
-          
         </ul>
+        {% assign has_refs = false %}
+        {% if section.link %}{% assign has_refs = true %}{% endif %}
+        {% for feature in section.features %}{% if feature.link %}{% assign has_refs = true %}{% endif %}{% endfor %}
+        {% if has_refs %}
+        <div class="section-references">
+          <span class="section-references-title">Recommended Reading</span>
+          <div class="section-references-list">
+            {% if section.link %}
+            <a href="{{section.link.url}}"><span class="ref-num">{{section.link.name}}</span>{{section.link.label | default: section.title}}</a>
+            {% endif %}
+            {% for feature in section.features %}
+            {% if feature.link %}
+            <a href="{{feature.link.url}}"><span class="ref-num">{{feature.link.name}}</span>{{feature.name}}</a>
+            {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
         {% endif %}
         {%if section.section.image %}
         <img src="/{{section.section.image}}"/>
@@ -88,6 +107,11 @@ bodyClass: v2-page-layout
       </div>
       
     </div>
+    {% if section.cta_text %}
+    <div class="section-cta">
+      <a class="section-cta-btn" href="{{ section.cta_link }}"{% if section.cta_link contains 'http' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ section.cta_text }}<span class="section-cta-arrow" aria-hidden="true">→</span></a>
+    </div>
+    {% endif %}
     
   </section>
   {% endif %}

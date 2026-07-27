@@ -3,27 +3,21 @@ main:
     url: "/"
     weight: -1
   - name: "Consulting"
-    url: "/consulting"
+    url: "/consulting/"
     weight: 0
   - name: "Services"
-    url: "/services"
-    weight: 2
+    url: "/services/"
+    weight: 1
   - name: "Talks"
     url: "/talks/"
-    weight: 4
+    weight: 3
   - name: "Write Ahead Log"
-    url: "/blog"
-    weight: 6
+    url: "/blog/"
+    weight: 4
   - name: "Company"
-    url: "/company"
-    weight: 7
-  - name: "Careers"
-    url: "/careers"
-    weight: 8
-footer:
-  - name: "Home"
-    url: "/"
-    weight: 1
-  - name: "Get in touch"
     url: "/company/"
-    weight: 2
+    weight: 5
+  - name: "Data+AI Academy"
+    url: "https://www.dataplusai.academy"
+    external: true
+    weight: 6

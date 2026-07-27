@@ -9,78 +9,125 @@ menuTrigger.onclick = function () {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
+  function goToSlideHash(targetId) {
+    if (!targetId) return;
+    var target = document.getElementById(targetId);
+    if (target) {
+      var page =
+        target.closest(".scroll-page") ||
+        target.closest(".slides section") ||
+        target;
+      var vp =
+        typeof Reveal !== "undefined" && Reveal.getViewportElement
+          ? Reveal.getViewportElement()
+          : null;
+      if (vp && vp.classList.contains("reveal-scroll")) {
+        vp.scrollTop = page.offsetTop;
+        vp.dispatchEvent(new Event("scroll"));
+      } else {
+        page.scrollIntoView({ block: "start" });
+      }
+    }
+    if (location.hash !== "#" + targetId) {
+      location.hash = targetId;
+    }
+  }
+
   // Get all navigation links
   var navLinks = document.querySelectorAll(".down-panel div > ul li a");
 
   navLinks.forEach(function (link) {
     link.addEventListener("click", function (event) {
-      // Get the target section's ID from the link's href
-      var targetId = link.getAttribute("href").substring(1);
+      var href = link.getAttribute("href") || "";
+      if (!href.startsWith("#")) return;
 
-      var targetSection = document.getElementById(targetId);
-
-      targetSection.scrollIntoView({
-        behavior: "smooth",
-      });
+      event.preventDefault();
+      goToSlideHash(href.substring(1));
 
       navLinks.forEach(function (navLink) {
         navLink.classList.remove("down-nav-active");
       });
-
       link.classList.add("down-nav-active");
     });
   });
 
-  const splashScreenId = "splash-screen";
-  const splashCookieName = "splash_shown";
-  const splashTimeout = 10000; // 10 seconds
+  // In-slide hash CTAs (e.g. hero "Learn more") need the same Reveal scroll path
+  document.querySelectorAll(".hero-cta-btn[href^='#'], .section-cta-btn[href^='#']").forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      var href = link.getAttribute("href") || "";
+      if (!href.startsWith("#") || href.length < 2) return;
+      event.preventDefault();
+      goToSlideHash(href.substring(1));
+    });
+  });
 
-  function hasSeenSplashScreen() {
-      return document.cookie.split("; ").some(row => row.startsWith(`${splashCookieName}=true`));
+  function shuffleNodes(nodes) {
+    var items = Array.prototype.slice.call(nodes);
+    for (var i = items.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = items[i];
+      items[i] = items[j];
+      items[j] = tmp;
+    }
+    return items;
   }
 
-  function setSplashScreenCookie() {
-      const expires = new Date();
-      expires.setTime(expires.getTime() + 30 * 60 * 1000); // Cookie expires in 30 minutes
-      document.cookie = `${splashCookieName}=true; expires=${expires.toUTCString()}; path=/`;
-  }
-
-  function hideSplashScreen() {
-      const splashScreen = document.getElementById(splashScreenId);
-      if (splashScreen) {
-          splashScreen.style.display = "none";
+  // Homepage thesis: randomly sample N principles from the collection
+  document.querySelectorAll(".principles-sample").forEach(function (list) {
+    var count = parseInt(list.getAttribute("data-sample-count") || "4", 10);
+    var items = shuffleNodes(list.querySelectorAll(".principle-candidate"));
+    if (items.length <= count) {
+      items.forEach(function (item) {
+        item.classList.remove("is-sampled-out");
+      });
+      return;
+    }
+    items.forEach(function (item, index) {
+      if (index < count) {
+        item.classList.remove("is-sampled-out");
+        list.appendChild(item);
+      } else {
+        item.classList.add("is-sampled-out");
       }
-  }
+    });
+  });
 
-  function showSplashScreen() {
-      const splashScreen = document.getElementById(splashScreenId);
-      if (splashScreen) {
-          splashScreen.style.display = "block";
+  // Partnership + expertise logos: reshuffle order on every page load
+  document.querySelectorAll(".images-container.partners, .images-container.expertise").forEach(function (grid) {
+    var fixed = Array.prototype.slice.call(grid.querySelectorAll(".image-item--underpin"));
+    var movable = Array.prototype.slice.call(grid.querySelectorAll(".image-item:not(.image-item--underpin)"));
+    shuffleNodes(movable).forEach(function (item) {
+      grid.appendChild(item);
+    });
+    fixed.forEach(function (item) {
+      grid.appendChild(item);
+    });
+  });
 
-          // Set timeout to hide splash screen automatically
-          const timeoutId = setTimeout(() => {
-              hideSplashScreen();
-              setSplashScreenCookie();
-          }, splashTimeout);
+  // Principle detail: float title bar once sticky engages
+  document.querySelectorAll("[data-principle-title-float]").forEach(function (header) {
+    var sentinel = document.createElement("div");
+    sentinel.setAttribute("aria-hidden", "true");
+    sentinel.style.cssText = "position:relative;height:1px;margin:0;pointer-events:none;";
+    header.parentNode.insertBefore(sentinel, header);
+    if (!("IntersectionObserver" in window)) return;
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          header.classList.toggle("is-floating", !entry.isIntersecting);
+        });
+      },
+      { rootMargin: "-76px 0px 0px 0px", threshold: 0 }
+    );
+    observer.observe(sentinel);
+  });
 
-          // Add event listener for "Enter" or "Escape" keys
-          const handleKeyPress = (event) => {
-              if (event.key === "Enter" || event.key === "Escape") {
-                  hideSplashScreen();
-                  setSplashScreenCookie();
-                  clearTimeout(timeoutId); // Clear the timeout to prevent double execution
-                  document.removeEventListener("keydown", handleKeyPress); // Remove listener after key press
-              }
-          };
-
-          document.addEventListener("keydown", handleKeyPress);
-      }
-  }
-
-  // Show splash screen if it hasn't been seen yet
-  if (!hasSeenSplashScreen()) {
-      showSplashScreen();
-  }
+  // Case studies: reshuffle card order on every page load
+  document.querySelectorAll("[data-case-studies-grid]").forEach(function (grid) {
+    shuffleNodes(grid.querySelectorAll(".case-study-card")).forEach(function (card) {
+      grid.appendChild(card);
+    });
+  });
 });
 
 var places= [
@@ -118,14 +165,4 @@ var places= [
 // map: "world",
 // markers: places
 // });
-
-const splashScreenId = "splash-screen";
-
-function hideSplashScreen() {
-  const splashScreen = document.getElementById(splashScreenId);
-  if (splashScreen) {
-      splashScreen.style.display = "none";
-  }
-}
-
 

@@ -1,0 +1,142 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-5CR3MF9");
+    </script>
+    <title>
+      {% if page.title %}{{ page.title }} {% endif %}| {{ site.title | escape }}
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ '/images/logo/favicon.png' | relative_url }}"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Titillium+Web:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet" />
+    {% include seo.html %}
+  </head>
+
+  <body class="case-studies-page">
+    {% include main-menu-mobile.html %}
+    {% include header.html headerClass='header-extra' %}
+
+    <main class="case-studies">
+      {% if page.collection == "case-studies" %}
+      <article class="case-study">
+        <header class="case-study-header">
+          <div class="case-study-inner">
+            <p class="case-study-kicker">
+              <a href="/case-studies/">Case Studies</a>
+              {% if page.industry %}<span aria-hidden="true"> / </span><span>{{ page.industry }}</span>{% endif %}
+            </p>
+            {% if page.customer_label %}
+            <p class="case-study-customer">{{ page.customer_label }}</p>
+            {% endif %}
+            <h1>{{ page.title }}</h1>
+            {% if page.summary %}
+            <p class="case-study-summary">{{ page.summary }}</p>
+            {% endif %}
+            {% if page.tags and page.tags.size > 0 %}
+            <ul class="case-study-tags">
+              {% for tag in page.tags %}
+              <li>{{ tag }}</li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+            {% if page.technologies and page.technologies.size > 0 %}
+            <p class="case-study-stack">
+              {% for tech in page.technologies %}{% unless forloop.first %} · {% endunless %}{{ tech }}{% endfor %}
+            </p>
+            {% endif %}
+          </div>
+        </header>
+
+        <div class="case-study-body">
+          <div class="case-study-inner">
+            <ol class="case-study-lemmas">
+              <li>
+                <h2>Customer</h2>
+                <div class="case-study-lemma-body">
+                  {% if page.the_customer %}
+                    {{ page.the_customer | markdownify }}
+                  {% else %}
+                    <p class="case-study-placeholder">Customer profile to be added.</p>
+                  {% endif %}
+                </div>
+              </li>
+
+              <li>
+                <h2>Challenge</h2>
+                <div class="case-study-lemma-body">
+                  {% if page.challenge %}
+                    {{ page.challenge | markdownify }}
+                  {% else %}
+                    <p class="case-study-placeholder">Challenge to be added.</p>
+                  {% endif %}
+                </div>
+              </li>
+
+              <li>
+                <h2>Work</h2>
+                <div class="case-study-lemma-body">
+                  {% if page.work %}
+                    {{ page.work | markdownify }}
+                  {% else %}
+                    <p class="case-study-placeholder">Work to be added.</p>
+                  {% endif %}
+                </div>
+              </li>
+
+              <li>
+                <h2>Impact</h2>
+                <div class="case-study-lemma-body">
+                  {% if page.impact and page.impact.size > 0 %}
+                    <ol class="case-study-impact">
+                      {% for item in page.impact %}
+                      <li>
+                        <span class="case-study-impact-num" aria-hidden="true">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+                        <span class="case-study-impact-text">{{ item }}</span>
+                      </li>
+                      {% endfor %}
+                    </ol>
+                  {% else %}
+                    <p class="case-study-placeholder">Impact to be added.</p>
+                  {% endif %}
+                </div>
+              </li>
+            </ol>
+
+            <p class="case-study-back">
+              <a href="/case-studies/">All case studies</a>
+            </p>
+          </div>
+        </div>
+      </article>
+      {% else %}
+      {{ content }}
+      {% endif %}
+    </main>
+
+    {% include footer.html %}
+    <script type="text/javascript" src="{{ '/assets/js/scripts.js' | relative_url }}"></script>
+  </body>
+</html>

@@ -1,0 +1,216 @@
+<section class="off-hero">
+  <div class="off-hero-stage">
+    <div class="off-hero-copy">
+      <p class="off-brand">Platformatory</p>
+      <p class="off-kicker">{{ page.kicker | default: page.title }}</p>
+      <h1>{{ page.headline }}</h1>
+      {% if page.lede %}
+      <p class="off-hero-lede">{{ page.lede }}</p>
+      {% endif %}
+      <div class="off-hero-actions">
+        <a class="off-btn off-btn--primary" href="{{ page.primary_cta_href | default: '/company#contact' }}">{{ page.primary_cta | default: 'Talk to us' }}</a>
+        {% if page.secondary_cta %}
+        <a class="off-btn off-btn--ghost" href="{{ page.secondary_cta_href | default: '#capabilities' }}">{{ page.secondary_cta }}</a>
+        {% elsif page.pillars %}
+        <a class="off-btn off-btn--ghost" href="#capabilities">Explore capabilities</a>
+        {% endif %}
+      </div>
+      {% if page.hero_note %}
+      <p class="off-hero-note">{{ page.hero_note }}</p>
+      {% endif %}
+    </div>
+
+    {% if page.hero_points %}
+    <aside class="off-hero-rail" aria-label="At a glance">
+      <p class="off-hero-rail-label">{{ page.hero_points_label | default: 'At a glance' }}</p>
+      <ul class="off-hero-points">
+        {% for point in page.hero_points %}
+        <li>
+          <strong>{{ point.title }}</strong>
+          {% if point.body %}<span>{{ point.body }}</span>{% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </aside>
+    {% endif %}
+  </div>
+</section>
+
+{% if page.stack or page.stack_logos %}
+<section class="off-stack-band" aria-label="{{ page.stack_heading | default: 'Stack' }}">
+  <div class="off-inner off-inner--wide">
+    {% if page.stack_heading or page.stack_intro or page.stack_kicker %}
+    <div class="off-stack-band-head">
+      {% if page.stack_kicker %}<p class="off-section-kicker">{{ page.stack_kicker }}</p>{% endif %}
+      {% if page.stack_heading %}<h2>{{ page.stack_heading }}</h2>{% endif %}
+      {% if page.stack_intro %}<p>{{ page.stack_intro }}</p>{% endif %}
+    </div>
+    {% endif %}
+    {% if page.stack_logos %}
+    <ul class="off-stack-logos">
+      {% for item in page.stack_logos %}
+      <li>
+        <img src="{{ item.logo | relative_url }}" alt="{{ item.name }}" loading="lazy" />
+        {% if item.name %}<span>{{ item.name }}</span>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% if page.stack %}
+    <ul class="off-stack">
+      {% for item in page.stack %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+{% if page.proof %}
+<section class="off-proof" aria-label="Proof points">
+  <div class="off-inner off-inner--wide">
+    <ul class="off-proof-list">
+      {% for item in page.proof %}
+      <li>
+        {% if item.stat %}<span class="off-proof-stat">{{ item.stat }}</span>{% endif %}
+        <span class="off-proof-label">{{ item.label }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}
+
+{% if page.pillars %}
+<section class="off-section" id="capabilities">
+  <div class="off-inner off-inner--wide">
+    <div class="off-section-head">
+      <p class="off-section-kicker">{{ page.pillars_kicker | default: 'Capabilities' }}</p>
+      <h2>{{ page.pillars_heading | default: 'What’s in scope' }}</h2>
+      {% if page.pillars_intro %}
+      <p>{{ page.pillars_intro }}</p>
+      {% endif %}
+    </div>
+    <ol class="off-capability-grid" id="pillars">
+      {% for pillar in page.pillars %}
+      <li{% if pillar.id %} id="{{ pillar.id }}"{% endif %}>
+        <span class="off-capability-num" aria-hidden="true">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+        <h3>{{ pillar.title }}</h3>
+        {% if pillar.body %}
+        <p>{{ pillar.body }}</p>
+        {% endif %}
+        {% if pillar.points %}
+        <ul class="off-capability-points">
+          {% for point in pillar.points %}
+          <li>{{ point }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+{% endif %}
+
+{% if page.outcomes %}
+<section class="off-section off-section--alt">
+  <div class="off-inner off-inner--wide">
+    <div class="off-section-head">
+      <p class="off-section-kicker">{{ page.outcomes_kicker | default: 'Outcomes' }}</p>
+      <h2>{{ page.outcomes_heading | default: 'What changes when this lands' }}</h2>
+      {% if page.outcomes_intro %}
+      <p>{{ page.outcomes_intro }}</p>
+      {% endif %}
+    </div>
+    <ul class="off-outcomes">
+      {% for item in page.outcomes %}
+      <li>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.body }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}
+
+{% if page.process %}
+<section class="off-section off-section--ink off-process">
+  <div class="off-inner off-inner--wide">
+    <div class="off-section-head">
+      <p class="off-section-kicker">{{ page.process_kicker | default: 'How we engage' }}</p>
+      <h2>{{ page.process_heading | default: 'From problem to production path' }}</h2>
+      {% if page.process_intro %}
+      <p>{{ page.process_intro }}</p>
+      {% endif %}
+    </div>
+    <ol class="off-process-steps">
+      {% for step in page.process %}
+      <li>
+        <span class="off-process-num" aria-hidden="true">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+        <h3>{{ step.title }}</h3>
+        <p>{{ step.body }}</p>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+{% endif %}
+
+{% if page.panels %}
+  {% for panel in page.panels %}
+  <section class="off-section{% if panel.ink %} off-section--ink{% elsif panel.alt %} off-section--alt{% endif %}">
+    <div class="off-inner off-inner--wide">
+      <div class="off-split">
+        <div class="off-split-copy">
+          {% if panel.kicker %}<p class="off-section-kicker">{{ panel.kicker }}</p>{% endif %}
+          <h2>{{ panel.title }}</h2>
+          {% for para in panel.body %}
+          {% assign para_strip = para | strip %}
+          {% if para_strip contains 'off-fn' %}
+          <div class="off-split-copy-block off-split-copy-block--fn">{{ para | raw }}</div>
+          {% else %}
+          <div class="off-split-copy-block">{{ para | markdownify }}</div>
+          {% endif %}
+          {% endfor %}
+        </div>
+        {% if panel.aside_title %}
+        <aside class="off-panel" aria-label="{{ panel.aside_title }}">
+          <h3>{{ panel.aside_title }}</h3>
+          <ul class="off-panel-list">
+            {% for item in panel.aside_items %}
+            <li>
+              <strong>{{ item.title }}</strong>
+              {% if item.body %}<span>{{ item.body }}</span>{% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+        </aside>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+  {% endfor %}
+{% endif %}
+
+{{ content }}
+
+<section class="off-cta">
+  <div class="off-inner off-inner--wide">
+    <div class="off-cta-grid">
+      <div>
+        <p class="off-section-kicker">Next step</p>
+        <h2>{{ page.cta_heading | default: 'Talk through the fit' }}</h2>
+        <p>{{ page.cta_body | default: 'Share the problem space and the constraints. We’ll map the right approach—and say when we are not the right fit.' }}</p>
+      </div>
+      <div class="off-hero-actions">
+        <a class="off-btn off-btn--primary" href="{{ page.primary_cta_href | default: '/company#contact' }}">{{ page.primary_cta | default: 'Talk to our team' }}</a>
+        {% if page.back_href %}
+        <a class="off-btn off-btn--ghost" href="{{ page.back_href }}">{{ page.back_label | default: 'Back' }}</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>

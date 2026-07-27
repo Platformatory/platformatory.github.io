@@ -1,7 +1,12 @@
 baseurl: ""
-exclude: ["README.md"]
+url: "https://platformatory.io"
+exclude:
+  - "README.md"
+  - "brand"
+  - "v2"
+  - "vendor"
 permalink: pretty
-title: "Platformatory Labs"
+title: "Platformatory | Forward Deployed Engineering Firm: Data, AI & Modernization"
 
 google_analytics_id: "G-PWW2W71JX1"
 homepage:
@@ -9,40 +14,54 @@ homepage:
 logo:
   mobile: "images/logo/plf-logo.svg"
   desktop: "images/logo/plf-logo.svg"
-  desktop_height: "60px"
+  desktop_height: "76px"
 footer:
-  copyright_text: "&copy; All rights reserved 2024. Platformatory LLC"
+  copyright_text: "&copy; All rights reserved YYYY. Platformatory LLC"
 
 seo:
   meta_og_title: "Platformatory"
   meta_og_type: "website"
-  meta_og_url: "http://platformatory.io"
-  meta_og_image: "http://platformatory.io/images/logo/plf-logo.svg"
-  meta_og_description: "Platform, Data & ML Engineering Studio"
-  meta_twitter_card: "summary"
+  meta_og_url: "https://platformatory.io"
+  meta_og_image: "https://platformatory.io/images/logo/plf-logo.png"
+  meta_og_description: "Forward Deployed Engineering Firm: Data, AI & Modernization"
+  meta_twitter_card: "summary_large_image"
   meta_twitter_site: "@platformatory"
   meta_twitter_creator: "@platformatory"
+  organization_name: "Platformatory"
+  brand_name: "Platformatory"
+  legal_name: "Platformatory LLC"
+  logo_url: "https://platformatory.io/images/logo/plf-logo.png"
+  locale: "en_US"
 
 collections:
   services:
-    output: true
+    output: false
   team:
     output: true
   consulting:
-    output: true
+    output: false
   solutions:
-    output: true
+    output: false
   openings:
-    output: true
+    output: false
   engineering:
-    output: true
+    output: false
   field-engineering:
-    output: true
+    output: false
   events:
     output: true
     permalink: /events/:path
   education:
+    output: false
+  principles:
     output: true
+    permalink: /platform-engineering/:name/
+  case-studies:
+    output: true
+    permalink: /case-studies/:name/
+  offerings:
+    output: true
+    permalink: /:name/
 
 # For events
 future: true
@@ -55,3 +74,15 @@ sass:
 plugins:
   - jekyll-environment-variables
   - jekyll-menus
+
+defaults:
+  - scope:
+      path: ""
+      type: principles
+    values:
+      layout: principle
+  - scope:
+      path: ""
+      type: offerings
+    values:
+      layout: offering

@@ -1,138 +1,261 @@
 ---
-layout: default
-bodyClass: page-events-list
+layout: null
 ---
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset="UTF-8" />
+ <script>
+ (function (w, d, s, l, i) {
+ w[l] = w[l] || [];
+ w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+ var f = d.getElementsByTagName(s)[0],
+ j = d.createElement(s),
+ dl = l != "dataLayer" ? "&l=" + l : "";
+ j.async = true;
+ j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+ f.parentNode.insertBefore(j, f);
+ })(window, document, "script", "dataLayer", "GTM-5CR3MF9");
+ </script>
+ <title>
+ {% if page.title %}{{ page.title }} {% endif %}| {{ site.title | escape }}
+ </title>
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <link
+ rel="icon"
+ type="image/png"
+ href="{{ '/images/logo/favicon.png' | relative_url }}"
+ />
+ <link rel="preconnect" href="https://fonts.gstatic.com" />
+ <link
+ href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap"
+ rel="stylesheet"
+ />
+ <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet" />
+ {% include seo.html %}
+ </head>
 
-<!-- <div class="reveal">
-    <div class="slides"> -->
-<!-- <section class="section-top">
-            <div class="section-intro-container row mx-0">
-                <div class="section-content col-lg-6 p-0 col-12">
-                  <div class="intro-content py-2">{{ content }}</div>
-                </div>
-                <div
-                  class="intro-image-conatainer col-lg-6 p-0 col-12 order-lg-1 order-first flex-xl-row-reverse"
-                >
-                  <img src="/{{page.intro_image}}" alt="{{page.title}}" />
-                </div>
-              </div>
-        </section> -->
-<!-- </div>
-</div> -->
+ <body class="talks-page">
+ {% include main-menu-mobile.html %}
+ {% include header.html headerClass='header-extra' %}
 
+ <main class="talks-archive">
+ <header class="talks-hero">
+ <div class="talks-hero-inner">
+ <p class="talks-kicker">Community talks</p>
+ <h1>Talks</h1>
+ <p class="talks-lede">
+ Recordings and slides from Bengaluru Streams and Platformatory community events, real-time data, streaming, and platforms.
+ </p>
+ <div class="talks-cta-row">
+ <a
+ class="talks-subscribe"
+ href="https://www.youtube.com/@Platformatory?sub_confirmation=1"
+ target="_blank"
+ rel="noopener noreferrer"
+ >
+ <svg class="talks-yt-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+ <path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8zM9.8 15.5v-7l6.3 3.5-6.3 3.5z"/>
+ </svg>
+ Subscribe on YouTube
+ </a>
+ <a
+ class="talks-secondary"
+ href="https://www.meetup.com/bangalore-streams/"
+ target="_blank"
+ rel="noopener noreferrer"
+ >
+ Upcoming meetups
+ </a>
+ </div>
+ </div>
+ </header>
 
-<section class="horizontal-talks">
-    <div class="container pb-md-6">
+ {% assign upcoming_events_found = false %}
+ {% for event in site.events %}
+ {% assign event_date_str = event.date | date: "%Y-%m-%d" %}
+ {% assign current_date_str = site.time | date: "%Y-%m-%d" %}
+ {% if event_date_str >= current_date_str %}
+ {% assign upcoming_events_found = true %}
+ {% break %}
+ {% endif %}
+ {% endfor %}
 
-        <div class="talks-container">
-            <div class="past-events-card mt-1">
-                <h4>Past Events</h4>
-            </div>
-            {% for event in site.events reversed %}
-            {% assign event_date_str = event.date | date: "%Y-%m-%d" %}
-            {% assign current_date_str = site.time | date: "%Y-%m-%d" %}
-            {% if event_date_str < current_date_str and event.talks %} <!-- <div class="talks-title-section">
-                <h2 class="talks-section-title">{{event.title}}</h2>
-        </div> -->
-        <div class="talks-grid border-md-bottom ">
-            {% for talk in event.talks%}
-            <div class="talk-card">
-                <div class=" mx-0 talk-top-position">
-                    <iframe class="talk-video" width="364" height="315"
-                        src="https://www.youtube.com/embed/{{talk.video}}?color=white" title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="talk-item">
-                    <div class="talk-item-list">
-                        <div class="talk-speaker">
-                            <h6 class="speaker">{{talk.speaker}}</h6>
-                        </div>
-                        <div class=" d-flex p-0  align-items-center">
-                            <h5 class="m-0 py-1 talk-card-title ">{{talk.title}}</h5>
-                        </div>
+ {% if upcoming_events_found %}
+ <section class="talks-upcoming" aria-labelledby="talks-upcoming-title">
+ <div class="talks-section-inner">
+ <h2 id="talks-upcoming-title">Upcoming</h2>
+ <div class="talks-upcoming-grid">
+ {% for event in site.events %}
+ {% assign event_date_str = event.date | date: "%Y-%m-%d" %}
+ {% assign current_date_str = site.time | date: "%Y-%m-%d" %}
+ {% if event_date_str >= current_date_str %}
+ <article class="talks-upcoming-card">
+ {% if event.banner %}
+ <img class="talks-upcoming-banner" src="{{ event.banner }}" alt="" />
+ {% endif %}
+ <div class="talks-upcoming-body">
+ <h3>{{ event.title }}</h3>
+ <p class="talks-upcoming-meta">
+ <span>{{ event.date | date: "%b %d, %Y" }}</span>
+ {% if event.location %}<span>{{ event.location }}</span>{% endif %}
+ </p>
+ <a class="talks-card-link" href="{{ event.url }}">Event details</a>
+ </div>
+ </article>
+ {% endif %}
+ {% endfor %}
+ </div>
+ </div>
+ </section>
+ {% endif %}
 
-                        <!-- <p class="talk-summary">{{talk.summary}}</p>        -->
-                    </div>
-                    <!-- <hr> -->
-                    <div class="talk-slide">
-                        {% if talk.slide %}
-                        <a target="_blank" {%if talk.slide%} href="{{talk.slide}}" {% endif %}
-                            class="talk-slide-btn">Download Slides</a>
-                        {% endif %}
-                        <a href="{{event.url}}" class="talk-view-more">View More</a>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-        {% endif %}
-        {% endfor %}
-    </div>
-    <div class="events-container">
-        {% assign upcoming_events_found = false %}
+ <section class="talks-library" aria-labelledby="talks-library-title">
+ <div class="talks-section-inner">
+ <div class="talks-library-head">
+ <h2 id="talks-library-title">Recordings &amp; slides</h2>
+ <p>Play recordings in place. Download slides when available.</p>
+ </div>
 
-        <!-- Check for upcoming events before the title -->
-        {% for event in site.events %}
-        {% assign event_date_str = event.date | date: "%Y-%m-%d" %}
-        {% assign current_date_str = site.time | date: "%Y-%m-%d" %}
-        {% if event_date_str >= current_date_str %}
-        {% assign upcoming_events_found = true %}
-        {% break %}
-        {% endif %}
-        {% endfor %}
+ <div class="talks-grid">
+ {% for event in site.events reversed %}
+ {% assign event_date_str = event.date | date: "%Y-%m-%d" %}
+ {% assign current_date_str = site.time | date: "%Y-%m-%d" %}
+ {% if event_date_str < current_date_str and event.talks %}
+ {% for talk in event.talks %}
+ {% if talk.video %}
+ <article class="talks-card" data-video-id="{{ talk.video }}">
+ <div class="talks-thumb">
+ <img
+ src="https://i.ytimg.com/vi/{{ talk.video }}/hqdefault.jpg"
+ alt=""
+ loading="lazy"
+ width="480"
+ height="360"
+ />
+ <button
+ type="button"
+ class="talks-play"
+ data-talks-play
+ aria-label="Play {{ talk.title | escape }}"
+ >
+ <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+ </button>
+ <div class="talks-player" hidden></div>
+ </div>
+ <div class="talks-card-body">
+ <p class="talks-speaker">{{ talk.speaker }}</p>
+ <h3 class="talks-card-title">{{ talk.title }}</h3>
+ <p class="talks-event-label">{{ event.title }} · {{ event.date | date: "%b %Y" }}</p>
+ <div class="talks-card-actions">
+ <button
+ type="button"
+ class="talks-action talks-action--primary"
+ data-talks-play
+ >Watch</button>
+ {% if talk.slide %}
+ <a
+ class="talks-action"
+ href="{{ talk.slide }}"
+ target="_blank"
+ rel="noopener noreferrer"
+ >Download slides</a>
+ {% endif %}
+ </div>
+ </div>
+ </article>
+ {% endif %}
+ {% endfor %}
+ {% endif %}
+ {% endfor %}
+ </div>
+ </div>
+ </section>
 
-        <!-- Display the title if there are upcoming events -->
-        {% if upcoming_events_found %}
-        <div class="upcoming-events-card mt-1">
-            <h4>Upcoming Events</h4>
-        </div>
-        {% endif %}
+ <section class="talks-subscribe-band" aria-label="Subscribe">
+ <div class="talks-section-inner talks-subscribe-band-inner">
+ <div>
+ <h2>Never miss a talk</h2>
+ <p>New Bengaluru Streams recordings land on our YouTube channel first.</p>
+ </div>
+ <a
+ class="talks-subscribe talks-subscribe--band"
+ href="https://www.youtube.com/@Platformatory?sub_confirmation=1"
+ target="_blank"
+ rel="noopener noreferrer"
+ >
+ Subscribe on YouTube
+ </a>
+ </div>
+ </section>
+ </main>
 
+ {% include footer.html %}
 
-        {% for event in site.events %}
-        {% assign event_date_str = event.date | date: "%Y-%m-%d" %}
-        {% assign current_date_str = site.time | date: "%Y-%m-%d" %}
-        {% if event_date_str >= current_date_str %}
-        <!-- <div class="talks-title-section">
-                    <h2 class="talks-section-title">{{event.title}}</h2>
-                </div> -->
-        <div class="event-grid border-md-bottom ">
-            <div class="event-card">
-                <div class=" mx-0 event-top-position">
-                    {% if event.banner %}
-                    <img src="{{event.banner}}" alt="{{event.title}}">
-                    {% else %}
-                    <h5 class=" event-card-title ">{{event.title}}</h5>
-                    {% endif %}
-                </div>
-                <div class="event-item">
-                    <div class="event-item-list">
-                        <div class="row mx-0 align-items-center event-items-grid">
-                            <div class="col-2  p-0"><img class="event-icons p-0" src="/images/event/location.png"
-                                    alt="location icon"></div>
-                            <p class="m-0 col-10 p-0">{{event.address}}</p>
-                        </div>
-                        <div class="row mx-0 align-items-center event-items-grid">
-                            <div class="col-2  p-0"><img class="event-icons p-0" src="/images/event/calendar.png"
-                                    alt="calender icon"></div>
-                            <p class="m-0 col-10 p-0 text-capitalize">{{ event.date | date: '%B' | upcase }} {{
-                                event.date | date: '%d'}}, {{ event.date | date: '%Y' | upcase }}</p>
-                        </div>
+ <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+ <script type="text/javascript" src="{{ '/assets/js/scripts.js' | relative_url }}"></script>
+ <script>
+ (function () {
+ function stopCard(card) {
+ if (!card || !card.classList.contains("is-playing")) return;
+ var player = card.querySelector(".talks-player");
+ if (player) {
+ player.innerHTML = "";
+ player.hidden = true;
+ }
+ card.classList.remove("is-playing");
+ card.querySelectorAll("[data-talks-play]").forEach(function (btn) {
+ if (btn.classList.contains("talks-action")) btn.textContent = "Watch";
+ });
+ }
 
-                        <!-- <p class="talk-summary">{{talk.summary}}</p>        -->
-                    </div>
-                    <!-- <hr> -->
-                    <div class="event-cta">
+ function playCard(card) {
+ var id = card && card.getAttribute("data-video-id");
+ if (!id) return;
+ if (card.classList.contains("is-playing")) return;
 
-                        <a href="{{event.url}}" class="event-view-more">View More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {% endif %}
-        {% endfor %}
-    </div>
-    </div>
-    </div>
+ document.querySelectorAll(".talks-card.is-playing").forEach(stopCard);
+
+ var player = card.querySelector(".talks-player");
+ if (!player) return;
+
+ var titleEl = card.querySelector(".talks-card-title");
+ var title = (titleEl && titleEl.textContent.trim()) || "Talk recording";
+ var iframe = document.createElement("iframe");
+ iframe.src =
+ "https://www.youtube-nocookie.com/embed/" +
+ encodeURIComponent(id) +
+ "?autoplay=1&rel=0&modestbranding=1";
+ iframe.title = title;
+ iframe.allow =
+ "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+ iframe.allowFullscreen = true;
+ iframe.setAttribute("loading", "eager");
+ iframe.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+
+ player.innerHTML = "";
+ player.appendChild(iframe);
+ player.hidden = false;
+ card.classList.add("is-playing");
+ card.querySelectorAll(".talks-action[data-talks-play]").forEach(function (btn) {
+ btn.textContent = "Playing";
+ });
+ if (typeof card.scrollIntoView === "function") {
+ card.scrollIntoView({ behavior: "smooth", block: "nearest" });
+ }
+ }
+
+ document.addEventListener("click", function (event) {
+ var trigger = event.target.closest("[data-talks-play]");
+ if (!trigger) return;
+ var card = trigger.closest(".talks-card");
+ if (!card) return;
+ event.preventDefault();
+ playCard(card);
+ });
+ })();
+ </script>
+ </body>
+</html>

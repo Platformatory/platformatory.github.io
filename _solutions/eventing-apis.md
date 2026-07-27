@@ -8,7 +8,7 @@ summary: ""
 image: "/images/products/eventception-logo.png"
 caption: Synthesize custom event streams from API transactions
 hash: "eventception"
-site_url: "https://eventception.io"
+site_url: "https://eventception.platformatory.io"
 section:
   background: "linear-gradient(to bottom right, #fdeef1, #fcfcfc)"
   color: "#212529"

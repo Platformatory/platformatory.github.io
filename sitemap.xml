@@ -1,0 +1,29 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% assign skip_slugs = "404.html,explore-careers.html,careers.html,robots.txt,sitemap.xml" | split: "," %}
+{% for p in site.pages %}
+  {% assign basename = p.path | split: "/" | last %}
+  {% unless p.redirect_to or skip_slugs contains basename %}
+  <url>
+    <loc>{{ p.url | absolute_url }}</loc>
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+  </url>
+  {% endunless %}
+{% endfor %}
+{% for collection in site.collections %}
+  {% unless collection.label == "posts" %}
+    {% for doc in collection.docs %}
+      {% unless doc.redirect_to or doc.published == false or doc.draft_status == "parked" %}
+  <url>
+    <loc>{{ doc.url | absolute_url }}</loc>
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+  </url>
+      {% endunless %}
+    {% endfor %}
+  {% endunless %}
+{% endfor %}
+</urlset>
