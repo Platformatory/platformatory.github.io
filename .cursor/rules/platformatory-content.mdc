@@ -1,0 +1,13 @@
+---
+description: Platformatory marketing-site content conventions (tone, anonymity, tags).
+globs: _{case-studies,offerings,principles,events,team}/**/*
+alwaysApply: false
+---
+
+# Content conventions
+
+- Follow `.cursor/skills/platformatory-content/SKILL.md` when creating or rewriting these files.
+- Case studies: anonymous `customer_label`; no customer logos; no invented metrics.
+- Case study `tags:` = outcome vocabulary; `technologies:` = product names only.
+- Voice: plain practitioner prose—avoid AI antithesis stacks and brochure padding.
+- Events: nest `talks:` keys under each list item; YouTube `video` is ID-only.
