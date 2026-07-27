@@ -1,6 +1,6 @@
 ---
 description: Platformatory marketing-site content conventions (tone, anonymity, tags).
-globs: _{case-studies,offerings,principles,events,team}/**/*
+globs: _case-studies/**/*.md, _offerings/**/*.md, _principles/**/*.md, _events/**/*.md, _team/**/*.md
 alwaysApply: false
 ---
 

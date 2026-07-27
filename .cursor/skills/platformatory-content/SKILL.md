@@ -4,7 +4,8 @@ description: >-
   Create and edit Platformatory site content with consistent tone: case studies,
   offerings, principles, events, team members, and talks. Use when adding or
   rewriting files under _case-studies/, _offerings/, _principles/, _events/,
-  _team/, or talks on /talks/.
+  _team/, or talks on /talks/, or when the user runs /new-case-study,
+  /new-offering, /new-principle, /new-event, /new-team-member, or /new-talk.
 ---
 
 # Platformatory content
