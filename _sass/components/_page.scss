@@ -965,6 +965,9 @@ p{
      .teams-items{
         min-height: 50%;
         background-color: var(--v2-box-container-bg);
+        @media (max-width: 600px) {
+          min-height: 0;
+        }
         ul{
           margin: 0;
           display: grid;
@@ -3159,16 +3162,85 @@ section{
   // overflow:visible — that lets slides grow past the viewport and bleed
   // into each other (broken snap / "two sections at once").
 
-  // Progress rail reads as a broken white gutter on phones.
+  // Keep a thin slide-progress rail so Reveal scroll still reads as paging.
   .reveal-viewport.reveal-scroll .scrollbar {
-    display: none !important;
+    display: block !important;
+    opacity: 1 !important;
   }
+
+  .reveal-viewport.reveal-scroll .scrollbar .scrollbar-inner {
+    width: 3px;
+    right: 6px;
+  }
+
+  .reveal-viewport.reveal-scroll .scrollbar .scrollbar-slide {
+    background-color: rgba(255, 255, 255, 0.18);
+    box-shadow: none;
+  }
+
+  .reveal-viewport.reveal-scroll .scrollbar .scrollbar-playhead {
+    background-color: var(--v2-text-primary);
+  }
+
+  // Inner pages (company, products, consulting, …) are also Reveal scroll.
+  // Do not apply homepage flex-order / overflow:hidden stacking there —
+  // that put titles under grids and clipped team cards.
+  .reveal:not(.home-page) .scroll-page section,
+  .reveal-viewport.reveal-scroll .reveal:not(.home-page) .scroll-page section {
+    height: 100% !important;
+    max-height: 100% !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+
+  .reveal:not(.home-page) .split-container {
+    display: flex;
+    flex-direction: column;
+    height: auto !important;
+    min-height: 100% !important;
+    overflow: visible !important;
+
+    .section-container {
+      display: flex;
+      flex-direction: column;
+      height: auto !important;
+      min-height: 0 !important;
+      overflow: visible !important;
+    }
+
+    .strip,
+    .content-list-item {
+      flex: 0 0 auto;
+      order: 0;
+      height: auto !important;
+      padding: clamp(4.75rem, 12vh, 6.5rem) 1rem 0.75rem !important;
+      overflow: visible !important;
+    }
+
+    .teams-items,
+    .list-items,
+    .images-items,
+    .image-items,
+    .list-bulletpoint-items {
+      flex: 0 0 auto;
+      order: 1;
+      height: auto !important;
+      min-height: 0 !important;
+      overflow: visible !important;
+    }
+
+    .teams-items ul {
+      height: auto !important;
+      overflow: visible !important;
+      padding: 0.75rem 0.85rem 1.25rem !important;
+    }
+  }
+
   .reveal.home-page .slides > section > .section-cta,
   .reveal.home-page .scroll-page > section > .section-cta,
-  .reveal.home-page .slides section > .section-cta,
-  .slides > section > .section-cta,
-  .scroll-page > section > .section-cta,
-  .reveal .slides section > .section-cta {
+  .reveal.home-page .slides section > .section-cta {
     position: static;
     order: 4;
     justify-content: center;
@@ -3178,10 +3250,11 @@ section{
     flex: 0 0 auto;
   }
 
-  // Stack split slides inside one viewport-tall Reveal page.
+  // Homepage only: stack split slides inside one viewport-tall Reveal page.
   // DOM: section > .section-container (strip + list/images) + .section-cta
-  .split-container,
-  .reveal-viewport.reveal-scroll .scroll-page section.split-container {
+  .reveal.home-page .split-container,
+  .reveal.home-page .reveal-viewport.reveal-scroll .scroll-page section.split-container,
+  .reveal-viewport.reveal-scroll .reveal.home-page .scroll-page section.split-container {
     display: flex !important;
     flex-direction: column;
     height: 100% !important;
@@ -3204,14 +3277,14 @@ section{
       height: auto !important;
       min-height: 0 !important;
       // Fluid header clearance across short/tall phones.
-      padding: clamp(4.5rem, 12svh, 6.75rem) 1rem 0.45rem !important;
+      padding: clamp(4.5rem, 12vh, 6.75rem) 1rem 0.45rem !important;
       overflow: hidden !important;
 
       .service-title,
       .service-title a,
       h1,
       h2 {
-        font-size: clamp(1.15rem, 2.4vw + 0.85rem, 1.6rem) !important;
+        font-size: clamp(1.15rem, 4.8vw, 1.6rem) !important;
         line-height: 1.18 !important;
         margin-bottom: 0 !important;
       }
@@ -3311,7 +3384,7 @@ section{
         max-height: 100%;
         align-content: stretch !important;
         align-items: stretch !important;
-        gap: clamp(0.28rem, 0.9svh, 0.55rem) !important;
+        gap: clamp(0.28rem, 0.9vh, 0.55rem) !important;
       }
 
       .partners {
@@ -3323,7 +3396,7 @@ section{
           aspect-ratio: auto !important;
           height: 100% !important;
           min-height: 0 !important;
-          padding: clamp(0.2rem, 0.6svh, 0.35rem) !important;
+          padding: clamp(0.2rem, 0.6vh, 0.35rem) !important;
         }
 
         img {
@@ -3338,12 +3411,15 @@ section{
       .expertise,
       .community {
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-        grid-auto-rows: minmax(0, 1fr) !important;
+        grid-auto-rows: auto !important;
+        align-content: center !important;
+        height: auto !important;
+        max-height: 100%;
 
         .image-item,
         div {
-          aspect-ratio: auto !important;
-          height: 100% !important;
+          aspect-ratio: 16 / 10 !important;
+          height: auto !important;
           min-height: 0 !important;
         }
       }
@@ -3352,10 +3428,10 @@ section{
 
   // Short phones (OnePlus / browser chrome): reclaim title space.
   @media (max-height: 740px) {
-    .split-container .strip,
-    .split-container .content-list-item,
-    .reveal-viewport.reveal-scroll .scroll-page section.split-container .strip,
-    .reveal-viewport.reveal-scroll .scroll-page section.split-container .content-list-item {
+    .reveal.home-page .split-container .strip,
+    .reveal.home-page .split-container .content-list-item,
+    .reveal-viewport.reveal-scroll .reveal.home-page .scroll-page section.split-container .strip,
+    .reveal-viewport.reveal-scroll .reveal.home-page .scroll-page section.split-container .content-list-item {
       padding-top: 4.35rem !important;
       padding-bottom: 0.3rem !important;
 
@@ -3373,42 +3449,50 @@ section{
     }
   }
 
-  #opensource-community.split-container,
-  .reveal-viewport.reveal-scroll .scroll-page section#opensource-community.split-container {
+  .reveal.home-page #opensource-community.split-container,
+  .reveal-viewport.reveal-scroll .reveal.home-page .scroll-page section#opensource-community.split-container {
     .images-items {
       flex: 1 1 auto;
       display: flex;
       min-height: 0 !important;
+      align-items: center;
     }
 
     .images-items ul {
-      flex: 1 1 auto;
-      padding: 0.35rem 0.75rem !important;
+      flex: 0 1 auto;
+      height: auto !important;
+      padding: 0.5rem 0.9rem !important;
     }
 
     .images-items ul > li.community {
       display: flex;
       flex-direction: column;
-      flex: 1 1 auto;
+      flex: 0 1 auto;
       width: 100%;
-      height: 100%;
+      height: auto;
       min-height: 0;
+      justify-content: center;
     }
 
     .images-container.community {
-      flex: 1 1 auto;
+      flex: 0 1 auto;
       width: 100%;
-      height: 100% !important;
+      height: auto !important;
       min-height: 0 !important;
-      align-content: stretch !important;
+      align-content: center !important;
       align-items: stretch;
-      grid-auto-rows: minmax(0, 1fr);
+      grid-auto-rows: auto;
     }
 
     .images-container.community .image-item {
       min-height: 0;
-      height: 100%;
-      aspect-ratio: auto !important;
+      height: auto;
+      aspect-ratio: 16 / 10 !important;
+      border: 0 !important;
+      background: transparent !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      overflow: hidden;
     }
   }
 
