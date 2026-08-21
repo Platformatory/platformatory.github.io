@@ -696,7 +696,8 @@ p{
               column-gap: 0.9rem;
               row-gap: 0.35rem;
               align-items: start;
-              min-height: 0;
+              flex: 0 0 auto;
+              min-height: min-content;
               margin: 0;
               padding: 0.95rem 0 1.05rem;
               border: 0;
@@ -3168,11 +3169,12 @@ section{
   .scroll-page > section > .section-cta,
   .reveal .slides section > .section-cta {
     position: static;
-    order: 2;
+    order: 4;
     justify-content: center;
     width: 100%;
     max-width: none;
-    padding: 0 1rem 1rem;
+    padding: 0.5rem 1rem 0.85rem;
+    flex: 0 0 auto;
   }
 
   // Stack split slides inside one viewport-tall Reveal page.
@@ -3231,9 +3233,28 @@ section{
       min-height: 0 !important;
       align-content: flex-start !important;
       justify-content: flex-start !important;
+      gap: 0 !important;
       overflow-x: hidden !important;
       overflow-y: auto !important;
       -webkit-overflow-scrolling: touch;
+
+      // Prevent flex-shrink from crushing rows — that made descriptions
+      // overflow and paint on top of the next heading on narrow phones.
+      > li {
+        flex: 0 0 auto !important;
+        height: auto !important;
+        min-height: min-content !important;
+        grid-template-rows: none !important;
+        grid-auto-rows: auto !important;
+        overflow: visible !important;
+
+        h4,
+        p,
+        .lemma-name,
+        .lemma-cta {
+          overflow: visible !important;
+        }
+      }
     }
   }
 
