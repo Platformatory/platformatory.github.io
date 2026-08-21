@@ -3159,6 +3159,10 @@ section{
   // overflow:visible — that lets slides grow past the viewport and bleed
   // into each other (broken snap / "two sections at once").
 
+  // Progress rail reads as a broken white gutter on phones.
+  .reveal-viewport.reveal-scroll .scrollbar {
+    display: none !important;
+  }
   .reveal.home-page .slides > section > .section-cta,
   .reveal.home-page .scroll-page > section > .section-cta,
   .reveal.home-page .slides section > .section-cta,
