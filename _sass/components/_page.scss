@@ -3156,13 +3156,10 @@ section{
 }
 
 @media (max-width: 600px) {
-  .reveal-viewport.reveal-scroll .scroll-page,
-  .reveal-viewport.reveal-scroll .scroll-page-content,
-  .reveal-viewport.reveal-scroll .scroll-page section {
-    height: auto !important;
-    min-height: 100svh !important;
-    overflow: visible !important;
-  }
+  // Keep Reveal scroll's page model intact.
+  // Do NOT set .scroll-page / .scroll-page-content to height:auto or
+  // overflow:visible — that lets slides grow past the viewport and bleed
+  // into each other (broken snap / "two sections at once").
 
   .reveal.home-page .slides > section > .section-cta,
   .reveal.home-page .scroll-page > section > .section-cta,
@@ -3175,32 +3172,44 @@ section{
     justify-content: center;
     width: 100%;
     max-width: none;
-    padding: 0 1rem 1.5rem;
+    padding: 0 1rem 1rem;
   }
 
+  // Stack split slides inside one viewport-tall Reveal page.
   .split-container,
   .reveal-viewport.reveal-scroll .scroll-page section.split-container {
     display: flex !important;
     flex-direction: column;
-    height: auto !important;
+    height: 100% !important;
     min-height: 0 !important;
-    overflow: visible;
+    overflow: hidden !important;
 
     .section-container {
-      display: contents;
-      height: auto !important;
+      display: flex !important;
+      flex-direction: column;
+      flex: 1 1 auto;
+      height: 100% !important;
       min-height: 0 !important;
-      overflow: visible;
+      overflow: hidden !important;
     }
 
     .strip,
     .content-list-item {
-      flex: none;
+      flex: 0 0 auto;
       order: 1;
       height: auto !important;
       min-height: 0 !important;
-      padding: 136px 16px 20px !important;
-      overflow: visible;
+      padding: 120px 16px 12px !important;
+      overflow: hidden;
+
+      .service-title,
+      .service-title a,
+      h1,
+      h2 {
+        font-size: clamp(1.35rem, 5.4vw, 1.7rem) !important;
+        line-height: 1.15 !important;
+        margin-bottom: 0 !important;
+      }
     }
 
     .images-items,
@@ -3211,47 +3220,34 @@ section{
       order: 3;
       height: auto !important;
       min-height: 0 !important;
-      overflow: visible;
+      overflow: hidden;
     }
 
+    // Tall lists scroll inside the slide instead of growing the page.
     .images-items ul,
     .list-items ul,
     .list-bulletpoint-items ul {
-      height: auto !important;
+      height: 100% !important;
       min-height: 0 !important;
       align-content: flex-start !important;
       justify-content: flex-start !important;
-      overflow: visible;
-    }
-  }
-
-  .reveal-viewport.reveal-scroll .scroll-page section.split-container {
-    min-height: 0 !important;
-
-    .section-container {
-      display: contents !important;
-    }
-
-    .strip,
-    .content-list-item {
-      padding: 136px 16px 20px !important;
+      overflow-x: hidden !important;
+      overflow-y: auto !important;
+      -webkit-overflow-scrolling: touch;
     }
   }
 
   #opensource-community.split-container,
   .reveal-viewport.reveal-scroll .scroll-page section#opensource-community.split-container {
-    min-height: 100svh !important;
-
     .images-items {
       flex: 1 1 auto;
       display: flex;
-      height: auto !important;
       min-height: 0 !important;
     }
 
     .images-items ul {
       flex: 1 1 auto;
-      padding: 16px 20px 20px !important;
+      padding: 12px 16px 16px !important;
     }
 
     .images-items ul > li.community {
@@ -3266,8 +3262,8 @@ section{
     .images-container.community {
       flex: 1 1 auto;
       width: 100%;
-      height: auto !important;
-      min-height: 100% !important;
+      height: 100% !important;
+      min-height: 0 !important;
       align-content: stretch !important;
       align-items: stretch;
       grid-auto-rows: minmax(0, 1fr);
@@ -3282,20 +3278,20 @@ section{
   .products-lemmas {
     .list-items {
       ul {
-        padding: 0.25rem 1.25rem 1.5rem;
+        padding: 0 1rem 0.75rem;
         gap: 0;
       }
 
       li.product-lemma {
-        grid-template-columns: 30px 48px minmax(0, 1fr);
-        column-gap: 12px;
-        row-gap: 4px;
-        padding: 12px 0 14px !important;
+        grid-template-columns: 28px 40px minmax(0, 1fr);
+        column-gap: 10px;
+        row-gap: 2px;
+        padding: 8px 0 9px !important;
 
         &::before {
           grid-row: 1 / span 3;
-          margin-top: 0.45rem;
-          font-size: 0.82rem;
+          margin-top: 0.3rem;
+          font-size: 0.75rem;
         }
 
         .lemma-logo {
@@ -3304,30 +3300,30 @@ section{
           a {
             grid-column: 2;
             grid-row: 1 / span 3;
-            width: 48px;
-            height: 48px;
-            padding: 5px;
+            width: 40px;
+            height: 40px;
+            padding: 4px;
           }
 
           .lemma-name {
             grid-column: 3;
             grid-row: 1;
-            font-size: 18px;
+            font-size: 16px;
           }
         }
 
         p {
           grid-column: 3;
           padding-right: 0;
-          font-size: 15.5px !important;
-          line-height: 1.42;
+          font-size: 14px !important;
+          line-height: 1.35;
           overflow-wrap: anywhere;
         }
 
         .lemma-cta {
           grid-column: 3;
           max-width: 100%;
-          font-size: 13px !important;
+          font-size: 12px !important;
           overflow-wrap: anywhere;
           white-space: normal;
         }
@@ -3337,10 +3333,10 @@ section{
 
   .reveal-viewport.reveal-scroll .scroll-page section.products-lemmas {
     .list-items ul li.product-lemma {
-      grid-template-columns: 30px 48px minmax(0, 1fr) !important;
-      column-gap: 12px !important;
-      row-gap: 4px !important;
-      padding: 12px 0 14px !important;
+      grid-template-columns: 28px 40px minmax(0, 1fr) !important;
+      column-gap: 10px !important;
+      row-gap: 2px !important;
+      padding: 8px 0 9px !important;
 
       .lemma-logo {
         display: contents !important;
@@ -3348,28 +3344,28 @@ section{
         a {
           grid-column: 2 !important;
           grid-row: 1 / span 3 !important;
-          width: 48px !important;
-          height: 48px !important;
-          padding: 5px !important;
+          width: 40px !important;
+          height: 40px !important;
+          padding: 4px !important;
         }
 
         .lemma-name {
           grid-column: 3 !important;
           grid-row: 1 !important;
-          font-size: 18px !important;
+          font-size: 16px !important;
         }
       }
 
       p {
         grid-column: 3 !important;
-        font-size: 15.5px !important;
-        line-height: 1.42 !important;
+        font-size: 14px !important;
+        line-height: 1.35 !important;
         overflow-wrap: anywhere !important;
       }
 
       .lemma-cta {
         grid-column: 3 !important;
-        font-size: 13px !important;
+        font-size: 12px !important;
       }
     }
   }
@@ -3377,16 +3373,16 @@ section{
   .raw-section-container:not(.careers-slide),
   .reveal-viewport.reveal-scroll .scroll-page section.raw-section-container:not(.careers-slide) {
     display: flex !important;
-    align-items: flex-start;
-    height: auto !important;
-    min-height: 100svh !important;
-    padding: 136px 16px 40px !important;
-    overflow: visible !important;
+    align-items: center;
+    height: 100% !important;
+    min-height: 0 !important;
+    padding: 120px 16px 28px !important;
+    overflow: hidden !important;
 
     .container {
       width: 100%;
-      height: 100% !important;
-      min-height: calc(100svh - 176px) !important;
+      height: auto !important;
+      min-height: 0 !important;
       padding: 0;
       justify-content: center !important;
     }
@@ -3395,9 +3391,9 @@ section{
     .hero-slide-inner {
       width: 100%;
       height: auto !important;
-      min-height: calc(100svh - 176px) !important;
+      min-height: 0 !important;
       justify-content: center !important;
-      gap: 34px;
+      gap: 28px;
     }
 
     .hero-slide-inner {
@@ -3412,20 +3408,20 @@ section{
 
     h1,
     .title {
-      font-size: 38px !important;
+      font-size: 34px !important;
       line-height: 1.1;
       text-wrap: balance;
     }
 
     h3,
     .sub-title {
-      font-size: 24px !important;
+      font-size: 22px !important;
       line-height: 1.25;
       text-wrap: balance;
     }
 
     .sub-title {
-      margin-top: 16px;
+      margin-top: 14px;
     }
 
     .hero-cta {
