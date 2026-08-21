@@ -156,4 +156,9 @@
   .main-footer{
     position: fixed !important;
   }
+  @media (max-width: 600px) {
+    .main-footer{
+      position: static !important;
+    }
+  }
 }

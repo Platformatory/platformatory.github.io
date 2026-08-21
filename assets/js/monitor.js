@@ -185,6 +185,7 @@ async function parse(input) {
 }
 function scrollToBottom() {
   let terminal = document.querySelector(".terminal");
+  if (!terminal) return;
   terminal.scrollTo(0, terminal.scrollHeight);
 }
 async function boot() {
@@ -198,6 +199,7 @@ async function boot() {
   await pause();
 }
 function clear(screen = document.querySelector(".terminal")) {
+  if (!screen) return;
   screen.innerHTML = "";
 }
 
@@ -205,6 +207,7 @@ function clear(screen = document.querySelector(".terminal")) {
 
 async function loadmonitor() {
   const terminalElement = document.querySelector(".terminal");
+  if (!terminalElement) return;
   const lines = terminalElement.innerHTML.split('\n')
   clear();
   for (let i=0; i<lines.length; i++){
@@ -221,16 +224,17 @@ loadmonitor();
 
 let index=0;
 const typewriterElement = document.getElementById("typewriter-title");
-const text = typewriterElement.textContent;
-typewriterElement.innerHTML="";
-console.log(text)
-const typewriterText = new Typewriter(typewriterElement, {
-  loop: true,
-  delay: 75,
-});
+if (typewriterElement) {
+  const text = typewriterElement.textContent;
+  typewriterElement.innerHTML="";
+  const typewriterText = new Typewriter(typewriterElement, {
+    loop: true,
+    delay: 75,
+  });
 
-typewriterText.pauseFor(1500);
-typewriterText.typeString(text).pauseFor(2500).start()
+  typewriterText.pauseFor(1500);
+  typewriterText.typeString(text).pauseFor(2500).start()
+}
 // function titletypeWriter() {
  
   
@@ -250,4 +254,4 @@ typewriterText.typeString(text).pauseFor(2500).start()
 //   }
 // }
 
-//   titletypeWriter(); 
+//   titletypeWriter();
