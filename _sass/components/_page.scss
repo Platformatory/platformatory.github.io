@@ -494,14 +494,10 @@ p{
       }
       @media (max-width: 600px) {
         .strip,.content-list-item{
-          height: 40%;
-          padding: 1.5em 0.2em 1em !important;
+          height: auto;
         }
         .images-items,.list-items,.image-items,.list-bulletpoint-items{
-          min-height: 60%;
-          display: flex;
-          align-items: center;
-          // margin-top: -2rem;
+          min-height: 0;
         }
 
         .list-items,.list-bulletpoint-items{
@@ -3179,6 +3175,7 @@ section{
   }
 
   // Stack split slides inside one viewport-tall Reveal page.
+  // DOM: section > .section-container (strip + list/images) + .section-cta
   .split-container,
   .reveal-viewport.reveal-scroll .scroll-page section.split-container {
     display: flex !important;
@@ -3216,10 +3213,21 @@ section{
       }
     }
 
-    .images-items,
+    // Text panels: size to content so we don't grow a tall empty white box.
+    // Spare space stays in .section-container (dark slide bg) above the CTA.
     .list-items,
-    .image-items,
     .list-bulletpoint-items {
+      flex: 0 1 auto;
+      order: 3;
+      height: auto !important;
+      min-height: 0 !important;
+      max-height: 100%;
+      overflow: hidden !important;
+    }
+
+    // Image panels: fill remaining space inside .section-container.
+    .images-items,
+    .image-items {
       flex: 1 1 auto;
       order: 3;
       height: auto !important;
@@ -3227,10 +3235,11 @@ section{
       overflow: hidden !important;
     }
 
-    // Text lists: scroll inside the slide when content exceeds the phone.
+    // Text lists: natural height; scroll only when they must shrink to fit.
     .list-items ul,
     .list-bulletpoint-items ul {
-      height: 100% !important;
+      height: auto !important;
+      max-height: 100%;
       min-height: 0 !important;
       align-content: flex-start !important;
       justify-content: flex-start !important;
