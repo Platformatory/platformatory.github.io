@@ -260,8 +260,30 @@
  center: false,
  });
 
+ function bindProgressBarTouch() {
+ var vp = Reveal.getViewportElement && Reveal.getViewportElement();
+ var inner = vp && vp.querySelector(".scrollbar-inner");
+ if (!vp || !inner || inner.dataset.touchBound) return;
+ inner.dataset.touchBound = "1";
+ function scrollFromClientY(clientY) {
+ var rect = inner.getBoundingClientRect();
+ var height = rect.height || 1;
+ var y = (clientY - rect.top) / height;
+ y = Math.max(Math.min(y, 1), 0);
+ vp.scrollTop = y * (vp.scrollHeight - vp.offsetHeight);
+ }
+ function onTouch(e) {
+ if (!e.touches || !e.touches[0]) return;
+ e.preventDefault();
+ scrollFromClientY(e.touches[0].clientY);
+ }
+ inner.addEventListener("touchstart", onTouch, { passive: false });
+ inner.addEventListener("touchmove", onTouch, { passive: false });
+ }
+
  function onReady() {
  bindScrollHash();
+ bindProgressBarTouch();
  if (initialHash && initialHash.length > 1) {
  goToHash(initialHash);
  } else {

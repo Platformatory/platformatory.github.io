@@ -3172,14 +3172,22 @@ section{
   // into each other (broken snap / "two sections at once").
 
   // Keep a thin slide-progress rail so Reveal scroll still reads as paging.
+  // Widen the invisible hit area so the rail is tappable on phones.
   .reveal-viewport.reveal-scroll .scrollbar {
     display: block !important;
     opacity: 1 !important;
+    pointer-events: auto;
+    z-index: 40;
   }
 
   .reveal-viewport.reveal-scroll .scrollbar .scrollbar-inner {
     width: 3px;
     right: 6px;
+  }
+
+  .reveal-viewport.reveal-scroll .scrollbar .scrollbar-slide:after {
+    width: 28px;
+    left: -12px;
   }
 
   .reveal-viewport.reveal-scroll .scrollbar .scrollbar-slide {
@@ -3191,17 +3199,30 @@ section{
     background-color: var(--v2-text-primary);
   }
 
+  // Nested overflow:auto + overscroll-behavior:contain trapped swipe/wheel
+  // inside each slide, so Reveal's viewport never paged. Keep inner panels
+  // clipped; the only vertical scroller is .reveal-viewport.
+  .reveal-viewport.reveal-scroll {
+    touch-action: pan-y;
+  }
+
   // Inner pages (company, products, consulting, …) are also Reveal scroll.
-  // Do not apply homepage flex-order / overflow:hidden stacking there —
-  // that put titles under grids and clipped team cards.
+  // Do not apply homepage flex-order stacking there — that put titles under
+  // grids and clipped team cards.
   .reveal:not(.home-page) .scroll-page section,
   .reveal-viewport.reveal-scroll .reveal:not(.home-page) .scroll-page section {
     height: 100% !important;
     max-height: 100% !important;
-    overflow-x: hidden !important;
-    overflow-y: auto !important;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior: contain;
+    overflow: hidden !important;
+  }
+
+  // Base list/image grids use overflow-y:auto at all breakpoints; on phones
+  // that becomes a nested scroller over the whole panel.
+  .reveal-viewport.reveal-scroll .scroll-page .list-items ul,
+  .reveal-viewport.reveal-scroll .scroll-page .list-bulletpoint-items ul,
+  .reveal-viewport.reveal-scroll .scroll-page .images-items ul,
+  .reveal-viewport.reveal-scroll .scroll-page .solutions {
+    overflow: hidden !important;
   }
 
   .reveal:not(.home-page) .split-container {
@@ -3321,7 +3342,7 @@ section{
       overflow: hidden !important;
     }
 
-    // Text lists: natural height; scroll only when they must shrink to fit.
+    // Text lists: natural height, clipped to the slide — no nested scroller.
     .list-items ul,
     .list-bulletpoint-items ul {
       height: auto !important;
@@ -3330,10 +3351,7 @@ section{
       align-content: flex-start !important;
       justify-content: flex-start !important;
       gap: 0 !important;
-      overflow-x: hidden !important;
-      overflow-y: auto !important;
-      -webkit-overflow-scrolling: touch;
-      overscroll-behavior: contain;
+      overflow: hidden !important;
 
       > li {
         flex: 0 0 auto !important;
