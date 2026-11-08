@@ -2786,6 +2786,7 @@ section{
     padding: 0;
     height: 100%;
     overflow: hidden;
+    overscroll-behavior: contain;
     text-align: left;
 
     .careers-copy-inner {
@@ -3110,7 +3111,10 @@ section{
     }
   }
 
-  @media (max-width: 992px) {
+  // Align with the 600px page-wide override block: between 601-992px the
+  // auto-height layout here collided with section{height:100%;overflow:hidden}
+  // and clipped the slide. Same threshold as the mobile rescue now.
+  @media (max-width: 600px) {
     height: auto;
     overflow: visible;
     flex: none;
@@ -3221,8 +3225,21 @@ section{
   .reveal-viewport.reveal-scroll .scroll-page .list-items ul,
   .reveal-viewport.reveal-scroll .scroll-page .list-bulletpoint-items ul,
   .reveal-viewport.reveal-scroll .scroll-page .images-items ul,
+  .reveal-viewport.reveal-scroll .scroll-page .contact-container,
+  .reveal-viewport.reveal-scroll .scroll-page .contact-container #contact,
+  .reveal-viewport.reveal-scroll .scroll-page .hbspot-form,
+  .reveal-viewport.reveal-scroll .scroll-page .address-info,
+  .reveal-viewport.reveal-scroll .scroll-page .careers-copy-inner,
+  .reveal-viewport.reveal-scroll .scroll-page .careers-form,
   .reveal-viewport.reveal-scroll .scroll-page .solutions {
     overflow: hidden !important;
+  }
+
+  // Any remaining nested scroller must not chain into (or trap) the
+  // viewport swipe paging.
+  .reveal-viewport.reveal-scroll [style*="overflow"],
+  .reveal-viewport.reveal-scroll .overflow-auto {
+    overscroll-behavior: contain;
   }
 
   .reveal:not(.home-page) .split-container {

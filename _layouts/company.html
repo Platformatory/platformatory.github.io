@@ -21,7 +21,7 @@ bodyClass: v2-page-layout
 <section id="{{ section.hash }}" class="{{section.section.class | default: 'box-card-container'}}">
 
 {% if section.section.feature_type == "contact" %}
-<div id="contact" class="row">
+<div class="row">
   <div class="col-12 col-lg-6 hbspot-form">
     <h2 class="contact-title">Contact Us</h2>
     {% include contactform.html %}

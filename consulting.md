@@ -10,7 +10,7 @@ sections:
     featured: true
     summary: ""
     raw_content: |
-      <section id="trusted-advisory" class="raw-section-container typewirter-and-quotes">
+      <section id="trusted-advisory" class="raw-section-container typewriter-and-quotes">
         <div class="container">
           <div style="justify-content: space-evenly;" class="d-flex flex-column h-100 ">
             <div>

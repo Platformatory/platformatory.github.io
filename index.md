@@ -10,7 +10,7 @@ sections:
     featured: false
     summary: "We transform our customers' tech estate and operating model with cloud-native infrastructure, real-time data and modern integration."
     raw_content: |
-      <section id="platform-product-engineering" class="raw-section-container typewirter-and-quotes">
+      <section id="platform-product-engineering" class="raw-section-container typewriter-and-quotes">
         <div class="container">
           <div class="d-flex flex-column h-100 hero-slide-inner">
             <div class="hero-copy">
