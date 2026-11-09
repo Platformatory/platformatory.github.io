@@ -245,6 +245,7 @@ p{
 .page {
   display: flex;
   min-height: 100vh;
+  min-height: 100dvh;
   flex-direction: column;
   .wrapper {
     flex: 1 0 0;
@@ -2739,6 +2740,7 @@ section{
 .careers-page {
   background-color: #fff;
   height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
