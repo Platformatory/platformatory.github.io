@@ -3020,12 +3020,6 @@ section{
       grid-auto-rows: auto;
 
       // Even 3x2 grid (6 communities): compact cards, generous gaps.
-      @media (min-width: 992px) {
-        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-        gap: 28px !important;
-        width: min(100%, 720px);
-        margin-inline: auto;
-      }
     }
 
     .images-container.community .image-item {
@@ -3038,22 +3032,8 @@ section{
       padding: 0 !important;
       overflow: hidden;
 
-      @media (min-width: 992px) {
-        aspect-ratio: 5 / 3 !important;
-        background: #0d1926 !important;
-        border: 1px solid rgba(255, 255, 255, 0.14) !important;
-        border-radius: 14px !important;
-        padding: 0.25rem !important;
-        transition: transform 0.15s ease, border-color 0.15s ease;
-
-        &:hover {
-          transform: translateY(-3px);
-          border-color: rgba(108, 151, 60, 0.65);
-        }
-      }
     }
   }
-
 
 
   .products-lemmas {
@@ -3243,10 +3223,10 @@ section{
 // Home communities grid: 7 logos now (was 4); trim the tablet-band gaps so
 // the 2-col grid keeps fitting inside one viewport slide. (The 601-992px
 // band has no section padding rescue, so cap the card height outright.)
-@media (min-width: 601px) and (max-width: 992px) {
+@media (min-width: 601px) and (max-width: 991.98px) {
   #opensource-community {
     .images-container.community {
-      gap: 0.4rem !important;
+      gap: 1.1rem !important;
     }
 
     .images-items ul {
@@ -3267,7 +3247,7 @@ section{
 
 // Square-ish tablets (900x900, 991x900): 4 rows x 150px + the title strip
 // overshoot the viewport by ~15px; drop the card size one notch.
-@media (min-width: 601px) and (max-width: 992px) and (max-height: 920px) {
+@media (min-width: 601px) and (max-width: 991.98px) and (max-height: 920px) {
   #opensource-community {
     .strip {
       min-height: 0 !important;
@@ -3371,97 +3351,6 @@ section{
   }
 }
 
-// Reveal's layout sheet pins scroll-view sections to `display: block
-// !important`; match its chain + our class so the 2-col split wins.
-// Stops at the Bootstrap lg breakpoint so phones/tablets stack.
-@media (min-width: 992px) {
-  .reveal-viewport.reveal-scroll .slides section.contact-careers {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: stretch !important;
-  }
-
-  // Tablet band (601-991px): stacked slide clears the 64px header and
-  // stays inside one viewport.
-  @media (min-width: 601px) and (max-width: 991.98px) {
-    .cc-left-inner {
-      padding-top: 96px;
-      padding-bottom: 1.5rem;
-      gap: 16px;
-    }
-
-    .cc-right-inner {
-      padding-top: 1.25rem;
-      gap: 0.75rem;
-    }
-
-    .cc-map {
-      aspect-ratio: auto;
-      height: 210px;
-    }
-
-    .cc-office {
-      padding: 0.45rem 0.7rem;
-    }
-
-    .cc-office-addr {
-      -webkit-line-clamp: 2;
-    }
-  }
-
-  // Phones: tighter stack.
-  @media (max-width: 600px) {
-    .cc-left-inner {
-      padding-top: 88px;
-      padding-bottom: 1.1rem;
-      gap: 12px;
-    }
-
-    .cc-block {
-      gap: 0.4rem;
-    }
-
-    .cc-left p.cc-text {
-      font-size: 0.85rem !important;
-    }
-
-    h2.cc-title {
-      font-size: 1.3rem !important;
-    }
-
-    .cc-pill {
-      font-size: 0.9rem;
-      padding: 0.45rem 1rem;
-    }
-
-    .cc-map {
-      height: 120px;
-    }
-
-    .cc-offices {
-      gap: 0.4rem;
-    }
-
-    .cc-office {
-      padding: 0.35rem 0.6rem;
-      gap: 0.15rem;
-    }
-
-    .cc-office-addr {
-      -webkit-line-clamp: 2;
-      font-size: 0.7rem !important;
-    }
-
-    .cc-office-phone {
-      font-size: 0.68rem !important;
-    }
-
-    .cc-office-name {
-      font-size: 0.62rem !important;
-    }
-  }
-}
-
 // Registration pages: email CTA card (forms retired).
 .reg-cta {
   max-width: 46rem;
@@ -3547,12 +3436,6 @@ section.contact-careers {
     flex: 0 0 100%;
     padding: 0;
 
-    @media (min-width: 992px) {
-      width: 50%;
-      flex: 0 0 50%;
-      height: 100%;
-      overflow: hidden;
-    }
   }
 
   .cc-left-inner {
@@ -3564,11 +3447,6 @@ section.contact-careers {
     padding: 0 clamp(24px, 3.4vw, 56px);
     background-color: var(--v2-background-primary);
 
-    @media (min-width: 992px) {
-      height: 100%;
-      padding-top: clamp(96px, 14vh, 130px);
-      padding-bottom: clamp(24px, 4vh, 48px);
-    }
   }
 
   .cc-right-inner {
@@ -3580,12 +3458,6 @@ section.contact-careers {
     padding: 0 clamp(24px, 3.4vw, 56px);
     background-color: var(--v2-background-secondary);
     color: #14202e;
-
-    @media (min-width: 992px) {
-      height: 100%;
-      padding-top: clamp(96px, 14vh, 130px);
-      padding-bottom: clamp(24px, 4vh, 48px);
-    }
 
     @media (max-width: 991.98px) {
       padding-top: 1.5rem;
