@@ -3223,6 +3223,46 @@ section{
   @include inner-page-stack(true);
 }
 
+// Home communities grid: 7 logos now (was 4); trim the tablet-band gaps so
+// the 2-col grid keeps fitting inside one viewport slide. (The 601-992px
+// band has no section padding rescue, so cap the card height outright.)
+@media (min-width: 601px) and (max-width: 992px) {
+  #opensource-community {
+    .images-container.community {
+      gap: 0.4rem !important;
+    }
+
+    .images-items ul {
+      padding: 0.25rem 0.6rem !important;
+    }
+
+    .images-container.community .image-item {
+      max-height: min(17vh, 150px) !important;
+    }
+  }
+}
+
+@media (max-height: 820px) and (min-width: 601px) {
+  #opensource-community .images-container.community .image-item {
+    max-height: min(16vh, 132px) !important;
+  }
+}
+
+// Square-ish tablets (900x900, 991x900): 4 rows x 150px + the title strip
+// overshoot the viewport by ~15px; drop the card size one notch.
+@media (min-width: 601px) and (max-width: 992px) and (max-height: 920px) {
+  #opensource-community {
+    .strip {
+      min-height: 0 !important;
+      padding-top: 1rem !important;
+    }
+
+    .images-container.community .image-item {
+      max-height: 118px !important;
+    }
+  }
+}
+
 // Email-link replacements for the retired HubSpot/Google forms.
 .contact-cta {
   display: flex;
