@@ -2616,16 +2616,6 @@ section{
 // (No .scroll-page height growth: content stays at viewport height with
 // overflow released, matching how home/consulting render their slides.)
 
-  .reveal.company-page .scroll-page section {
-    // Grow past one viewport when content doesn't fit (was: clipped).
-    // height: auto only for the company page - matches the proven phone
-    // mode of the other pages while keeping them untouched.
-    height: auto !important;
-    min-height: 100% !important;
-    max-height: none !important;
-    overflow: visible !important;
-  }
-
   .reveal.company-page .split-container {
     display: flex;
     flex-direction: column;
@@ -3424,11 +3414,6 @@ section{
   padding: 88px clamp(20px, 5vw, 64px) 32px !important;
   text-align: left !important;
 
-  .cc-careers-anchor {
-    position: absolute;
-    top: 0;
-  }
-
   .cc-layout {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
@@ -3612,6 +3597,13 @@ section{
     overflow-wrap: anywhere;
   }
 
+  .cc-office-phone {
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.85);
+    letter-spacing: 0.01em;
+  }
+
   @media (max-width: 992px) {
     padding-top: 96px !important;
 
@@ -3626,6 +3618,34 @@ section{
     }
   }
 
+  // Tablet band (601-992px): stacked layout, keep inside one viewport.
+  @media (min-width: 601px) and (max-width: 992px) {
+    padding-top: 88px !important;
+    padding-bottom: 20px !important;
+
+    .cc-layout {
+      gap: 16px;
+      align-content: start;
+    }
+
+    .cc-left {
+      gap: 16px;
+    }
+
+    .cc-map {
+      max-height: 190px;
+      aspect-ratio: auto;
+    }
+
+    .cc-office {
+      padding: 0.45rem 0.7rem;
+    }
+
+    .cc-office-addr {
+      font-size: 0.72rem;
+    }
+  }
+
   @media (max-width: 767px) {
     padding-top: 78px !important;
     padding-bottom: 18px !important;
@@ -3635,7 +3655,14 @@ section{
       height: auto;
     }
 
-    // Beat the site-wide `p { font-size: 1.2rem !important }` phone rules.
+    .cc-office-addr {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    // Beat the site-wide `p/li/span` phone font-size rules.
     .cc-left p.cc-text {
       font-size: 0.85rem !important;
       line-height: 1.45 !important;
@@ -3645,10 +3672,8 @@ section{
       font-size: 1.35rem !important;
     }
 
-    // The site forces li/span font-sizes in em units on phones; pin ours.
-    .cc-offices li,
     .cc-offices span,
-    .cc-pill-row span {
+    .cc-block span {
       font-size: inherit !important;
     }
 
@@ -3704,12 +3729,20 @@ section{
 
   @media (max-width: 767px) and (min-width: 430px) {
     .cc-map {
-      max-height: 150px;
+      max-height: 120px;
+    }
+
+    .cc-layout {
+      gap: 14px;
+    }
+
+    .cc-left {
+      gap: 14px;
     }
   }
 
   @media (max-width: 399px) {
-    padding-top: 64px !important;
+    padding-top: 60px !important;
     padding-bottom: 8px !important;
 
     // UAE address is long: clamp so the office stack stays inside the fold.
@@ -3730,11 +3763,11 @@ section{
 
     .cc-offices {
       grid-template-columns: 1fr;
-      gap: 0.4rem;
+      gap: 0.35rem;
     }
 
     .cc-office {
-      padding: 0.3rem 0.65rem;
+      padding: 0.25rem 0.6rem;
       flex-direction: row;
       align-items: baseline;
       gap: 0.5rem;

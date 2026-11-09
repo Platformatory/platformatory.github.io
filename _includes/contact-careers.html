@@ -1,22 +1,16 @@
 <section id="contact" class="raw-section-container contact-careers">
   <div class="cc-layout">
     <div class="cc-left">
-      <div class="cc-block">
-        <span id="careers" class="cc-careers-anchor" aria-hidden="true"></span>
-        <span class="cc-kicker">Join us</span>
+      <div class="cc-block" id="careers">
+        <span class="cc-kicker">Careers</span>
         <h2 class="cc-title">We're looking for engineers.</h2>
-        <p class="cc-text">Practitioners who immerse themselves in business problems and go technically deep. No degrees or pedigree required — growth is competence-based, and senior team members can become partners.</p>
+        <p class="cc-text">We hire practitioners who dig into business problems and go technically deep. Degrees do not matter; shipped work does. Growth is based on competence, and senior team members can become partners.</p>
         <a class="cc-pill" href="mailto:joinus@platformatory.com?subject=Joining%20Platformatory">joinus@platformatory.com</a>
       </div>
       <div class="cc-block">
-        <span class="cc-kicker">Work with us</span>
-        <p class="cc-text">Tell us about the problem you're solving — we reply to every message.</p>
-        <div class="cc-pill-row">
-          <a class="cc-pill" href="mailto:hello@platformatory.com?subject=Project%20enquiry">hello@platformatory.com</a>
-          <a class="cc-quiet" href="tel:{{ site.data.contact.phone_us | remove: ' ' }}">{{ site.data.contact.phone_us }}</a>
-          <span class="cc-dot">·</span>
-          <a class="cc-quiet" href="tel:{{ site.data.contact.phone_in | remove: ' ' }}">{{ site.data.contact.phone_in }}</a>
-        </div>
+        <span class="cc-kicker">Sales &amp; enquiries</span>
+        <p class="cc-text">Tell us about the problem you are solving. We reply to every message.</p>
+        <a class="cc-pill" href="mailto:hello@platformatory.com?subject=Project%20enquiry">hello@platformatory.com</a>
       </div>
     </div>
     <div class="cc-right">
@@ -33,20 +27,24 @@
       </div>
       <div class="cc-offices">
         <a class="cc-office" href="{{ site.data.contact.map_us }}" target="_blank" rel="noopener noreferrer">
-          <span class="cc-office-name">USA</span>
-          <span class="cc-office-addr">{{ site.data.contact.us_office | replace: " <br>", "," | replace: "<br>", ", " | replace: "<br />", ", " }}</span>
+          <span class="cc-office-name">USA &middot; Austin</span>
+          <span class="cc-office-addr">{{ site.data.contact.us_office }}</span>
+          <span class="cc-office-phone">{{ site.data.contact.phone_us }}</span>
         </a>
         <div class="cc-office">
-          <span class="cc-office-name">Canada</span>
-          <span class="cc-office-addr">{{ site.data.contact.canada_office | replace: " <br>", "," | replace: "<br>", ", " | replace: "<br />", ", " }}</span>
+          <span class="cc-office-name">Canada &middot; Surrey</span>
+          <span class="cc-office-addr">{{ site.data.contact.canada_office }}</span>
+          <span class="cc-office-phone">{{ site.data.contact.phone_us }}</span>
         </div>
         <div class="cc-office">
-          <span class="cc-office-name">UAE</span>
-          <span class="cc-office-addr">{{ site.data.contact.uae_office | replace: " <br>", "," | replace: "<br>", ", " | replace: "<br />", ", " }}</span>
+          <span class="cc-office-name">UAE &middot; Dubai</span>
+          <span class="cc-office-addr">{{ site.data.contact.uae_office }}</span>
+          <span class="cc-office-phone">{{ site.data.contact.phone_uae }}</span>
         </div>
         <a class="cc-office" href="{{ site.data.contact.map_in }}" target="_blank" rel="noopener noreferrer">
-          <span class="cc-office-name">India</span>
-          <span class="cc-office-addr">{{ site.data.contact.india_office | replace: " <br>", "," | replace: "<br>", ", " | replace: "<br />", ", " }}</span>
+          <span class="cc-office-name">India &middot; Bengaluru</span>
+          <span class="cc-office-addr">{{ site.data.contact.india_office }}</span>
+          <span class="cc-office-phone">{{ site.data.contact.phone_in }}</span>
         </a>
       </div>
     </div>

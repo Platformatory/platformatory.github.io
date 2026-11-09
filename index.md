@@ -197,8 +197,8 @@ sections:
         cta: true
         class: "community"
         images: 
-          - name: "Bengaluru streams"
-            url: "../images/v2/meetup-community/streams.png"
+          - name: "Bengaluru Streams"
+            url: "../images/v2/meetup-community/streams-card.png"
             link: "https://meetup.com/bangalore-streams"
           - name: "P99 India"
             url: "../images/v2/meetup-community/p99-india.png"
@@ -216,7 +216,7 @@ sections:
             url: "../images/v2/meetup-community/ais-india.png"
             link: "https://luma.com/agentic-ai-data-infra"
           - name: "Data+AI Academy (Data & AI Forum)"
-            url: "../images/v2/meetup-community/data-ai-forum.svg"
+            url: "../images/v2/meetup-community/data-ai-academy.png"
             link: "https://www.meetup.com/data-ai-forum/"
   - title: "Preaching what we practice, with Data+AI Academy"
     featured: true
