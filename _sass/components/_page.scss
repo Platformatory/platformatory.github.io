@@ -3678,9 +3678,13 @@ section.contact-careers {
 
   @media (max-width: 575.98px) {
     .cc-left-inner {
-      padding-top: 96px;
-      padding-bottom: 1.25rem;
-      gap: 14px;
+      padding-top: 88px;
+      padding-bottom: 1.1rem;
+      gap: 12px;
+    }
+
+    .cc-left p.cc-text {
+      font-size: 0.85rem !important;
     }
 
     .cc-block {
