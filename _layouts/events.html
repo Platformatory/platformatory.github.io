@@ -21,7 +21,7 @@ bodyClass: page-events-list
                     <div class="event-card">
                         <div class="row mx-0 event-top-position">
                             {%if event.banner %}
-                            <img src="{{event.banner}}" alt="{{event.title}}">
+                            <img src="{{event.banner}}" alt="{{event.title}}" loading="lazy">
                             {% else %}
                             <h5 class=" p-1 event-card-title ">{{event.title}}</h5>
                             {% endif %}
@@ -30,12 +30,12 @@ bodyClass: page-events-list
                             <div class="event-item-list">
                                 <div class="row mx-0 align-items-center event-items-grid">
                                     <div class="col-2  p-0"><img class="event-icons p-0" src="/images/event/location.png"
-                                            alt="location icon"></div>
+                                            alt="location icon" loading="lazy"></div>
                                     <p class="m-0 col-10 p-0">{{event.location}}</p>
                                 </div>
                                 <div class="row mx-0 align-items-center event-items-grid">
                                     <div class="col-2  p-0"><img class="event-icons p-0" src="/images/event/calendar.png"
-                                            alt="calender icon"></div>
+                                            alt="calender icon" loading="lazy"></div>
                                     <p class="m-0 col-10 p-0 text-capitalize">{{ event.date | date: '%d'}}-{{ event.date | date: '%b' | upcase }}-{{ event.date | date: '%Y' | upcase }}</p>
                                 </div>
                             </div>

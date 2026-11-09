@@ -92,7 +92,7 @@ layout: null
  {% if event_date_str >= current_date_str %}
  <article class="talks-upcoming-card">
  {% if event.banner %}
- <img class="talks-upcoming-banner" src="{{ event.banner }}" alt="" />
+ <img class="talks-upcoming-banner" src="{{ event.banner }}" alt="" / loading="lazy">
  {% endif %}
  <div class="talks-upcoming-body">
  <h3>{{ event.title }}</h3>

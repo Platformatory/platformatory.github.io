@@ -14,7 +14,7 @@ bodyClass: v2-page-consulting
         <div
           class="intro-image-conatainer col-lg-6 p-0 col-12 order-lg-1 order-first flex-xl-row-reverse"
         >
-          <img src="/{{page.intro_image}}" alt="{{page.title}}" />
+          <img src="/{{page.intro_image}}" alt="{{page.title}}" / loading="lazy">
         </div>
       </div>
     </section>
@@ -70,7 +70,7 @@ bodyClass: v2-page-consulting
           {% endfor %}
         </ul>
         {%if consulting.section.image %}
-        <img src="/{{consulting.section.image}}"/>
+        <img src="/{{consulting.section.image}}"/ loading="lazy">
         {%endif %}
         {% endif %}
       </div>

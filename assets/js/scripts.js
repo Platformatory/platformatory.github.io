@@ -135,6 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+/* Dead payload removed: jsvectormap config (map init was commented out).
 var places= [
   { name: "Bangaluru", coords: [12.971599, 77.594566],style: {
       initial: {
@@ -170,4 +171,6 @@ var places= [
 // map: "world",
 // markers: places
 // });
+*/
+
 

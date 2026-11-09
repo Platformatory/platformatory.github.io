@@ -14,7 +14,7 @@ bodyClass: v2-page-layout
         <div
           class="intro-image-conatainer col-lg-6 p-0 col-12 order-lg-1 order-first flex-xl-row-reverse"
         >
-          <img src="/{{page.intro_image}}" alt="{{page.title}}" />
+          <img src="/{{page.intro_image}}" alt="{{page.title}}" / loading="lazy">
         </div>
       </div>
     </section>
@@ -79,7 +79,7 @@ bodyClass: v2-page-layout
         </ul>
         {% endif %}
         {%if section.section.image %}
-        <img src="/{{section.section.image}}"/>
+        <img src="/{{section.section.image}}"/ loading="lazy">
         {%endif %}
         
       </div>

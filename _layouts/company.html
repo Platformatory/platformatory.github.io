@@ -93,10 +93,10 @@ class="section-container {% if section.section.grid_order_class %}{{section.sect
      <div >
        {% if feature.cta %}
        <a href="{{image.link}}" target="_blank" rel="noopener noreferrer">
-        <img src="{{image.url}}" alt="{{image.name}}">
+        <img src="{{image.url}}" alt="{{image.name}}" loading="lazy">
        </a> 
        {% else %}
-       <img src="{{image.url}}" alt="{{image.name}}">
+       <img src="{{image.url}}" alt="{{image.name}}" loading="lazy">
        {% endif %}
      </div>
      <p class="summary">{{image.summary}}</p>
@@ -104,12 +104,12 @@ class="section-container {% if section.section.grid_order_class %}{{section.sect
     </div>
     {% elsif section.section.feature_type == "teams" %}
     <div class="team-container">
-      <img class="team-image" src="/{{feature.image}}" alt="{{feature.name}}">
+      <img class="team-image" src="/{{feature.image}}" alt="{{feature.name}}" loading="lazy">
       <h4 class="title">{{feature.name}}</h4>
       <p class="job-description">{{feature.description}}</p>
       <div class="social-lists-items">
         {% if feature.linkedinurl and feature.linkedinurl != "" %}
-        <a href="{{ feature.linkedinurl }}" target="_blank" rel="noopener noreferrer"><img src="/images/v2/linkedin.svg" alt="LinkedIn"></a>
+        <a href="{{ feature.linkedinurl }}" target="_blank" rel="noopener noreferrer"><img src="/images/v2/linkedin.svg" alt="LinkedIn" loading="lazy"></a>
         {% endif %}
       </div>
     </div>
@@ -141,12 +141,12 @@ class="section-container {% if section.section.grid_order_class %}{{section.sect
 {% endif %}
 
 {%if section.section.image %}
-<img src="/{{section.section.image}}"/>
+<img src="/{{section.section.image}}"/ loading="lazy">
 {%endif %}
 {%if section.section.images %}
 <div class="feature-images">
 {% for image in section.section.images%}
-<img src="/{{image.url}}" alt="{{image.name}}"/>
+<img src="/{{image.url}}" alt="{{image.name}}"/ loading="lazy">
 {% endfor %}
 
 </div>
