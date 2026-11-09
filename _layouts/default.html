@@ -55,7 +55,7 @@
   <body>
     {% include main-menu-mobile.html %}
         {% include header.html headerClass='header-extra' %}
-        <div class="reveal">
+        <div class="reveal{% if page.bodyClass %} {{ page.bodyClass }}{% endif %}">
                 {{ content }}
         </div>
     

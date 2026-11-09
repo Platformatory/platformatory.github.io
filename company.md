@@ -2,6 +2,7 @@
 title: People
 layout: company
 permalink: /company/
+bodyClass: company-page
 intro_image: "images/v2/banners/people.jpg"
 intro_image_absolute: true
 intro_image_hide_on_mobile: false
