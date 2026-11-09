@@ -2983,7 +2983,10 @@ section{
   }
 
   .reveal.home-page #opensource-community.split-container,
-  .reveal-viewport.reveal-scroll .reveal.home-page .scroll-page section#opensource-community.split-container {
+
+  .reveal.home-page .scroll-page section#opensource-community.split-container,
+  .reveal-viewport.reveal-scroll .reveal.home-page .scroll-page section#opensource-community.split-container,
+  .reveal-viewport.reveal-scroll .scroll-page section#opensource-community.split-container {
     .images-items {
       flex: 1 1 auto;
       display: flex;
@@ -3015,6 +3018,14 @@ section{
       align-content: center !important;
       align-items: stretch;
       grid-auto-rows: auto;
+
+      // Even 3x2 grid (6 communities): compact cards, generous gaps.
+      @media (min-width: 992px) {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 28px !important;
+        width: min(100%, 720px);
+        margin-inline: auto;
+      }
     }
 
     .images-container.community .image-item {
@@ -3026,8 +3037,24 @@ section{
       box-shadow: none !important;
       padding: 0 !important;
       overflow: hidden;
+
+      @media (min-width: 992px) {
+        aspect-ratio: 5 / 3 !important;
+        background: #0d1926 !important;
+        border: 1px solid rgba(255, 255, 255, 0.14) !important;
+        border-radius: 14px !important;
+        padding: 0.25rem !important;
+        transition: transform 0.15s ease, border-color 0.15s ease;
+
+        &:hover {
+          transform: translateY(-3px);
+          border-color: rgba(108, 151, 60, 0.65);
+        }
+      }
     }
   }
+
+
 
   .products-lemmas {
     .list-items {
@@ -4228,3 +4255,26 @@ section.contact-careers {
     }
   }
 }
+
+@media (min-width: 992px) {
+  .split-container .images-items ul li .images-container.community {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 28px 28px !important;
+    padding: 0.75rem 1rem !important;
+  }
+
+  .split-container .images-items ul li .community .image-item {
+    aspect-ratio: 5 / 3 !important;
+    background: #0d1926 !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    border-radius: 14px !important;
+    padding: 0.2rem !important;
+    transition: transform 0.15s ease, border-color 0.15s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      border-color: rgba(108, 151, 60, 0.65);
+    }
+  }
+}
+
