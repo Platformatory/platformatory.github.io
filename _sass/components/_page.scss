@@ -2426,181 +2426,6 @@ p{
   }
 }
 
-.contact-container{
-  width: 100%;
-  height: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
-  #contact{
-    height: 100%;
-  }
-  .hbspot-form{
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 90px 8rem 20px;
-    .contact-title{
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--v2-background-primary);
-      margin-bottom: 0.5rem;
-      padding-top: 0.75rem;
-      position: relative;
-      &::before{
-        content: "";
-        display: block;
-        width: 3.5rem;
-        height: 4px;
-        border-radius: 2px;
-        background-color: var(--v2-text-primary);
-        margin-bottom: 1.25rem;
-      }
-    }
-    iframe{
-      max-width: 100%;
-      min-height: 100%;
-    }
-  }
-    .address-info{
-      background-color: var(--v2-background-primary);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: stretch;
-      padding: 3rem 3.5rem;
-      .contact-address-container{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        .offices-grid{
-          display: grid;
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-          gap: 1.25rem;
-        }
-        .contact-country{
-          border: 1px solid rgba(255, 255, 255, 0.12);
-          background-color: rgba(255, 255, 255, 0.03);
-          border-radius: 12px;
-          padding: 1.5rem 1.5rem 1.6rem;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          height: 100%;
-          transition: border-color 200ms ease, background-color 200ms ease;
-          &:hover{
-            border-color: var(--v2-text-primary);
-            background-color: rgba(255, 255, 255, 0.05);
-          }
-        }
-      }
-    .direction{
-      background-color: var(--v2-background-primary);
-      color: #fff;
-      font-size: 1.5rem;
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      img{
-        margin: 0;
-      }
-    }
-    .region-tag{
-      font-size: 0.7rem;
-      font-weight: 700;
-      text-align: start;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--v2-text-primary);
-      margin-bottom: 0.6rem;
-    }
-    .country-name{
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin: 0 0 0.7rem;
-      text-align: start;
-    }
-    .address,.contact{
-      font-size: 1rem;
-      line-height: 1.5;
-      margin: 0;
-      font-family: inherit !important;
-      text-align: start;
-      color: #c7ccd3;
-    }
-    .address{
-      margin-bottom: 0.75rem;
-    }
-    .address-map-link{
-      color: inherit;
-      text-decoration: none;
-
-      &:hover,
-      &:focus-visible {
-        color: #fff;
-        text-decoration: underline;
-      }
-    }
-    .contact{
-      font-weight: 700;
-    }
-
-    .email-block{
-      display: flex;
-      align-items: baseline;
-      flex-wrap: wrap;
-      column-gap: 0.75rem;
-      background-color: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      width: 100%;
-      margin-top: 1.25rem;
-      padding: 1rem 1.5rem;
-      border-radius: 12px;
-      transition: border-color 200ms ease, background-color 200ms ease;
-      &:hover{
-        border-color: var(--v2-text-primary);
-        background-color: rgba(255, 255, 255, 0.05);
-      }
-      .region-tag{
-        margin-bottom: 0;
-      }
-      a{
-        color: var(--v2-text-primary);
-        font-size: 1.15rem;
-        font-weight: 700;
-      }
-    }
-  }
-  @media (max-width:992px) {
-    #contact{
-      margin-top: 64px;
-      .hbspot-form{
-        padding: 20px 4rem;
-      }
-    }
-    .address-info{
-      padding: 2.5rem 1.5rem;
-      .address,.contact{
-        font-size: 1.05rem;
-      }
-    }
-    .email-block{
-      width: 100%;
-    }
-    .contact-address-container{
-      .offices-grid{
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1rem;
-      }
-    }
-  }
-  @media (max-width:576px) {
-    .contact-address-container{
-      .offices-grid{
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-      }
-    }
-  }
-}
 section{
   scroll-margin-top: 200px !important;
   .quote-content{
@@ -2767,420 +2592,6 @@ section{
   }
 }
 
-.careers-slide {
-  height: 100%;
-  background-color: #fff;
-  padding: 0 !important;
-  text-align: left !important;
-
-  .careers-container {
-    height: 100%;
-    text-align: left;
-  }
-}
-
-.careers-container {
-  width: 100%;
-  flex: 1 1 auto;
-  min-height: 0;
-  overflow: hidden;
-
-  #careers,
-  & > .row {
-    height: 100%;
-    margin: 0;
-  }
-
-  .careers-copy {
-    background-color: var(--v2-background-primary);
-    color: #fff;
-    padding: 0;
-    height: 100%;
-    overflow: hidden;
-    overscroll-behavior: contain;
-    text-align: left;
-
-    .careers-copy-inner {
-      box-sizing: border-box;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 3rem 3.5rem 3.5rem;
-      overflow-y: auto;
-      text-align: left;
-    }
-
-    .careers-kicker {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--v2-text-primary);
-      margin-bottom: 1rem;
-    }
-
-    .careers-title {
-      font-family: $font-family-heading;
-      font-size: 2.35rem;
-      font-weight: 700;
-      line-height: 1.2;
-      margin: 0 0 1.5rem;
-      max-width: 22rem;
-      position: relative;
-      padding-top: 0.75rem;
-      text-align: left;
-
-      &::before {
-        content: "";
-        display: block;
-        width: 3.5rem;
-        height: 4px;
-        border-radius: 2px;
-        background-color: var(--v2-text-primary);
-        margin-bottom: 1.25rem;
-      }
-    }
-
-    .careers-body {
-      max-width: 34rem;
-      width: 100%;
-      text-align: left;
-
-      p {
-        font-size: 1.02rem;
-        line-height: 1.65;
-        color: #c7ccd3;
-        margin: 0 0 1.15rem;
-        text-align: left;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-
-      a {
-        color: var(--v2-text-primary);
-        font-weight: 700;
-        text-decoration: underline;
-        text-underline-offset: 2px;
-
-        &:hover {
-          color: #fff;
-        }
-      }
-    }
-  }
-
-  .careers-form {
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    overflow-y: auto;
-    padding: 2.25rem 2.5rem 2.5rem;
-    -webkit-overflow-scrolling: touch;
-
-    .careers-form-title {
-      font-family: $font-family-heading;
-      font-size: 1.75rem;
-      font-weight: 700;
-      color: var(--v2-background-primary);
-      margin: 0 0 1.1rem;
-      position: relative;
-      padding-top: 0.35rem;
-
-      &::before {
-        content: "";
-        display: block;
-        width: 2.5rem;
-        height: 3px;
-        border-radius: 2px;
-        background-color: var(--v2-text-primary);
-        margin-bottom: 0.85rem;
-      }
-    }
-  }
-
-  .careers-native-form {
-    width: 100%;
-    max-width: 640px;
-
-    .cnf-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.85rem 0.95rem;
-    }
-
-    .cnf-field {
-      display: flex;
-      flex-direction: column;
-      gap: 0.3rem;
-      margin: 0;
-      min-width: 0;
-      border: 0;
-      padding: 0;
-      min-inline-size: 0;
-    }
-
-    .cnf-span-2 {
-      grid-column: 1 / -1;
-    }
-
-    .cnf-label {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: #5a5a5a;
-      float: none;
-      width: auto;
-      padding: 0;
-
-      em {
-        color: var(--v2-primary-color);
-        font-style: normal;
-      }
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    input[type="url"],
-    input[type="number"],
-    select,
-    textarea {
-      width: 100%;
-      appearance: none;
-      background: #f7f8f7;
-      border: 1px solid rgba(10, 19, 11, 0.12);
-      border-radius: 8px;
-      padding: 0.65rem 0.8rem;
-      font-size: 0.92rem;
-      line-height: 1.35;
-      color: var(--v2-background-primary);
-      font-family: inherit;
-      transition: border-color 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
-
-      &::placeholder {
-        color: #9aa3ae;
-      }
-
-      &:hover {
-        border-color: rgba(10, 19, 11, 0.28);
-      }
-
-      &:focus {
-        outline: none;
-        background: #fff;
-        border-color: var(--v2-primary-color);
-        box-shadow: 0 0 0 3px rgba(29, 100, 39, 0.15);
-      }
-    }
-
-    select {
-      background-image: linear-gradient(45deg, transparent 50%, #6b6b6b 50%),
-        linear-gradient(135deg, #6b6b6b 50%, transparent 50%);
-      background-position: calc(100% - 16px) calc(50% - 2px), calc(100% - 11px) calc(50% - 2px);
-      background-size: 5px 5px, 5px 5px;
-      background-repeat: no-repeat;
-      padding-right: 2rem;
-    }
-
-    textarea {
-      resize: vertical;
-      min-height: 4rem;
-    }
-
-    .cnf-hint {
-      font-size: 0.72rem;
-      color: #8a8a8a;
-    }
-
-    .cnf-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-    }
-
-    .cnf-chip {
-      display: inline-flex;
-      align-items: center;
-      margin: 0;
-      cursor: pointer;
-
-      input {
-        position: absolute;
-        opacity: 0;
-        pointer-events: none;
-      }
-
-      span {
-        display: inline-block;
-        padding: 0.35rem 0.65rem;
-        border-radius: 999px;
-        border: 1px solid rgba(10, 19, 11, 0.14);
-        background: #f7f8f7;
-        color: #3a3a3a;
-        font-size: 0.8rem;
-        font-weight: 600;
-        transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease;
-      }
-
-      input:focus-visible + span {
-        box-shadow: 0 0 0 3px rgba(29, 100, 39, 0.15);
-      }
-
-      input:checked + span {
-        background: rgba(29, 100, 39, 0.1);
-        border-color: var(--v2-primary-color);
-        color: var(--v2-primary-color);
-      }
-    }
-
-    .cnf-other-input {
-      margin-top: 0.4rem;
-
-      &:disabled {
-        display: none;
-      }
-    }
-
-    .cnf-actions {
-      margin-top: 1.2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.7rem;
-    }
-
-    .cnf-submit {
-      appearance: none;
-      border: 0;
-      border-radius: 999px;
-      background: var(--v2-background-primary);
-      color: #fff;
-      font-weight: 700;
-      font-size: 0.95rem;
-      padding: 0.85rem 1.4rem;
-      cursor: pointer;
-      transition: background-color 150ms ease, transform 150ms ease;
-
-      &:hover {
-        background: var(--v2-primary-color);
-      }
-
-      &:active {
-        transform: translateY(1px);
-      }
-    }
-
-    .cnf-note {
-      margin: 0;
-      font-size: 0.8rem;
-      color: #8a8a8a;
-
-      a {
-        color: var(--v2-primary-color);
-        font-weight: 700;
-      }
-    }
-
-    .cnf-success {
-      margin-top: 1rem;
-      padding: 1.25rem 1.35rem;
-      border-radius: 12px;
-      background: rgba(29, 100, 39, 0.08);
-      border: 1px solid rgba(29, 100, 39, 0.2);
-      color: var(--v2-background-primary);
-
-      strong {
-        display: block;
-        font-size: 1.1rem;
-        margin-bottom: 0.35rem;
-      }
-
-      p {
-        margin: 0;
-        color: #454545;
-        font-size: 0.95rem;
-      }
-
-      a {
-        color: var(--v2-primary-color);
-        font-weight: 700;
-      }
-    }
-
-    .cnf-hidden-frame {
-      position: absolute;
-      width: 0;
-      height: 0;
-      border: 0;
-      visibility: hidden;
-    }
-  }
-
-  // Align with the 600px page-wide override block: between 601-992px the
-  // auto-height layout here collided with section{height:100%;overflow:hidden}
-  // and clipped the slide. Same threshold as the mobile rescue now.
-  @media (max-width: 600px) {
-    height: auto;
-    overflow: visible;
-    flex: none;
-
-    #careers {
-      height: auto;
-      min-height: auto;
-    }
-
-    .careers-copy {
-      height: auto;
-      overflow: visible;
-
-      .careers-copy-inner {
-        height: auto;
-        min-height: auto;
-        justify-content: flex-start;
-        padding: 2.5rem 1.75rem 2.75rem;
-      }
-
-      .careers-title {
-        font-size: 2rem;
-        max-width: none;
-      }
-    }
-
-    .careers-form {
-      height: auto;
-      overflow: visible;
-      padding: 2rem 1.5rem 2.5rem;
-    }
-  }
-
-  @media (max-width: 576px) {
-    .careers-copy {
-      .careers-copy-inner {
-        padding: 2rem 1.25rem 2.25rem;
-      }
-
-      .careers-title {
-        font-size: 1.75rem;
-      }
-
-      .careers-body p {
-        font-size: 1rem;
-      }
-    }
-
-    .careers-native-form .cnf-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-}
 
 // Inner-page (non-home) stack mode: lay tall slides out as one flowing
 // page (Reveal still counts each <section> as one slide) so content that
@@ -3723,8 +3134,8 @@ section{
     }
   }
 
-  .raw-section-container:not(.careers-slide),
-  .reveal-viewport.reveal-scroll .scroll-page section.raw-section-container:not(.careers-slide) {
+  .raw-section-container:not(.careers-slide):not(.contact-careers),
+  .reveal-viewport.reveal-scroll .scroll-page section.raw-section-container:not(.careers-slide):not(.contact-careers) {
     display: flex !important;
     align-items: center;
     height: 100% !important;
@@ -3956,6 +3367,351 @@ section{
     &:hover {
       color: #fff;
       filter: brightness(1.08);
+    }
+  }
+}
+
+// Merged Careers & Contact slide (replaces the old careers + contact slides).
+// Single section: hiring pitch + sales/enquiry pills on the left, offices
+// and a dot-map of the four cities on the right. Sized to fit one viewport.
+.raw-section-container.contact-careers {
+  background-color: var(--v2-background-primary);
+  color: #fff;
+  // Reveal's black theme sets .reveal to 42px (em-based children explode);
+  // pin our rem-based scale at the root of this slide.
+  font-size: 1rem;
+  height: 100% !important;
+  padding: 88px clamp(20px, 5vw, 64px) 32px !important;
+  text-align: left !important;
+
+  .cc-careers-anchor {
+    position: absolute;
+    top: 0;
+  }
+
+  .cc-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+    gap: clamp(24px, 4vw, 56px);
+    align-items: center;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .cc-left {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(20px, 3.5vh, 40px);
+  }
+
+  .cc-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.65rem;
+  }
+
+  .cc-kicker {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--v2-text-primary);
+  }
+
+  .cc-title {
+    font-family: $font-family-heading;
+    font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+    font-weight: 700;
+    line-height: 1.15;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .cc-text {
+    font-size: clamp(0.92rem, 1.15vw, 1.02rem);
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.72);
+    margin: 0;
+    max-width: 30rem;
+  }
+
+  .cc-pill {
+    display: inline-block;
+    background: var(--v2-text-primary);
+    color: var(--v2-background-primary);
+    font-size: clamp(0.95rem, 1.6vw, 1.2rem);
+    font-weight: 700;
+    padding: 0.55rem 1.2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: transform 150ms ease, box-shadow 150ms ease;
+
+    &:hover,
+    &:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+      color: var(--v2-background-primary);
+    }
+  }
+
+  .cc-pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 0.9rem;
+  }
+
+  .cc-quiet {
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .cc-dot {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .cc-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 0;
+  }
+
+  .cc-map {
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    max-height: 46vh;
+    margin: 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    background:
+      radial-gradient(120% 90% at 50% 40%, rgba(255, 255, 255, 0.03), transparent 70%);
+    overflow: hidden;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .cc-dots circle {
+      fill: rgba(255, 255, 255, 0.22);
+    }
+
+    .cc-pin {
+      fill: var(--v2-text-primary);
+    }
+
+    .cc-pin-ring {
+      fill: none;
+      stroke: var(--v2-text-primary);
+      stroke-opacity: 0.4;
+      stroke-width: 2;
+    }
+
+    .cc-pin-label {
+      fill: #fff;
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    a {
+      cursor: pointer;
+
+      &:hover .cc-pin-ring {
+        stroke-opacity: 0.9;
+      }
+    }
+  }
+
+  .cc-offices {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
+  }
+
+  .cc-office {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    padding: 0.65rem 0.85rem;
+    color: inherit;
+    text-decoration: none;
+    transition: border-color 150ms ease;
+
+    &:hover {
+      border-color: var(--v2-text-primary);
+      color: inherit;
+    }
+  }
+
+  .cc-office-name {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--v2-text-primary);
+  }
+
+  .cc-office-addr {
+    font-size: 0.78rem;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.65);
+    overflow-wrap: anywhere;
+  }
+
+  @media (max-width: 992px) {
+    padding-top: 96px !important;
+
+    .cc-layout {
+      grid-template-columns: 1fr;
+      gap: 26px;
+      align-content: center;
+    }
+
+    .cc-map {
+      max-height: 260px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 78px !important;
+    padding-bottom: 18px !important;
+
+    .cc-layout {
+      align-content: start;
+      height: auto;
+    }
+
+    // Beat the site-wide `p { font-size: 1.2rem !important }` phone rules.
+    .cc-left p.cc-text {
+      font-size: 0.85rem !important;
+      line-height: 1.45 !important;
+    }
+
+    h2.cc-title {
+      font-size: 1.35rem !important;
+    }
+
+    // The site forces li/span font-sizes in em units on phones; pin ours.
+    .cc-offices li,
+    .cc-offices span,
+    .cc-pill-row span {
+      font-size: inherit !important;
+    }
+
+    .cc-layout {
+      gap: 14px;
+      align-content: start;
+    }
+
+    .cc-left {
+      gap: 14px;
+    }
+
+    .cc-block {
+      gap: 0.4rem;
+    }
+
+    .cc-title {
+      font-size: 1.35rem;
+    }
+
+    .cc-text {
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+
+    .cc-pill {
+      font-size: 0.92rem;
+      padding: 0.45rem 1rem;
+    }
+
+    .cc-map {
+      max-height: 128px;
+      aspect-ratio: auto;
+    }
+
+    .cc-pin-label {
+      font-size: 26px;
+    }
+
+    .cc-offices {
+      gap: 0.45rem;
+    }
+
+    .cc-office {
+      padding: 0.45rem 0.7rem;
+    }
+
+    .cc-office-addr {
+      font-size: 0.7rem;
+      line-height: 1.35;
+    }
+  }
+
+  @media (max-width: 767px) and (min-width: 430px) {
+    .cc-map {
+      max-height: 150px;
+    }
+  }
+
+  @media (max-width: 399px) {
+    padding-top: 64px !important;
+    padding-bottom: 8px !important;
+
+    // UAE address is long: clamp so the office stack stays inside the fold.
+    .cc-office-addr {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .cc-left p.cc-text {
+      font-size: 0.8rem !important;
+    }
+
+    .cc-left {
+      gap: 11px;
+    }
+
+    .cc-offices {
+      grid-template-columns: 1fr;
+      gap: 0.4rem;
+    }
+
+    .cc-office {
+      padding: 0.3rem 0.65rem;
+      flex-direction: row;
+      align-items: baseline;
+      gap: 0.5rem;
+    }
+
+    .cc-office-name {
+      flex: none;
+    }
+
+    .cc-map {
+      max-height: 84px;
+    }
+
+    .cc-left p.cc-text:last-of-type {
+      // "work with us" lede is one line here; let it clamp too on tiny screens
+      max-height: 2.6em;
+      overflow: hidden;
     }
   }
 }

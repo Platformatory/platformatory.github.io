@@ -70,17 +70,11 @@ sections:
         image: "images/team/bk.svg"
         description: "Support & Managed Services"
         linkedinurl: "https://in.linkedin.com/in/balaji-k-32419611"
-  - title: "Careers"
+  - title: "Careers & Contact"
     featured: true
     summary: ""
-    hash: "careers"
-    include: "careers-slide.html"
-  - title: "Contact Us"
-    featured: false
     hash: "contact"
-    section:
-      class: "contact-container"
-      feature_type: "contact"
+    include: "contact-careers.html"
 ---
 
 
