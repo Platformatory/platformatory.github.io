@@ -17,7 +17,7 @@ ctas:
   - text: "Contact us for a migration assessment"
     btn_id: "openContactDialog"
     color: "#0c910c"
-    scriptfile: "contactform"
+    scriptfile: "mailtocta"
     onclick: "openModal('ContactModel','ContactOverlay')"
     modal_id: "ContactModel"
     modal_overlay_id: "ContactOverlay"

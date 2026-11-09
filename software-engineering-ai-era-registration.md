@@ -60,4 +60,7 @@ Join us for an exclusive deep dive into the architectural backbone of modern AI.
 
 <br>
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfVWCt-VcxMgb2hDpbf6yDSDyrp-LR6x0-8k57fhVf-mDaGdg/viewform?embedded=true" style="width: 100%; max-width: 100%; height: 1500px; border: none; overflow: hidden;" frameborder="0" marginheight="0" marginwidth="0">Software Engineering in the AI Era | Data & AI Forum</iframe>
+<div class="reg-cta">
+  <h2>Register by email</h2>
+  <p>Skip the form: email <a href="mailto:events@platformatory.com?subject=Subject%3A%20Event%20registration">events@platformatory.com</a> with your name and what you'd like to register for (Software Engineering in the AI Era | Data & AI Forum), and we'll confirm your spot.</p>
+</div>

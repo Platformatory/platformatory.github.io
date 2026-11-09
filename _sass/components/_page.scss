@@ -975,8 +975,13 @@ p{
         ul{
           margin: 0;
           display: grid;
-          // Fluid: one row when tall, wraps without clipping as space tightens.
-          grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+          // Desktop: even 3x2 (6 members). auto-fit gave ragged
+          // 2/2/2 rows and uneven card widths; step to 2 cols on
+          // narrower panels so every row stays aligned.
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          @media (max-width: 1200px) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
           column-gap: 1.5rem;
           row-gap: 1.5rem;
           height: 100%;
@@ -3797,3 +3802,151 @@ section{
 // inner-page slides flow as one scrollable page; Reveal still counts
 // each <section> as a slide.
 @include inner-page-stack(true);
+
+// Email-link replacements for the retired HubSpot/Google forms.
+.contact-cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
+  padding-top: 0 !important;
+
+  .contact-lede {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 1.1rem;
+    max-width: 34rem;
+  }
+
+  .contact-email-link {
+    align-self: flex-start;
+    display: inline-block;
+    background: var(--v2-text-primary);
+    color: var(--v2-background-primary);
+    font-size: clamp(1.25rem, 2.6vw, 1.75rem);
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    padding: 0.8rem 1.6rem;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: transform 150ms ease, box-shadow 150ms ease;
+
+    &:hover,
+    &:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+      color: var(--v2-background-primary);
+    }
+  }
+
+  .contact-alt {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.98rem;
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.careers-apply {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+
+  .careers-apply-label {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--v2-text-secondary);
+  }
+
+  .careers-apply-link {
+    display: inline-block;
+    background: var(--v2-text-primary);
+    color: var(--v2-background-primary);
+    font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+    font-weight: 700;
+    padding: 0.7rem 1.4rem;
+    border-radius: 999px;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+      color: var(--v2-background-primary);
+    }
+  }
+
+  .careers-apply-note {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.95rem;
+    margin: 0;
+  }
+}
+
+// Registration pages: email CTA card (forms retired).
+.reg-cta {
+  max-width: 46rem;
+  margin: 2rem auto;
+  padding: 2rem clamp(1.25rem, 4vw, 2.5rem);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  a {
+    color: var(--v2-text-primary);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    overflow-wrap: anywhere;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+// Mailto CTA inside landing dialogs (replaces the HubSpot embed).
+.dialog-mailto {
+  padding: 1.5rem 0.5rem;
+  text-align: center;
+  color: #333;
+
+  .dialog-mailto-link {
+    display: inline-block;
+    margin-top: 0.25rem;
+    background: #0c910c;
+    color: #fff;
+    font-weight: 700;
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+
+    &:hover {
+      color: #fff;
+      filter: brightness(1.08);
+    }
+  }
+}

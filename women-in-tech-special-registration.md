@@ -60,4 +60,7 @@ Join us for the second edition of the Data & AI Forum: Women in Tech Special, fo
 
 <br>
 <br>
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdlm6zIxUwfP7ZNofH6ohFUOKrxbR-PtRf6x8Ps6YkOD_KS3Q/viewform?embedded=true" style="width: 100%; max-width: 100%; height: 1500px; border: none; overflow: hidden;" frameborder="0" marginheight="0" marginwidth="0">Women in Tech Special | Data & AI Forum</iframe>
+<div class="reg-cta">
+  <h2>Register by email</h2>
+  <p>Skip the form: email <a href="mailto:events@platformatory.com?subject=Subject%3A%20Event%20registration">events@platformatory.com</a> with your name and what you'd like to register for (Women in Tech Special | Data & AI Forum), and we'll confirm your spot.</p>
+</div>
