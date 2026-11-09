@@ -3175,37 +3175,61 @@ section{
   }
 }
 
-// Inner-page (non-home) stack mode: lay tall slides out as one vertical
-// flow so nothing is clipped. Mixed into the 600px phone block (full) and
-// the 992px tablet block (typography untouched, layout only).
-// Layout parts only ever apply to touch-width viewports: at desktop widths
-// the 2-col grid (which needs min-width:992px) must stay intact.
+// Inner-page (non-home) stack mode: lay tall slides out as one flowing
+// page (Reveal still counts each <section> as one slide) so content that
+// doesn't fit a viewport is reachable by scrolling instead of being
+// cropped. Emitted after the legacy rules so its !important decls win;
+// the 2-col desktop grid survives via higher-specificity overrides below.
 @mixin inner-page-stack($with-typography: true) {
-  @media (max-width: 992px) {
-    .reveal:not(.home-page) .split-container {
-      display: flex;
-      flex-direction: column;
-      height: auto !important;
-      min-height: 100% !important;
-      overflow: visible !important;
+  .reveal:not(.home-page) .slides section,
+  .reveal:not(.home-page) .slides .scroll-page section,
+  // Beat the higher-specificity root rule Reveal's own layout sheet uses.
+  .reveal-viewport.reveal-scroll .reveal:not(.home-page) .scroll-page section,
+  .reveal:not(.home-page) .reveal-viewport.reveal-scroll .scroll-page section {
+    // Release the crop only. Heights stay as the base slide rules define
+    // them (100% min-heights keep the 2-col grid filling the viewport;
+    // overflow on inner panels is released below instead).
+    max-height: none !important;
+    overflow: visible !important;
+  }
 
-      .section-container {
-        display: flex;
-        flex-direction: column;
-        height: auto !important;
-        min-height: 0 !important;
-        overflow: visible !important;
-      }
-    }
+  .reveal:not(.home-page) .scroll-page section {
+    // Grow past one viewport when content doesn't fit (was: clipped).
+    height: auto !important;
+    min-height: 100% !important;
   }
 
   .reveal:not(.home-page) .split-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100% !important;
+    overflow: visible !important;
+
+    .section-container {
+      display: flex;
+      flex-direction: column;
+      min-height: 0 !important;
+      overflow: visible !important;
+
+      // Keep the 2-col grid where the base rule defines one (lg+), but
+      // never crop: min-height instead of hard height.
+      @media (min-width: 992px) {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: stretch;
+        height: 100% !important;
+        min-height: 100% !important;
+        overflow: visible !important;
+      }
+    }
+
     .strip,
     .content-list-item {
       flex: 0 0 auto;
-      order: 0;
-      height: auto !important;
+      // Phone block already zeroes these heights; elsewhere (grid desktop
+      // panels) leave the base panel sizing intact, just stop cropping.
       @if $with-typography {
+        height: auto !important;
         padding: clamp(4.75rem, 12vh, 6.5rem) 1rem 0.75rem !important;
       } @else {
         padding-top: clamp(6rem, 12vh, 7rem) !important;
@@ -3220,28 +3244,21 @@ section{
     .list-bulletpoint-items {
       flex: 0 0 auto;
       order: 1;
-      height: auto !important;
-      min-height: 0 !important;
+      @if $with-typography {
+        height: auto !important;
+        min-height: 0 !important;
+      }
       overflow: visible !important;
     }
 
     .teams-items ul {
-      height: auto !important;
+      @if $with-typography {
+        height: auto !important;
+        padding: 0.75rem 0.85rem 1.25rem !important;
+      }
       overflow: visible !important;
-      padding: 0.75rem 0.85rem 1.25rem !important;
     }
   }
-}
-
-@media (max-width: 992px) {
-  // Tablet band: slides taller than the viewport used to be clipped with
-  // no scrollbar (base rules clip; the old rescue was 600px-only).
-  .reveal:not(.home-page) .scroll-page section,
-  .reveal-viewport.reveal-scroll .reveal:not(.home-page) .scroll-page section {
-    overflow: visible !important;
-  }
-
-  @include inner-page-stack(false);
 }
 
 @media (max-width: 600px) {
@@ -3315,7 +3332,6 @@ section{
   }
 
 
-  @include inner-page-stack(true);
 
   .reveal.home-page .slides > section > .section-cta,
   .reveal.home-page .scroll-page > section > .section-cta,
@@ -3765,3 +3781,19 @@ section{
     }
   }
 }
+
+// Tablet band (601-992px): inner-page slides taller than the viewport
+// were clipped with no scrollbar (base rules clip; the phone block below
+// only reaches 600px). Layout only - typography keeps desktop sizing.
+@media (max-width: 992px) {
+  .reveal:not(.home-page) .split-container .strip,
+  .reveal:not(.home-page) .split-container .content-list-item {
+    padding-top: clamp(6rem, 12vh, 7rem) !important;
+  }
+}
+
+// Inner-page stack mode, applied last so its !important declarations win
+// cascade ties against both the tablet and phone blocks above. Tall
+// inner-page slides flow as one scrollable page; Reveal still counts
+// each <section> as a slide.
+@include inner-page-stack(true);
