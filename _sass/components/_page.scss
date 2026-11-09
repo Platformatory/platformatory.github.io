@@ -3260,6 +3260,17 @@ section{
   }
 }
 
+// Reveal's layout sheet pins scroll-view sections to `display: block
+// !important`; match its chain + our class so the 2-col split wins.
+// Stops at the Bootstrap lg breakpoint so phones/tablets stack.
+@media (min-width: 992px) {
+  .reveal-viewport.reveal-scroll .slides section.contact-careers {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch !important;
+  }
+}
+
 // Email-link replacements for the retired HubSpot/Google forms.
 .contact-cta {
   display: flex;
@@ -3420,15 +3431,6 @@ section.contact-careers {
   text-align: left !important;
 
 
-  > .cc-right {
-    width: 50%;
-    min-width: 0;
-    flex: 0 0 50%;
-    height: 100%;
-    padding: 0;
-    overflow: hidden;
-  }
-
   > .cc-left,
   > .cc-right {
     width: 100%;
@@ -3436,6 +3438,12 @@ section.contact-careers {
     flex: 0 0 100%;
     padding: 0;
 
+    @media (min-width: 992px) {
+      width: 50%;
+      flex: 0 0 50%;
+      height: 100%;
+      overflow: hidden;
+    }
   }
 
   .cc-left-inner {
@@ -3447,6 +3455,11 @@ section.contact-careers {
     padding: 0 clamp(24px, 3.4vw, 56px);
     background-color: var(--v2-background-primary);
 
+    @media (min-width: 992px) {
+      height: 100%;
+      padding-top: clamp(96px, 14vh, 130px);
+      padding-bottom: clamp(24px, 4vh, 48px);
+    }
   }
 
   .cc-right-inner {
@@ -3458,6 +3471,12 @@ section.contact-careers {
     padding: 0 clamp(24px, 3.4vw, 56px);
     background-color: var(--v2-background-secondary);
     color: #14202e;
+
+    @media (min-width: 992px) {
+      height: 100%;
+      padding-top: clamp(96px, 14vh, 130px);
+      padding-bottom: clamp(24px, 4vh, 48px);
+    }
 
     @media (max-width: 991.98px) {
       padding-top: 1.5rem;
