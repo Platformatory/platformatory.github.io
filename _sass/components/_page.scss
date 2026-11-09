@@ -3344,6 +3344,364 @@ section{
   }
 }
 
+// Reveal's layout sheet pins scroll-view sections to `display: block
+// !important`; match its chain + our class so the 2-col split wins.
+// Stops at the Bootstrap lg breakpoint so phones/tablets stack.
+@media (min-width: 992px) {
+  .reveal-viewport.reveal-scroll .slides section.contact-careers {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch !important;
+  }
+}
+
+// Registration pages: email CTA card (forms retired).
+.reg-cta {
+  max-width: 46rem;
+  margin: 2rem auto;
+  padding: 2rem clamp(1.25rem, 4vw, 2.5rem);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  a {
+    color: var(--v2-text-primary);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    overflow-wrap: anywhere;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+// Mailto CTA inside landing dialogs (replaces the HubSpot embed).
+.dialog-mailto {
+  padding: 1.5rem 0.5rem;
+  text-align: center;
+  color: #333;
+
+  .dialog-mailto-link {
+    display: inline-block;
+    margin-top: 0.25rem;
+    background: #0c910c;
+    color: #fff;
+    font-weight: 700;
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+
+    &:hover {
+      color: #fff;
+      filter: brightness(1.08);
+    }
+  }
+}
+
+// Merged Careers & Contact slide. Same anatomy as the split-container
+// slides (culture/teams): dark left half with the copy, light right half
+// with the content blocks, full-bleed to the slide edges at >=992px.
+section.contact-careers {
+  background-color: var(--v2-background-primary);
+  color: #fff;
+  // Reveal's black theme sets .reveal to 42px; pin the rem scale here.
+  font-size: 1rem;
+  padding: 0 !important;
+  text-align: left !important;
+
+
+  > .cc-right {
+    width: 50%;
+    min-width: 0;
+    flex: 0 0 50%;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  > .cc-left,
+  > .cc-right {
+    width: 100%;
+    min-width: 0;
+    flex: 0 0 100%;
+    padding: 0;
+
+    @media (min-width: 992px) {
+      width: 50%;
+      flex: 0 0 50%;
+      height: 100%;
+      overflow: hidden;
+    }
+  }
+
+  .cc-left-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: clamp(20px, 3.5vh, 36px);
+    box-sizing: border-box;
+    padding: 0 clamp(24px, 3.4vw, 56px);
+    background-color: var(--v2-background-primary);
+
+    @media (min-width: 992px) {
+      height: 100%;
+      padding-top: clamp(96px, 14vh, 130px);
+      padding-bottom: clamp(24px, 4vh, 48px);
+    }
+  }
+
+  .cc-right-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.9rem;
+    box-sizing: border-box;
+    padding: 0 clamp(24px, 3.4vw, 56px);
+    background-color: var(--v2-background-secondary);
+    color: #14202e;
+
+    @media (min-width: 992px) {
+      height: 100%;
+      padding-top: clamp(96px, 14vh, 130px);
+      padding-bottom: clamp(24px, 4vh, 48px);
+    }
+
+    @media (max-width: 991.98px) {
+      padding-top: 1.5rem;
+    }
+  }
+
+  .cc-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .cc-kicker {
+    font-size: 0.72rem !important;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--v2-text-primary);
+  }
+
+  .cc-title {
+    font-family: $font-family-heading;
+    font-size: clamp(1.5rem, 2.4vw, 2rem);
+    font-weight: 700;
+    line-height: 1.15;
+    margin: 0 0 0.1rem;
+    color: #fff;
+    text-wrap: balance;
+  }
+
+  .cc-text {
+    font-size: clamp(0.9rem, 1.1vw, 1rem);
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.72);
+    margin: 0;
+    max-width: 30rem;
+  }
+
+  .cc-pill {
+    display: inline-block;
+    background: var(--v2-text-primary);
+    color: var(--v2-background-primary);
+    font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+    font-weight: 700;
+    padding: 0.5rem 1.2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: transform 150ms ease, box-shadow 150ms ease;
+
+    &:hover,
+    &:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+      color: var(--v2-background-primary);
+    }
+  }
+
+  .cc-map {
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    border: 1px solid rgba(20, 32, 46, 0.12);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--v2-background-primary);
+
+    svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .cc-dots circle {
+      fill: rgba(255, 255, 255, 0.2);
+    }
+
+    .cc-pin {
+      fill: var(--v2-text-primary);
+    }
+
+    .cc-pin-ring {
+      fill: none;
+      stroke: var(--v2-text-primary);
+      stroke-opacity: 0.4;
+      stroke-width: 2;
+    }
+
+    .cc-pin-label {
+      fill: #fff;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    a:hover .cc-pin-ring {
+      stroke-opacity: 0.9;
+    }
+  }
+
+  // Four identical office cards: fixed 2x2 grid, equal cells, content
+  // clipped instead of growing the box.
+  .cc-offices {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 0.6rem;
+
+    > * {
+      min-height: 0;
+    }
+  }
+
+  .cc-office {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+    border: 1px solid rgba(20, 32, 46, 0.14);
+    background: #fff;
+    border-radius: 10px;
+    padding: 0.7rem 0.85rem;
+    color: inherit;
+    text-decoration: none;
+    overflow: hidden;
+    transition: border-color 150ms ease, box-shadow 150ms ease;
+
+    &:hover {
+      border-color: var(--v2-primary-color, #6c973c);
+      box-shadow: 0 4px 14px rgba(13, 25, 38, 0.08);
+      color: inherit;
+    }
+  }
+
+  .cc-office-name {
+    font-size: 0.68rem !important;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #1d6427;
+  }
+
+  .cc-office-addr {
+    font-size: 0.74rem !important;
+    line-height: 1.35;
+    color: rgba(20, 32, 46, 0.72);
+    overflow-wrap: anywhere;
+
+    // keep every card the same size: address shows 3 lines max
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .cc-office-phone {
+    font-size: 0.72rem !important;
+    font-weight: 700;
+    color: rgba(20, 32, 46, 0.85);
+  }
+
+  // Phone/tablet: stacks like every other slide (dark block above,
+  // light block below, no full-bleed required).
+  @media (max-width: 991.98px) {
+    .cc-left-inner {
+      padding: 112px 1.5rem 1.5rem;
+      gap: 18px;
+    }
+
+    .cc-right-inner {
+      padding-top: 1.25rem;
+    }
+
+    h2.cc-title {
+      font-size: 1.5rem !important;
+    }
+
+    .cc-left p.cc-text {
+      font-size: 0.9rem !important;
+    }
+
+    .cc-right-inner {
+      padding: 0 1.25rem 2rem;
+      gap: 0.75rem;
+    }
+
+    .cc-map {
+      aspect-ratio: auto;
+      height: 170px;
+    }
+
+    .cc-office {
+      padding: 0.55rem 0.7rem;
+    }
+
+    .cc-office-addr {
+      -webkit-line-clamp: 2;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    .cc-left-inner {
+      padding-top: 96px;
+      padding-bottom: 1.25rem;
+      gap: 14px;
+    }
+
+    .cc-block {
+      gap: 0.45rem;
+    }
+
+    .cc-map {
+      height: 124px;
+    }
+
+    .cc-offices {
+      gap: 0.4rem;
+    }
+
+    .cc-office {
+      padding: 0.45rem 0.6rem;
+    }
+  }
+}
+
 // Registration pages: email CTA card (forms retired).
 .reg-cta {
   max-width: 46rem;
