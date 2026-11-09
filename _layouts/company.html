@@ -7,7 +7,7 @@ bodyClass: v2-page-layout
 
         {{content}}
           
-<!-- | sort: 'weight' | reverse -->
+{% comment %} | sort: 'weight' | reverse {% endcomment %}
 {%if page.sections%}
 {% assign sorted_section = page.sections  %}
 
