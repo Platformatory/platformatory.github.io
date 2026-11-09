@@ -294,16 +294,19 @@ p{
   .intro-content{
     height: 100%;
     padding: 1rem;
+    // max-width (not fixed width): keeps the old desktop sizing where it
+    // fitted, without overflowing the col-lg-6 at narrow lg widths.
     @media (min-width: 1600px) {
-      width: 796px !important;
+      max-width: 796px;
     }
     @media (min-width:1300px) and (max-width: 1599px) {
-      width: 652px !important;
+      max-width: 652px;
     }
     @include media-breakpoint-up(lg){
       padding: 1rem 1.5em;  
       margin: 0 auto;
-      width: 528px;
+      width: 100%;
+      max-width: 528px;
       h1{
         padding-bottom: 20px;
         font-size: 1.6em !important;
@@ -3173,22 +3176,28 @@ section{
 // Inner-page (non-home) stack mode: lay tall slides out as one vertical
 // flow so nothing is clipped. Mixed into the 600px phone block (full) and
 // the 992px tablet block (typography untouched, layout only).
+// Layout parts only ever apply to touch-width viewports: at desktop widths
+// the 2-col grid (which needs min-width:992px) must stay intact.
 @mixin inner-page-stack($with-typography: true) {
-  .reveal:not(.home-page) .split-container {
-    display: flex;
-    flex-direction: column;
-    height: auto !important;
-    min-height: 100% !important;
-    overflow: visible !important;
-
-    .section-container {
+  @media (max-width: 992px) {
+    .reveal:not(.home-page) .split-container {
       display: flex;
       flex-direction: column;
       height: auto !important;
-      min-height: 0 !important;
+      min-height: 100% !important;
       overflow: visible !important;
-    }
 
+      .section-container {
+        display: flex;
+        flex-direction: column;
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: visible !important;
+      }
+    }
+  }
+
+  .reveal:not(.home-page) .split-container {
     .strip,
     .content-list-item {
       flex: 0 0 auto;
@@ -3240,7 +3249,9 @@ section{
   // into each other (broken snap / "two sections at once").
 
   // Keep a thin slide-progress rail so Reveal scroll still reads as paging.
-  // Widen the invisible hit area so the rail is tappable on phones.
+  // Hit area kept narrow: a 28px preventDefault strip along the right edge
+  // killed normal page swipes. Reveal's scrollActivationWidth guard now
+  // disables the rail on narrow viewports.
   .reveal-viewport.reveal-scroll .scrollbar {
     display: block !important;
     opacity: 1 !important;
@@ -3251,11 +3262,6 @@ section{
   .reveal-viewport.reveal-scroll .scrollbar .scrollbar-inner {
     width: 3px;
     right: 6px;
-  }
-
-  .reveal-viewport.reveal-scroll .scrollbar .scrollbar-slide:after {
-    width: 28px;
-    left: -12px;
   }
 
   .reveal-viewport.reveal-scroll .scrollbar .scrollbar-slide {
@@ -3517,7 +3523,9 @@ section{
   }
 
   // Short phones (OnePlus / browser chrome): reclaim title space.
-  @media (max-height: 740px) {
+  // Portrait-only: without the qualifier every 13" laptop window (<=740px
+  // tall) matched and got phone-sized homepage titles.
+  @media (max-height: 740px) and (orientation: portrait) {
     .reveal.home-page .split-container .strip,
     .reveal.home-page .split-container .content-list-item,
     .reveal-viewport.reveal-scroll .reveal.home-page .scroll-page section.split-container .strip,

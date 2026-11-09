@@ -176,8 +176,10 @@ body {
 }
 .event-card,.publication-card{
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 454px;
-    height: 492px;
+    // Fluid: fixed 454px overflowed every phone (360-430px) horizontally.
+    width: min(454px, 100%);
+    height: auto;
+    min-height: 320px;
     background-color: white;
 }
 .events-grid, .publications-grid {
@@ -411,12 +413,14 @@ ol {
     
 }
 .dialog-content{
-    width: 640px;
+    // Fluid so padding never pushes past narrow devices (336px + 40px
+    // padding overflowed 360px phones).
+    width: min(640px, 100%);
     @include media-breakpoint-down(md){
-        width: 500px;
+        width: min(500px, 100%);
     }
     @include media-breakpoint-down(sm){
-        width: 336px;
+        width: 100%;
     }
 }
 
