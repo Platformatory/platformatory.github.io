@@ -1,10 +1,11 @@
+<nav aria-label="Main">
 <div id="main-menu" class="main-menu">
     {% assign mainmenu = site.data.menus.main  %}
     {% assign current_path = page.url | relative_url %}
     {% if current_path != '/' %}
       {% assign current_path = current_path | replace: '.html', '' | append: '/' | replace: '//', '/' %}
     {% endif %}
-    <nav aria-label="Main"><ul>
+    <ul>
       {% for item in mainmenu %}
       {% assign item_path = item.url | relative_url %}
       {% if item_path != '/' %}
@@ -46,5 +47,5 @@
     {% endif %}
       </li>
       {% endfor %}
-    </ul></nav>
-  </div>
+    </ul>
+</div></nav>
