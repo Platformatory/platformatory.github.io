@@ -1,10 +1,10 @@
-<div id="main-menu-mobile" class="v2-main-menu-mobile">
+<div id="main-menu-mobile" class="v2-main-menu-mobile" aria-label="Mobile">
     {% assign mainmenu = site.data.menus.main  %}
     {% assign current_path = page.url | relative_url %}
     {% if current_path != '/' %}
       {% assign current_path = current_path | replace: '.html', '' | append: '/' | replace: '//', '/' %}
     {% endif %}
-    <ul>
+    <nav aria-label="Main"><ul>
         {% for item in mainmenu %}
         {% assign item_path = item.url | relative_url %}
         {% if item_path != '/' %}
@@ -17,10 +17,10 @@
           {% assign is_active = true %}
         {% endif %}
         <li class="{% if is_active %}active{% endif %}{% if item.children %} custom-dropdown{% endif %}">
-          <a class="{% if item.children %}custom-dropdown{% endif %}" {% if item.children %} data-toggle="dropdown" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false"  {% else %} href="{{ item.url | relative_url }}"{% if item.external %} target="_blank" rel="noopener noreferrer"{% endif %}{% endif %}  >{{ item.name }}</a>
+          <a class="{% if item.children %}custom-dropdown{% endif %}" {% if item.children %} data-toggle="dropdown" id="navbarDropdown-{{ forloop.index }}" role="button" aria-haspopup="true" aria-expanded="false"  {% else %} href="{{ item.url | relative_url }}"{% if item.external %} target="_blank" rel="noopener noreferrer"{% endif %}{% endif %}  >{{ item.name }}</a>
   
           {% if item.children %}
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown-{{ forloop.index }}">
           <div class="">
           <div class="sub-menu">
             {% if item.children.name%}
@@ -46,5 +46,5 @@
       {% endif %}
         </li>
         {% endfor %}
-    </ul>
+    </ul></nav>
   </div>

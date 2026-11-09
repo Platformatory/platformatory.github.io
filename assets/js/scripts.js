@@ -2,11 +2,16 @@ var body = document.querySelector("body");
 var menuTrigger = document.querySelector("#toggle-main-menu-mobile");
 var menuContainer = document.querySelector("#main-menu-mobile");
 
-menuTrigger.onclick = function () {
-  menuContainer.classList.toggle("open");
-  menuTrigger.classList.toggle("is-active");
-  body.classList.toggle("lock-scroll");
-};
+// Guarded: pages without the mobile menu must not die here (this script
+// also runs on pages with no header markup).
+if (menuTrigger && menuContainer) {
+  menuTrigger.onclick = function () {
+    var open = menuContainer.classList.toggle("open");
+    menuTrigger.classList.toggle("is-active");
+    body.classList.toggle("lock-scroll");
+    menuTrigger.setAttribute("aria-expanded", open ? "true" : "false");
+  };
+}
 
 document.addEventListener("DOMContentLoaded", function () {
   function goToSlideHash(targetId) {
