@@ -3353,6 +3353,86 @@ section{
     flex-direction: row !important;
     align-items: stretch !important;
   }
+
+  // Tablet band (601-991px): stacked slide clears the 64px header and
+  // stays inside one viewport.
+  @media (min-width: 601px) and (max-width: 991.98px) {
+    .cc-left-inner {
+      padding-top: 96px;
+      padding-bottom: 1.5rem;
+      gap: 16px;
+    }
+
+    .cc-right-inner {
+      padding-top: 1.25rem;
+      gap: 0.75rem;
+    }
+
+    .cc-map {
+      aspect-ratio: auto;
+      height: 210px;
+    }
+
+    .cc-office {
+      padding: 0.45rem 0.7rem;
+    }
+
+    .cc-office-addr {
+      -webkit-line-clamp: 2;
+    }
+  }
+
+  // Phones: tighter stack.
+  @media (max-width: 600px) {
+    .cc-left-inner {
+      padding-top: 88px;
+      padding-bottom: 1.1rem;
+      gap: 12px;
+    }
+
+    .cc-block {
+      gap: 0.4rem;
+    }
+
+    .cc-left p.cc-text {
+      font-size: 0.85rem !important;
+    }
+
+    h2.cc-title {
+      font-size: 1.3rem !important;
+    }
+
+    .cc-pill {
+      font-size: 0.9rem;
+      padding: 0.45rem 1rem;
+    }
+
+    .cc-map {
+      height: 120px;
+    }
+
+    .cc-offices {
+      gap: 0.4rem;
+    }
+
+    .cc-office {
+      padding: 0.35rem 0.6rem;
+      gap: 0.15rem;
+    }
+
+    .cc-office-addr {
+      -webkit-line-clamp: 2;
+      font-size: 0.7rem !important;
+    }
+
+    .cc-office-phone {
+      font-size: 0.68rem !important;
+    }
+
+    .cc-office-name {
+      font-size: 0.62rem !important;
+    }
+  }
 }
 
 // Registration pages: email CTA card (forms retired).
