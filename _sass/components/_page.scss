@@ -3576,8 +3576,8 @@ section.contact-careers {
     }
   }
 
-  // Four identical office cards: fixed 2x2 grid, equal cells, content
-  // clipped instead of growing the box.
+  // Four office cards: 2x2 grid, equal cells, full addresses always
+  // visible (no line-clamping, no clipping).
   .cc-offices {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -3586,6 +3586,7 @@ section.contact-careers {
 
     > * {
       min-height: 0;
+      overflow: visible;
     }
   }
 
@@ -3600,7 +3601,7 @@ section.contact-careers {
     padding: 0.7rem 0.85rem;
     color: inherit;
     text-decoration: none;
-    overflow: hidden;
+    overflow: visible;
     transition: border-color 150ms ease, box-shadow 150ms ease;
 
     &:hover {
@@ -3623,12 +3624,6 @@ section.contact-careers {
     line-height: 1.35;
     color: rgba(20, 32, 46, 0.72);
     overflow-wrap: anywhere;
-
-    // keep every card the same size: address shows 3 lines max
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
   }
 
   .cc-office-phone {
@@ -3669,10 +3664,6 @@ section.contact-careers {
 
     .cc-office {
       padding: 0.55rem 0.7rem;
-    }
-
-    .cc-office-addr {
-      -webkit-line-clamp: 2;
     }
   }
 
