@@ -43,8 +43,8 @@ layout: null
  <header class="talks-hero">
  <div class="talks-hero-inner">
  <p class="talks-kicker">Community talks</p>
- <h1 class="text-capitalize">Talks</h1>
- <h1 class="text-capitalize"><span id="typewriter-title">Real-time data &amp; platforms.</span></h1>
+ <h1 class="text-capitalize">Real-life x Real-time:</h1>
+ <h1 class="text-capitalize"><span id="typewriter-title">Platform Engineering, Data &amp; AI</span></h1>
  <p class="talks-lede">
  Recordings and slides from Bengaluru Streams and Platformatory community events, real-time data, streaming, and platforms.
  </p>
@@ -85,7 +85,7 @@ layout: null
  {% if upcoming_events_found %}
  <section class="talks-upcoming" aria-labelledby="talks-upcoming-title">
  <div class="talks-section-inner">
- <h2 id="talks-upcoming-title">Upcoming</h2>
+ <h2 id="talks-upcoming-title">Upcoming Events</h2>
  <div class="talks-upcoming-grid">
  {% for event in site.events %}
  {% assign event_date_str = event.date | date: "%Y-%m-%d" %}
@@ -106,6 +106,19 @@ layout: null
  </article>
  {% endif %}
  {% endfor %}
+ </div>
+ </div>
+ </section>
+ {% else %}
+ <section class="talks-upcoming" aria-labelledby="talks-upcoming-title">
+ <div class="talks-section-inner">
+ <h2 id="talks-upcoming-title">Upcoming Events</h2>
+ <p class="talks-section-sub">No talks scheduled yet. New meetups land on our community calendars first:</p>
+ <div class="talks-upcoming-calendars">
+ <a class="talks-upcoming-calendar" href="https://www.meetup.com/bangalore-streams/" target="_blank" rel="noopener noreferrer">Bengaluru Streams on Meetup<span>meetup.com</span></a>
+ <a class="talks-upcoming-calendar" href="https://www.meetup.com/data-ai-forum/" target="_blank" rel="noopener noreferrer">Data &amp; AI Forum on Meetup<span>meetup.com</span></a>
+ <a class="talks-upcoming-calendar" href="https://luma.com/p99-India" target="_blank" rel="noopener noreferrer">P99 India on Luma<span>luma.com</span></a>
+ <a class="talks-upcoming-calendar" href="https://luma.com/systems.streams.bengaluru" target="_blank" rel="noopener noreferrer">Bengaluru Distributed Systems Group on Luma<span>luma.com</span></a>
  </div>
  </div>
  </section>
@@ -169,6 +182,39 @@ layout: null
  {% endfor %}
  {% endif %}
  {% endfor %}
+ </div>
+ </div>
+ </section>
+
+ <section class="talks-communities" aria-labelledby="talks-communities-title">
+ <div class="talks-section-inner">
+ <h2 id="talks-communities-title">Our communities</h2>
+ <p class="talks-section-sub">Where these talks happen.</p>
+ <div class="talks-communities-grid">
+ <a class="talks-community" href="https://meetup.com/bangalore-streams" target="_blank" rel="noopener noreferrer">
+ <img src="/images/v2/meetup-community/streams-card.png" alt="Bengaluru Streams" loading="lazy">
+ <span>Bengaluru Streams</span>
+ </a>
+ <a class="talks-community" href="https://luma.com/p99-India" target="_blank" rel="noopener noreferrer">
+ <img src="/images/v2/meetup-community/p99-india.png" alt="P99 India" loading="lazy">
+ <span>P99 India</span>
+ </a>
+ <a class="talks-community" href="https://luma.com/systems.streams.bengaluru" target="_blank" rel="noopener noreferrer">
+ <img src="/images/v2/meetup-community/bdg.png" alt="Bengaluru Distributed Systems Group" loading="lazy">
+ <span>Bengaluru Distributed Systems Group</span>
+ </a>
+ <a class="talks-community" href="https://luma.com/dee-bangalore" target="_blank" rel="noopener noreferrer">
+ <img src="/images/v2/meetup-community/dee-india.png" alt="Durable Execution Systems India" loading="lazy">
+ <span>Durable Execution Systems India</span>
+ </a>
+ <a class="talks-community" href="https://luma.com/agentic-ai-data-infra" target="_blank" rel="noopener noreferrer">
+ <img src="/images/v2/meetup-community/ais-india.png" alt="Agentic Infrastructure Systems" loading="lazy">
+ <span>Agentic Infrastructure Systems</span>
+ </a>
+ <a class="talks-community" href="https://www.meetup.com/data-ai-forum/" target="_blank" rel="noopener noreferrer">
+ <img src="/images/v2/meetup-community/data-ai-academy.png" alt="Data+AI Academy" loading="lazy">
+ <span>Data+AI Academy</span>
+ </a>
  </div>
  </div>
  </section>

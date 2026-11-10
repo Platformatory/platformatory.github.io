@@ -481,3 +481,104 @@ button.talks-action {
     transform: none;
   }
 }
+
+// Communities strip (logos stacked like the home page's slide)
+.talks-communities {
+  padding: 3.5rem 0;
+  background: var(--talks-panel);
+  border-top: 1px solid var(--talks-line);
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.talks-section-sub {
+  margin: -0.5rem 0 1.75rem;
+  text-align: center;
+  color: var(--talks-muted);
+}
+
+.talks-communities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  max-width: 46rem;
+  margin: 0 auto;
+
+  @media (max-width: 640px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem;
+  }
+}
+
+.talks-community {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  color: var(--talks-ink);
+  content-visibility: auto;
+  contain-intrinsic-size: 240px 180px;
+
+  img {
+    width: 100%;
+    aspect-ratio: 5 / 3;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--talks-line);
+    background: var(--talks-ink);
+    transition: transform 0.15s ease, border-color 0.15s ease;
+  }
+
+  span {
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-align: center;
+  }
+
+  &:hover img {
+    transform: translateY(-3px);
+    border-color: var(--talks-accent);
+  }
+}
+
+// Upcoming fallback: community calendars when no dated events remain
+.talks-upcoming-calendars {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+  max-width: 46rem;
+  margin: 0 auto;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.talks-upcoming-calendar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--talks-line);
+  border-radius: 12px;
+  background: var(--talks-panel);
+  color: var(--talks-ink);
+  font-weight: 700;
+  text-decoration: none;
+  transition: border-color 150ms ease, transform 150ms ease;
+
+  span {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--talks-muted);
+  }
+
+  &:hover {
+    border-color: var(--talks-accent);
+    transform: translateY(-2px);
+  }
+}
