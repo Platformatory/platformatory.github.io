@@ -42,11 +42,7 @@ layout: null
  <main class="talks-archive">
  <header class="talks-hero">
  <div class="talks-hero-inner">
- <p class="talks-kicker">Community talks</p>
- <h1>Talks</h1>
- <p class="talks-lede">
- Recordings and slides from Bengaluru Streams and Platformatory community events, real-time data, streaming, and platforms.
- </p>
+ <h1 class="text-capitalize"><span id="typewriter-title">Platforming thought leadership, Engineering, Data &amp; AI.</span></h1>
  <div class="talks-cta-row">
  <a
  class="talks-subscribe"
@@ -81,10 +77,11 @@ layout: null
  {% endif %}
  {% endfor %}
 
+ <section class="talks-library" aria-labelledby="talks-library-title">
+ <div class="talks-section-inner talks-library-layout">
+ <aside class="talks-upcoming" aria-labelledby="talks-upcoming-title">
+ <h2 id="talks-upcoming-title">Upcoming Events</h2>
  {% if upcoming_events_found %}
- <section class="talks-upcoming" aria-labelledby="talks-upcoming-title">
- <div class="talks-section-inner">
- <h2 id="talks-upcoming-title">Upcoming</h2>
  <div class="talks-upcoming-grid">
  {% for event in site.events %}
  {% assign event_date_str = event.date | date: "%Y-%m-%d" %}
@@ -92,7 +89,7 @@ layout: null
  {% if event_date_str >= current_date_str %}
  <article class="talks-upcoming-card">
  {% if event.banner %}
- <img class="talks-upcoming-banner" src="{{ event.banner }}" alt="" />
+ <img class="talks-upcoming-banner" src="{{ event.banner }}" alt="" / loading="lazy">
  {% endif %}
  <div class="talks-upcoming-body">
  <h3>{{ event.title }}</h3>
@@ -106,12 +103,18 @@ layout: null
  {% endif %}
  {% endfor %}
  </div>
+ {% else %}
+ <p class="talks-upcoming-note">No talks scheduled yet. New meetups land on our community calendars first:</p>
+ <div class="talks-upcoming-calendars">
+ <a class="talks-upcoming-calendar" href="https://www.meetup.com/bangalore-streams/" target="_blank" rel="noopener noreferrer">Bengaluru Streams on Meetup<span>meetup.com</span></a>
+ <a class="talks-upcoming-calendar" href="https://www.meetup.com/data-ai-forum/" target="_blank" rel="noopener noreferrer">Data &amp; AI Forum on Meetup<span>meetup.com</span></a>
+ <a class="talks-upcoming-calendar" href="https://luma.com/p99-India" target="_blank" rel="noopener noreferrer">P99 India on Luma<span>luma.com</span></a>
+ <a class="talks-upcoming-calendar" href="https://luma.com/systems.streams.bengaluru" target="_blank" rel="noopener noreferrer">Bengaluru Distributed Systems Group on Luma<span>luma.com</span></a>
  </div>
- </section>
  {% endif %}
+ </aside>
 
- <section class="talks-library" aria-labelledby="talks-library-title">
- <div class="talks-section-inner">
+ <div class="talks-library-main">
  <div class="talks-library-head">
  <h2 id="talks-library-title">Recordings &amp; slides</h2>
  <p>Play recordings in place. Download slides when available.</p>
@@ -170,6 +173,40 @@ layout: null
  {% endfor %}
  </div>
  </div>
+ </div>
+ </section>
+
+ <section class="talks-communities" aria-labelledby="talks-communities-title">
+ <div class="talks-section-inner">
+ <h2 id="talks-communities-title">Our communities</h2>
+ <p class="talks-section-sub">Where these talks happen.</p>
+ <div class="talks-communities-grid">
+ <a class="talks-community" href="https://meetup.com/bangalore-streams" target="_blank" rel="noopener noreferrer">
+ <img src="/images/v2/meetup-community/streams-card.png" alt="Bengaluru Streams" loading="lazy">
+ <span>Bengaluru Streams</span>
+ </a>
+ <a class="talks-community" href="https://luma.com/p99-India" target="_blank" rel="noopener noreferrer">
+ <img src="/images/v2/meetup-community/p99-india.png" alt="P99 India" loading="lazy">
+ <span>P99 India</span>
+ </a>
+ <a class="talks-community" href="https://luma.com/systems.streams.bengaluru" target="_blank" rel="noopener noreferrer">
+ <img src="/images/v2/meetup-community/bdg.png" alt="Bengaluru Distributed Systems Group" loading="lazy">
+ <span>Bengaluru Distributed Systems Group</span>
+ </a>
+ <a class="talks-community" href="https://luma.com/dee-bangalore" target="_blank" rel="noopener noreferrer">
+ <img src="/images/v2/meetup-community/dee-india.png" alt="Durable Execution Systems India" loading="lazy">
+ <span>Durable Execution Systems India</span>
+ </a>
+ <a class="talks-community" href="https://luma.com/agentic-ai-data-infra" target="_blank" rel="noopener noreferrer">
+ <img src="/images/v2/meetup-community/ais-india.png" alt="Agentic Infrastructure Systems" loading="lazy">
+ <span>Agentic Infrastructure Systems</span>
+ </a>
+ <a class="talks-community" href="https://www.meetup.com/data-ai-forum/" target="_blank" rel="noopener noreferrer">
+ <img src="/images/v2/meetup-community/data-ai-academy.png" alt="Data+AI Academy" loading="lazy">
+ <span>Data+AI Academy</span>
+ </a>
+ </div>
+ </div>
  </section>
 
  <section class="talks-subscribe-band" aria-label="Subscribe">
@@ -192,10 +229,31 @@ layout: null
 
  {% include footer.html %}
 
+ <script src="https://unpkg.com/typewriter-effect@2.21.0/dist/core.js"></script>
+ <script type="text/javascript" src="{{ '/assets/js/monitor.js' | relative_url }}"></script>
  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
  <script type="text/javascript" src="{{ '/assets/js/scripts.js' | relative_url }}"></script>
+ <script>
+ (function () {
+ // Shuffle the recording cards (Fisher-Yates) so the library order is
+ // random per visit rather than strict reverse-chronological.
+ var grid = document.querySelector(".talks-grid");
+ if (grid) {
+  var cards = Array.prototype.slice.call(grid.children);
+  for (var i = cards.length - 1; i > 0; i--) {
+   var j = Math.floor(Math.random() * (i + 1));
+   var tmp = cards[i];
+   cards[i] = cards[j];
+   cards[j] = tmp;
+  }
+  cards.forEach(function (c) {
+   grid.appendChild(c);
+  });
+ }
+ })();
+ </script>
  <script>
  (function () {
  function stopCard(card) {

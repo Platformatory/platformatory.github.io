@@ -38,11 +38,7 @@
       rel="stylesheet"
     />
     <!-- map -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap/dist/css/jsvectormap.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/jsvectormap"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jsvectormap/dist/maps/world.js"></script>
     {% include seo.html %}
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Reveal.js style -->
     <link
       rel="stylesheet"
@@ -53,13 +49,13 @@
       href="{{ '/assets/reveal.js/dist/theme/black.css' | relative_url }}"
       id="theme"
     />
-    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@2.21.0/dist/core.js"></script>
   </head>
 
   <body>
     {% include main-menu-mobile.html %}
         {% include header.html headerClass='header-extra' %}
-        <div class="reveal">
+        <div class="reveal{% if page.bodyClass %} {{ page.bodyClass }}{% endif %}">
                 {{ content }}
         </div>
     

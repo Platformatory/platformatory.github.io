@@ -1,13 +1,16 @@
 .hamburger {
-  padding: 10px 0 10px 10px;
+  // 44px+ tap target (WCAG 2.5.3).
+  padding: 12px 4px 12px 14px;
   outline: none;
   z-index: 30;
   cursor: pointer;
   @include media-breakpoint-up(lg) {
     display: none;
   }
-  &:focus {
-    outline: none;
+  &:focus-visible {
+    // Keyboard affordance replacing the removed outline.
+    outline: 2px solid #fff;
+    outline-offset: 2px;
   }
   .hamburger-inner,
   .hamburger-inner::before,

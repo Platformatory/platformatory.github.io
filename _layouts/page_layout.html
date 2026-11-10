@@ -32,7 +32,7 @@ bodyClass: v2-page-layout
             {%if section.section.images %}
         <div class="feature-images">
         {% for image in section.section.images%}
-        <img src="/{{image.url}}" alt="{{image.name}}"/>
+        <img src="/{{image.url}}" alt="{{image.name}}"/ loading="lazy">
         {% endfor %}
         
         </div>
@@ -58,10 +58,10 @@ bodyClass: v2-page-layout
              <div class="image-item{% if image.summary %} has-summary{% endif %}">
                {% if feature.cta or image.link %}
                <a class="image-logo-link" href="{{ image.link }}"{% if image.link contains 'http' %} target="_blank" rel="noopener noreferrer"{% endif %}>
-                <img src="{{ image.url }}" alt="{{ image.name }}">
+                <img src="{{ image.url }}" alt="{{ image.name }}" loading="lazy">
                </a>
                {% else %}
-               <img src="{{ image.url }}" alt="{{ image.name }}">
+               <img src="{{ image.url }}" alt="{{ image.name }}" loading="lazy">
                {% endif %}
                {% if image.summary %}
                <p class="summary">{{ image.summary }}</p>
@@ -99,7 +99,7 @@ bodyClass: v2-page-layout
         {% endif %}
         {% endif %}
         {%if section.section.image %}
-        <img src="/{{section.section.image}}"/>
+        <img src="/{{section.section.image}}"/ loading="lazy">
         {%endif %}
         
         

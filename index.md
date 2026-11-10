@@ -10,7 +10,7 @@ sections:
     featured: false
     summary: "We transform our customers' tech estate and operating model with cloud-native infrastructure, real-time data and modern integration."
     raw_content: |
-      <section id="platform-product-engineering" class="raw-section-container typewirter-and-quotes">
+      <section id="platform-product-engineering" class="raw-section-container typewriter-and-quotes">
         <div class="container">
           <div class="d-flex flex-column h-100 hero-slide-inner">
             <div class="hero-copy">
@@ -197,17 +197,23 @@ sections:
         cta: true
         class: "community"
         images: 
-          - name: "Bengaluru streams"
-            url: "../images/v2/meetup-community/streams.png"
+          - name: "Bengaluru Streams"
+            url: "../images/v2/meetup-community/streams-card.png"
             link: "https://meetup.com/bangalore-streams"
+          - name: "P99 India"
+            url: "../images/v2/meetup-community/p99-india.png"
+            link: "https://luma.com/p99-India"
           - name: "Bengaluru Distributed Systems Group"
-            url: "../images/v2/meetup-community/large_scale_systems.png"
+            url: "../images/v2/meetup-community/bdg.png"
             link: "https://luma.com/systems.streams.bengaluru"
-          - name: "Durable Execution Systems Bangalore"
-            url: "../images/v2/meetup-community/durable-execution.svg"
+          - name: "Durable Execution Systems India"
+            url: "../images/v2/meetup-community/dee-india.png"
             link: "https://luma.com/dee-bangalore"
-          - name: "Data+AI Forum Bangalore"
-            url: "../images/v2/meetup-community/data-ai-forum.svg"
+          - name: "Agentic Infrastructure Systems"
+            url: "../images/v2/meetup-community/ais-india.png"
+            link: "https://luma.com/agentic-ai-data-infra"
+          - name: "Data+AI Academy (Data & AI Forum)"
+            url: "../images/v2/meetup-community/data-ai-academy.png"
             link: "https://www.meetup.com/data-ai-forum/"
   - title: "Preaching what we practice, with Data+AI Academy"
     featured: true

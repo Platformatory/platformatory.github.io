@@ -23,16 +23,29 @@
 }
 
 .talks-hero {
-  background:
-    radial-gradient(ellipse 70% 55% at 70% 0%, rgba(124, 200, 70, 0.14), transparent 55%),
-    linear-gradient(180deg, #0a1420 0%, var(--talks-ink) 100%);
+  background: var(--v2-background-primary, #0d1926);
   color: #fff;
-  padding: 4.5rem 1.5rem 3.5rem;
+  min-height: calc(100vh - 64px);
+  display: flex;
+  align-items: center;
+  padding: 6rem 1.5rem 4rem;
   text-align: center;
+
+  @media (max-width: 767.98px) {
+    min-height: 0;
+    padding: 7.5rem 1.25rem 3.5rem;
+  }
 
   .talks-hero-inner {
     max-width: 40rem;
     margin: 0 auto;
+
+    // Widen the stage at 8rem so the typed headline wraps at 3 lines
+    // (its h1 caps at 25em = 2000px); the lede/CTAs keep their own
+    // narrower caps.
+    @media (min-width: 1400px) {
+      max-width: none;
+    }
   }
 
   .talks-kicker {
@@ -47,10 +60,26 @@
   h1 {
     margin: 0 0 1rem;
     font-family: $font-family-heading;
-    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    // Two full h1 lines here, so keep it a notch under the 8rem
+    // single-line heroes on the other pages.
+    font-size: 2rem;
+
+    @media (min-width: 768px) {
+      font-size: 4rem;
+    }
+
+    @media (min-width: 1400px) {
+      // 8rem, same as the other pages' hero titles.
+      font-size: 8rem;
+
+      // The 56-char typed line spans exactly two lines at this size.
+      max-width: 25em;
+    }
+
     font-weight: 700;
     letter-spacing: -0.02em;
     line-height: 1.05;
+    text-transform: capitalize;
   }
 
   .talks-lede {
@@ -131,19 +160,27 @@
 }
 
 .talks-upcoming {
-  padding: 3rem 0 0.5rem;
+  // Sidebar next to the recordings grid (>=992px); stacks above it below.
+  padding: 0 0 2rem;
 
   h2 {
-    margin: 0 0 1.25rem;
+    margin: 0 0 1rem;
     font-family: $font-family-heading;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 700;
   }
 }
 
+.talks-upcoming-note {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: var(--talks-muted);
+  line-height: 1.5;
+}
+
 .talks-upcoming-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  grid-template-columns: 1fr;
   gap: 1rem;
 }
 
@@ -216,6 +253,47 @@
       color: var(--talks-muted);
       font-size: 1.05rem;
     }
+  }
+}
+
+// Recordings + Upcoming-Events sidebar
+.talks-library-layout {
+  display: block;
+
+  // The recordings grid sizes off its own column, not the viewport
+  .talks-grid {
+    container-type: inline-size;
+  }
+
+  @media (min-width: 992px) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 20rem;
+    gap: 2.5rem;
+    align-items: start;
+    max-width: 80rem;
+
+    .talks-upcoming {
+      order: 2;
+      position: sticky;
+      top: 5.5rem;
+      padding: 0;
+      border-left: 1px solid var(--talks-line);
+      padding-left: 1.75rem;
+    }
+
+    .talks-library-main {
+      order: 1;
+    }
+
+    .talks-upcoming-calendars {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .talks-upcoming-calendars {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -443,14 +521,25 @@ button.talks-action {
   }
 }
 
+@container (max-width: 62rem) {
+  .talks-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 640px) {
   .talks-hero {
     padding: 3.5rem 1.25rem 3rem;
   }
+}
 
+@container (max-width: 38rem) {
   .talks-grid {
     grid-template-columns: 1fr;
   }
+}
+
+@media (max-width: 640px) {
 
   .talks-subscribe-band-inner {
     flex-direction: column;
@@ -472,5 +561,128 @@ button.talks-action {
   .talks-card:hover,
   .talks-subscribe:hover {
     transform: none;
+  }
+}
+
+// Communities strip (logos stacked like the home page's slide)
+.talks-communities {
+  padding: 3.5rem 0;
+  background: var(--talks-panel);
+  border-top: 1px solid var(--talks-line);
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.talks-section-sub {
+  margin: -0.5rem 0 1.75rem;
+  text-align: center;
+  color: var(--talks-muted);
+}
+
+.talks-communities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  max-width: 46rem;
+  margin: 0 auto;
+
+  @media (max-width: 640px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem;
+  }
+}
+
+.talks-community {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  color: var(--talks-ink);
+  content-visibility: auto;
+  contain-intrinsic-size: 240px 180px;
+
+  img {
+    width: 100%;
+    aspect-ratio: 5 / 3;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--talks-line);
+    background: var(--talks-ink);
+    transition: transform 0.15s ease, border-color 0.15s ease;
+  }
+
+  span {
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-align: center;
+  }
+
+  &:hover img {
+    transform: translateY(-3px);
+    border-color: var(--talks-accent);
+  }
+}
+
+// Upcoming fallback: community calendars when no dated events remain
+.talks-upcoming-calendars {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+  max-width: 46rem;
+  margin: 0 auto;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.talks-upcoming-calendar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--talks-line);
+  border-radius: 12px;
+  background: var(--talks-panel);
+  color: var(--talks-ink);
+  font-weight: 700;
+  text-decoration: none;
+  transition: border-color 150ms ease, transform 150ms ease;
+
+  span {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--talks-muted);
+  }
+
+  &:hover {
+    border-color: var(--talks-accent);
+    transform: translateY(-2px);
+  }
+}
+
+// Two-line cap for the long typed line on /talks/ (56 chars at 8rem).
+// body.talks-page prefix keeps this off every other page's typewriter
+// while still beating style.scss's final `#typewriter-title` block.
+body.talks-page #typewriter-title {
+  display: block;
+  max-width: 25em;
+  margin-inline: auto;
+  // The typed line is 56 chars; at 8rem it MUST wrap. Force it so the
+  // text wraps inside this 25em box regardless of what else declares
+  // white-space: nowrap (the nowrap+hidden combo clipped a headline on
+  // phones once already; overflow-wrap:break-word below still saves
+  // narrow viewports).
+  white-space: normal !important;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 1399.98px) {
+  body.talks-page #typewriter-title {
+    max-width: none;
   }
 }

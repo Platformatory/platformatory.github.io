@@ -9,4 +9,7 @@ intro_image_absolute: true
 
 
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScOkOAO0hKnL7-QEMUPy6MjuLPMDWy60bfGS3V4E-dIPHaigw/viewform?embedded=true" width="640" height="3210" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<div class="reg-cta">
+  <h2>Register by email</h2>
+  <p>Skip the form: email <a href="mailto:academy@platformatory.com?subject=Subject%3A%20Scholarship%20application">academy@platformatory.com</a> with your name and what you'd like to register for (Data+AI Academy Scholarship), and we'll confirm your spot.</p>
+</div>

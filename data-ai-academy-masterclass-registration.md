@@ -60,4 +60,7 @@ permalink: /events/2026-05-data-ai-academy-masterclass/confirmation/
 
 <br>
 <br>
-<iframe src="https://forms.gle/spc85vLJNYFhJVx6A" style="width: 100%; max-width: 100%; height: 1850px; border: none;" frameborder="0" marginheight="0" marginwidth="0">Masterclass on Data Engineering for Real-time Applications</iframe>
+<div class="reg-cta">
+  <h2>Register by email</h2>
+  <p>Skip the form: email <a href="mailto:academy@platformatory.com?subject=Subject%3A%20Masterclass%20registration">academy@platformatory.com</a> with your name and what you'd like to register for (Masterclass on Data Engineering for Real-time Applications), and we'll confirm your spot.</p>
+</div>

@@ -9,7 +9,7 @@ sections:
     featured: true
     summary: "TBD"
     raw_content: |
-      <section id="academy" class="raw-section-container typewirter-and-quotes">
+      <section id="academy" class="raw-section-container typewriter-and-quotes">
         <div class="container">
           <div style="justify-content: space-evenly;" class="d-flex flex-column h-100 ">
             <div>

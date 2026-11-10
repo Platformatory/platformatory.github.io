@@ -46,7 +46,7 @@ layout: default
                             <p>{{page.location}}</p>
                             {% if page.map_link %}
                             <a class="direction" href="{{page.map_link}}" target="_blank" rel="noopener noreferrer">Map
-                                <img src="/images/event/traffic-sign.png" alt="direciton image"></a>
+                                <img src="/images/event/traffic-sign.png" alt="direciton image" loading="lazy"></a>
                             {% endif %}
                         </div>
                     </div>
@@ -62,7 +62,7 @@ layout: default
                     {% for talk in page.talks%}
                     <div class="talk-card">
                         <div class=" mx-0 talk-top-position">
-                            <iframe class="talk-video" width="364" height="315"
+                            <iframe class="talk-video"
                                 src="https://www.youtube.com/embed/{{talk.video}}?color=white"
                                 title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

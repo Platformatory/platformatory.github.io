@@ -252,7 +252,11 @@
  view: "scroll",
  scrollProgress: true,
  jumpToSlide: true,
- scrollActivationWidth: null,
+ // Reveal's built-in narrow-viewport guard: below this presentation width
+ // the scrollbar rail stays inactive and swipes page the deck. Previously
+ // `null` disabled it and a custom non-passive touch handler (removed)
+ // tried to compensate, killing page scroll along the right edge.
+ scrollActivationWidth: 2,
  controls: false,
  // Scroll view already fills the viewport per page. Reveal's absolute
  // center transform (left/top 50% + translate -50%) paints a duplicate
@@ -260,30 +264,11 @@
  center: false,
  });
 
- function bindProgressBarTouch() {
- var vp = Reveal.getViewportElement && Reveal.getViewportElement();
- var inner = vp && vp.querySelector(".scrollbar-inner");
- if (!vp || !inner || inner.dataset.touchBound) return;
- inner.dataset.touchBound = "1";
- function scrollFromClientY(clientY) {
- var rect = inner.getBoundingClientRect();
- var height = rect.height || 1;
- var y = (clientY - rect.top) / height;
- y = Math.max(Math.min(y, 1), 0);
- vp.scrollTop = y * (vp.scrollHeight - vp.offsetHeight);
- }
- function onTouch(e) {
- if (!e.touches || !e.touches[0]) return;
- e.preventDefault();
- scrollFromClientY(e.touches[0].clientY);
- }
- inner.addEventListener("touchstart", onTouch, { passive: false });
- inner.addEventListener("touchmove", onTouch, { passive: false });
- }
+ // (Touch scrubbing on the progress rail is Reveal's own; the previous
+ // custom non-passive handler swallowed page swipes along the right edge.)
 
  function onReady() {
  bindScrollHash();
- bindProgressBarTouch();
  if (initialHash && initialHash.length > 1) {
  goToHash(initialHash);
  } else {
