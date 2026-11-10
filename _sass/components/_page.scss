@@ -3582,8 +3582,32 @@ section.contact-careers {
       display: contents !important;
     }
 
-    .hsfc-RichText {
+    // Hide the intro rich text inside the form, but keep the post-submit
+    // thank-you message (also a RichText block) visible.
+    .hsfc-Form .hsfc-RichText {
       display: none !important;
+    }
+
+    .hsfc-PostSubmit {
+      padding: 1.25rem 1.4rem !important;
+      border: 1px solid rgba(0, 255, 0, 0.35) !important;
+      border-radius: 12px;
+      background: rgba(0, 255, 0, 0.06) !important;
+      font-size: 1.05rem;
+      text-align: center;
+
+      .hsfc-Step__Content {
+        display: block !important;
+      }
+
+      .hsfc-RichText p {
+        margin: 0;
+      }
+
+      .hsfc-RichText p:empty,
+      .hsfc-RichText p:not(:first-child) {
+        display: none;
+      }
     }
 
     .hsfc-TextField,
