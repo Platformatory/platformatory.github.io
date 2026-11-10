@@ -39,6 +39,13 @@
   .talks-hero-inner {
     max-width: 40rem;
     margin: 0 auto;
+
+    // Widen the stage at 8rem so the typed headline wraps at 3 lines
+    // (its h1 caps at 25em = 2000px); the lede/CTAs keep their own
+    // narrower caps.
+    @media (min-width: 1400px) {
+      max-width: none;
+    }
   }
 
   .talks-kicker {
@@ -61,9 +68,12 @@
       font-size: 4rem;
     }
 
-    @media (min-width: 1200px) {
-      // Same 8rem scale as the other pages' hero titles.
+    @media (min-width: 1400px) {
+      // 8rem, same as the other pages' hero titles.
       font-size: 8rem;
+
+      // The 56-char typed line spans exactly two lines at this size.
+      max-width: 25em;
     }
 
     font-weight: 700;
@@ -652,5 +662,27 @@ button.talks-action {
   &:hover {
     border-color: var(--talks-accent);
     transform: translateY(-2px);
+  }
+}
+
+// Two-line cap for the long typed line on /talks/ (56 chars at 8rem).
+// body.talks-page prefix keeps this off every other page's typewriter
+// while still beating style.scss's final `#typewriter-title` block.
+body.talks-page #typewriter-title {
+  display: block;
+  max-width: 25em;
+  margin-inline: auto;
+  // The typed line is 56 chars; at 8rem it MUST wrap. Force it so the
+  // text wraps inside this 25em box regardless of what else declares
+  // white-space: nowrap (the nowrap+hidden combo clipped a headline on
+  // phones once already; overflow-wrap:break-word below still saves
+  // narrow viewports).
+  white-space: normal !important;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 1399.98px) {
+  body.talks-page #typewriter-title {
+    max-width: none;
   }
 }
