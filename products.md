@@ -15,8 +15,7 @@ sections:
         <div class="container d-flex justify-content-between">
           <div style="gap: 1.5em;" class="d-flex flex-column h-100 justify-content-center">
             <div>
-              <h1 class="mb-1">Platform products,</h1>
-              <h1 class="mb-1"><span id="typewriter-title">forged in the reality of customer problems.</span></h1>
+              <h1 class="mb-1"><span id="typewriter-title">Platform products, forged in the reality of customer problems.</span></h1>
             </div>
             <div class="d-flex justify-content-center">
               <p class="quote-content"> <span class="quote">The way to get startup ideas is not to try to think of startup ideas. It’s to look for problems, preferably problems you have yourself.</span> - Paul Graham</p>

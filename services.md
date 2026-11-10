@@ -14,8 +14,7 @@ sections:
         <div class="container d-flex justify-content-between">
           <div style="gap: 1.5em;" class="d-flex flex-column h-100 justify-content-center">
             <div>
-              <h1 class="text-capitalize mb-1">Deliver mission critical platforms.</h1>
-              <h1 class="text-capitalize mb-1"><span id="typewriter-title">End to end.</span></h1>
+              <h1 class="text-capitalize mb-1"><span id="typewriter-title">Deliver mission critical platforms.</span></h1>
             </div>
             <div class="d-flex justify-content-center">
               <p class="quote-content"> <span class="quote">A product is useless without a platform, or more precisely and accurately, a platform-less product will always be replaced by an equivalent platform-ized product</span>  – Steve Yegge</p>
