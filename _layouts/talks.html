@@ -43,7 +43,7 @@ layout: null
  <header class="talks-hero">
  <div class="talks-hero-inner">
  <h1 class="text-capitalize">Real-life x Real-time:</h1>
- <h1 class="text-capitalize"><span id="typewriter-title">Platform Engineering, Data &amp; AI</span></h1>
+ <h1 class="text-capitalize"><span id="typewriter-title">Platforming thought leadership: Engineering, Data &amp; AI.</span></h1>
  <p class="talks-lede">
  Recordings and slides from Bengaluru Streams and Platformatory community events, real-time data, streaming, and platforms.
  </p>
@@ -239,6 +239,25 @@ layout: null
  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
  <script type="text/javascript" src="{{ '/assets/js/scripts.js' | relative_url }}"></script>
+ <script>
+ (function () {
+ // Shuffle the recording cards (Fisher-Yates) so the library order is
+ // random per visit rather than strict reverse-chronological.
+ var grid = document.querySelector(".talks-grid");
+ if (grid) {
+  var cards = Array.prototype.slice.call(grid.children);
+  for (var i = cards.length - 1; i > 0; i--) {
+   var j = Math.floor(Math.random() * (i + 1));
+   var tmp = cards[i];
+   cards[i] = cards[j];
+   cards[j] = tmp;
+  }
+  cards.forEach(function (c) {
+   grid.appendChild(c);
+  });
+ }
+ })();
+ </script>
  <script>
  (function () {
  function stopCard(card) {

@@ -58,11 +58,12 @@
     font-size: 2rem;
 
     @media (min-width: 768px) {
-      font-size: 3.25rem;
+      font-size: 4rem;
     }
 
     @media (min-width: 1200px) {
-      font-size: 4.5rem;
+      // Same 8rem scale as the other pages' hero titles.
+      font-size: 8rem;
     }
 
     font-weight: 700;
