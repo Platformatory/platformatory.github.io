@@ -3551,30 +3551,227 @@ section.contact-careers {
     }
   }
 
-  // HubSpot form (iframe embed). The iframe is cross-origin, so its
-  // built-in "Contact Us / We'd love to hear from you" header can't be
-  // styled away: we pin the frame to a fixed width (so the header wraps
-  // the same way every time) and slide it up under an overflow clip.
+  // HubSpot form (developer embed: renders inline HTML, so we can style it).
+  // Fields are flattened into one grid: First/Last and Email/Phone pair up,
+  // Company and Message span the full width. HubSpot's own intro rich text
+  // ("Contact Us / We'd love to hear from you") is hidden.
   .cc-form {
-    width: 300px;
-    max-width: 100%;
-    margin-top: 0.6rem;
-    padding: 0.4rem 0 0;
-    background: #f5f7fa;
-    border-radius: 12px;
+    width: 100%;
+    max-width: 640px;
+    margin-top: 1rem;
     text-align: left;
-  }
 
-  .cc-form-clip {
-    overflow: hidden;
-    border-radius: 12px;
-  }
+    .hsfc-Renderer,
+    .hsfc-FormWrapper,
+    .hsfc-Form,
+    .hsfc-Step {
+      background: transparent !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      border: 0 !important;
+    }
 
-  .cc-form .hs-form-frame {
-    width: 300px;
-    max-width: none;
-    margin-top: -232px;
-    margin-bottom: -72px;
+    .hsfc-Step__Content {
+      display: grid !important;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.85rem 1rem;
+      padding: 0 !important;
+    }
+
+    .hsfc-Row {
+      display: contents !important;
+    }
+
+    .hsfc-RichText {
+      display: none !important;
+    }
+
+    .hsfc-TextField,
+    .hsfc-EmailField,
+    .hsfc-PhoneField,
+    .hsfc-TextareaField,
+    .hsfc-DropdownField {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      min-width: 0;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    // A text field alone in its row (Company) and Message take the full row.
+    .hsfc-Row > .hsfc-TextField:only-child,
+    .hsfc-TextareaField,
+    .hsfc-NavigationRow {
+      grid-column: 1 / -1;
+    }
+
+    .hsfc-FieldLabel {
+      margin: 0 !important;
+      font-family: inherit !important;
+      font-size: 0.72rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.62) !important;
+    }
+
+    .hsfc-FieldLabel__RequiredIndicator {
+      color: var(--v2-text-primary) !important;
+      margin-left: 0.15em;
+    }
+
+    .hsfc-TextInput,
+    .hsfc-TextareaInput,
+    .hsfc-PhoneInput {
+      width: 100% !important;
+      box-sizing: border-box;
+      font-family: inherit !important;
+      font-size: 0.95rem !important;
+      color: #fff !important;
+      background: rgba(255, 255, 255, 0.05) !important;
+      border: 1px solid rgba(255, 255, 255, 0.16) !important;
+      border-radius: 10px !important;
+      padding: 0.7rem 0.9rem !important;
+      min-height: 0 !important;
+      box-shadow: none !important;
+      transition: border-color 150ms ease, background-color 150ms ease, box-shadow 150ms ease;
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.35) !important;
+      }
+
+      &:hover {
+        border-color: rgba(255, 255, 255, 0.3) !important;
+      }
+
+      &:focus,
+      &:focus-within {
+        outline: none !important;
+        border-color: var(--v2-text-primary) !important;
+        background: rgba(255, 255, 255, 0.08) !important;
+        box-shadow: 0 0 0 3px rgba(0, 255, 0, 0.15) !important;
+      }
+    }
+
+    .hsfc-TextareaInput {
+      min-height: 110px !important;
+      resize: vertical;
+    }
+
+    // Phone: the wrapper draws the box; the inner input is bare.
+    .hsfc-PhoneInput {
+      display: flex !important;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0 0.9rem !important;
+
+      .hsfc-TextInput {
+        flex: 1;
+        border: 0 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        padding: 0.7rem 0 !important;
+        border-radius: 0 !important;
+      }
+    }
+
+    .hsfc-PhoneInput__FlagAndCaret {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding-right: 0.6rem;
+      border-right: 1px solid rgba(255, 255, 255, 0.16);
+      background: transparent !important;
+      border-top: 0 !important;
+      border-bottom: 0 !important;
+      border-left: 0 !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      cursor: pointer;
+    }
+
+    .hsfc-PhoneInput__FlagAndCaret__Caret {
+      border-top-color: rgba(255, 255, 255, 0.6) !important;
+    }
+
+    .hsfc-DropdownOptions {
+      background: #fff;
+      color: #14202e;
+      border-radius: 10px !important;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+
+      .hsfc-TextInput {
+        color: #14202e !important;
+        background: #f5f7fa !important;
+        border-color: rgba(20, 32, 46, 0.15) !important;
+      }
+    }
+
+    .hsfc-Row > .hsfc-ErrorAlert {
+      grid-column: 1 / -1;
+      margin-top: -0.45rem !important;
+    }
+
+    .hsfc-TextInput[aria-invalid="true"],
+    .hsfc-TextareaInput[aria-invalid="true"],
+    .hsfc-PhoneInput:has([aria-invalid="true"]) {
+      border-color: #ff8a7a !important;
+    }
+
+    .hsfc-ErrorAlert,
+    .hsfc-InfoAlert {
+      font-family: inherit !important;
+      font-size: 0.78rem !important;
+      color: #ff8a7a !important;
+      margin: 0 !important;
+    }
+
+    .hsfc-NavigationRow {
+      margin: 0.4rem 0 0 !important;
+      padding: 0 !important;
+    }
+
+    .hsfc-NavigationRow__Alerts:empty {
+      display: none !important;
+    }
+
+    .hsfc-NavigationRow__Buttons {
+      display: block !important;
+    }
+
+    .hsfc-Button {
+      width: 100%;
+      font-family: inherit !important;
+      font-size: 1rem !important;
+      font-weight: 700 !important;
+      color: var(--v2-background-primary) !important;
+      background: var(--v2-text-primary) !important;
+      background-image: none !important;
+      border: 0 !important;
+      border-radius: 999px !important;
+      padding: 0.8rem 1.4rem !important;
+      cursor: pointer;
+      transition: transform 150ms ease, box-shadow 150ms ease;
+
+      &:hover,
+      &:focus-visible {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    .hsfc-PostSubmit,
+    .hsfc-PostSubmit * {
+      color: #fff !important;
+      font-family: inherit !important;
+    }
+
+    @media (max-width: 575.98px) {
+      .hsfc-Step__Content {
+        grid-template-columns: 1fr;
+      }
+    }
   }
 
   .cc-map {
