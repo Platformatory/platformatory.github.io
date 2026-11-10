@@ -53,7 +53,22 @@
   h1 {
     margin: 0 0 1rem;
     font-family: $font-family-heading;
-    font-size: clamp(2.5rem, 9vw, 8rem);
+    // Same scale as the other pages' hero .title (8rem at desktop), not
+    // viewport-scaling: 9vw pushed this past 128px on wide screens.
+    font-size: 2.4rem;
+
+    @media (min-width: 768px) {
+      font-size: 4rem;
+    }
+
+    @media (min-width: 992px) {
+      font-size: 8rem;
+    }
+
+    @media (max-width: 575.98px) {
+      font-size: 2.4rem;
+    }
+
     font-weight: 700;
     letter-spacing: -0.02em;
     line-height: 1.05;
@@ -138,19 +153,27 @@
 }
 
 .talks-upcoming {
-  padding: 3rem 0 0.5rem;
+  // Sidebar next to the recordings grid (>=992px); stacks above it below.
+  padding: 0 0 2rem;
 
   h2 {
-    margin: 0 0 1.25rem;
+    margin: 0 0 1rem;
     font-family: $font-family-heading;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 700;
   }
 }
 
+.talks-upcoming-note {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: var(--talks-muted);
+  line-height: 1.5;
+}
+
 .talks-upcoming-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  grid-template-columns: 1fr;
   gap: 1rem;
 }
 
@@ -223,6 +246,47 @@
       color: var(--talks-muted);
       font-size: 1.05rem;
     }
+  }
+}
+
+// Recordings + Upcoming-Events sidebar
+.talks-library-layout {
+  display: block;
+
+  // The recordings grid sizes off its own column, not the viewport
+  .talks-grid {
+    container-type: inline-size;
+  }
+
+  @media (min-width: 992px) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 20rem;
+    gap: 2.5rem;
+    align-items: start;
+    max-width: 80rem;
+
+    .talks-upcoming {
+      order: 2;
+      position: sticky;
+      top: 5.5rem;
+      padding: 0;
+      border-left: 1px solid var(--talks-line);
+      padding-left: 1.75rem;
+    }
+
+    .talks-library-main {
+      order: 1;
+    }
+
+    .talks-upcoming-calendars {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .talks-upcoming-calendars {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -450,14 +514,25 @@ button.talks-action {
   }
 }
 
+@container (max-width: 62rem) {
+  .talks-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 640px) {
   .talks-hero {
     padding: 3.5rem 1.25rem 3rem;
   }
+}
 
+@container (max-width: 38rem) {
   .talks-grid {
     grid-template-columns: 1fr;
   }
+}
+
+@media (max-width: 640px) {
 
   .talks-subscribe-band-inner {
     flex-direction: column;
