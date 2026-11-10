@@ -2598,13 +2598,13 @@ section{
 // doesn't fit a viewport is reachable by scrolling instead of being
 // cropped. Emitted after the legacy rules so its !important decls win;
 // the 2-col desktop grid survives via higher-specificity overrides below.
-@mixin inner-page-stack($with-typography: true) {
+@mixin inner-page-stack($with-typography: true, $scope: ".reveal.company-page") {
   // Desktop-only inner-page layout (see mixin header for why).
   @media (min-width: 993px) {
-    .reveal.company-page .slides section,
-    .reveal.company-page .slides .scroll-page section,
-    .reveal-viewport.reveal-scroll .reveal.company-page .scroll-page section,
-    .reveal.company-page .reveal-viewport.reveal-scroll .scroll-page section {
+    #{$scope} .slides section,
+    #{$scope} .slides .scroll-page section,
+    .reveal-viewport.reveal-scroll #{$scope} .scroll-page section,
+    #{$scope} .reveal-viewport.reveal-scroll .scroll-page section {
       // Release the crop only. Heights stay as the base slide rules define
       // them (100% min-heights keep the 2-col grid filling the viewport;
       // overflow on inner panels is released below instead).
@@ -2616,7 +2616,7 @@ section{
 // (No .scroll-page height growth: content stays at viewport height with
 // overflow released, matching how home/consulting render their slides.)
 
-  .reveal.company-page .split-container {
+  #{$scope} .split-container {
     display: flex;
     flex-direction: column;
     min-height: 100% !important;
@@ -3213,8 +3213,16 @@ section{
 // inner-page slides flow as one scrollable page; Reveal still counts
 // each <section> as a slide.
 
-// Company page only (scoped hook, not a global include): tall slides grow to
-// content height; other pages keep master one-viewport behaviour.
+// Inner pages (consulting, services, products, …): the mixin restores
+// master's one-viewport slide sizing on phones (strips clear the fixed
+// header, panels stay slide-height with overflow released). Home is
+// flex-ordered by its own rules and company runs an intentional
+// grow-to-content stack, so both are skipped.
+.reveal:not(.home-page):not(.company-page) {
+  @include inner-page-stack(true, "&");
+}
+
+// Company page: tall slides grow to content height (intentional stack mode).
 .reveal.company-page {
   @include inner-page-stack(true);
 }
@@ -3750,6 +3758,31 @@ section.contact-careers {
       color: #fff;
       filter: brightness(1.08);
     }
+  }
+}
+
+// Phones: give the community logos real size — a snug 3x2 grid that fills
+// the slide's width (base rules left 6 tiny cards + dead space on phones).
+// EOF placement wins ties against the phone 2-col block; the :not guards
+// skip the company slide (its cards carry captions and keep 2-col sizing).
+// 5 classes + :has() beats the home-page 0-5-0 override that was keeping
+// them at 2 columns. The :not(figcaption) guard skips the company slide,
+// whose cards carry captions and keep the roomier 2-col sizing.
+@media (max-width: 600px) {
+  #opensource-community .images-container.community {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 0.6rem !important;
+    align-content: center;
+  }
+
+  #opensource-community .images-container.community .image-item {
+    aspect-ratio: 5 / 3 !important;
+    height: auto !important;
+    min-height: 0;
+    background: #0d1926 !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    border-radius: 12px !important;
+    padding: 0.15rem !important;
   }
 }
 
