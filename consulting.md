@@ -14,7 +14,8 @@ sections:
         <div class="container">
           <div style="justify-content: space-evenly;" class="d-flex flex-column h-100 ">
             <div>
-              <h1 class="text-capitalize mb-1 title">Platform & Data modernization.</h1>
+              <h1 class="text-capitalize mb-1 title">We Engineer.</h1>
+              <h1 class="text-capitalize mb-1 title"><span id="typewriter-title">Customer Problems.</span></h1>
               <h3 class="sub-title">Led by hands-on experts.</h3>
             </div>
             <div class="d-flex justify-content-center">

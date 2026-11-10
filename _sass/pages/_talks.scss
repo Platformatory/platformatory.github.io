@@ -23,12 +23,18 @@
 }
 
 .talks-hero {
-  background:
-    radial-gradient(ellipse 70% 55% at 70% 0%, rgba(124, 200, 70, 0.14), transparent 55%),
-    linear-gradient(180deg, #0a1420 0%, var(--talks-ink) 100%);
+  background: var(--v2-background-primary, #0d1926);
   color: #fff;
-  padding: 4.5rem 1.5rem 3.5rem;
+  min-height: calc(100vh - 64px);
+  display: flex;
+  align-items: center;
+  padding: 6rem 1.5rem 4rem;
   text-align: center;
+
+  @media (max-width: 767.98px) {
+    min-height: 0;
+    padding: 7.5rem 1.25rem 3.5rem;
+  }
 
   .talks-hero-inner {
     max-width: 40rem;
@@ -47,10 +53,11 @@
   h1 {
     margin: 0 0 1rem;
     font-family: $font-family-heading;
-    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    font-size: clamp(2.5rem, 9vw, 8rem);
     font-weight: 700;
     letter-spacing: -0.02em;
     line-height: 1.05;
+    text-transform: capitalize;
   }
 
   .talks-lede {
