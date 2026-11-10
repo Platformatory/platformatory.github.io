@@ -53,20 +53,16 @@
   h1 {
     margin: 0 0 1rem;
     font-family: $font-family-heading;
-    // Same scale as the other pages' hero .title (8rem at desktop), not
-    // viewport-scaling: 9vw pushed this past 128px on wide screens.
-    font-size: 2.4rem;
+    // Two full h1 lines here, so keep it a notch under the 8rem
+    // single-line heroes on the other pages.
+    font-size: 2rem;
 
     @media (min-width: 768px) {
-      font-size: 4rem;
+      font-size: 3.25rem;
     }
 
-    @media (min-width: 992px) {
-      font-size: 8rem;
-    }
-
-    @media (max-width: 575.98px) {
-      font-size: 2.4rem;
+    @media (min-width: 1200px) {
+      font-size: 4.5rem;
     }
 
     font-weight: 700;
