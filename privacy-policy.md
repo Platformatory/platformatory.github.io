@@ -12,11 +12,15 @@ This policy explains how Platformatory collects, uses, and shares information ab
 
 ## Information we collect
 
-**Information you give us directly.** We have no sign-up forms, account system, or newsletter on the Site. We collect what you choose to send us when you email us, respond to the contact details published on the Site, or register for an event, workshop, or academy session we run. This typically includes your name, email address, employer, and the content of your message. Event registration pages may also collect your role and session preferences.
+**Information you give us directly.** The Site has no account system or newsletter. We collect what you choose to send us:
 
-**Information collected automatically.** Like most websites, the Site loads resources from Google. In production, we use Google Tag Manager and Google Analytics to understand how visitors use the Site, and we load web fonts from Google Fonts. These services may set cookies and collect your IP address, browser and device type, pages viewed, and referral source. Google's [Privacy & Terms](https://policies.google.com/technologies/partner-sites) describes how it processes this data.
+- **Contact form.** Our contact page embeds a form provided by HubSpot, Inc. Fields you fill in (typically name, email address, company, and your message) are submitted to and stored in HubSpot's CRM, which acts as our service provider. HubSpot's [privacy statement](https://www.hubspot.com/legal/privacy-statement) explains how it handles data. We may use what you submit to reply and, where you opt in, to send updates about our services and events.
+- **Email.** Information you volunteer when you email the addresses published on the Site.
+- **Event registrations.** Information you provide when you register for an event, workshop, or academy session we run, which may include your role and session preferences.
 
-We do not sell personal information, and we do not run advertising or marketing-tracking pixels on the Site.
+**Information collected automatically.** Like most websites, the Site loads resources from third parties. In production, we use Google Tag Manager and Google Analytics to understand how visitors use the Site, we load web fonts from Google Fonts, and the HubSpot form embed may set cookies that recognize your browser across sites. These services may collect your IP address, browser and device type, pages viewed, and referral source, and HubSpot's embed can be used for advertising and cross-site tracking. Google's [Privacy & Terms](https://policies.google.com/technologies/partner-sites) and HubSpot's [cookie usage](https://www.hubspot.com/legal/cookie-usage) describe how each processes this data.
+
+Apart from the HubSpot embed described above, we do not run advertising or marketing-tracking pixels on the Site, and we do not sell personal information.
 
 ## How we use information
 
@@ -31,7 +35,7 @@ We do not use personal information from the Site for automated decision-making o
 
 We share personal information only:
 
-- With service providers that help us operate (website hosting, email delivery, analytics), under confidentiality obligations.
+- - With service providers that help us operate (website hosting, HubSpot for forms and CRM, email delivery, analytics), under confidentiality obligations.
 - With our own affiliates listed above, when relevant to serving you.
 - When required by law, or to protect our rights, property, or safety.
 
@@ -43,14 +47,14 @@ Platformatory has offices in the United States, India, Canada, and the United Ar
 
 ## Retention
 
-We keep emails and inquiry records only as long as needed for the purpose you contacted us for, or as law requires. Analytics data is retained according to the retention settings configured in our analytics tools.
+We keep emails and inquiry records only as long as needed for the purpose you contacted us for, or as law requires. Contact-form submissions are stored in HubSpot's CRM; analytics data is retained according to the retention settings configured in our analytics tools.
 
 ## Your choices and rights
 
-- **Cookies.** You can block or delete cookies in your browser settings. Google also offers a [browser add-on to opt out of Google Analytics](https://tools.google.com/dlpage/gaoptout).
+- **Cookies.** You can block or delete cookies in your browser settings. Google also offers a [browser add-on to opt out of Google Analytics](https://tools.google.com/dlpage/gaoptout). HubSpot cookies used for advertising and cross-site tracking can be disabled via HubSpot's [opt-out page](https://hs-eopt-out.websitetestlink.com/link/2000/opt-out.html), and browser "Do Not Track"/GPC signals are honored by their scripts.
 - **Access, correction, deletion.** Depending on where you live (for example under the GDPR in the EEA/UK or the CCPA/CPRA in California), you may have the right to access, correct, delete, or restrict the use of your personal information, to object to certain processing, and to lodge a complaint with your local data-protection authority. We do not discriminate for exercising these rights.
 
-To make a request, email us at [hello@platformatory.com](mailto:hello@platformatory.com). We will respond within the timeframe required by applicable law.
+To make a request, email us at [hello@platformatory.io](mailto:hello@platformatory.io). We will respond within the timeframe required by applicable law.
 
 ## Security
 
@@ -68,4 +72,4 @@ We may update this policy. When we do, we revise the "Last updated" date above. 
 
 Platformatory LLC
 5900 Balcones Drive STE 10969, Austin, Texas 78731, USA
-Email: [hello@platformatory.com](mailto:hello@platformatory.com)
+Email: [hello@platformatory.io](mailto:hello@platformatory.io)

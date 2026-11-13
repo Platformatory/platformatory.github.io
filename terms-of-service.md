@@ -49,4 +49,4 @@ These terms are governed by the laws of the State of Texas, United States, witho
 
 Platformatory LLC
 5900 Balcones Drive STE 10969, Austin, Texas 78731, USA
-Email: [hello@platformatory.com](mailto:hello@platformatory.com)
+Email: [hello@platformatory.io](mailto:hello@platformatory.io)
