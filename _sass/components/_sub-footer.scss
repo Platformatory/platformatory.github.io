@@ -23,6 +23,25 @@
       color: inherit;
     }
   }
+  .footer-legal-links {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.15rem 0.85rem;
+    a {
+      color: inherit;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      white-space: nowrap;
+
+      &:hover,
+      &:focus-visible {
+        text-decoration: underline;
+      }
+    }
+  }
   .social {
     a:first-of-type {
       margin-left: -10px;
