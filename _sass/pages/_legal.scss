@@ -11,6 +11,18 @@
 .reveal.legal-page {
   background-color: var(--v2-background-primary, #0d1926);
 
+  // reveal.css sets `.reveal { overflow: hidden }` for its slide deck.
+  // These pages carry no .slides structure, so Reveal never manages them
+  // and the clip (plus the 100vh viewport rule) makes the document
+  // unscrollable on touch devices. Let them scroll like a plain page.
+  // .reveal.legal-page (0,2,0) beats reveal.css `.reveal` (0,1,0) without
+  // needing !important.
+  &.reveal {
+    overflow: visible;
+    height: auto;
+    max-height: none;
+  }
+
   .container {
     height: auto;
     min-height: 100%;
