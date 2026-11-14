@@ -1,0 +1,100 @@
+// Long-form legal pages (privacy policy, terms of service).
+// The `page` layout wraps content in .reveal, so Reveal's own stylesheet
+// theme (black.css: 2.5em text, uppercase headings) plus its scroll-view
+// rules apply. Without a .slides/section structure Reveal never enters
+// scroll mode, so these pages render as a plain tall document: undo the
+// deck theme and apply the site's dark page theme instead.
+//
+// bodyClass renders on the .reveal wrapper div in the default layout (not
+// on <body>), so scope to the wrapper itself: .reveal.legal-page beats
+// Reveal's own `.reveal h1` theme rules via (0,2,1) and later load order.
+.reveal.legal-page {
+  background-color: var(--v2-background-primary, #0d1926);
+
+  .container {
+    height: auto;
+    min-height: 100%;
+  }
+
+  .service-single {
+    max-width: 760px;
+    margin: 0 auto;
+    background: none; // the .service class (from `page` layout) is #f5f5f5
+  }
+
+  .content {
+    a {
+      color: #00ff00;
+      text-decoration: underline;
+    }
+
+    h1 {
+      // _content.scss sets h1 {font-size:34px!important} at >=sm; match
+      // its !important at higher specificity so legal pages get prose size.
+      font-size: 2.25rem !important;
+      line-height: 1.25 !important;
+      text-transform: none;
+    }
+
+    // Reveal's theme makes h2 huge and uppercase; legal section headings
+    // need prose scale and sentence case.
+    h2 {
+      // The site theme has two !important h2 sizes (.content h2: 28px at
+      // >=sm, _page.scss elsewhere); overriding needs !important at (0,2,0)
+      // or higher.
+      font-size: 1.6rem !important;
+      font-weight: 700;
+      line-height: 1.35;
+      text-transform: none !important;
+      text-align: left !important;
+      color: #ffffff;
+      margin-top: 2.4rem;
+      margin-bottom: 0.6rem;
+    }
+
+    p {
+      font-size: 1.0625rem;
+      font-family: $font-family-heading;
+      line-height: 1.7;
+      text-align: left;
+      color: #cfd8e0;
+    }
+
+    // The default .content rules style ol/ul as card grids; legal text
+    // needs ordinary prose lists. Reveal's theme resets list styles.
+    ol,
+    ul {
+      display: block;
+      background: none;
+      padding: 0 0 0 1.4rem;
+      margin: 0.75rem 0;
+      list-style: disc;
+      gap: 0;
+
+      li {
+        background: none;
+        color: #cfd8e0;
+        min-height: 0;
+        padding: 0;
+        margin-bottom: 0.6rem;
+        text-align: left;
+        border: 0;
+        box-shadow: none;
+        font-size: 1.0625rem;
+
+        p {
+          color: #cfd8e0;
+          margin: 0;
+        }
+      }
+    }
+
+    ol {
+      list-style: decimal;
+    }
+
+    strong {
+      color: #ffffff;
+    }
+  }
+}

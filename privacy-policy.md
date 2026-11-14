@@ -1,9 +1,10 @@
 ---
 title: Privacy Policy
-layout: page
+layout: legal
 permalink: /privacy-policy/
 description: "How Platformatory collects, uses, and protects personal information on platformatory.io."
 sitemap: false
+bodyClass: legal-page
 ---
 
 **Last updated:** November 12, 2026

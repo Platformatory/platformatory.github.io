@@ -1,9 +1,10 @@
 ---
 title: Terms of Service
-layout: page
+layout: legal
 permalink: /terms-of-service/
 description: "Terms governing use of the platformatory.io website."
 sitemap: false
+bodyClass: legal-page
 ---
 
 **Last updated:** November 12, 2026
