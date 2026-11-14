@@ -1,26 +1,41 @@
 // Long-form legal pages (privacy policy, terms of service).
-// The `page` layout wraps content in .reveal, so Reveal's own stylesheet
-// theme (black.css: 2.5em text, uppercase headings) plus its scroll-view
-// rules apply. Without a .slides/section structure Reveal never enters
-// scroll mode, so these pages render as a plain tall document: undo the
-// deck theme and apply the site's dark page theme instead.
+//
+// The `page` layout wraps content in .reveal so Reveal's deck CSS applies:
+// overflow clipping, height:100%, touch-action:pinch-zoom, and its scroll
+// view if a .slides structure exists. Handing these pages to Reveal's
+// scroll view is wrong: one scroll-page taller than a viewport breaks its
+// snap/sticky model (html.reveal-full-page clips the document and the
+// content overflows the body). These pages are deliberately kept *out* of
+// deck mode — a single tall plain document — and all deck styling is
+// neutralized here so they scroll and theme like a normal page.
 //
 // bodyClass renders on the .reveal wrapper div in the default layout (not
-// on <body>), so scope to the wrapper itself: .reveal.legal-page beats
-// Reveal's own `.reveal h1` theme rules via (0,2,1) and later load order.
+// on <body>). .reveal.legal-page selectors (0,2,0) beat reveal.css's
+// `.reveal ...` (0,1,0) without !important; !important is only needed
+// where the site theme itself uses it (.content h2/h1 sizes).
 .reveal.legal-page {
   background-color: var(--v2-background-primary, #0d1926);
 
-  // reveal.css sets `.reveal { overflow: hidden }` for its slide deck.
-  // These pages carry no .slides structure, so Reveal never manages them
-  // and the clip (plus the 100vh viewport rule) makes the document
-  // unscrollable on touch devices. Let them scroll like a plain page.
-  // .reveal.legal-page (0,2,0) beats reveal.css `.reveal` (0,1,0) without
-  // needing !important.
+  // Neutralize the deck: unclip, unsize, and take over touch gestures so
+  // the document scrolls natively (this is what fails on iOS if left to
+  // reveal.css's pinch-zoom + overflow:hidden).
   &.reveal {
+    overflow: visible !important;
+    height: auto !important;
+    max-height: none !important;
+    touch-action: pan-y !important;
+  }
+
+  // Belt-and-braces in case the deck ever initializes on these pages:
+  // never let the viewport clip.
+  body.reveal-full-page:has(.legal-page) {
     overflow: visible;
+  }
+  &.reveal .slides,
+  &.reveal section {
+    position: static;
     height: auto;
-    max-height: none;
+    overflow: visible;
   }
 
   .container {
