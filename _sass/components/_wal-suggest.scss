@@ -1,0 +1,91 @@
+// "From the Write Ahead Log" corner card: two random blog post links
+// injected by assets/js/wal-suggest.js on every load. Fixed to the
+// bottom-right, above the footer (z 15) and below the mobile menu
+// (z 20) so it never fights the header (z 34) or the menu overlay.
+
+.plf-wal-widget,
+#plf-wal-card {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 15;
+  max-width: 300px;
+  background: rgba(13, 25, 38, 0.92);
+  border: 1px solid rgba(0, 255, 0, 0.25);
+  border-radius: 10px;
+  padding: 10px 12px 12px;
+  font-family: $font-family-heading;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+  &.plf-wal-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  .plf-wal-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .plf-wal-label {
+    color: #00ff00;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .plf-wal-close {
+    appearance: none;
+    background: none;
+    border: 0;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1rem;
+    line-height: 1;
+    padding: 2px 4px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible {
+      color: #ffffff;
+    }
+  }
+
+  .plf-wal-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li + li {
+      margin-top: 6px;
+    }
+  }
+
+  .plf-wal-link {
+    display: block;
+    color: #cfd8e0;
+    font-size: 0.85rem;
+    line-height: 1.35;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      color: #00ff00;
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  #plf-wal-card {
+    right: 12px;
+    bottom: 12px;
+    max-width: calc(100vw - 24px);
+  }
+}
