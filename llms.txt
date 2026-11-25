@@ -1,0 +1,42 @@
+---
+layout: null
+permalink: /llms.txt
+sitemap: false
+---
+{%- assign base = site.url | append: site.baseurl -%}
+{%- assign home = site.pages | where: "url", "/" | first -%}
+# Platformatory
+
+> {{ home.description | default: site.description }}
+
+- Engineering writing lives on the blog, The Write Ahead Log: [blog llms.txt]({{ base }}/blog/llms.txt), [full text]({{ base }}/blog/llms-full.txt).
+- Sitemaps: [site]({{ base }}/sitemap.xml), [blog]({{ base }}/blog/sitemap.xml).
+
+## Company
+
+- [Services]({{ base }}/services/): Mission-critical platforms delivered end to end.
+- [Consulting]({{ base }}/consulting/): Platform and data modernization, agentic AI, systems at scale.
+- [Case studies]({{ base }}/case-studies/): Selected engagements.
+- [People]({{ base }}/company/): Team and contact.
+- [Talks]({{ base }}/talks/): Recordings and slides from community events.
+
+## Offerings
+{% for o in site.offerings %}
+- [{{ o.title }}]({{ base }}{{ o.url }}): {{ o.description | strip_html | strip_newlines | strip }}
+{%- endfor %}
+
+## Case studies
+{% assign cs = site.case-studies | where: "draft_status", "approved" | sort: "weight" %}
+{%- for c in cs %}
+- [{{ c.title }}]({{ base }}{{ c.url }}): {{ c.summary | strip_html | strip_newlines | strip | truncate: 220 }}
+{%- endfor %}
+
+## Platform engineering principles
+{% assign pr = site.principles | sort: "weight" %}
+{%- for p in pr %}
+- [{{ p.title }}]({{ base }}{{ p.url }}): {{ p.description | strip_html | strip_newlines | strip | truncate: 220 }}
+{%- endfor %}
+
+## Blog
+
+- [The Write Ahead Log]({{ base }}/blog/): Platform and product engineering journal. Index of every post: [llms.txt]({{ base }}/blog/llms.txt).
